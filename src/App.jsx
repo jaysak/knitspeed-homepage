@@ -322,7 +322,14 @@ export default function App() {
     <input className="rounded-2xl border border-slate-200 px-4 py-3 outline-none focus:border-sky-400" name="color" placeholder="Color" />
 
     <input className="rounded-2xl border border-slate-200 px-4 py-3 outline-none focus:border-sky-400" name="quantity_value" type="number" min="0" placeholder="Quantity" />
-    <input type="hidden" name="quantity_unit" value="kg" />
+    <input
+      className="rounded-2xl border border-slate-200 bg-slate-100 px-4 py-3 text-slate-600 outline-none cursor-not-allowed"
+      name="quantity_unit"
+      value="kg"
+      readOnly
+      aria-label="Quantity unit"
+      title="Knitted fabric is quoted in KG"
+    />
 
     <select className="rounded-2xl border border-slate-200 px-4 py-3 outline-none focus:border-sky-400 sm:col-span-2" name="usage_type" defaultValue="">
       <option value="" disabled>Usage</option>
