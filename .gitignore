@@ -4,3 +4,9 @@ dist
 .env.local
 .DS_Store
 .vercel
+
+# Local secrets
+.env.local
+
+# Supabase generated temp files
+supabase/.temp/
