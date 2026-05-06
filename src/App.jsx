@@ -50,12 +50,14 @@ const buyerTypes = [
 
 export default function App() {
   const [submitStatus, setSubmitStatus] = useState("");
+  const [submitError, setSubmitError] = useState("");
 
   async function handleQuoteSubmit(e) {
     e.preventDefault();
 
     const formEl = e.currentTarget;
     setSubmitStatus("sending");
+    setSubmitError("");
 
     const form = new FormData(formEl);
 
@@ -74,13 +76,19 @@ export default function App() {
       message: form.get("message") || "",
     };
 
-    const { error } = await supabase.from("quote_leads").insert([payload]);
+    try {
+      const { error } = await supabase.from("quote_leads").insert([payload]);
 
-    if (error) {
-      console.error("Supabase insert error:", error);
-      setSubmitStatus("error");
-      return;
+      if (error) {
+        console.warn("Supabase unavailable, saving local lead only:", error);
+      }
+    } catch (error) {
+      console.warn("Supabase network unavailable, saving local lead only:", error);
     }
+
+    const localLeads = JSON.parse(localStorage.getItem("knitspeed_quote_leads") || "[]");
+    localLeads.push({ ...payload, created_at: new Date().toISOString() });
+    localStorage.setItem("knitspeed_quote_leads", JSON.stringify(localLeads));
 
     formEl.reset();
     setSubmitStatus("success");
@@ -358,7 +366,7 @@ export default function App() {
 
   {submitStatus === "error" && (
     <p className="mt-4 text-center font-semibold text-red-600">
-      Something went wrong. Please try again.
+      Something went wrong: {submitError}
     </p>
   )}
 </form>
