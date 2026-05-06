@@ -315,15 +315,17 @@ export default function App() {
     <input className="rounded-2xl border border-slate-200 px-4 py-3 outline-none focus:border-sky-400" name="phone_line" placeholder="Phone / LINE" />
 
     <select className="rounded-2xl border border-slate-200 px-4 py-3 outline-none focus:border-sky-400" name="product_raw_name" defaultValue="">
-      <option value="" disabled>Fabric type</option>
+      <option value="" disabled>Select knitted fabric type</option>
       <option>Single Jersey</option>
-      <option>Rib</option>
+      <option>Rib / Rib Knit</option>
       <option>Interlock</option>
-      <option>Pique</option>
-      <option>Fleece</option>
+      <option>Pique / Lacoste</option>
       <option>French Terry</option>
-      {/* <option>Woven</option> */}
-      <option>Other</option>
+      <option>Fleece</option>
+      <option>Jersey Spandex</option>
+      <option>Rib Spandex</option>
+      <option>Not sure / Need recommendation</option>
+      <option>Other knitted fabric</option>
     </select>
 
     <input className="rounded-2xl border border-slate-200 px-4 py-3 outline-none focus:border-sky-400" name="gsm" placeholder="GSM" />
@@ -340,15 +342,16 @@ export default function App() {
     />
 
     <select className="rounded-2xl border border-slate-200 px-4 py-3 outline-none focus:border-sky-400 sm:col-span-2" name="usage_type" defaultValue="">
-      <option value="" disabled>Usage</option>
-      <option>T-shirt</option>
-      <option>Polo shirt</option>
-      <option>Uniform</option>
+      <option value="" disabled>Select usage</option>
+      <option>T-shirt production</option>
+      <option>Polo shirt production</option>
+      <option>Uniform / company shirt</option>
       <option>Fashion brand</option>
-      <option>Online seller</option>
-      <option>Factory production</option>
+      <option>Online seller / small batch</option>
+      <option>Garment factory production</option>
       <option>Sample / testing</option>
-      <option>Other</option>
+      <option>Need fabric recommendation</option>
+      <option>Other usage</option>
     </select>
   </div>
 
