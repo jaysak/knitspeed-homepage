@@ -1,131 +1,126 @@
-# KNITSPEED HOMEPAGE — PROJECT TASKS
-Updated: 2026-05-06
+# KNITSPEED HOMEPAGE — TASK ROADMAP
+
+Last Updated: 2026-05-06
 
 ---
 
-# CURRENT STATUS
+# COMPLETED ✅
 
 ## Infrastructure
-- [x] GitHub repository connected
-- [x] Vercel deployment pipeline working
-- [x] Production deployment confirmed
-- [x] Local Vite development working
-- [x] Homepage publicly accessible via deployment URL
+- GitHub repo connected
+- Vercel deployment live
+- Supabase connected
+- Supabase CLI linked
+- .gitignore cleaned
+- Local + production workflow verified
 
-## Quote Form
-- [x] Form UI stabilized
-- [x] Submit flow fixed
-- [x] Graceful error handling added
-- [x] Local fallback lead storage implemented
-- [ ] Supabase production connection unresolved
-- [ ] Remove temporary fallback/debug scaffolding later
-
-## Supabase Findings
-- Supabase hostname could not resolve:
-  divpreezwaxutcbigdxp.supabase.co
-
-- Root issue appears infrastructure/DNS/project-related
-  rather than frontend code or RLS.
-
-- Future action:
-  create clean production-grade Supabase project later.
+## Quote System
+- quote_leads insert working
+- schema mapping fixed
+- textile dropdown polish
+- consultation-style helper text
+- small quantity messaging
+- response expectation trust signal
 
 ---
 
-# NEXT PRIORITY TASKS
+# NEXT TASKS 🚀
 
-## TASK 1 — Clean Production Polish
-Priority: HIGH
-Estimate: 30–60 min
+## TASK 1 — Form UX Polish
+Estimate: 30–45 min
 
-- remove temporary debug code
-- remove temporary fallback messaging
-- improve mobile spacing
-- improve CTA consistency
-- final typography cleanup
+- improve spacing/alignment
+- mobile responsiveness check
+- validation polish
+- success/error UX cleanup
+- optional field indicators
 
 ---
 
-## TASK 2 — Rebuild Supabase Properly
-Priority: HIGH
+## TASK 2 — Real Product Naming Extraction
 Estimate: 1–2 hrs
 
-Goals:
-- create stable production project
-- reconnect env vars
-- verify DNS resolution
-- recreate quote_leads table
-- verify RLS correctly
-- production quote inserts working
+Goal:
+Extract real textile product names from sales data.
+
+Output:
+- real GSM naming
+- real fabric categories
+- common constructions
+- product terminology aligned with GSC business
 
 ---
 
-## TASK 3 — Build products_master
-Priority: HIGH
-Estimate: 1–2 hrs
-
-Goals:
-- real textile naming conventions
-- GSM grouping
-- fabric category taxonomy
-- cotton/CVC/TC/rib/interlock structure
-- aligned with GSC real sales terminology
-
----
-
-## TASK 4 — Dynamic Quote Dropdowns
-Priority: HIGH
+## TASK 3 — products_master Table
 Estimate: 45–90 min
 
-Goals:
-- load fabric types from DB
-- load usage types from DB
-- reduce human input errors
-- standardize incoming quote leads
+Goal:
+Create structured textile product database.
+
+Possible columns:
+- product_code
+- product_name
+- fabric_type
+- gsm
+- composition
+- width
+- stock_unit
+- active_status
 
 ---
 
-## TASK 5 — Lead Intake Dashboard
-Priority: MEDIUM
+## TASK 4 — Dynamic Product Dropdown
+Estimate: 45–90 min
+
+Goal:
+Load fabric options directly from Supabase instead of hardcoded JSX.
+
+Benefits:
+- scalable
+- editable without code
+- future inventory integration
+
+---
+
+## TASK 5 — Internal Lead Dashboard
 Estimate: 2–4 hrs
 
-Goals:
-- view quote requests
-- status pipeline
-- customer follow-up tracking
-- export leads
-- future CRM integration
+Goal:
+Internal staff dashboard for quote leads.
+
+Features:
+- recent inquiries
+- lead status
+- callback tracking
+- filtering
+- future LINE integration
 
 ---
 
-## TASK 6 — Retail KG Pricing Logic
-Priority: MEDIUM
+## TASK 6 — KG Retail / Small Lot Logic
 Estimate: 2–3 hrs
 
-Goals:
-- support small lot buyers
-- markup logic for KG sales
-- preserve roll pricing separately
-- sample order capability
+Goal:
+Support sample orders and small-batch buying flow.
+
+Potential:
+- MOQ guidance
+- retail markup logic
+- estimated rolls/kg conversion
 
 ---
 
-## TASK 7 — Domain Migration
-Priority: MEDIUM
+## TASK 7 — Domain Migration Strategy
 Estimate: TBD
 
-Goals:
-- migrate from old GoDaddy Wordpress
-- preserve SEO
-- connect knitspeed.com cleanly
-- redirect strategy
-- modern frontend stack only
+Goal:
+Move from old GoDaddy WordPress structure toward modern GitHub/Vercel architecture.
 
 ---
 
-# LONGER TERM VISION
+# LONG TERM VISION 🌎
 
-## Knitspeed Platform Direction
+Knitspeed evolving toward:
 - textile supply intelligence system
 - real production visibility
 - customer forecasting
@@ -133,18 +128,4 @@ Goals:
 - reorder recommendations
 - AI-assisted sales pipeline
 - future agent-assisted procurement
-
----
-
-# IMPORTANT LESSONS LEARNED
-
-## Debugging Order
-1. DNS / hostname
-2. deployment URL
-3. environment variables
-4. network connectivity
-5. database
-6. frontend code
-
-Do not assume frontend bug first.
 

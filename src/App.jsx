@@ -357,9 +357,18 @@ export default function App() {
 
   <textarea className="mt-4 min-h-28 w-full rounded-2xl border border-slate-200 px-4 py-3 outline-none focus:border-sky-400" name="message" placeholder="Message / special requirements" />
 
+  <p className="mt-3 text-sm text-slate-500">
+    Not sure which fabric to use yet? No problem.
+    Tell us your product idea and our team will gladly recommend suitable knitted fabric, GSM and usage — even for small quantities or sample production.
+  </p>
+
   <button type="submit" disabled={submitStatus === "sending"} className="mt-4 w-full rounded-full px-7 py-4 font-bold text-white shadow-lg disabled:opacity-60" style={{ backgroundColor: brand.blue }}>
     {submitStatus === "sending" ? "Sending..." : "Submit Quote Request"}
   </button>
+
+  <p className="mt-3 text-center text-xs text-slate-400">
+    Usually responds within business hours via LINE or phone.
+  </p>
 
   {submitStatus === "success" && (
     <p className="mt-4 text-center font-semibold text-green-600">
