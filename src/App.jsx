@@ -77,7 +77,7 @@ export default function App() {
     };
 
     try {
-      const { error } = await supabase.from("quote_leads").insert([payload]);
+      const { error } = supabase ? await supabase.from("quote_leads").insert([payload]) : { error: new Error("Supabase not configured") };
 
       if (error) {
         console.warn("Supabase unavailable, saving local lead only:", error);
