@@ -129,3 +129,132 @@ Knitspeed evolving toward:
 - AI-assisted sales pipeline
 - future agent-assisted procurement
 
+
+---
+
+# TASK 2 — Real Product Naming Extraction
+Estimate: 1–2 hrs initial pass
+
+Goal:
+Extract real textile product naming from actual GSC sales data and normalize into structured master data.
+
+---
+
+## SUBTASK 2.1 — Inspect Source Data
+Estimate: 15–20 min
+
+Deliverables:
+- identify useful columns
+- confirm naming patterns
+- identify textile abbreviations
+- identify units and widths
+- detect noisy data columns
+
+Completion Criteria:
+- documented usable columns
+- understood naming structure
+- ready for extraction step
+
+Checkpoint:
+- commit findings notes
+
+---
+
+## SUBTASK 2.2 — Extract Unique Product Names
+Estimate: 20–30 min
+
+Deliverables:
+- unique Clothno/product names
+- frequency overview
+- duplicate detection
+- raw export list
+
+Completion Criteria:
+- clean unique naming list exported
+- obvious junk entries identified
+
+Checkpoint:
+- export CSV snapshot
+- commit extraction scripts/notes
+
+---
+
+## SUBTASK 2.3 — Decode Naming Structure
+Estimate: 30–45 min
+
+Deliverables:
+- yarn count patterns
+- composition abbreviations
+- knit structure decoding
+- width interpretation
+- naming conventions
+
+Examples:
+- SJ = Single Jersey
+- RB = Rib
+- IT = Interlock
+- CVC = Chief Value Cotton
+
+Completion Criteria:
+- initial textile naming dictionary established
+- normalization rules documented
+
+Checkpoint:
+- naming_rules.md
+- commit decoding logic
+
+---
+
+## SUBTASK 2.4 — Build Product Categories
+Estimate: 30–45 min
+
+Deliverables:
+- normalized categories
+- fabric structure grouping
+- composition grouping
+- reusable dropdown values
+
+Completion Criteria:
+- usable categories for frontend dropdowns
+- suitable for products_master table
+
+Checkpoint:
+- categories CSV/MD committed
+
+---
+
+## SUBTASK 2.5 — Generate products_master Draft
+Estimate: 20–30 min
+
+Deliverables:
+- products_master draft CSV
+- normalized columns
+- preliminary product codes
+
+Suggested Columns:
+- product_code
+- product_name
+- fabric_structure
+- composition
+- yarn_count
+- gsm
+- width
+- active_status
+
+Completion Criteria:
+- import-ready draft generated
+- suitable for Supabase import
+
+Checkpoint:
+- products_master_draft.csv committed
+
+---
+
+RULE:
+No subtask left partially ambiguous before ending session.
+Each subtask must end in:
+- notes
+- export
+- commit
+- or explicit checkpoint state
+
