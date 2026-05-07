@@ -60,6 +60,9 @@ function AdminLeadsDashboard() {
   const [loading, setLoading] = useState(true);
   const [errorText, setErrorText] = useState("");
 
+  const [searchText, setSearchText] = useState("");
+  const [statusFilter, setStatusFilter] = useState("all");
+
   const leadStatuses = [
     "new",
     "contacted",
@@ -134,6 +137,22 @@ function AdminLeadsDashboard() {
     URL.revokeObjectURL(url);
   }
 
+  const filteredLeads = leads.filter((lead) => {
+    const search = searchText.toLowerCase();
+
+    const matchesSearch =
+      !search ||
+      (lead.customer_name || "").toLowerCase().includes(search) ||
+      (lead.company_name || "").toLowerCase().includes(search) ||
+      (lead.fabric_type || "").toLowerCase().includes(search);
+
+    const matchesStatus =
+      statusFilter === "all" ||
+      (lead.lead_status || "new") === statusFilter;
+
+    return matchesSearch && matchesStatus;
+  });
+
   useEffect(() => {
     async function loadLeads() {
       setLoading(true);
@@ -201,7 +220,7 @@ function AdminLeadsDashboard() {
         <div className="mb-5 grid gap-4 md:grid-cols-4">
           <div className="rounded-3xl bg-white p-5 shadow-sm">
             <div className="text-sm text-slate-500">Total leads</div>
-            <div className="mt-2 text-3xl font-extrabold">{leads.length}</div>
+            <div className="mt-2 text-3xl font-extrabold">{filteredLeads.length}</div>
           </div>
           <div className="rounded-3xl bg-white p-5 shadow-sm">
             <div className="text-sm text-slate-500">New</div>
@@ -221,6 +240,29 @@ function AdminLeadsDashboard() {
               {leads[0]?.fabric_type || "-"}
             </div>
           </div>
+        </div>
+
+        <div className="mb-5 flex flex-col gap-3 md:flex-row">
+          <input
+            type="text"
+            placeholder="Search customer, company, fabric..."
+            value={searchText}
+            onChange={(e) => setSearchText(e.target.value)}
+            className="rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none focus:border-sky-400"
+          />
+
+          <select
+            value={statusFilter}
+            onChange={(e) => setStatusFilter(e.target.value)}
+            className="rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none focus:border-sky-400"
+          >
+            <option value="all">All statuses</option>
+            {leadStatuses.map((status) => (
+              <option key={status} value={status}>
+                {status}
+              </option>
+            ))}
+          </select>
         </div>
 
         <div className="overflow-hidden rounded-3xl bg-white shadow-sm">
@@ -245,7 +287,7 @@ function AdminLeadsDashboard() {
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-100">
-                  {leads.map((lead) => (
+                  {filteredLeads.map((lead) => (
                     <tr key={lead.id || lead.created_at} className="hover:bg-sky-50/40">
                       <td className="whitespace-nowrap px-4 py-3 text-slate-500">
                         {lead.created_at ? new Date(lead.created_at).toLocaleString() : "-"}
