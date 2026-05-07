@@ -24,11 +24,15 @@ create table if not exists public.quote_leads (
 
 alter table public.quote_leads enable row level security;
 
+drop policy if exists "Allow public quote lead inserts" on public.quote_leads;
+
 create policy "Allow public quote lead inserts"
 on public.quote_leads
 for insert
 to anon
 with check (true);
+
+drop policy if exists "Allow authenticated users to read quote leads" on public.quote_leads;
 
 create policy "Allow authenticated users to read quote leads"
 on public.quote_leads
