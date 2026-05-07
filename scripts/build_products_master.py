@@ -26,16 +26,36 @@ def detect_structure(name):
 def detect_material(name):
     n = str(name).upper()
 
+    # CVC blends
     if "CVC" in n:
         return "cvc"
 
+    # Tetron cotton
     if "TC" in n:
         return "tc"
 
+    # Poly ring spun
+    if "TK" in n:
+        return "polyester"
+
+    # Top dyed blended yarn
+    if "TD" in n:
+        return "mixed_blend"
+
+    # Semi combed
+    if "SM" in n:
+        return "cotton"
+
+    # OE weaving / OE knitting
+    if "OEW" in n or "OE" in n:
+        return "cotton"
+
+    # Generic polyester
     if "POLY" in n:
         return "polyester"
 
-    if "CM" in n or "COMBED" in n:
+    # Cotton / combed
+    if "CM" in n or "COMBED" in n or "COTTON" in n:
         return "cotton"
 
     return "unknown"
