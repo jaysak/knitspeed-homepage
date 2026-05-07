@@ -294,96 +294,174 @@ export default function App() {
       </section>
 
       <section id="quote" className="py-16" style={{ backgroundColor: brand.iceBlue }}>
-        <div className="mx-auto grid max-w-7xl gap-10 px-5 md:grid-cols-2">
-          <div>
-            <h2 className="text-3xl font-extrabold md:text-4xl" style={{ color: brand.navy }}>Request a Fabric Quote</h2>
-            <p className="mt-4 text-lg leading-8 text-slate-600">
-              Send fabric type, GSM, color, quantity and usage. Our team will respond quickly via LINE or phone.
-            </p>
+  <div className="mx-auto grid max-w-7xl gap-10 px-5 md:grid-cols-2">
+    <div>
+      <h2
+        className="text-3xl font-extrabold md:text-4xl"
+        style={{ color: brand.navy }}
+      >
+        Request a Fabric Quote
+      </h2>
 
-            <div className="mt-8 space-y-4 text-slate-600">
-              <div className="flex gap-3"><Phone className="text-sky-500" /> 090-912-4154</div>
-              <div className="flex gap-3"><Mail className="text-sky-500" /> knitspeed@hotmail.com</div>
-              <div className="flex gap-3"><MapPin className="text-sky-500" /> Bangkok, Thailand</div>
-            </div>
-          </div>
+      <p className="mt-4 text-lg leading-8 text-slate-600">
+        Send fabric type, GSM, color, quantity and usage.
+        Our team will respond quickly via LINE or phone.
+      </p>
 
-          <form onSubmit={handleQuoteSubmit} className="rounded-[2rem] bg-white p-6 shadow-xl shadow-sky-100">
-  <div className="grid gap-4 sm:grid-cols-2">
-    <input className="rounded-2xl border border-slate-200 px-4 py-3 outline-none focus:border-sky-400" name="customer_name" placeholder="Name" />
-    <input className="rounded-2xl border border-slate-200 px-4 py-3 outline-none focus:border-sky-400" name="company_name" placeholder="Company" />
-    <input className="rounded-2xl border border-slate-200 px-4 py-3 outline-none focus:border-sky-400" name="phone_line" placeholder="Phone / LINE" />
-
-    <select className="rounded-2xl border border-slate-200 px-4 py-3 outline-none focus:border-sky-400" name="product_raw_name" defaultValue="">
-      <option value="" disabled>Select knitted fabric type</option>
-      <option>Single Jersey</option>
-      <option>Rib / Rib Knit</option>
-      <option>Interlock</option>
-      <option>Pique / Lacoste</option>
-      <option>French Terry</option>
-      <option>Fleece</option>
-      <option>Jersey Spandex</option>
-      <option>Rib Spandex</option>
-      <option>Not sure / Need recommendation</option>
-      <option>Other knitted fabric</option>
-    </select>
-
-    <input className="rounded-2xl border border-slate-200 px-4 py-3 outline-none focus:border-sky-400" name="gsm" placeholder="GSM" />
-    <input className="rounded-2xl border border-slate-200 px-4 py-3 outline-none focus:border-sky-400" name="color" placeholder="Color" />
-
-    <input className="rounded-2xl border border-slate-200 px-4 py-3 outline-none focus:border-sky-400" name="quantity_value" type="number" min="0" placeholder="Quantity" />
-    <input
-      className="rounded-2xl border border-slate-200 bg-slate-100 px-4 py-3 text-slate-600 outline-none cursor-not-allowed"
-      name="quantity_unit"
-      value="kg"
-      readOnly
-      aria-label="Quantity unit"
-      title="Knitted fabric is quoted in KG"
-    />
-
-    <select className="rounded-2xl border border-slate-200 px-4 py-3 outline-none focus:border-sky-400 sm:col-span-2" name="usage_type" defaultValue="">
-      <option value="" disabled>Select usage</option>
-      <option>T-shirt production</option>
-      <option>Polo shirt production</option>
-      <option>Uniform / company shirt</option>
-      <option>Fashion brand</option>
-      <option>Online seller / small batch</option>
-      <option>Garment factory production</option>
-      <option>Sample / testing</option>
-      <option>Need fabric recommendation</option>
-      <option>Other usage</option>
-    </select>
-  </div>
-
-  <textarea className="mt-4 min-h-28 w-full rounded-2xl border border-slate-200 px-4 py-3 outline-none focus:border-sky-400" name="message" placeholder="Message / special requirements" />
-
-  <p className="mt-3 text-sm text-slate-500">
-    Not sure which fabric to use yet? No problem.
-    Tell us your product idea and our team will gladly recommend suitable knitted fabric, GSM and usage — even for small quantities or sample production.
-  </p>
-
-  <button type="submit" disabled={submitStatus === "sending"} className="mt-4 w-full rounded-full px-7 py-4 font-bold text-white shadow-lg disabled:opacity-60" style={{ backgroundColor: brand.blue }}>
-    {submitStatus === "sending" ? "Sending..." : "Submit Quote Request"}
-  </button>
-
-  <p className="mt-3 text-center text-xs text-slate-400">
-    Usually responds within business hours via LINE or phone.
-  </p>
-
-  {submitStatus === "success" && (
-    <p className="mt-4 text-center font-semibold text-green-600">
-      Quote request sent successfully.
-    </p>
-  )}
-
-  {submitStatus === "error" && (
-    <p className="mt-4 text-center font-semibold text-red-600">
-      Something went wrong: {submitError}
-    </p>
-  )}
-</form>
+      <div className="mt-8 space-y-4 text-slate-600">
+        <div className="flex gap-3">
+          <Phone className="text-sky-500" />
+          090-912-4154
         </div>
-      </section>
+
+        <div className="flex gap-3">
+          <Mail className="text-sky-500" />
+          knitspeed@hotmail.com
+        </div>
+
+        <div className="flex gap-3">
+          <MapPin className="text-sky-500" />
+          Bangkok, Thailand
+        </div>
+      </div>
+    </div>
+
+    <form
+      onSubmit={handleQuoteSubmit}
+      className="rounded-[2rem] bg-white p-6 shadow-xl shadow-sky-100 md:p-8"
+    >
+      <div className="grid gap-4 sm:grid-cols-2">
+        <input
+          required
+          className="rounded-2xl border border-slate-200 px-4 py-3 outline-none transition focus:border-sky-400 focus:ring-4 focus:ring-sky-100"
+          name="customer_name"
+          placeholder="Name *"
+        />
+
+        <input
+          className="rounded-2xl border border-slate-200 px-4 py-3 outline-none transition focus:border-sky-400 focus:ring-4 focus:ring-sky-100"
+          name="company_name"
+          placeholder="Company"
+        />
+
+        <input
+          required
+          className="rounded-2xl border border-slate-200 px-4 py-3 outline-none transition focus:border-sky-400 focus:ring-4 focus:ring-sky-100"
+          name="phone_line"
+          placeholder="Phone / LINE *"
+        />
+
+        <select
+          required
+          className="rounded-2xl border border-slate-200 px-4 py-3 outline-none transition focus:border-sky-400 focus:ring-4 focus:ring-sky-100"
+          name="product_raw_name"
+          defaultValue=""
+        >
+          <option value="" disabled>Select knitted fabric type *</option>
+          <option>Single Jersey</option>
+          <option>Rib / Rib Knit</option>
+          <option>Interlock</option>
+          <option>Pique / Lacoste</option>
+          <option>French Terry</option>
+          <option>Fleece</option>
+          <option>Jersey Spandex</option>
+          <option>Rib Spandex</option>
+          <option>Not sure / Need recommendation</option>
+          <option>Other knitted fabric</option>
+        </select>
+
+        <input
+          className="rounded-2xl border border-slate-200 px-4 py-3 outline-none transition focus:border-sky-400 focus:ring-4 focus:ring-sky-100"
+          name="gsm"
+          placeholder="GSM"
+        />
+
+        <input
+          className="rounded-2xl border border-slate-200 px-4 py-3 outline-none transition focus:border-sky-400 focus:ring-4 focus:ring-sky-100"
+          name="color"
+          placeholder="Color"
+        />
+
+        <input
+          className="rounded-2xl border border-slate-200 px-4 py-3 outline-none transition focus:border-sky-400 focus:ring-4 focus:ring-sky-100"
+          name="quantity_value"
+          type="number"
+          min="0"
+          placeholder="Quantity (KG)"
+        />
+
+        <input
+          className="rounded-2xl border border-slate-200 bg-slate-100 px-4 py-3 text-slate-500 outline-none cursor-not-allowed"
+          value="KG"
+          readOnly
+        />
+
+        <select
+          required
+          className="rounded-2xl border border-slate-200 px-4 py-3 outline-none transition focus:border-sky-400 focus:ring-4 focus:ring-sky-100 sm:col-span-2"
+          name="usage_type"
+          defaultValue=""
+        >
+          <option value="" disabled>Select usage *</option>
+          <option>T-shirt production</option>
+          <option>Polo shirt production</option>
+          <option>Uniform / company shirt</option>
+          <option>Fashion brand</option>
+          <option>Online seller / small batch</option>
+          <option>Garment factory production</option>
+          <option>Sample / testing</option>
+          <option>Need fabric recommendation</option>
+          <option>Other usage</option>
+        </select>
+      </div>
+
+      <div className="mt-5 mb-2 text-sm font-semibold text-slate-500">
+        Additional details (optional)
+      </div>
+
+      <textarea
+        className="min-h-28 w-full rounded-2xl border border-slate-200 px-4 py-3 outline-none transition focus:border-sky-400 focus:ring-4 focus:ring-sky-100"
+        name="message"
+        placeholder="Message / special requirements"
+      />
+
+      <p className="mt-4 text-sm leading-6 text-slate-500">
+        Not sure which fabric to use yet? No problem.
+        Tell us your product idea and our team will recommend
+        suitable knitted fabric, GSM and usage — even for
+        small quantities or sample production.
+      </p>
+
+      <button
+        type="submit"
+        disabled={submitStatus === "sending"}
+        className="mt-6 w-full rounded-full px-7 py-4 font-bold text-white shadow-lg transition hover:translate-y-[-1px] hover:opacity-95 disabled:cursor-not-allowed disabled:opacity-60"
+        style={{ backgroundColor: brand.blue }}
+      >
+        {submitStatus === "sending"
+          ? "Sending..."
+          : "Submit Quote Request"}
+      </button>
+
+      <p className="mt-3 text-center text-xs text-slate-400">
+        Usually responds within business hours via LINE or phone.
+      </p>
+
+      {submitStatus === "success" && (
+        <div className="mt-5 rounded-2xl border border-green-200 bg-green-50 px-4 py-3 text-center text-sm font-semibold text-green-700">
+          Quote request sent successfully.
+          Our team will contact you shortly.
+        </div>
+      )}
+
+      {submitStatus === "error" && (
+        <div className="mt-5 rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-center text-sm font-semibold text-red-700">
+          Something went wrong: {submitError}
+        </div>
+      )}
+    </form>
+  </div>
+</section>
 
       <footer id="contact" className="bg-slate-900 px-5 py-10 text-white">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-6 md:flex-row md:items-center">
