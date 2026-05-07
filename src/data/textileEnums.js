@@ -1,0 +1,122 @@
+// Auto-generated from data/processed/products_master_draft.csv
+// Do not edit manually. Run scripts/export_frontend_dropdowns.py instead.
+
+export const PRODUCT_CATEGORIES = [
+  "knitted_fabric",
+  "traded_textile",
+];
+
+export const FABRIC_STRUCTURES = [
+  "interlock",
+  "rib",
+  "single_jersey",
+];
+
+export const MATERIAL_FAMILIES = [
+  "cotton",
+  "cvc",
+  "mixed_blend",
+  "polyester",
+  "tc",
+];
+
+export const SOURCE_TYPES = [
+];
+
+export const YARN_COUNTS = [
+  "20",
+  "24",
+  "28",
+  "30",
+  "32",
+  "34",
+  "40",
+  "45",
+  "208",
+  "308",
+];
+
+export const WIDTH_INCHES = [
+  "2",
+  "16",
+  "17",
+  "17.5",
+  "18",
+  "18.5",
+  "19",
+  "20",
+  "20.5",
+  "21",
+  "21.5",
+  "22",
+  "22.5",
+  "23",
+  "23.5",
+  "24",
+  "24.5",
+  "25",
+  "25.5",
+  "26",
+  "27",
+  "27.5",
+  "28",
+  "29",
+  "30",
+  "31",
+  "32",
+  "32.5",
+  "33",
+  "33.5",
+  "34",
+  "34.5",
+  "35",
+  "35.5",
+  "36",
+  "36.5",
+  "37",
+  "37.5",
+  "38",
+  "38.5",
+  "39",
+  "40",
+  "40.5",
+  "41",
+  "42",
+  "42.5",
+  "43",
+  "44",
+  "44.5",
+  "46",
+  "47.5",
+  "48",
+  "49",
+  "55",
+  "60",
+  "66",
+  "71",
+  "72",
+  "73",
+  "74",
+  "76",
+  "80",
+  "84",
+  "86",
+  "87",
+  "101",
+  "104",
+];
+
+export const GSM = [
+];
+
+export const COLORS = [
+];
+
+export const UNITS = [
+  "kg",
+];
+
+export const MANUAL_REVIEW_OPTIONS = [
+  "false",
+  "true",
+];
