@@ -74,6 +74,7 @@ export default function App() {
       company_name: form.get("company_name") || "",
       phone_line: form.get("phone_line") || "",
       product_raw_name: form.get("product_raw_name") || "",
+      fabric_type: form.get("product_raw_name") || "knitted",
       material_family: form.get("material_family") || "",
       yarn_count: form.get("yarn_count") || "",
       width_inches: form.get("width_inches") || "",
