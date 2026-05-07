@@ -91,6 +91,49 @@ function AdminLeadsDashboard() {
     }
   }
 
+  function exportLeadsCsv() {
+    const columns = [
+      "created_at",
+      "customer_name",
+      "company_name",
+      "phone_line",
+      "fabric_type",
+      "product_raw_name",
+      "material_family",
+      "yarn_count",
+      "width_inches",
+      "gsm",
+      "color",
+      "quantity_value",
+      "quantity_unit",
+      "usage_type",
+      "lead_status",
+      "message",
+    ];
+
+    const escapeCsv = (value) => {
+      if (value === null || value === undefined) return "";
+      const text = String(value).replaceAll('"', '""');
+      return `"${text}"`;
+    };
+
+    const csv = [
+      columns.join(","),
+      ...leads.map((lead) => columns.map((column) => escapeCsv(lead[column])).join(",")),
+    ].join("\n");
+
+    const blob = new Blob(["\ufeff" + csv], { type: "text/csv;charset=utf-8;" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    const date = new Date().toISOString().slice(0, 10);
+
+    link.href = url;
+    link.download = `knitspeed_leads_${date}.csv`;
+    link.click();
+
+    URL.revokeObjectURL(url);
+  }
+
   useEffect(() => {
     async function loadLeads() {
       setLoading(true);
@@ -136,12 +179,23 @@ function AdminLeadsDashboard() {
             </p>
           </div>
 
-          <a
-            href="/"
-            className="rounded-full bg-white px-5 py-2 text-sm font-semibold text-sky-700 shadow-sm ring-1 ring-sky-100"
-          >
-            Back to website
-          </a>
+          <div className="flex gap-3">
+            <button
+              type="button"
+              onClick={exportLeadsCsv}
+              disabled={!leads.length}
+              className="rounded-full bg-sky-600 px-5 py-2 text-sm font-semibold text-white shadow-sm disabled:cursor-not-allowed disabled:opacity-50"
+            >
+              Export CSV
+            </button>
+
+            <a
+              href="/"
+              className="rounded-full bg-white px-5 py-2 text-sm font-semibold text-sky-700 shadow-sm ring-1 ring-sky-100"
+            >
+              Back to website
+            </a>
+          </div>
         </div>
 
         <div className="mb-5 grid gap-4 md:grid-cols-4">
