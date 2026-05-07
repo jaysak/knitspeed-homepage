@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   FABRIC_STRUCTURES,
   MATERIAL_FAMILIES,
@@ -54,7 +54,192 @@ const buyerTypes = [
   "Sampling",
 ];
 
+
+function AdminLeadsDashboard() {
+  const [leads, setLeads] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [errorText, setErrorText] = useState("");
+
+  const leadStatuses = [
+    "new",
+    "contacted",
+    "quoted",
+    "sampling",
+    "negotiating",
+    "confirmed",
+    "dead",
+  ];
+
+  async function updateLeadStatus(leadId, nextStatus) {
+    const previousLeads = leads;
+
+    setLeads((current) =>
+      current.map((lead) =>
+        lead.id === leadId ? { ...lead, lead_status: nextStatus } : lead
+      )
+    );
+
+    const { error } = await supabase
+      .from("quote_leads")
+      .update({ lead_status: nextStatus })
+      .eq("id", leadId);
+
+    if (error) {
+      console.error("Failed to update lead status:", error);
+      setLeads(previousLeads);
+      alert("Could not update lead status. Reverted.");
+    }
+  }
+
+  useEffect(() => {
+    async function loadLeads() {
+      setLoading(true);
+      setErrorText("");
+
+      try {
+        if (!supabase) {
+          setErrorText("Supabase is not configured.");
+          setLoading(false);
+          return;
+        }
+
+        const { data, error } = await supabase
+          .from("quote_leads")
+          .select("*")
+          .order("created_at", { ascending: false })
+          .limit(50);
+
+        if (error) throw error;
+
+        setLeads(data || []);
+      } catch (error) {
+        console.error("Failed to load leads:", error);
+        setErrorText(error.message || "Failed to load leads.");
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    loadLeads();
+  }, []);
+
+  return (
+    <main className="min-h-screen bg-slate-50 p-6 text-slate-800">
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-6 flex flex-col justify-between gap-4 md:flex-row md:items-center">
+          <div>
+            <h1 className="text-3xl font-extrabold" style={{ color: brand.navy }}>
+              Knitspeed Lead Dashboard
+            </h1>
+            <p className="mt-1 text-slate-500">
+              Internal view of quote requests from the website.
+            </p>
+          </div>
+
+          <a
+            href="/"
+            className="rounded-full bg-white px-5 py-2 text-sm font-semibold text-sky-700 shadow-sm ring-1 ring-sky-100"
+          >
+            Back to website
+          </a>
+        </div>
+
+        <div className="mb-5 grid gap-4 md:grid-cols-4">
+          <div className="rounded-3xl bg-white p-5 shadow-sm">
+            <div className="text-sm text-slate-500">Total leads</div>
+            <div className="mt-2 text-3xl font-extrabold">{leads.length}</div>
+          </div>
+          <div className="rounded-3xl bg-white p-5 shadow-sm">
+            <div className="text-sm text-slate-500">New</div>
+            <div className="mt-2 text-3xl font-extrabold">
+              {leads.filter((lead) => lead.lead_status === "new").length}
+            </div>
+          </div>
+          <div className="rounded-3xl bg-white p-5 shadow-sm">
+            <div className="text-sm text-slate-500">With quantity</div>
+            <div className="mt-2 text-3xl font-extrabold">
+              {leads.filter((lead) => lead.quantity_value).length}
+            </div>
+          </div>
+          <div className="rounded-3xl bg-white p-5 shadow-sm">
+            <div className="text-sm text-slate-500">Latest fabric</div>
+            <div className="mt-2 truncate text-lg font-bold">
+              {leads[0]?.fabric_type || "-"}
+            </div>
+          </div>
+        </div>
+
+        <div className="overflow-hidden rounded-3xl bg-white shadow-sm">
+          {loading ? (
+            <div className="p-6 text-slate-500">Loading leads...</div>
+          ) : errorText ? (
+            <div className="p-6 text-red-600">{errorText}</div>
+          ) : (
+            <div className="overflow-x-auto">
+              <table className="min-w-full text-left text-sm">
+                <thead className="bg-slate-100 text-xs uppercase tracking-wide text-slate-500">
+                  <tr>
+                    <th className="px-4 py-3">Date</th>
+                    <th className="px-4 py-3">Customer</th>
+                    <th className="px-4 py-3">Phone / LINE</th>
+                    <th className="px-4 py-3">Fabric</th>
+                    <th className="px-4 py-3">Material</th>
+                    <th className="px-4 py-3">Width</th>
+                    <th className="px-4 py-3">Qty</th>
+                    <th className="px-4 py-3">Usage</th>
+                    <th className="px-4 py-3">Status</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-100">
+                  {leads.map((lead) => (
+                    <tr key={lead.id || lead.created_at} className="hover:bg-sky-50/40">
+                      <td className="whitespace-nowrap px-4 py-3 text-slate-500">
+                        {lead.created_at ? new Date(lead.created_at).toLocaleString() : "-"}
+                      </td>
+                      <td className="px-4 py-3 font-semibold">
+                        {lead.customer_name || "-"}
+                        <div className="text-xs font-normal text-slate-500">{lead.company_name || ""}</div>
+                      </td>
+                      <td className="px-4 py-3">{lead.phone_line || "-"}</td>
+                      <td className="px-4 py-3">{lead.fabric_type || lead.product_raw_name || "-"}</td>
+                      <td className="px-4 py-3">{lead.material_family || "-"}</td>
+                      <td className="px-4 py-3">{lead.width_inches || "-"}</td>
+                      <td className="px-4 py-3">
+                        {lead.quantity_value ? `${lead.quantity_value} ${lead.quantity_unit || ""}` : "-"}
+                      </td>
+                      <td className="px-4 py-3">{lead.usage_type || "-"}</td>
+                      <td className="px-4 py-3">
+                        <select
+                          className="rounded-full bg-sky-100 px-3 py-1 text-xs font-bold text-sky-700 outline-none"
+                          value={lead.lead_status || "new"}
+                          onChange={(e) => updateLeadStatus(lead.id, e.target.value)}
+                          disabled={!lead.id}
+                        >
+                          {leadStatuses.map((status) => (
+                            <option key={status} value={status}>
+                              {status}
+                            </option>
+                          ))}
+                        </select>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+        </div>
+      </div>
+    </main>
+  );
+}
+
+
 export default function App() {
+  if (window.location.pathname === "/admin/leads") {
+    return <AdminLeadsDashboard />;
+  }
+
   const [submitStatus, setSubmitStatus] = useState("");
   const [submitError, setSubmitError] = useState("");
 
