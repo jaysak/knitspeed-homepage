@@ -137,6 +137,28 @@ function AdminLeadsDashboard() {
     URL.revokeObjectURL(url);
   }
 
+  const fabricCounts = {};
+
+  leads.forEach((lead) => {
+    const fabric = lead.fabric_type || "unknown";
+    fabricCounts[fabric] = (fabricCounts[fabric] || 0) + 1;
+  });
+
+  const hottestFabric =
+    Object.entries(fabricCounts).sort((a, b) => b[1] - a[1])[0]?.[0] || "-";
+
+  const totalRequestedKg = leads.reduce((sum, lead) => {
+    return sum + (Number(lead.quantity_value) || 0);
+  }, 0);
+
+  const confirmedCount = leads.filter(
+    (lead) => lead.lead_status === "confirmed"
+  ).length;
+
+  const samplingCount = leads.filter(
+    (lead) => lead.lead_status === "sampling"
+  ).length;
+
   const filteredLeads = leads.filter((lead) => {
     const search = searchText.toLowerCase();
 
@@ -217,7 +239,7 @@ function AdminLeadsDashboard() {
           </div>
         </div>
 
-        <div className="mb-5 grid gap-4 md:grid-cols-4">
+        <div className="mb-5 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
           <div className="rounded-3xl bg-white p-5 shadow-sm">
             <div className="text-sm text-slate-500">Total leads</div>
             <div className="mt-2 text-3xl font-extrabold">{filteredLeads.length}</div>
@@ -235,9 +257,30 @@ function AdminLeadsDashboard() {
             </div>
           </div>
           <div className="rounded-3xl bg-white p-5 shadow-sm">
-            <div className="text-sm text-slate-500">Latest fabric</div>
+            <div className="text-sm text-slate-500">Hottest fabric</div>
             <div className="mt-2 truncate text-lg font-bold">
-              {leads[0]?.fabric_type || "-"}
+              {hottestFabric}
+            </div>
+          </div>
+
+          <div className="rounded-3xl bg-white p-5 shadow-sm">
+            <div className="text-sm text-slate-500">Total requested KG</div>
+            <div className="mt-2 text-3xl font-extrabold">
+              {totalRequestedKg}
+            </div>
+          </div>
+
+          <div className="rounded-3xl bg-white p-5 shadow-sm">
+            <div className="text-sm text-slate-500">Confirmed leads</div>
+            <div className="mt-2 text-3xl font-extrabold">
+              {confirmedCount}
+            </div>
+          </div>
+
+          <div className="rounded-3xl bg-white p-5 shadow-sm">
+            <div className="text-sm text-slate-500">Sampling leads</div>
+            <div className="mt-2 text-3xl font-extrabold">
+              {samplingCount}
             </div>
           </div>
         </div>
