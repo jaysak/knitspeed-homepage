@@ -258,3 +258,44 @@ Each subtask must end in:
 - commit
 - or explicit checkpoint state
 
+
+---
+
+# FUTURE VISION — SUPPLY INTELLIGENCE LAYER
+
+## Strategic Direction
+Knitspeed platform is NOT intended to become a public open marketplace like Alibaba.
+
+Primary purpose:
+- strengthen GSC / Knitspeed operations
+- improve textile sales workflow
+- improve supplier intelligence
+- improve sourcing visibility
+- improve buyer relationship management
+- centralize textile operational knowledge
+
+## Two-Sided Internal Intelligence Model
+
+### Buyer Side
+- quote requests
+- demand tracking
+- fabric trends
+- reorder behavior
+- lead management
+
+### Supplier Side
+- yarn supplier intelligence
+- knitting factory capabilities
+- dyeing factory tracking
+- MOQ visibility
+- lead time tracking
+- quality consistency notes
+- sourcing relationships
+
+## Long-Term Goal
+Create a private textile intelligence and operational coordination system for GSC / Knitspeed.
+
+NOT a public mass-registration marketplace.
+
+Relationship quality and operational intelligence are more important than platform scale.
+
