@@ -17,17 +17,27 @@ def clean_values(series):
             values.append(text)
     return sorted(set(values))
 
-def clean_numbers(series):
+def clean_numbers(series, min_value=None, max_value=None):
     values = []
+
     for v in series.dropna():
         try:
             n = float(v)
+
+            if min_value is not None and n < min_value:
+                continue
+
+            if max_value is not None and n > max_value:
+                continue
+
             if n.is_integer():
                 values.append(str(int(n)))
             else:
                 values.append(str(n))
+
         except Exception:
             pass
+
     return sorted(set(values), key=lambda x: float(x))
 
 dropdowns = {
@@ -35,7 +45,11 @@ dropdowns = {
     "fabric_structures": clean_values(df["fabric_structure"]),
     "material_families": clean_values(df["material_family"]),
     "source_types": clean_values(df["source_type"]),
-    "yarn_counts": clean_numbers(df["yarn_count"]),
+    "yarn_counts": clean_numbers(
+        df["yarn_count"],
+        min_value=10,
+        max_value=80
+    ),
     "width_inches": clean_numbers(df["width_inches"]),
     "gsm": clean_numbers(df["gsm"]),
     "colors": clean_values(df["color"]),

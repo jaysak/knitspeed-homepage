@@ -32,8 +32,6 @@ export const YARN_COUNTS = [
   "34",
   "40",
   "45",
-  "208",
-  "308",
 ];
 
 export const WIDTH_INCHES = [

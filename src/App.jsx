@@ -1,5 +1,10 @@
 import React, { useState } from "react";
-import { FABRIC_STRUCTURES } from "./data/textileEnums";
+import {
+  FABRIC_STRUCTURES,
+  MATERIAL_FAMILIES,
+  YARN_COUNTS,
+  WIDTH_INCHES,
+} from "./data/textileEnums";
 import { supabase } from "./lib/supabaseClient";
 import {
   ArrowRight,
@@ -370,6 +375,44 @@ export default function App() {
 
   <option value="not_sure">Not sure / Need recommendation</option>
   <option value="other_knitted_fabric">Other knitted fabric</option>
+</select>
+<select
+  className="rounded-2xl border border-slate-200 px-4 py-3 outline-none focus:border-sky-400"
+  name="material_family"
+  defaultValue=""
+>
+  <option value="">Material / blend</option>
+  {MATERIAL_FAMILIES.map((item) => (
+    <option key={item} value={item}>
+      {item.replaceAll("_", " ").replace(/\b\w/g, (c) => c.toUpperCase())}
+    </option>
+  ))}
+</select>
+
+<select
+  className="rounded-2xl border border-slate-200 px-4 py-3 outline-none focus:border-sky-400"
+  name="yarn_count"
+  defaultValue=""
+>
+  <option value="">Yarn count</option>
+  {YARN_COUNTS.map((item) => (
+    <option key={item} value={item}>
+      {item}
+    </option>
+  ))}
+</select>
+
+<select
+  className="rounded-2xl border border-slate-200 px-4 py-3 outline-none focus:border-sky-400"
+  name="width_inches"
+  defaultValue=""
+>
+  <option value="">Width</option>
+  {WIDTH_INCHES.map((item) => (
+    <option key={item} value={item}>
+      {item}"
+    </option>
+  ))}
 </select>
         <input
           className="rounded-2xl border border-slate-200 px-4 py-3 outline-none transition focus:border-sky-400 focus:ring-4 focus:ring-sky-100"
