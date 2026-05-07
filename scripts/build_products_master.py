@@ -83,6 +83,55 @@ def extract_width(name):
 
     return None
 
+
+def build_review_flags(record, combined_name):
+    notes = []
+    confidence = 0.85
+    requires_review = False
+
+    width = record.get("width_inches")
+    material = record.get("material_family")
+    structure = record.get("fabric_structure")
+    raw = str(record.get("raw_product_name", "")).upper()
+    commercial = str(record.get("commercial_name", ""))
+
+    if pd.isna(width) or width is None:
+        requires_review = True
+        confidence -= 0.15
+        notes.append("missing width")
+
+    elif width > 120:
+        record["width_inches"] = None
+        requires_review = True
+        confidence -= 0.30
+        notes.append("suspicious width parsing")
+
+    if material == "unknown":
+        requires_review = True
+        confidence -= 0.20
+        notes.append("unknown material family")
+
+    if structure == "unknown":
+        requires_review = True
+        confidence -= 0.15
+        notes.append("unknown fabric structure")
+
+    if "OEW" in raw:
+        requires_review = True
+        confidence -= 0.10
+        notes.append("OE weaving yarn used in knitting context")
+
+    thai_chars = any("\u0E00" <= ch <= "\u0E7F" for ch in commercial)
+    if thai_chars:
+        confidence -= 0.10
+        notes.append("Thai commercial/pattern name preserved")
+
+    record["confidence_score"] = round(max(confidence, 0.20), 2)
+    record["requires_manual_review"] = requires_review
+    record["review_reason"] = "; ".join(notes)
+
+    return record
+
 for idx, row in df.iterrows():
 
     raw_name = str(row.get("product_name", ""))
@@ -107,9 +156,13 @@ for idx, row in df.iterrows():
         "gsm": None,
         "color": None,
         "unit": "kg",
-        "confidence_score": 0.7,
-        "notes": ""
+        "confidence_score": 0.85,
+        "notes": "",
+        "requires_manual_review": False,
+        "review_reason": ""
     }
+
+    record = build_review_flags(record, combined_name)
 
     records.append(record)
 
