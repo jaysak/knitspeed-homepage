@@ -115,6 +115,33 @@ function AdminLeadsDashboard() {
     }
   }
 
+  async function updateLeadNotes(leadId, salesNotes) {
+    const previousLeads = leads;
+    const lastContactAt = salesNotes.trim() ? new Date().toISOString() : null;
+
+    setLeads((current) =>
+      current.map((lead) =>
+        lead.id === leadId
+          ? { ...lead, sales_notes: salesNotes, last_contact_at: lastContactAt }
+          : lead
+      )
+    );
+
+    const { error } = await supabase
+      .from("quote_leads")
+      .update({
+        sales_notes: salesNotes,
+        last_contact_at: lastContactAt,
+      })
+      .eq("id", leadId);
+
+    if (error) {
+      console.error("Failed to update lead notes:", error);
+      setLeads(previousLeads);
+      alert("Could not update lead notes. Reverted.");
+    }
+  }
+
   function exportLeadsCsv() {
     if (!isOwner) {
       alert("Export is restricted to owner account.");
