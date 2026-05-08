@@ -61,6 +61,8 @@ const buyerTypes = [
 
 function AdminLeadsDashboard() {
   const { profile, profileLoading } = useProfile();
+  const isOwner = profile?.role === "owner";
+  const isStaff = profile?.role === "staff";
   const [leads, setLeads] = useState([]);
   const [loading, setLoading] = useState(true);
   const [errorText, setErrorText] = useState("");
@@ -100,6 +102,10 @@ function AdminLeadsDashboard() {
   }
 
   function exportLeadsCsv() {
+    if (!isOwner) {
+      alert("Export is restricted to owner account.");
+      return;
+    }
     const columns = [
       "created_at",
       "customer_name",
@@ -232,14 +238,20 @@ function AdminLeadsDashboard() {
           </div>
 
           <div className="flex gap-3">
-            <button
-              type="button"
-              onClick={exportLeadsCsv}
-              disabled={!leads.length}
-              className="rounded-full bg-sky-600 px-5 py-2 text-sm font-semibold text-white shadow-sm disabled:cursor-not-allowed disabled:opacity-50"
-            >
-              Export CSV
-            </button>
+            {isOwner ? (
+              <button
+                type="button"
+                onClick={exportLeadsCsv}
+                disabled={!leads.length}
+                className="rounded-full bg-sky-600 px-5 py-2 text-sm font-semibold text-white shadow-sm disabled:cursor-not-allowed disabled:opacity-50"
+              >
+                Export CSV
+              </button>
+            ) : (
+              <span className="rounded-full bg-slate-100 px-5 py-2 text-sm font-medium text-slate-500">
+                Export restricted
+              </span>
+            )}
 
             <a
               href="/"
