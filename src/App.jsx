@@ -80,6 +80,20 @@ function AdminLeadsDashboard() {
     "dead",
   ];
 
+  const leadStatusStyles = {
+    new: "bg-sky-100 text-sky-700",
+    contacted: "bg-indigo-100 text-indigo-700",
+    quoted: "bg-amber-100 text-amber-700",
+    sampling: "bg-purple-100 text-purple-700",
+    negotiating: "bg-orange-100 text-orange-700",
+    confirmed: "bg-emerald-100 text-emerald-700",
+    dead: "bg-slate-200 text-slate-600",
+  };
+
+  function getLeadStatusStyle(status) {
+    return leadStatusStyles[status] || "bg-slate-100 text-slate-600";
+  }
+
   async function updateLeadStatus(leadId, nextStatus) {
     const previousLeads = leads;
 
@@ -372,7 +386,7 @@ function AdminLeadsDashboard() {
                       <td className="px-4 py-3">{lead.usage_type || "-"}</td>
                       <td className="px-4 py-3">
                         <select
-                          className="rounded-full bg-sky-100 px-3 py-1 text-xs font-bold text-sky-700 outline-none"
+                          className={`rounded-full px-3 py-1 text-xs font-bold outline-none ${getLeadStatusStyle(lead.lead_status || "new")}`}
                           value={lead.lead_status || "new"}
                           onChange={(e) => updateLeadStatus(lead.id, e.target.value)}
                           disabled={!lead.id}
