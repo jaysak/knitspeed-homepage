@@ -211,6 +211,21 @@ function AdminLeadsDashboard() {
     (lead) => lead.lead_status === "sampling"
   ).length;
 
+  const statusCounts = leadStatuses.reduce((acc, status) => {
+    acc[status] = leads.filter((lead) => (lead.lead_status || "new") === status).length;
+    return acc;
+  }, {});
+
+  const untouchedOver3Days = leads.filter((lead) => {
+    if (lead.last_contact_at) return false;
+    const createdAt = new Date(lead.created_at);
+    const ageDays = (Date.now() - createdAt.getTime()) / (1000 * 60 * 60 * 24);
+    return ageDays > 3;
+  }).length;
+
+  const conversionRate =
+    leads.length > 0 ? Math.round((confirmedCount / leads.length) * 100) : 0;
+
   const filteredLeads = leads.filter((lead) => {
     const search = searchText.toLowerCase();
 
@@ -303,27 +318,61 @@ function AdminLeadsDashboard() {
           </div>
         </div>
 
-        <div className="mb-5 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+        <div className="mb-6 grid gap-4 md:grid-cols-2 xl:grid-cols-5">
+
           <div className="rounded-3xl bg-white p-5 shadow-sm">
             <div className="text-sm text-slate-500">Total leads</div>
-            <div className="mt-2 text-3xl font-extrabold">{filteredLeads.length}</div>
+            <div className="mt-2 text-3xl font-extrabold">
+              {filteredLeads.length}
+            </div>
           </div>
-          <div className="rounded-3xl bg-white p-5 shadow-sm">
+
+          <div className="rounded-3xl bg-sky-50 p-5 shadow-sm">
             <div className="text-sm text-slate-500">New</div>
             <div className="mt-2 text-3xl font-extrabold">
-              {leads.filter((lead) => lead.lead_status === "new").length}
+              {statusCounts.new || 0}
             </div>
           </div>
-          <div className="rounded-3xl bg-white p-5 shadow-sm">
-            <div className="text-sm text-slate-500">With quantity</div>
+
+          <div className="rounded-3xl bg-amber-50 p-5 shadow-sm">
+            <div className="text-sm text-slate-500">Quoted</div>
             <div className="mt-2 text-3xl font-extrabold">
-              {leads.filter((lead) => lead.quantity_value).length}
+              {statusCounts.quoted || 0}
             </div>
           </div>
+
+          <div className="rounded-3xl bg-violet-50 p-5 shadow-sm">
+            <div className="text-sm text-slate-500">Negotiating</div>
+            <div className="mt-2 text-3xl font-extrabold">
+              {statusCounts.negotiating || 0}
+            </div>
+          </div>
+
+          <div className="rounded-3xl bg-emerald-50 p-5 shadow-sm">
+            <div className="text-sm text-slate-500">Confirmed</div>
+            <div className="mt-2 text-3xl font-extrabold">
+              {confirmedCount}
+            </div>
+          </div>
+
+          <div className="rounded-3xl bg-rose-50 p-5 shadow-sm">
+            <div className="text-sm text-slate-500">Dead leads</div>
+            <div className="mt-2 text-3xl font-extrabold">
+              {statusCounts.dead || 0}
+            </div>
+          </div>
+
+          <div className="rounded-3xl bg-orange-50 p-5 shadow-sm">
+            <div className="text-sm text-slate-500">Untouched &gt; 3 days</div>
+            <div className="mt-2 text-3xl font-extrabold">
+              {untouchedOver3Days}
+            </div>
+          </div>
+
           <div className="rounded-3xl bg-white p-5 shadow-sm">
-            <div className="text-sm text-slate-500">Hottest fabric</div>
-            <div className="mt-2 truncate text-lg font-bold">
-              {hottestFabric}
+            <div className="text-sm text-slate-500">Conversion rate</div>
+            <div className="mt-2 text-3xl font-extrabold">
+              {conversionRate}%
             </div>
           </div>
 
@@ -335,18 +384,12 @@ function AdminLeadsDashboard() {
           </div>
 
           <div className="rounded-3xl bg-white p-5 shadow-sm">
-            <div className="text-sm text-slate-500">Confirmed leads</div>
-            <div className="mt-2 text-3xl font-extrabold">
-              {confirmedCount}
+            <div className="text-sm text-slate-500">Hottest fabric</div>
+            <div className="mt-2 truncate text-lg font-bold">
+              {hottestFabric}
             </div>
           </div>
 
-          <div className="rounded-3xl bg-white p-5 shadow-sm">
-            <div className="text-sm text-slate-500">Sampling leads</div>
-            <div className="mt-2 text-3xl font-extrabold">
-              {samplingCount}
-            </div>
-          </div>
         </div>
 
         <div className="mb-5 flex flex-col gap-3 md:flex-row">
