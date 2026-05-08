@@ -5,6 +5,10 @@ import {
   YARN_COUNTS,
   WIDTH_INCHES,
 } from "./data/textileEnums";
+import { AuthProvider } from "./auth/AuthProvider";
+import ProtectedRoute from "./auth/ProtectedRoute";
+import Login from "./pages/Login";
+import { useProfile } from "./auth/useProfile";
 import { supabase } from "./lib/supabaseClient";
 import {
   ArrowRight,
@@ -56,6 +60,7 @@ const buyerTypes = [
 
 
 function AdminLeadsDashboard() {
+  const { profile, profileLoading } = useProfile();
   const [leads, setLeads] = useState([]);
   const [loading, setLoading] = useState(true);
   const [errorText, setErrorText] = useState("");
@@ -215,6 +220,12 @@ function AdminLeadsDashboard() {
             <h1 className="text-3xl font-extrabold" style={{ color: brand.navy }}>
               Knitspeed Lead Dashboard
             </h1>
+
+            <div className="text-sm text-slate-500 mt-1">
+              {profileLoading
+                ? "Loading profile..."
+                : `${profile?.full_name || "User"} (${profile?.role || "unknown"})`}
+            </div>
             <p className="mt-1 text-slate-500">
               Internal view of quote requests from the website.
             </p>
@@ -375,8 +386,22 @@ function AdminLeadsDashboard() {
 
 
 export default function App() {
+  if (window.location.pathname === "/login") {
+    return (
+      <AuthProvider>
+        <Login />
+      </AuthProvider>
+    );
+  }
+
   if (window.location.pathname === "/admin/leads") {
-    return <AdminLeadsDashboard />;
+    return (
+      <AuthProvider>
+        <ProtectedRoute>
+          <AdminLeadsDashboard />
+        </ProtectedRoute>
+      </AuthProvider>
+    );
   }
 
   const [submitStatus, setSubmitStatus] = useState("");
