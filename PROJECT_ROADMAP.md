@@ -180,6 +180,9 @@ Examples:
 Connect:
 "Quote this article"
 
+Status:
+- completed 2026-05-09
+
 Should:
 - auto-scroll to quote form
 - prefill quote fields
@@ -293,4 +296,3 @@ with:
 - reorder prediction
 - AI-assisted sourcing
 - agent-assisted procurement
-

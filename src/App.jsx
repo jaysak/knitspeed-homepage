@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   FABRIC_STRUCTURES,
   MATERIAL_FAMILIES,
   YARN_COUNTS,
   WIDTH_INCHES,
 } from "./data/textileEnums";
+import { FINISHED_ARTICLES } from "./data/finishedArticles";
 import { AuthProvider } from "./auth/AuthProvider";
 import ProtectedRoute from "./auth/ProtectedRoute";
 import Login from "./pages/Login";
@@ -32,24 +33,6 @@ const brand = {
   navy: "#123044",
 };
 
-const fabrics = [
-  {
-    title: "Cotton Combed #20",
-    desc: "Thicker, durable, ideal for oversize tees, uniforms and screen printing.",
-    gsm: "180–220 GSM",
-  },
-  {
-    title: "Cotton Combed #30",
-    desc: "Soft, breathable, versatile fabric for everyday T-shirts and fashion brands.",
-    gsm: "140–170 GSM",
-  },
-  {
-    title: "Cotton #40 Interlock",
-    desc: "Premium smooth surface, balanced weight, holds shape and feels refined.",
-    gsm: "160–180 GSM",
-  },
-];
-
 const buyerTypes = [
   "T-shirts",
   "Uniforms",
@@ -58,14 +41,35 @@ const buyerTypes = [
   "Sampling",
 ];
 
+const usageSegmentLabels = {
+  collar_cuff: "Collar / cuff",
+  general: "General fabric",
+  premium_fashion: "Premium fashion",
+  tshirt: "T-shirt fabric",
+};
+
+const featuredArticles = [...FINISHED_ARTICLES]
+  .sort((a, b) => b.linkedProducts - a.linkedProducts)
+  .slice(0, 12);
+
+function titleize(value) {
+  return String(value || "")
+    .replaceAll("_", " ")
+    .replace(/\b\w/g, (c) => c.toUpperCase());
+}
+
+function getPrimaryWidth(article) {
+  return article?.availableWidths?.[0] || "";
+}
+
 
 function AdminLeadsDashboard() {
   const { profile, profileLoading } = useProfile();
   const isOwner = profile?.role === "owner";
-  const isStaff = profile?.role === "staff";
   const [leads, setLeads] = useState([]);
   const [loading, setLoading] = useState(true);
   const [errorText, setErrorText] = useState("");
+  const [currentTimeMs] = useState(() => Date.now());
 
   const [searchText, setSearchText] = useState("");
   const [priorityFilter, setPriorityFilter] = useState("all");
@@ -113,33 +117,6 @@ function AdminLeadsDashboard() {
       console.error("Failed to update lead status:", error);
       setLeads(previousLeads);
       alert("Could not update lead status. Reverted.");
-    }
-  }
-
-  async function updateLeadNotes(leadId, salesNotes) {
-    const previousLeads = leads;
-    const lastContactAt = salesNotes.trim() ? new Date().toISOString() : null;
-
-    setLeads((current) =>
-      current.map((lead) =>
-        lead.id === leadId
-          ? { ...lead, sales_notes: salesNotes, last_contact_at: lastContactAt }
-          : lead
-      )
-    );
-
-    const { error } = await supabase
-      .from("quote_leads")
-      .update({
-        sales_notes: salesNotes,
-        last_contact_at: lastContactAt,
-      })
-      .eq("id", leadId);
-
-    if (error) {
-      console.error("Failed to update lead notes:", error);
-      setLeads(previousLeads);
-      alert("Could not update lead notes. Reverted.");
     }
   }
 
@@ -208,10 +185,6 @@ function AdminLeadsDashboard() {
     (lead) => lead.lead_status === "confirmed"
   ).length;
 
-  const samplingCount = leads.filter(
-    (lead) => lead.lead_status === "sampling"
-  ).length;
-
   const statusCounts = leadStatuses.reduce((acc, status) => {
     acc[status] = leads.filter((lead) => (lead.lead_status || "new") === status).length;
     return acc;
@@ -220,7 +193,7 @@ function AdminLeadsDashboard() {
   const untouchedOver3Days = leads.filter((lead) => {
     if (lead.last_contact_at) return false;
     const createdAt = new Date(lead.created_at);
-    const ageDays = (Date.now() - createdAt.getTime()) / (1000 * 60 * 60 * 24);
+    const ageDays = (currentTimeMs - createdAt.getTime()) / (1000 * 60 * 60 * 24);
     return ageDays > 3;
   }).length;
 
@@ -864,7 +837,43 @@ function AdminBuyersDashboard() {
 
 
 export default function App() {
-  if (window.location.pathname === "/login") {
+  const pathname = window.location.pathname;
+  const [submitStatus, setSubmitStatus] = useState("");
+  const [submitError, setSubmitError] = useState("");
+  const [selectedArticle, setSelectedArticle] = useState(null);
+  const [selectedFabricStructure, setSelectedFabricStructure] = useState("");
+  const [selectedMaterialFamily, setSelectedMaterialFamily] = useState("");
+  const [selectedYarnCount, setSelectedYarnCount] = useState("");
+  const [selectedWidthInches, setSelectedWidthInches] = useState("");
+
+  function handleArticleSelect(article) {
+    setSelectedArticle(article);
+    setSelectedFabricStructure(article.fabricStructure || "");
+    setSelectedMaterialFamily(article.materialFamily || "");
+    setSelectedYarnCount(article.yarnCount || "");
+    setSelectedWidthInches(getPrimaryWidth(article));
+
+    document.getElementById("quote")?.scrollIntoView({ behavior: "smooth" });
+  }
+
+  function clearSelectedArticle() {
+    setSelectedArticle(null);
+  }
+
+  const fabricStructureOptions = Array.from(
+    new Set([...FABRIC_STRUCTURES, selectedFabricStructure].filter(Boolean))
+  );
+  const materialFamilyOptions = Array.from(
+    new Set([...MATERIAL_FAMILIES, selectedMaterialFamily].filter(Boolean))
+  );
+  const yarnCountOptions = Array.from(
+    new Set([...YARN_COUNTS, selectedYarnCount].filter(Boolean))
+  );
+  const widthOptions = Array.from(
+    new Set([...WIDTH_INCHES.map(String), selectedWidthInches].filter(Boolean))
+  );
+
+  if (pathname === "/login") {
     return (
       <AuthProvider>
         <Login />
@@ -872,7 +881,7 @@ export default function App() {
     );
   }
 
-  if (window.location.pathname === "/admin/leads") {
+  if (pathname === "/admin/leads") {
     return (
       <AuthProvider>
         <ProtectedRoute>
@@ -882,7 +891,7 @@ export default function App() {
     );
   }
 
-  if (window.location.pathname === "/admin/buyers") {
+  if (pathname === "/admin/buyers") {
     return (
       <AuthProvider>
         <ProtectedRoute>
@@ -891,9 +900,6 @@ export default function App() {
       </AuthProvider>
     );
   }
-
-  const [submitStatus, setSubmitStatus] = useState("");
-  const [submitError, setSubmitError] = useState("");
 
   async function handleQuoteSubmit(e) {
     e.preventDefault();
@@ -946,6 +952,11 @@ export default function App() {
     localStorage.setItem("knitspeed_quote_leads", JSON.stringify(localLeads));
 
     formEl.reset();
+    setSelectedArticle(null);
+    setSelectedFabricStructure("");
+    setSelectedMaterialFamily("");
+    setSelectedYarnCount("");
+    setSelectedWidthInches("");
     setSubmitStatus("success");
 
     setTimeout(() => {
@@ -1107,22 +1118,55 @@ export default function App() {
       <section id="products" className="mx-auto max-w-7xl px-5 py-16">
         <div className="mb-10 flex flex-col justify-between gap-4 md:flex-row md:items-end">
           <div>
-            <h2 className="text-3xl font-extrabold md:text-4xl" style={{ color: brand.navy }}>Featured Fabrics</h2>
-            <p className="mt-3 text-slate-600">Start with the core products buyers understand quickly.</p>
+            <h2 className="text-3xl font-extrabold md:text-4xl" style={{ color: brand.navy }}>Finished Articles</h2>
+            <p className="mt-3 text-slate-600">Buyer-facing fabric articles mapped from current production data.</p>
           </div>
           <a href="#quote" className="font-bold text-sky-600">Request custom GSM / color →</a>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-3">
-          {fabrics.map((f) => (
-            <div key={f.title} className="overflow-hidden rounded-[2rem] border border-sky-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-sky-100">
-              <div className="h-36" style={{ background: `linear-gradient(135deg, ${brand.paleBlue}, #fff)` }} />
-              <div className="p-6">
-                <div className="mb-3 inline-flex rounded-full bg-sky-50 px-3 py-1 text-sm font-bold text-sky-700">{f.gsm}</div>
-                <h3 className="text-xl font-extrabold" style={{ color: brand.navy }}>{f.title}</h3>
-                <p className="mt-3 text-sm leading-6 text-slate-600">{f.desc}</p>
+        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          {featuredArticles.map((article) => (
+            <article
+              key={article.articleId}
+              data-article-slug={article.seoSlug}
+              className="overflow-hidden rounded-2xl border border-sky-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-sky-100"
+            >
+              <div className="flex min-h-32 flex-col justify-between p-6" style={{ background: `linear-gradient(135deg, ${brand.paleBlue}, #fff)` }}>
+                <div className="flex items-center justify-between gap-3">
+                  <span className="rounded-full bg-white px-3 py-1 text-xs font-bold text-sky-700 shadow-sm">
+                    {usageSegmentLabels[article.usageSegment] || titleize(article.usageSegment)}
+                  </span>
+                  <span className="text-xs font-semibold text-slate-500">
+                    {article.linkedProducts} SKU{article.linkedProducts === 1 ? "" : "s"}
+                  </span>
+                </div>
+                <h3 className="mt-5 text-xl font-extrabold leading-snug" style={{ color: brand.navy }}>
+                  {article.articleName}
+                </h3>
               </div>
-            </div>
+              <div className="p-6">
+                <div className="flex flex-wrap gap-2 text-xs font-semibold text-slate-600">
+                  <span className="rounded-full bg-slate-100 px-3 py-1">{titleize(article.materialFamily)}</span>
+                  <span className="rounded-full bg-slate-100 px-3 py-1">{titleize(article.fabricStructure)}</span>
+                  {article.yarnCount ? (
+                    <span className="rounded-full bg-slate-100 px-3 py-1">{article.yarnCount}s</span>
+                  ) : null}
+                </div>
+                <p className="mt-4 text-sm leading-6 text-slate-600">
+                  {article.availableWidths.length
+                    ? `Available widths: ${article.availableWidths.slice(0, 4).join('", ')}"`
+                    : "Width options confirmed after inquiry."}
+                </p>
+                <button
+                  type="button"
+                  onClick={() => handleArticleSelect(article)}
+                  className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-bold text-white shadow-sm transition hover:opacity-90"
+                  style={{ backgroundColor: brand.blue }}
+                >
+                  Quote this article <ArrowRight size={16} />
+                </button>
+              </div>
+            </article>
           ))}
         </div>
       </section>
@@ -1185,10 +1229,30 @@ export default function App() {
       onSubmit={handleQuoteSubmit}
       className="rounded-[2rem] bg-white p-6 shadow-xl shadow-sky-100 md:p-8"
     >
-      <input type="hidden" name="inquiry_source" value="homepage_quote_form" />
-      <input type="hidden" name="lead_priority" value="prime" />
-      <input type="hidden" name="article_slug" value="homepage-quote" />
-      <input type="hidden" name="article_name" value="Homepage Quote Inquiry" />
+      <input
+        type="hidden"
+        name="inquiry_source"
+        value={selectedArticle ? "finished_article_card" : "homepage_quote_form"}
+      />
+      <input type="hidden" name="lead_priority" value={selectedArticle?.leadPriority || "prime"} />
+      <input type="hidden" name="article_slug" value={selectedArticle?.seoSlug || "homepage-quote"} />
+      <input type="hidden" name="article_name" value={selectedArticle?.articleName || "Homepage Quote Inquiry"} />
+      <input type="hidden" name="usage_segment" value={selectedArticle?.usageSegment || ""} />
+
+      {selectedArticle ? (
+        <div className="mb-5 rounded-2xl border border-sky-100 bg-sky-50 px-4 py-3">
+          <div className="text-xs font-bold uppercase tracking-wide text-sky-700">
+            Selected article
+          </div>
+          <div className="mt-1 font-extrabold" style={{ color: brand.navy }}>
+            {selectedArticle.articleName}
+          </div>
+          <div className="mt-1 text-sm text-slate-600">
+            {usageSegmentLabels[selectedArticle.usageSegment] || titleize(selectedArticle.usageSegment)}
+          </div>
+        </div>
+      ) : null}
+
       <div className="grid gap-4 sm:grid-cols-2">
         <input
           required
@@ -1214,11 +1278,15 @@ export default function App() {
   className="rounded-2xl border border-slate-200 px-4 py-3 outline-none focus:border-sky-400"
   required
   name="product_raw_name"
-  defaultValue=""
+  value={selectedFabricStructure}
+  onChange={(e) => {
+    setSelectedFabricStructure(e.target.value);
+    clearSelectedArticle();
+  }}
 >
   <option value="" disabled>Select knitted fabric type *</option>
 
-  {FABRIC_STRUCTURES.map((item) => (
+  {fabricStructureOptions.map((item) => (
     <option key={item} value={item}>
       {item
   .replaceAll("_", " ")
@@ -1232,10 +1300,14 @@ export default function App() {
 <select
   className="rounded-2xl border border-slate-200 px-4 py-3 outline-none focus:border-sky-400"
   name="material_family"
-  defaultValue=""
+  value={selectedMaterialFamily}
+  onChange={(e) => {
+    setSelectedMaterialFamily(e.target.value);
+    clearSelectedArticle();
+  }}
 >
   <option value="">Material / blend</option>
-  {MATERIAL_FAMILIES.map((item) => (
+  {materialFamilyOptions.map((item) => (
     <option key={item} value={item}>
       {item.replaceAll("_", " ").replace(/\b\w/g, (c) => c.toUpperCase())}
     </option>
@@ -1245,10 +1317,14 @@ export default function App() {
 <select
   className="rounded-2xl border border-slate-200 px-4 py-3 outline-none focus:border-sky-400"
   name="yarn_count"
-  defaultValue=""
+  value={selectedYarnCount}
+  onChange={(e) => {
+    setSelectedYarnCount(e.target.value);
+    clearSelectedArticle();
+  }}
 >
   <option value="">Yarn count</option>
-  {YARN_COUNTS.map((item) => (
+  {yarnCountOptions.map((item) => (
     <option key={item} value={item}>
       {item}
     </option>
@@ -1258,10 +1334,14 @@ export default function App() {
 <select
   className="rounded-2xl border border-slate-200 px-4 py-3 outline-none focus:border-sky-400"
   name="width_inches"
-  defaultValue=""
+  value={selectedWidthInches}
+  onChange={(e) => {
+    setSelectedWidthInches(e.target.value);
+    clearSelectedArticle();
+  }}
 >
   <option value="">Width</option>
-  {WIDTH_INCHES.map((item) => (
+  {widthOptions.map((item) => (
     <option key={item} value={item}>
       {item}"
     </option>

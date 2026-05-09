@@ -1,4 +1,4 @@
-import { useAuth } from "./AuthProvider";
+import { useAuth } from "./useAuth";
 
 export default function ProtectedRoute({ children }) {
   const { session, loading } = useAuth();

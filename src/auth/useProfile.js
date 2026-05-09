@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { supabase } from "../lib/supabaseClient";
-import { useAuth } from "./AuthProvider";
+import { useAuth } from "./useAuth";
 
 export function useProfile() {
   const { session } = useAuth();
