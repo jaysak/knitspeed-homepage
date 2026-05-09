@@ -23,7 +23,7 @@ export default function Login() {
     }
 
     setStatus("Login successful.");
-    window.location.href = "/";
+    window.location.href = "/admin/buyers";
   }
 
   async function handleLogout() {

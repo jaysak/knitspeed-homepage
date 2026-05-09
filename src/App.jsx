@@ -656,10 +656,17 @@ function AdminBuyersDashboard() {
 
           <div className="flex gap-3">
             <a
-              href="/admin/leads"
-              className="rounded-full bg-white px-5 py-2 text-sm font-semibold text-sky-700 shadow-sm ring-1 ring-sky-100"
+              href="/admin/buyers"
+              className="rounded-full bg-sky-600 px-5 py-2 text-sm font-semibold text-white shadow-sm"
             >
-              Inbound leads
+              Buyers Console
+            </a>
+            <a
+              href="/admin/leads"
+              className="rounded-full bg-white px-5 py-2 text-sm font-semibold text-slate-400 shadow-sm ring-1 ring-slate-100"
+              title="Inbound leads are kept secondary for now"
+            >
+              Inbound Leads
             </a>
             <a
               href="/"
