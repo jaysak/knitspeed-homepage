@@ -68,6 +68,7 @@ function AdminLeadsDashboard() {
   const [errorText, setErrorText] = useState("");
 
   const [searchText, setSearchText] = useState("");
+  const [priorityFilter, setPriorityFilter] = useState("all");
   const [statusFilter, setStatusFilter] = useState("all");
 
   const leadStatuses = [
@@ -239,7 +240,11 @@ function AdminLeadsDashboard() {
       statusFilter === "all" ||
       (lead.lead_status || "new") === statusFilter;
 
-    return matchesSearch && matchesStatus;
+    const matchesPriority =
+      priorityFilter === "all" ||
+      (lead.lead_priority || "random") === priorityFilter;
+
+    return matchesSearch && matchesStatus && matchesPriority;
   });
 
   useEffect(() => {
@@ -291,6 +296,19 @@ function AdminLeadsDashboard() {
             <p className="mt-1 text-slate-500">
               Internal view of quote requests from the website.
             </p>
+
+
+            <div className="mt-4 flex gap-3">
+              <select
+                value={priorityFilter}
+                onChange={(e) => setPriorityFilter(e.target.value)}
+                className="rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm"
+              >
+                <option value="all">All Leads</option>
+                <option value="prime">Prime Leads</option>
+                <option value="random">Random Leads</option>
+              </select>
+            </div>
           </div>
 
           <div className="flex gap-3">
