@@ -70,6 +70,81 @@ def detect_category(structure):
 
     return "traded_textile"
 
+
+def build_display_name(row):
+    yarn = row.get("yarn_count")
+    width = row.get("width_inches")
+
+    material_map = {
+        "cotton": "Combed Cotton",
+        "cvc": "CVC",
+        "tc": "TC Blend",
+        "polyester": "Polyester",
+        "mixed_blend": "Mixed Blend"
+    }
+
+    structure_map = {
+        "single_jersey": "Single Jersey",
+        "rib": "Rib",
+        "interlock": "Interlock"
+    }
+
+    material = material_map.get(
+        row.get("material_family"),
+        "Fabric"
+    )
+
+    structure = structure_map.get(
+        row.get("fabric_structure"),
+        "Fabric"
+    )
+
+    parts = []
+
+    if pd.notna(yarn):
+        parts.append(f"{int(float(yarn))}s")
+
+    if material != "Fabric":
+        parts.append(material)
+
+    if structure != "Fabric":
+        parts.append(structure)
+
+    if pd.notna(width):
+        parts.append(f'{float(width):g}"')
+
+    if parts:
+        return " ".join(parts)
+
+    fallback = row.get("commercial_name") or row.get("raw_product_name") or "Knitspeed Fabric"
+    return str(fallback)
+
+def build_seo_slug(display_name):
+    slug = display_name.lower()
+
+    slug = slug.replace('"', "")
+    slug = slug.replace(".", "-")
+    slug = slug.replace(" ", "-")
+
+    while "--" in slug:
+        slug = slug.replace("--", "-")
+
+    return slug.strip("-")
+
+
+def detect_usage_segment(structure):
+    if structure == "single_jersey":
+        return "tshirt"
+
+    if structure == "rib":
+        return "collar_cuff"
+
+    if structure == "interlock":
+        return "premium_fashion"
+
+    return "general"
+
+
 def extract_width(name):
     match = re.search(r"/(\d+)", str(name))
 
@@ -147,6 +222,12 @@ for idx, row in df.iterrows():
         "product_id": f"P{idx+1:05}",
         "commercial_name": raw_name,
         "raw_product_name": str(row.get("normalized_code", "")),
+
+        "display_name": "",
+        "seo_slug": "",
+        "article_title": "",
+        "usage_segment": "",
+        "lead_priority": "prime",
         "product_category": category,
         "fabric_structure": structure,
         "material_family": material,
@@ -163,6 +244,20 @@ for idx, row in df.iterrows():
     }
 
     record = build_review_flags(record, combined_name)
+
+    record["display_name"] = build_display_name(record)
+
+    record["seo_slug"] = build_seo_slug(
+        record["display_name"]
+    )
+
+    record["article_title"] = (
+        f'{record["display_name"]} Fabric'
+    )
+
+    record["usage_segment"] = detect_usage_segment(
+        record["fabric_structure"]
+    )
 
     records.append(record)
 

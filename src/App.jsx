@@ -894,6 +894,14 @@ export default function App() {
       phone_line: form.get("phone_line") || "",
       product_raw_name: form.get("product_raw_name") || "",
       fabric_type: form.get("product_raw_name") || "knitted",
+
+      // Prime Engine metadata
+      inquiry_source: form.get("inquiry_source") || "homepage_quote_form",
+      lead_priority: form.get("lead_priority") || "prime",
+      article_name: form.get("article_name") || form.get("product_raw_name") || "",
+      article_slug: form.get("article_slug") || "",
+      usage_segment: form.get("usage_segment") || "",
+
       material_family: form.get("material_family") || "",
       yarn_count: form.get("yarn_count") || "",
       width_inches: form.get("width_inches") || "",
@@ -1159,6 +1167,10 @@ export default function App() {
       onSubmit={handleQuoteSubmit}
       className="rounded-[2rem] bg-white p-6 shadow-xl shadow-sky-100 md:p-8"
     >
+      <input type="hidden" name="inquiry_source" value="homepage_quote_form" />
+      <input type="hidden" name="lead_priority" value="prime" />
+      <input type="hidden" name="article_slug" value="homepage-quote" />
+      <input type="hidden" name="article_name" value="Homepage Quote Inquiry" />
       <div className="grid gap-4 sm:grid-cols-2">
         <input
           required
