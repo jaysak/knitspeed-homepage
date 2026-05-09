@@ -29,17 +29,23 @@ create table if not exists buyer_targets (
 
 alter table buyer_targets enable row level security;
 
+drop policy if exists "Authenticated users can read buyer targets" on buyer_targets;
+
 create policy "Authenticated users can read buyer targets"
 on buyer_targets
 for select
 to authenticated
 using (true);
 
+drop policy if exists "Authenticated users can insert buyer targets" on buyer_targets;
+
 create policy "Authenticated users can insert buyer targets"
 on buyer_targets
 for insert
 to authenticated
 with check (true);
+
+drop policy if exists "Authenticated users can update buyer targets" on buyer_targets;
 
 create policy "Authenticated users can update buyer targets"
 on buyer_targets
