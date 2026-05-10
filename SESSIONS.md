@@ -153,3 +153,25 @@ Verification:
 Notes:
 - no Supabase tables or migrations added
 - insights currently use the loaded dashboard lead window
+
+---
+
+## Quote Insert RLS Fix
+
+Status:
+- complete
+
+Summary:
+- Diagnosed `403 Forbidden` on quote insert while logged in as owner
+- Root cause: browser session used Supabase role `authenticated`, but `quote_leads` insert policy only covered `anon`
+- Added authenticated insert policy for `quote_leads`
+- Applied policy directly to linked Supabase using `supabase db query --linked`
+
+Verification:
+- `npm run build`
+- `npm run lint`
+- remote policy check confirmed `Allow authenticated quote lead inserts`
+
+Notes:
+- `supabase db push` is currently blocked by a remote migration-history mismatch around old version `20260508`
+- migration file is kept locally for repo history and future migration repair

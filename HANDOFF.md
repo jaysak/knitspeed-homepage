@@ -33,6 +33,10 @@ Known local untracked backup files:
 
 Do not commit those backup files unless Jay explicitly asks.
 
+Supabase migration note:
+- `supabase db push` is currently blocked by a migration-history mismatch around remote version `20260508`
+- direct linked SQL query was used for the authenticated quote insert RLS fix
+
 ---
 
 # COMPLETED CHECKPOINT
@@ -88,6 +92,11 @@ Implemented in slice 2:
 - top usage segments card
 - recent Prime article inquiries card
 - all insights use existing `quote_leads` data
+
+RLS fix after slice 2:
+- logged-in owner/admin quote submissions were failing with `403 Forbidden`
+- added `Allow authenticated quote lead inserts` policy on `quote_leads`
+- remote Supabase policy has been applied and verified
 
 Estimated time:
 - 1-2 hours remaining for next useful slice
