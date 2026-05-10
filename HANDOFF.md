@@ -800,3 +800,40 @@ Next likely safe slice:
 - Phase 3.5P — Lightweight knowledge search/filtering on `/knowledge`
 - keep registry-driven and client-side only
 
+
+---
+
+## Phase 3.5P — Lightweight Knowledge Search and Filtering
+
+Status:
+- complete
+- verified locally
+
+Goal:
+- make the knowledge index easier for buyers to browse as article count grows
+
+Implemented:
+- client-side search input on `/knowledge`
+- interactive topic filters
+- result count
+- clear filters action
+- empty-state recovery
+
+Verified:
+- `npm run build` passes
+- `npm run lint` passes
+- browser smoke confirmed search/filter behavior on `/knowledge`
+
+Rules preserved:
+- no React Router
+- no CMS
+- no sitemap
+- no Supabase changes
+- no quote flow changes
+- no admin dashboard changes
+
+Next likely safe slice:
+- Phase 3.5Q — Add fourth hand-authored buyer guide
+- candidate: Combed Cotton vs Carded Cotton
+- keep textile claims conservative and production-dependent
+

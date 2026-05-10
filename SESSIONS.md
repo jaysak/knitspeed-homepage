@@ -938,3 +938,37 @@ Notes:
 - no quote flow changes
 - no Prime scoring changes
 
+
+---
+
+## Phase 3.5P — Lightweight Knowledge Search and Filtering
+
+Status:
+- implemented and verified
+
+Summary:
+- added client-side knowledge search on `/knowledge`
+- converted topic chips into interactive filters
+- added visible result count and clear filters control
+- added empty-state recovery when no guide matches
+- preserved registry-driven knowledge page data
+
+Implemented files:
+- `src/pages/KnowledgeIndexPage.jsx`
+
+Verification:
+- `npm run build`
+- `npm run lint`
+- browser smoke confirmed `/knowledge` renders search and topic filters
+- browser smoke confirmed article cards filter by search term and topic cluster
+- browser smoke confirmed existing article routes remain unchanged
+
+Notes:
+- no CMS
+- no sitemap
+- no routing changes
+- no Supabase changes
+- no admin dashboard changes
+- no quote flow changes
+- no Prime scoring changes
+
