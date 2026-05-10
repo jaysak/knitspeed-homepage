@@ -972,3 +972,33 @@ Notes:
 - no quote flow changes
 - no Prime scoring changes
 
+
+---
+
+## Phase 3.5R — Lightweight Reading Progress Polish
+
+Status:
+- implemented and verified
+
+Summary:
+- added lightweight reading progress bar for knowledge article pages
+- improved long-form article reading feedback
+- preserved lightweight non-CMS architecture
+
+Implemented files:
+- `src/components/knowledge/ReadingProgressBar.jsx`
+- `src/pages/KnowledgeArticlePage.jsx`
+
+Verification:
+- `npm run build`
+- `npm run lint`
+- browser smoke confirmed reading progress updates during article scroll
+
+Notes:
+- no routing changes
+- no CMS
+- no sitemap
+- no Supabase changes
+- no admin dashboard changes
+- no quote flow changes
+

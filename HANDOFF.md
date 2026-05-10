@@ -871,3 +871,36 @@ Next likely safe slice:
 - Phase 3.5R — Lightweight article reading progress polish
 - keep UI-only and lightweight
 
+
+---
+
+## Phase 3.5R — Lightweight Reading Progress Polish
+
+Status:
+- complete
+- verified locally
+
+Goal:
+- improve article reading experience with lightweight UI feedback
+
+Implemented:
+- sticky reading progress bar
+- scroll-based progress tracking
+
+Verified:
+- `npm run build` passes
+- `npm run lint` passes
+- browser smoke confirmed progress behavior on article pages
+
+Rules preserved:
+- no React Router
+- no CMS
+- no sitemap
+- no Supabase changes
+- no quote flow changes
+- no admin dashboard changes
+
+Next likely safe slice:
+- Phase 3.5S — Add fifth hand-authored buyer guide
+- candidate: What Causes Spirality in Knitted Fabric?
+

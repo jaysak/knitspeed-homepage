@@ -4,6 +4,7 @@ import SEOJsonLd from "../components/SEOJsonLd";
 import FAQBlock from "../components/knowledge/FAQBlock";
 import KnowledgePageLayout from "../components/knowledge/KnowledgePageLayout";
 import QuoteCTA from "../components/knowledge/QuoteCTA";
+import ReadingProgressBar from "../components/knowledge/ReadingProgressBar";
 import SpecSummaryGrid from "../components/knowledge/SpecSummaryGrid";
 import { writeBuyerIntentEvent } from "../lib/buyerIntent";
 import { getRelatedKnowledgePages } from "../lib/knowledgeRegistry";
@@ -103,6 +104,7 @@ export default function KnowledgeArticlePage({ page }) {
 
   return (
     <>
+      <ReadingProgressBar />
       <SEOJsonLd schema={schema} />
       <KnowledgePageLayout
         eyebrow={page.eyebrow}
