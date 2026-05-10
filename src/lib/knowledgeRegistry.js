@@ -57,3 +57,13 @@ function formatClusterLabel(clusterKey) {
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(" ");
 }
+
+export function getKnowledgePageFromPathname(pathname) {
+  if (!pathname?.startsWith("/knowledge/")) {
+    return null;
+  }
+
+  const slug = pathname.replace("/knowledge/", "").replace(/\/$/, "");
+
+  return getKnowledgePageBySlug(slug);
+}

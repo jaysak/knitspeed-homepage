@@ -16,7 +16,7 @@ import KnowledgeArticlePage from "./pages/KnowledgeArticlePage";
 import KnowledgeIndexPage from "./pages/KnowledgeIndexPage";
 import QuoteForm from "./components/QuoteForm";
 import FinishedArticleGrid from "./components/articles/FinishedArticleGrid";
-import { getKnowledgePageBySlug } from "./lib/knowledgeRegistry";
+import { getKnowledgePageFromPathname } from "./lib/knowledgeRegistry";
 import { supabase } from "./lib/supabaseClient";
 import { buildBuyerIntentNote, writeBuyerIntentEvent } from "./lib/buyerIntent";
 import {
@@ -179,36 +179,10 @@ export default function App() {
     return <KnowledgeIndexPage />;
   }
 
-  if (pathname === "/knowledge/what-gsm-should-t-shirts-use") {
-    return (
-      <KnowledgeArticlePage
-        page={getKnowledgePageBySlug("what-gsm-should-t-shirts-use")}
-      />
-    );
-  }
+  const knowledgePage = getKnowledgePageFromPathname(pathname);
 
-  if (pathname === "/knowledge/what-is-compact-cotton") {
-    return (
-      <KnowledgeArticlePage
-        page={getKnowledgePageBySlug("what-is-compact-cotton")}
-      />
-    );
-  }
-
-  if (pathname === "/knowledge/what-is-compact-cotton") {
-    return (
-      <KnowledgeArticlePage
-        page={getKnowledgePageBySlug("what-is-compact-cotton")}
-      />
-    );
-  }
-
-  if (pathname === "/knowledge/single-jersey-vs-interlock") {
-    return (
-      <KnowledgeArticlePage
-        page={getKnowledgePageBySlug("single-jersey-vs-interlock")}
-      />
-    );
+  if (knowledgePage) {
+    return <KnowledgeArticlePage page={knowledgePage} />;
   }
 
   async function handleQuoteSubmit(e) {

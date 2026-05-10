@@ -849,3 +849,28 @@ Notes:
 - no fake GSM recommendation, MOQ, inventory, or product availability claims added
 - no CMS, sitemap, Supabase, quote flow, admin, or scoring changes made
 
+
+---
+
+## Phase 3.5M — Knowledge Route Resolver Cleanup
+
+Status:
+- implemented and verified
+
+Summary:
+- replaced manual per-article knowledge route branches with a registry-driven pathname resolver
+- removed duplicate Compact Cotton route branch
+- preserved `/knowledge` index route
+- preserved all implemented knowledge article routes
+- kept routing lightweight without adding React Router
+
+Verification:
+- npm run build
+- npm run lint
+- browser smoke confirmed `/knowledge` renders
+- browser smoke confirmed all implemented knowledge article routes render
+- browser smoke confirmed article JSON-LD remains stable
+
+Notes:
+- no CMS, sitemap, Supabase, quote flow, admin, or scoring changes made
+

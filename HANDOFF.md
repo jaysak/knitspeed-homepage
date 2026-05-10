@@ -695,3 +695,37 @@ Next likely safe slice:
 - Phase 3.5M — Knowledge Route Resolver Cleanup
 - reduce manual route branching while avoiding React Router
 
+
+---
+
+## Phase 3.5M — Knowledge Route Resolver Cleanup
+
+Status:
+- complete
+- verified locally
+
+Goal:
+- reduce route branching as knowledge article count grows
+
+Implemented:
+- registry-driven pathname resolver
+- generic knowledge article rendering branch
+- duplicate manual Compact Cotton route removed
+
+Verified:
+- npm run build passes
+- npm run lint passes
+- browser smoke confirmed knowledge index and article routes remain stable
+
+Rules preserved:
+- no React Router
+- no CMS
+- no sitemap
+- no Supabase changes
+- no quote flow changes
+- no admin dashboard changes
+
+Next likely safe slice:
+- Phase 3.5N — Add lightweight knowledge 404 state
+- keep it local and simple
+
