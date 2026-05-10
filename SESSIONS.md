@@ -799,3 +799,27 @@ Verification:
 Notes:
 - no CMS, sitemap, Supabase, quote flow, admin, or scoring changes made
 
+
+---
+
+## Phase 3.5K — Knowledge Index Metadata
+
+Status:
+- implemented and verified
+
+Summary:
+- added page title and meta description handling for `/knowledge`
+- added lightweight CollectionPage schema for the knowledge index
+- preserved registry-driven knowledge listing and topic clusters
+- kept article schema behavior unchanged
+
+Verification:
+- npm run build
+- npm run lint
+- browser smoke confirmed `/knowledge` title and meta description
+- browser smoke confirmed `/knowledge` JSON-LD types: Organization, CollectionPage, BreadcrumbList
+- browser smoke confirmed article pages still render normally
+
+Notes:
+- no CMS, sitemap, Supabase, quote flow, admin, or scoring changes made
+

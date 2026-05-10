@@ -76,6 +76,28 @@ export function buildFAQPageSchema(page) {
   };
 }
 
+export function buildKnowledgeCollectionSchema(pages) {
+  const url = `${KNITSPEED_SITE_URL}/knowledge`;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": `${url}#collection`,
+    name: "Knitspeed Textile Knowledge",
+    description:
+      "Practical knitted fabric sourcing guidance from Knitspeed and GSC Import Export Co., Ltd.",
+    url,
+    publisher: {
+      "@id": ORGANIZATION_ID,
+    },
+    hasPart: pages.map((page) => ({
+      "@type": "Article",
+      name: page.title,
+      url: getCanonicalKnowledgeUrl(page),
+    })),
+  };
+}
+
 export function buildBreadcrumbSchema(items) {
   return {
     "@context": "https://schema.org",

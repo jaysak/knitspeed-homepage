@@ -1,14 +1,69 @@
+import { useEffect } from "react";
+
+import SEOJsonLd from "../components/SEOJsonLd";
+import {
+  buildBreadcrumbSchema,
+  buildKnowledgeCollectionSchema,
+  buildOrganizationSchema,
+  KNITSPEED_SITE_URL,
+} from "../lib/seoSchema";
 import {
   getAllKnowledgePages,
   getKnowledgeTopicClusters,
 } from "../lib/knowledgeRegistry";
 
+function useKnowledgeIndexMeta() {
+  useEffect(() => {
+    const previousTitle = document.title;
+    let metaDescription = document.querySelector('meta[name="description"]');
+    const createdMetaDescription = !metaDescription;
+    const previousDescription = metaDescription?.getAttribute("content");
+
+    if (!metaDescription) {
+      metaDescription = document.createElement("meta");
+      metaDescription.setAttribute("name", "description");
+      document.head.appendChild(metaDescription);
+    }
+
+    document.title = "Textile Knowledge | Knitspeed";
+    metaDescription.setAttribute(
+      "content",
+      "Practical knitted fabric sourcing guidance from Knitspeed and GSC Import Export Co., Ltd."
+    );
+
+    return () => {
+      document.title = previousTitle;
+
+      if (createdMetaDescription) {
+        metaDescription.remove();
+      } else if (previousDescription === null) {
+        metaDescription.removeAttribute("content");
+      } else {
+        metaDescription.setAttribute("content", previousDescription);
+      }
+    };
+  }, []);
+}
+
 export default function KnowledgeIndexPage() {
+  useKnowledgeIndexMeta();
+
   const pages = getAllKnowledgePages();
   const clusters = getKnowledgeTopicClusters();
 
+  const schema = [
+    buildOrganizationSchema(),
+    buildKnowledgeCollectionSchema(pages),
+    buildBreadcrumbSchema([
+      { name: "Home", url: KNITSPEED_SITE_URL },
+      { name: "Textile Knowledge", url: `${KNITSPEED_SITE_URL}/knowledge` },
+    ]),
+  ];
+
   return (
     <div className="bg-slate-50">
+      <SEOJsonLd schema={schema} />
+
       <section className="border-b border-slate-200 bg-sky-50">
         <div className="mx-auto max-w-5xl px-5 py-16">
           <p className="text-sm font-semibold uppercase tracking-wide text-sky-700">

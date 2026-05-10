@@ -621,3 +621,39 @@ Next likely safe slice:
 - add document title/meta description for `/knowledge`
 - optionally add lightweight CollectionPage schema only if kept simple
 
+
+---
+
+## Phase 3.5K — Knowledge Index Metadata
+
+Status:
+- complete
+- verified locally
+
+Goal:
+- make the `/knowledge` index page machine-readable and metadata-complete
+
+Implemented:
+- document title for `/knowledge`
+- meta description for `/knowledge`
+- lightweight CollectionPage JSON-LD schema
+- breadcrumb schema for knowledge index
+
+Verified:
+- npm run build passes
+- npm run lint passes
+- browser smoke confirmed index JSON-LD schema types
+- browser smoke confirmed article pages remain stable
+
+Rules preserved:
+- no CMS
+- no sitemap
+- no Supabase changes
+- no quote flow changes
+- no admin dashboard changes
+
+Next likely safe slice:
+- Phase 3.5L — Add third hand-authored buyer guide
+- candidate: What GSM Should T-Shirts Use?
+- keep specs production-dependent and avoid fake numbers
+
