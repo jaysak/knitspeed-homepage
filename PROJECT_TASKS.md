@@ -1,6 +1,6 @@
 # KNITSPEED HOMEPAGE — TASK ROADMAP
 
-Last Updated: 2026-05-06
+Last Updated: 2026-05-10
 
 ---
 
@@ -21,6 +21,13 @@ Last Updated: 2026-05-06
 - consultation-style helper text
 - small quantity messaging
 - response expectation trust signal
+
+## Prime Lead Workflow
+- Phase 3.4E lead action workflow implemented
+- canonical workflow fields locked: `lead_status`, `lead_owner`, `sales_notes`, `follow_up_at`, `last_contact_at`
+- workflow statuses locked: `new`, `contacted`, `quoted`, `negotiating`, `won`, `lost`
+- dashboard metrics, workflow filters, and CSV export aligned with canonical workflow fields
+- Prime scoring and homepage remain unchanged
 
 ---
 
@@ -89,10 +96,10 @@ Goal:
 Internal staff dashboard for quote leads.
 
 Features:
-- recent inquiries
-- lead status
-- callback tracking
-- filtering
+- recent inquiries ✅
+- lead status ✅
+- callback tracking ✅
+- filtering ✅
 - future LINE integration
 
 ---
@@ -298,4 +305,3 @@ Create a private textile intelligence and operational coordination system for GS
 NOT a public mass-registration marketplace.
 
 Relationship quality and operational intelligence are more important than platform scale.
-

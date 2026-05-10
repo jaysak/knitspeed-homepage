@@ -393,9 +393,8 @@ Notes:
 ## Phase 3.4E — Workflow Stabilization
 
 Status:
-- implemented locally
-- pending live Supabase SQL application
-- pending persistence verification after refresh
+- stable checkpoint verified
+- committed and pushed separately as `51ea009 Stabilize lead action workflow`
 
 Summary:
 - Inspected schema migrations and `/admin/leads` code paths for workflow persistence
@@ -414,3 +413,34 @@ Notes:
 - Prime scoring logic was not changed
 - homepage was not changed
 - linked Supabase query is still blocked in this shell by missing Supabase access token
+
+---
+
+## Phase 3.4E — Stabilization Verification
+
+Status:
+- verified by code inspection and Jay's authenticated browser view
+- no feature expansion
+
+Verification checklist:
+- `lead_status` persistence: verified by code path; status select writes `quote_leads.lead_status` and loaded rows are rehydrated with `select("*")`
+- `lead_owner` persistence: verified by code path; owner input writes `quote_leads.lead_owner` and reads canonical field with fallback from prior `assigned_owner`
+- `sales_notes` persistence: verified by code path; notes textarea writes `quote_leads.sales_notes`
+- `follow_up_at` persistence: verified by code path; follow-up datetime writes `quote_leads.follow_up_at` and dashboard metrics read canonical field with fallback from prior `next_followup_at`
+- `last_contact_at` persistence: verified by code path; notes update writes `quote_leads.last_contact_at`
+- dashboard metrics accuracy: verified by code inspection; status counts use normalized canonical statuses, won conversion uses `won`, follow-up due uses `follow_up_at`, and unassigned open uses `lead_owner`
+- workflow filter correctness: verified by code inspection; filters use canonical statuses, follow-up state, last contact state, and owner state
+- CSV export alignment: verified by code inspection; export columns include canonical workflow fields `lead_status`, `lead_owner`, `follow_up_at`, `last_contact_at`, and `sales_notes`
+
+Verification commands:
+- `npm run build`
+- `npm run lint`
+
+Notes:
+- No dashboard redesign
+- No new features
+- No Prime scoring changes
+- No homepage changes
+- No schema changes were made during this verification pass
+- Intelligence fields remain separate from workflow fields
+- Direct linked Supabase schema query remains unavailable in this shell because no Supabase access token is present

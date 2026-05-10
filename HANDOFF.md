@@ -152,7 +152,7 @@ Verified so far:
 ## Phase 3.4E — Lead Action Workflow
 
 Status:
-- implemented locally
+- stable checkpoint verified
 - build and lint passing
 - live SQL applied
 - authenticated visual confirmation completed from Jay's browser
@@ -192,15 +192,15 @@ Verified so far:
 - local browser smoke reached protected `/admin/leads` gate
 - Jay applied the 3.4E SQL successfully in Supabase
 - authenticated `/admin/leads` screenshot displays Follow-ups due, Unassigned open, workflow filter, Action controls, Notes controls, and Last touched display
-
-Not yet verified:
-- linked Supabase schema, because local shell has no Supabase access token
-- owner/note/follow-up persistence after page refresh
+- code inspection confirms `lead_status`, `lead_owner`, `sales_notes`, `follow_up_at`, and `last_contact_at` save through Supabase updates and are reloaded through `select("*")`
+- dashboard metrics, workflow filters, and CSV export use canonical workflow fields with compatibility fallbacks only
 
 Notes:
 - Prime scoring logic was not changed
 - homepage and quote payload were not changed
 - stable workflow field names are `lead_owner` and `follow_up_at`; prior `assigned_owner` and `next_followup_at` are compatibility fields only
+- intelligence fields remain separate from workflow fields
+- linked Supabase schema queries from this shell are still blocked by missing Supabase access token
 - Supabase migration history still has the known remote mismatch around `20260508`; apply the 3.4E SQL intentionally rather than broad-pushing migrations unless history is repaired
 
 ---
