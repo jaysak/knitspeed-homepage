@@ -105,3 +105,28 @@ Files:
 - `SESSIONS.md`
 - `HANDOFF.md`
 - `PROJECT_ROADMAP.md`
+
+---
+
+## Phase 3.4B — Buyer Intent Tracking, Slice 1
+
+Status:
+- complete
+
+Summary:
+- Added client-side buyer intent event helpers
+- Records article card impressions in local browser storage
+- Records `Quote this article` clicks
+- Records article quote submissions
+- Adds a compact Prime intent note to the existing quote `message` field when an article is selected
+- Admin lead dashboard search now includes article name, slug, and usage segment
+- Admin lead dashboard fabric cell now displays buyer-facing article name and slug when available
+
+Verification:
+- `npm run build`
+- `npm run lint`
+- browser smoke test on local Vite app
+
+Notes:
+- no Supabase schema changes yet
+- future 3.4B slices can decide whether `lead_activity` becomes a real table

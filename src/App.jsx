@@ -52,6 +52,9 @@ const featuredArticles = [...FINISHED_ARTICLES]
   .sort((a, b) => b.linkedProducts - a.linkedProducts)
   .slice(0, 12);
 
+const BUYER_INTENT_STORAGE_KEY = "knitspeed_buyer_intent_events";
+const MAX_BUYER_INTENT_EVENTS = 100;
+
 function titleize(value) {
   return String(value || "")
     .replaceAll("_", " ")
@@ -60,6 +63,59 @@ function titleize(value) {
 
 function getPrimaryWidth(article) {
   return article?.availableWidths?.[0] || "";
+}
+
+function readBuyerIntentEvents() {
+  try {
+    return JSON.parse(localStorage.getItem(BUYER_INTENT_STORAGE_KEY) || "[]");
+  } catch (error) {
+    console.warn("Could not read buyer intent events:", error);
+    return [];
+  }
+}
+
+function writeBuyerIntentEvent(eventType, article, details = {}) {
+  if (!article?.seoSlug) return null;
+
+  const event = {
+    event_type: eventType,
+    article_name: article.articleName,
+    article_slug: article.seoSlug,
+    usage_segment: article.usageSegment,
+    material_family: article.materialFamily,
+    fabric_structure: article.fabricStructure,
+    linked_products: article.linkedProducts,
+    created_at: new Date().toISOString(),
+    ...details,
+  };
+
+  const events = readBuyerIntentEvents();
+  events.push(event);
+  localStorage.setItem(
+    BUYER_INTENT_STORAGE_KEY,
+    JSON.stringify(events.slice(-MAX_BUYER_INTENT_EVENTS))
+  );
+
+  return event;
+}
+
+function buildBuyerIntentNote(article) {
+  if (!article?.seoSlug) return "";
+
+  const matchingEvents = readBuyerIntentEvents().filter(
+    (event) => event.article_slug === article.seoSlug
+  );
+  const quoteClicks = matchingEvents.filter(
+    (event) => event.event_type === "article_quote_click"
+  ).length;
+
+  return [
+    "Prime intent:",
+    article.articleName,
+    `slug=${article.seoSlug}`,
+    `usage=${article.usageSegment || "unknown"}`,
+    `quote_clicks=${quoteClicks}`,
+  ].join(" ");
 }
 
 
@@ -207,7 +263,10 @@ function AdminLeadsDashboard() {
       !search ||
       (lead.customer_name || "").toLowerCase().includes(search) ||
       (lead.company_name || "").toLowerCase().includes(search) ||
-      (lead.fabric_type || "").toLowerCase().includes(search);
+      (lead.fabric_type || "").toLowerCase().includes(search) ||
+      (lead.article_name || "").toLowerCase().includes(search) ||
+      (lead.article_slug || "").toLowerCase().includes(search) ||
+      (lead.usage_segment || "").toLowerCase().includes(search);
 
     const matchesStatus =
       statusFilter === "all" ||
@@ -438,7 +497,12 @@ function AdminLeadsDashboard() {
                         <div className="text-xs font-normal text-slate-500">{lead.company_name || ""}</div>
                       </td>
                       <td className="px-4 py-3">{lead.phone_line || "-"}</td>
-                      <td className="px-4 py-3">{lead.fabric_type || lead.product_raw_name || "-"}</td>
+                      <td className="px-4 py-3">
+                        {lead.article_name || lead.fabric_type || lead.product_raw_name || "-"}
+                        {lead.article_slug ? (
+                          <div className="text-xs text-slate-500">{lead.article_slug}</div>
+                        ) : null}
+                      </td>
                       <td className="px-4 py-3">{lead.material_family || "-"}</td>
                       <td className="px-4 py-3">{lead.width_inches || "-"}</td>
                       <td className="px-4 py-3">
@@ -846,7 +910,19 @@ export default function App() {
   const [selectedYarnCount, setSelectedYarnCount] = useState("");
   const [selectedWidthInches, setSelectedWidthInches] = useState("");
 
+  useEffect(() => {
+    if (pathname !== "/") return;
+
+    featuredArticles.forEach((article, position) => {
+      writeBuyerIntentEvent("article_impression", article, {
+        position: position + 1,
+      });
+    });
+  }, [pathname]);
+
   function handleArticleSelect(article) {
+    writeBuyerIntentEvent("article_quote_click", article);
+
     setSelectedArticle(article);
     setSelectedFabricStructure(article.fabricStructure || "");
     setSelectedMaterialFamily(article.materialFamily || "");
@@ -909,6 +985,9 @@ export default function App() {
     setSubmitError("");
 
     const form = new FormData(formEl);
+    const userMessage = form.get("message") || "";
+    const buyerIntentNote = buildBuyerIntentNote(selectedArticle);
+    const message = [userMessage, buyerIntentNote].filter(Boolean).join("\n\n");
 
     const payload = {
       business_unit: "Knitspeed",
@@ -934,8 +1013,14 @@ export default function App() {
       quantity_value: form.get("quantity_value") ? Number(form.get("quantity_value")) : null,
       quantity_unit: form.get("quantity_unit") || "kg",
       usage_type: form.get("usage_type") || "",
-      message: form.get("message") || "",
+      message,
     };
+
+    writeBuyerIntentEvent("article_quote_submit", selectedArticle, {
+      quantity_value: payload.quantity_value,
+      quantity_unit: payload.quantity_unit,
+      usage_type: payload.usage_type,
+    });
 
     try {
       const { error } = supabase ? await supabase.from("quote_leads").insert([payload]) : { error: new Error("Supabase not configured") };

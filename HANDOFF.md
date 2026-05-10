@@ -61,22 +61,28 @@ Implemented:
 Goal:
 - track buyer interest in articles before and during quote submission
 
-Possible subtasks:
-1. Inspect current quote flow and Supabase schema
-2. Decide first tracking storage:
-   - local/session only
-   - Supabase `lead_activity`
-   - additional fields on `quote_leads`
-3. Track article card clicks
-4. Track quoted article slugs
-5. Surface top articles/categories in dashboard later
+Current status:
+- slice 1 implemented locally
+- no database schema changes yet
 
-Suggested first implementation:
-- start with low-risk local/session tracking and quote payload metadata
-- avoid new database table until schema decision is clear
+Possible subtasks:
+1. Decide whether intent should graduate into Supabase:
+   - `lead_activity`
+   - additional fields on `quote_leads`
+   - delayed until article pages exist
+2. Add top article/category counters to dashboard
+3. Improve distinction between rendered article cards and truly viewed articles
+4. Decide retention/analytics policy for local intent events
+
+Implemented in slice 1:
+- local/session article intent tracking
+- quote click tracking
+- quote submit tracking
+- compact Prime intent note appended to quote message
+- dashboard article search/display visibility
 
 Estimated time:
-- 1.5-3 hours
+- 1-2 hours remaining for next useful slice
 
 ---
 
