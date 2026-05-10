@@ -5,6 +5,8 @@ import FAQBlock from "../components/knowledge/FAQBlock";
 import KnowledgePageLayout from "../components/knowledge/KnowledgePageLayout";
 import QuoteCTA from "../components/knowledge/QuoteCTA";
 import SpecSummaryGrid from "../components/knowledge/SpecSummaryGrid";
+import { writeBuyerIntentEvent } from "../lib/buyerIntent";
+import { getRelatedKnowledgePages } from "../lib/knowledgeRegistry";
 import {
   KNITSPEED_SITE_URL,
   buildArticleSchema,
@@ -13,7 +15,6 @@ import {
   buildOrganizationSchema,
   getCanonicalKnowledgeUrl,
 } from "../lib/seoSchema";
-import { writeBuyerIntentEvent } from "../lib/buyerIntent";
 
 function useKnowledgePageMeta(page) {
   useEffect(() => {
@@ -65,6 +66,12 @@ export default function KnowledgeArticlePage({ page }) {
       linkedProducts: 0,
       leadPriority: "prime",
     };
+  }, [page]);
+
+  const relatedPages = useMemo(() => {
+    if (!page) return [];
+
+    return getRelatedKnowledgePages(page.slug);
   }, [page]);
 
   useEffect(() => {
@@ -147,6 +154,28 @@ export default function KnowledgeArticlePage({ page }) {
         </section>
 
         <FAQBlock title="Buyer FAQ" items={page.faqs} />
+
+        {relatedPages.length > 0 && (
+          <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+            <p className="text-sm font-semibold uppercase tracking-wide text-sky-700">
+              Related Textile Knowledge
+            </p>
+            <div className="mt-4 grid gap-3 md:grid-cols-2">
+              {relatedPages.map((relatedPage) => (
+                <a
+                  key={relatedPage.slug}
+                  href={relatedPage.canonicalPath}
+                  className="rounded-2xl border border-slate-200 p-4 transition hover:border-sky-300 hover:bg-sky-50"
+                >
+                  <h3 className="font-semibold text-slate-950">{relatedPage.title}</h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">
+                    {relatedPage.metaDescription || relatedPage.subtitle}
+                  </p>
+                </a>
+              ))}
+            </div>
+          </section>
+        )}
       </KnowledgePageLayout>
     </>
   );

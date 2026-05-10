@@ -15,7 +15,7 @@ import AdminBuyersDashboard from "./pages/AdminBuyersDashboard";
 import KnowledgeArticlePage from "./pages/KnowledgeArticlePage";
 import QuoteForm from "./components/QuoteForm";
 import FinishedArticleGrid from "./components/articles/FinishedArticleGrid";
-import { getTextileKnowledgePage } from "./data/textileKnowledgePages";
+import { getKnowledgePageBySlug } from "./lib/knowledgeRegistry";
 import { supabase } from "./lib/supabaseClient";
 import { buildBuyerIntentNote, writeBuyerIntentEvent } from "./lib/buyerIntent";
 import {
@@ -177,7 +177,7 @@ export default function App() {
   if (pathname === "/knowledge/single-jersey-vs-interlock") {
     return (
       <KnowledgeArticlePage
-        page={getTextileKnowledgePage("single-jersey-vs-interlock")}
+        page={getKnowledgePageBySlug("single-jersey-vs-interlock")}
       />
     );
   }

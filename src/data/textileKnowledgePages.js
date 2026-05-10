@@ -1,6 +1,10 @@
 export const TEXTILE_KNOWLEDGE_PAGES = [
   {
     slug: "single-jersey-vs-interlock",
+    canonicalPath: "/knowledge/single-jersey-vs-interlock",
+    category: "Knitted fabric structures",
+    discoveryPriority: 10,
+    relatedArticleSlugs: [],
     eyebrow: "Textile knowledge",
     title: "Single Jersey vs Interlock",
     subtitle:
