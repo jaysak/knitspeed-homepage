@@ -387,3 +387,30 @@ Notes:
 - Linked Supabase schema query was attempted, but this shell has no Supabase access token
 - New migration is `supabase/migrations/202605101820_add_lead_action_workflow_fields.sql`
 - Owner/note/follow-up persistence after page refresh should be confirmed before final 3.4E commit
+
+---
+
+## Phase 3.4E — Workflow Stabilization
+
+Status:
+- implemented locally
+- pending live Supabase SQL application
+- pending persistence verification after refresh
+
+Summary:
+- Inspected schema migrations and `/admin/leads` code paths for workflow persistence
+- Confirmed `lead_status`, `sales_notes`, and `last_contact_at` are already persisted fields
+- Identified naming mismatch: current 3.4E used `assigned_owner` and `next_followup_at`; stable contract should use `lead_owner` and `follow_up_at`
+- Added migration to create `lead_owner` and `follow_up_at`, backfill from prior 3.4E fields, and normalize legacy statuses
+- Locked workflow statuses to `new`, `contacted`, `quoted`, `negotiating`, `won`, and `lost`
+- Updated dashboard writes to use `lead_owner` and `follow_up_at` with read fallbacks for `assigned_owner` and `next_followup_at`
+- Updated dashboard metrics, workflow filters, and CSV export to use the stable workflow contract
+
+Verification:
+- `npm run build`
+- `npm run lint`
+
+Notes:
+- Prime scoring logic was not changed
+- homepage was not changed
+- linked Supabase query is still blocked in this shell by missing Supabase access token

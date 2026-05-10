@@ -161,8 +161,8 @@ Goal:
 - add operational CRM behavior to inbound Prime leads without changing scoring or quote intake
 
 Implemented fields:
-- `assigned_owner`
-- `next_followup_at`
+- `lead_owner`
+- `follow_up_at`
 
 Existing workflow fields used:
 - `sales_notes`
@@ -171,14 +171,17 @@ Existing workflow fields used:
 
 Implemented files:
 - `supabase/migrations/202605101820_add_lead_action_workflow_fields.sql`
+- `supabase/migrations/202605101905_stabilize_lead_action_workflow.sql`
 - `src/pages/AdminLeadsDashboard.jsx`
 
 Implemented behavior:
 - authenticated update RLS policy for `quote_leads`
 - owner assignment per lead
-- next follow-up timestamp per lead
+- follow-up timestamp per lead
 - internal sales notes per lead
 - automatic `last_contact_at` update when notes are changed
+- locked workflow statuses: new, contacted, quoted, negotiating, won, lost
+- compatibility read fallback for prior `assigned_owner` and `next_followup_at` fields
 - workflow filters for needs follow-up, scheduled follow-up, untouched over 3 days, and unassigned open leads
 - follow-up due and unassigned open lead KPI cards
 - workflow fields included in CSV export
@@ -197,6 +200,7 @@ Not yet verified:
 Notes:
 - Prime scoring logic was not changed
 - homepage and quote payload were not changed
+- stable workflow field names are `lead_owner` and `follow_up_at`; prior `assigned_owner` and `next_followup_at` are compatibility fields only
 - Supabase migration history still has the known remote mismatch around `20260508`; apply the 3.4E SQL intentionally rather than broad-pushing migrations unless history is repaired
 
 ---

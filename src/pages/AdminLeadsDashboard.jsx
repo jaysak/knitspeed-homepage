@@ -31,34 +31,51 @@ export default function AdminLeadsDashboard() {
     "new",
     "contacted",
     "quoted",
-    "sampling",
     "negotiating",
-    "confirmed",
-    "dead",
+    "won",
+    "lost",
   ];
 
   const leadStatusStyles = {
     new: "bg-sky-100 text-sky-700",
     contacted: "bg-indigo-100 text-indigo-700",
     quoted: "bg-amber-100 text-amber-700",
-    sampling: "bg-purple-100 text-purple-700",
     negotiating: "bg-orange-100 text-orange-700",
-    confirmed: "bg-emerald-100 text-emerald-700",
-    dead: "bg-slate-200 text-slate-600",
+    won: "bg-emerald-100 text-emerald-700",
+    lost: "bg-slate-200 text-slate-600",
   };
 
+  function normalizeLeadStatus(status) {
+    const legacyStatusMap = {
+      sampling: "contacted",
+      confirmed: "won",
+      dead: "lost",
+    };
+
+    return legacyStatusMap[status] || status || "new";
+  }
+
   function getLeadStatusStyle(status) {
-    return leadStatusStyles[status] || "bg-slate-100 text-slate-600";
+    return leadStatusStyles[normalizeLeadStatus(status)] || "bg-slate-100 text-slate-600";
   }
 
   function isClosedLead(lead) {
-    return ["confirmed", "dead"].includes(lead.lead_status || "new");
+    return ["won", "lost"].includes(normalizeLeadStatus(lead.lead_status));
+  }
+
+  function getLeadOwner(lead) {
+    return lead.lead_owner || lead.assigned_owner || "";
+  }
+
+  function getFollowupAt(lead) {
+    return lead.follow_up_at || lead.next_followup_at || "";
   }
 
   function getFollowupState(lead) {
-    if (!lead.next_followup_at || isClosedLead(lead)) return "none";
+    const followupAtValue = getFollowupAt(lead);
+    if (!followupAtValue || isClosedLead(lead)) return "none";
 
-    const followupAt = new Date(lead.next_followup_at).getTime();
+    const followupAt = new Date(followupAtValue).getTime();
     if (Number.isNaN(followupAt)) return "none";
 
     return followupAt <= currentTimeMs ? "due" : "scheduled";
@@ -116,14 +133,14 @@ export default function AdminLeadsDashboard() {
     }
   }
 
-  function updateLeadOwner(leadId, assignedOwner) {
-    updateLeadAction(leadId, { assigned_owner: assignedOwner.trim() || null });
+  function updateLeadOwner(leadId, leadOwner) {
+    updateLeadAction(leadId, { lead_owner: leadOwner.trim() || null });
   }
 
-  function updateLeadFollowup(leadId, nextFollowupValue) {
+  function updateLeadFollowup(leadId, followUpValue) {
     updateLeadAction(leadId, {
-      next_followup_at: nextFollowupValue
-        ? new Date(nextFollowupValue).toISOString()
+      follow_up_at: followUpValue
+        ? new Date(followUpValue).toISOString()
         : null,
     });
   }
@@ -161,8 +178,8 @@ export default function AdminLeadsDashboard() {
       "production_stage",
       "sourcing_pain_points",
       "lead_status",
-      "assigned_owner",
-      "next_followup_at",
+      "lead_owner",
+      "follow_up_at",
       "last_contact_at",
       "sales_notes",
       "message",
@@ -174,9 +191,16 @@ export default function AdminLeadsDashboard() {
       return `"${text}"`;
     };
 
+    const getExportValue = (lead, column) => {
+      if (column === "lead_status") return normalizeLeadStatus(lead.lead_status);
+      if (column === "lead_owner") return getLeadOwner(lead);
+      if (column === "follow_up_at") return getFollowupAt(lead);
+      return lead[column];
+    };
+
     const csv = [
       columns.join(","),
-      ...leads.map((lead) => columns.map((column) => escapeCsv(lead[column])).join(",")),
+      ...leads.map((lead) => columns.map((column) => escapeCsv(getExportValue(lead, column))).join(",")),
     ].join("\n");
 
     const blob = new Blob(["\ufeff" + csv], { type: "text/csv;charset=utf-8;" });
@@ -205,12 +229,12 @@ export default function AdminLeadsDashboard() {
     return sum + (Number(lead.quantity_value) || 0);
   }, 0);
 
-  const confirmedCount = leads.filter(
-    (lead) => lead.lead_status === "confirmed"
+  const wonCount = leads.filter(
+    (lead) => normalizeLeadStatus(lead.lead_status) === "won"
   ).length;
 
   const statusCounts = leadStatuses.reduce((acc, status) => {
-    acc[status] = leads.filter((lead) => (lead.lead_status || "new") === status).length;
+    acc[status] = leads.filter((lead) => normalizeLeadStatus(lead.lead_status) === status).length;
     return acc;
   }, {});
 
@@ -222,11 +246,11 @@ export default function AdminLeadsDashboard() {
   }).length;
   const dueFollowups = leads.filter((lead) => getFollowupState(lead) === "due").length;
   const unassignedOpenLeads = leads.filter(
-    (lead) => !isClosedLead(lead) && !lead.assigned_owner
+    (lead) => !isClosedLead(lead) && !getLeadOwner(lead)
   ).length;
 
   const conversionRate =
-    leads.length > 0 ? Math.round((confirmedCount / leads.length) * 100) : 0;
+    leads.length > 0 ? Math.round((wonCount / leads.length) * 100) : 0;
 
   const primeLeads = leads.filter((lead) => (lead.lead_priority || "random") === "prime");
   const scoredLeads = leads.map((lead) => ({
@@ -269,7 +293,7 @@ export default function AdminLeadsDashboard() {
 
     const matchesStatus =
       statusFilter === "all" ||
-      (lead.lead_status || "new") === statusFilter;
+      normalizeLeadStatus(lead.lead_status) === statusFilter;
 
     const matchesPriority =
       priorityFilter === "all" ||
@@ -285,7 +309,7 @@ export default function AdminLeadsDashboard() {
         const ageDays = (currentTimeMs - createdAt.getTime()) / (1000 * 60 * 60 * 24);
         return ageDays > 3;
       })()) ||
-      (workflowFilter === "unassigned" && !isClosedLead(lead) && !lead.assigned_owner);
+      (workflowFilter === "unassigned" && !isClosedLead(lead) && !getLeadOwner(lead));
 
     return matchesSearch && matchesStatus && matchesPriority && matchesWorkflow;
   });
@@ -410,16 +434,16 @@ export default function AdminLeadsDashboard() {
           </div>
 
           <div className="rounded-3xl bg-emerald-50 p-5 shadow-sm">
-            <div className="text-sm text-slate-500">Confirmed</div>
+            <div className="text-sm text-slate-500">Won</div>
             <div className="mt-2 text-3xl font-extrabold">
-              {confirmedCount}
+              {wonCount}
             </div>
           </div>
 
           <div className="rounded-3xl bg-rose-50 p-5 shadow-sm">
-            <div className="text-sm text-slate-500">Dead leads</div>
+            <div className="text-sm text-slate-500">Lost leads</div>
             <div className="mt-2 text-3xl font-extrabold">
-              {statusCounts.dead || 0}
+              {statusCounts.lost || 0}
             </div>
           </div>
 
@@ -685,7 +709,7 @@ export default function AdminLeadsDashboard() {
                       <td className="px-4 py-3">
                         <select
                           className={`rounded-full px-3 py-1 text-xs font-bold outline-none ${getLeadStatusStyle(lead.lead_status || "new")}`}
-                          value={lead.lead_status || "new"}
+                          value={normalizeLeadStatus(lead.lead_status)}
                           onChange={(e) => updateLeadStatus(lead.id, e.target.value)}
                           disabled={!lead.id}
                         >
@@ -700,10 +724,10 @@ export default function AdminLeadsDashboard() {
                         <div className="space-y-2">
                           <input
                             type="text"
-                            defaultValue={lead.assigned_owner || ""}
+                            defaultValue={getLeadOwner(lead)}
                             placeholder="Owner"
                             onBlur={(e) => {
-                              if (e.target.value !== (lead.assigned_owner || "")) {
+                              if (e.target.value !== getLeadOwner(lead)) {
                                 updateLeadOwner(lead.id, e.target.value);
                               }
                             }}
@@ -712,9 +736,9 @@ export default function AdminLeadsDashboard() {
                           />
                           <input
                             type="datetime-local"
-                            defaultValue={toDatetimeLocalValue(lead.next_followup_at)}
+                            defaultValue={toDatetimeLocalValue(getFollowupAt(lead))}
                             onBlur={(e) => {
-                              if (e.target.value !== toDatetimeLocalValue(lead.next_followup_at)) {
+                              if (e.target.value !== toDatetimeLocalValue(getFollowupAt(lead))) {
                                 updateLeadFollowup(lead.id, e.target.value);
                               }
                             }}
