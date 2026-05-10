@@ -571,3 +571,44 @@ Next likely slice:
 - Phase 3.5D Internal linking + discovery flow
 - inspect before patching
 - do not change quote attribution until Phase 3.5E
+
+---
+
+## Phase 3.5D — Internal Discovery Flow
+
+Status:
+- implemented locally
+- verified with build, lint, and browser smoke
+- pending Jay's git checkpoint
+
+Summary:
+- Added a small homepage Textile Knowledge discovery block after the Finished Articles grid
+- Linked the block to `/knowledge/single-jersey-vs-interlock`
+- Added a lightweight desktop nav Knowledge link
+- Added a small footer Textile Knowledge link
+- Kept styling consistent with the current homepage cards, buttons, and Knitspeed brand colors
+
+Verification:
+- `npm run build`
+- `npm run lint`
+- browser smoke confirmed homepage renders the Textile Knowledge block and 9 existing article quote buttons
+- browser smoke confirmed the new knowledge CTA navigates to `/knowledge/single-jersey-vs-interlock`
+- browser smoke confirmed `/knowledge/single-jersey-vs-interlock` renders `Single Jersey vs Interlock` and keeps 4 JSON-LD scripts
+- browser smoke confirmed `Quote this article` still selects the first article, scrolls to the quote form, shows the selected article panel, and preserves hidden metadata: `inquiry_source=finished_article_card`, `article_slug=30s-combed-cotton-single-jersey`
+- browser console errors: none
+
+Rules preserved:
+- no Supabase changes
+- no admin changes
+- no quote payload changes
+- no new tracking systems
+- no routing overhaul
+- no CMS
+- no bulk article generation
+- no homepage redesign
+- no fake textile content
+
+Next likely slice:
+- Phase 3.5E Quote attribution integration refinement
+- inspect before patching
+- keep attribution changes small and preserve existing article quote behavior

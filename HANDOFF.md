@@ -15,7 +15,7 @@ Read these files first:
 4. `HANDOFF.md`
 
 Magic words for next boot:
-> Jarvis, read `HANDOFF.md`, `PROJECT_ROADMAP.md`, `DECISIONS.md`, and `SESSIONS.md`. Confirm current checkpoint is `aef2c3a`, Phase 3.4 is closed, Phase 3.5A and 3.5B are complete, Phase 3.5C is implemented locally pending Jay's git checkpoint, then propose the next safe slice before patching.
+> Jarvis, read `HANDOFF.md`, `PROJECT_ROADMAP.md`, `DECISIONS.md`, and `SESSIONS.md`. Confirm current checkpoint is `73ae650`, Phase 3.4 is closed, Phase 3.5A-3.5C are complete, Phase 3.5D is implemented locally pending Jay's git checkpoint, then propose the next safe slice before patching.
 
 ---
 
@@ -25,7 +25,7 @@ Branch:
 - `main`
 
 Latest product checkpoint:
-- `aef2c3a Add first textile knowledge page`
+- `73ae650 Add knowledge page structured data`
 
 Remote:
 - `origin/main`
@@ -219,7 +219,8 @@ Status:
 - implementation-active
 - 3.5A complete
 - 3.5B complete
-- 3.5C implemented locally pending Jay's git checkpoint
+- 3.5C complete
+- 3.5D implemented locally pending Jay's git checkpoint
 
 Goal:
 - turn Knitspeed into a machine-readable textile knowledge authority
@@ -256,6 +257,20 @@ Verified 3.5C locally:
 - `npm run lint` passes
 - browser smoke confirmed `/knowledge/single-jersey-vs-interlock` renders and includes 4 `application/ld+json` scripts
 - browser smoke confirmed homepage still renders 9 existing article quote CTAs
+
+Implemented 3.5D locally:
+- added a small homepage Textile Knowledge discovery block linking to `/knowledge/single-jersey-vs-interlock`
+- added a lightweight desktop nav Knowledge link
+- added a footer Textile Knowledge link
+- kept homepage hierarchy, quote behavior, quote payload, admin dashboard, Supabase schema, Prime scoring, and tracking systems unchanged
+
+Verified 3.5D locally:
+- `npm run build` passes
+- `npm run lint` passes
+- browser smoke confirmed homepage renders the new Textile Knowledge block
+- browser smoke confirmed the discovery CTA navigates to `/knowledge/single-jersey-vs-interlock`
+- browser smoke confirmed the knowledge route renders and keeps 4 JSON-LD scripts
+- browser smoke confirmed `Quote this article` still selects the first article, reaches the quote form, and preserves `finished_article_card` plus article slug metadata
 
 Rules:
 - no fake textile content

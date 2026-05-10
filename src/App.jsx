@@ -26,6 +26,7 @@ import {
   Clock,
   Shirt,
   Package,
+  BookOpen,
 } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -253,6 +254,7 @@ export default function App() {
           <nav className="hidden items-center gap-7 text-sm font-medium text-slate-600 md:flex">
             <a href="#products" className="hover:text-sky-600">Products</a>
             <a href="#why" className="hover:text-sky-600">Why Us</a>
+            <a href="/knowledge/single-jersey-vs-interlock" className="hover:text-sky-600">Knowledge</a>
             <a href="#quote" className="hover:text-sky-600">Quote</a>
             <a href="#contact" className="hover:text-sky-600">Contact</a>
           </nav>
@@ -389,6 +391,34 @@ export default function App() {
       />
 
       <section className="mx-auto max-w-7xl px-5 pb-16">
+        <div className="rounded-[2rem] border border-sky-100 bg-white p-8 shadow-sm md:p-10">
+          <div className="grid gap-6 md:grid-cols-[1.2fr_0.8fr] md:items-center">
+            <div>
+              <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-sky-50 px-4 py-2 text-sm font-bold text-sky-700">
+                <BookOpen size={16} />
+                Textile Knowledge
+              </div>
+              <h2 className="text-3xl font-extrabold" style={{ color: brand.navy }}>
+                Compare fabric structures before you quote.
+              </h2>
+              <p className="mt-4 max-w-2xl text-lg leading-8 text-slate-600">
+                Start with a practical guide to Single Jersey and Interlock, then share your garment use,
+                hand feel, color, and quantity when you are ready to source.
+              </p>
+            </div>
+
+            <a
+              href="/knowledge/single-jersey-vs-interlock"
+              className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-4 text-center font-bold text-white shadow-sm transition hover:translate-y-[-1px]"
+              style={{ backgroundColor: brand.blue }}
+            >
+              Read Single Jersey vs Interlock <ArrowRight size={18} />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-5 pb-16">
         <div className="rounded-[2rem] p-8 md:p-12" style={{ backgroundColor: brand.paleBlue }}>
           <div className="grid gap-8 md:grid-cols-2 md:items-center">
             <div>
@@ -437,6 +467,10 @@ export default function App() {
           </div>
           <div className="text-sm text-slate-300">
             www.knitspeed.com • Facebook: Knitspeed • 090-912-4154
+            <span className="mx-2 text-slate-500">•</span>
+            <a href="/knowledge/single-jersey-vs-interlock" className="text-sky-200 hover:text-white">
+              Textile Knowledge
+            </a>
           </div>
         </div>
       </footer>

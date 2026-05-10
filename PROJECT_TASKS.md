@@ -32,8 +32,10 @@ Last Updated: 2026-05-10
 ## LLM Discovery / Authority Layer
 - Phase 3.5A layout foundation complete
 - Phase 3.5B first real knowledge route complete: `/knowledge/single-jersey-vs-interlock`
-- Phase 3.5C lightweight machine-readable discovery layer implemented locally and verified
+- Phase 3.5C lightweight machine-readable discovery layer complete
+- Phase 3.5D internal discovery flow implemented locally and verified
 - structured data added for Organization, Article, FAQPage, and BreadcrumbList
+- homepage, desktop nav, and footer now link to the first textile knowledge page
 - no fake textile claims, no bulk article generation, no routing overhaul, and no quote/admin/Prime behavior changes
 
 ---
@@ -51,30 +53,29 @@ Estimate: 30–45 min
 
 ---
 
-## PHASE 3.5D — Internal Linking + Discovery Flow
+## PHASE 3.5E — Quote Attribution Integration Refinement
 Estimate: 45–90 min
 
 Goal:
-Make the first real knowledge page easier to discover from existing public surfaces without changing quote payloads or routing architecture.
+Refine how knowledge-page discovery connects to quote attribution without changing the quote payload schema unless a real gap is confirmed.
 
 Rules:
 - inspect before patching
-- no fake textile content
-- no bulk AI article generation
-- no routing overhaul
 - preserve Prime Engine attribution flow
-- preserve current quote form behavior
-- no Supabase schema changes
+- preserve existing article quote behavior
+- no fake textile content
+- no routing overhaul
+- no Supabase schema changes unless Jay explicitly approves
+- no admin dashboard changes
 
 Potential deliverables:
-- minimal homepage or article-grid link to the knowledge page
-- reusable knowledge link/list pattern if it stays small
-- buyer-friendly internal link copy
-- browser smoke confirming homepage and knowledge route still render
+- confirm current `/#quote` behavior from knowledge pages
+- identify whether knowledge page quote attribution needs only existing fields or a tiny client-side note
+- keep buyer intent and quote metadata paths separate unless a real integration gap exists
 
 Checkpoint:
 - build and lint pass
-- visual smoke complete
+- browser smoke homepage, knowledge route, and quote flow
 - commit only after Jay runs git commands locally
 
 ---
