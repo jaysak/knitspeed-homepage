@@ -657,3 +657,41 @@ Next likely safe slice:
 - candidate: What GSM Should T-Shirts Use?
 - keep specs production-dependent and avoid fake numbers
 
+
+---
+
+## Phase 3.5L — Third Hand-Authored Buyer Guide
+
+Status:
+- complete
+- verified locally
+
+Goal:
+- expand high-intent buyer education with a practical T-shirt GSM guide
+
+Implemented:
+- T-shirt GSM knowledge article
+- `/knowledge/what-gsm-should-t-shirts-use` route
+- registry integration
+- topic/tag metadata
+- related knowledge linking
+
+Verified:
+- npm run build passes
+- npm run lint passes
+- browser smoke confirmed `/knowledge` lists three articles
+- browser smoke confirmed GSM article and related links render
+
+Rules preserved:
+- no fake GSM rule
+- no fake specs
+- no CMS
+- no sitemap
+- no Supabase changes
+- no quote flow changes
+- no admin dashboard changes
+
+Next likely safe slice:
+- Phase 3.5M — Knowledge Route Resolver Cleanup
+- reduce manual route branching while avoiding React Router
+

@@ -179,6 +179,14 @@ export default function App() {
     return <KnowledgeIndexPage />;
   }
 
+  if (pathname === "/knowledge/what-gsm-should-t-shirts-use") {
+    return (
+      <KnowledgeArticlePage
+        page={getKnowledgePageBySlug("what-gsm-should-t-shirts-use")}
+      />
+    );
+  }
+
   if (pathname === "/knowledge/what-is-compact-cotton") {
     return (
       <KnowledgeArticlePage

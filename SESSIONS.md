@@ -823,3 +823,29 @@ Verification:
 Notes:
 - no CMS, sitemap, Supabase, quote flow, admin, or scoring changes made
 
+
+---
+
+## Phase 3.5L — Third Hand-Authored Buyer Guide
+
+Status:
+- implemented and verified
+
+Summary:
+- added hand-authored T-shirt GSM buyer guide
+- added route `/knowledge/what-gsm-should-t-shirts-use`
+- connected article to existing knowledge registry, topic clusters, and related knowledge links
+- preserved conservative sourcing language and production-dependent fabric guidance
+
+Verification:
+- npm run build
+- npm run lint
+- browser smoke confirmed `/knowledge` lists three implemented articles
+- browser smoke confirmed GSM article renders
+- browser smoke confirmed related knowledge links render
+- browser smoke confirmed JSON-LD count remains 4 on article pages
+
+Notes:
+- no fake GSM recommendation, MOQ, inventory, or product availability claims added
+- no CMS, sitemap, Supabase, quote flow, admin, or scoring changes made
+

@@ -152,6 +152,82 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
     ],
   },
 
+  {
+    slug: "what-gsm-should-t-shirts-use",
+    canonicalPath: "/knowledge/what-gsm-should-t-shirts-use",
+    category: "Fabric specification",
+    discoveryPriority: 30,
+    relatedArticleSlugs: ["single-jersey-vs-interlock", "what-is-compact-cotton"],
+    topicCluster: "fabric-specification",
+    buyerIntent: "fabric-selection",
+    tags: ["t-shirt fabric", "gsm", "single jersey", "fabric weight", "apparel sourcing"],
+    eyebrow: "Textile knowledge",
+    title: "What GSM Should T-Shirts Use?",
+    subtitle:
+      "A practical buyer guide to choosing T-shirt fabric weight based on garment use, market position, hand feel, and production needs.",
+    metaDescription:
+      "Learn how to choose T-shirt fabric GSM with practical sourcing guidance for single jersey, premium basics, streetwear, and production checks.",
+    shortAnswer:
+      "There is no single best GSM for every T-shirt. A lighter GSM can support softer, breathable basics, while a heavier GSM can support more body and structure. Buyers should choose GSM together with yarn quality, knitting structure, finishing, shrinkage, target market, and garment style rather than using weight alone.",
+    comparison: [
+      {
+        name: "Lighter T-Shirt Fabrics",
+        specs: {
+          composition: "Depends on cotton, blends, or synthetic fibers",
+          structure: "Often Single Jersey, but structure should be confirmed",
+          width: "Confirmed by production spec",
+          gsm: "Chosen according to target hand feel and garment use",
+          moq: "Confirmed after sourcing check",
+          useCases: ["basic T-shirts", "warm-weather casualwear", "soft promotional apparel"],
+        },
+      },
+      {
+        name: "Heavier T-Shirt Fabrics",
+        specs: {
+          composition: "Depends on yarn quality and buyer requirement",
+          structure: "Often Single Jersey or heavier knitted constructions",
+          width: "Confirmed by production spec",
+          gsm: "Chosen according to body, opacity, and garment positioning",
+          moq: "Confirmed after sourcing check",
+          useCases: ["premium basics", "streetwear", "structured casualwear"],
+        },
+      },
+    ],
+    guidance: [
+      "Choose GSM based on the garment's target customer, climate, price point, and desired hand feel.",
+      "For premium or streetwear T-shirts, buyers often care about body, opacity, collar behavior, and shrinkage as much as GSM.",
+      "Confirm fabric structure, yarn quality, width, shrinkage, colorfastness, and finishing before approving production.",
+      "Use physical samples whenever possible because two fabrics with similar GSM can feel different after knitting and finishing.",
+    ],
+    mistakes: [
+      "Choosing fabric by GSM only without checking structure, yarn quality, and finishing.",
+      "Assuming heavier fabric is always better for every market or climate.",
+      "Ignoring shrinkage, spirality, opacity, and hand feel during sample approval.",
+      "Comparing supplier options without matching composition, width, finishing, and testing requirements.",
+    ],
+    faqs: [
+      {
+        question: "Is higher GSM always better for T-shirts?",
+        answer:
+          "No. Higher GSM can give more body and structure, but it can also feel warmer or less suitable for some markets. The best choice depends on garment use, target customer, climate, and brand positioning.",
+      },
+      {
+        question: "Can two fabrics with the same GSM feel different?",
+        answer:
+          "Yes. Yarn quality, knitting structure, finishing, dyeing, and washing can make two fabrics with similar GSM feel different in hand, drape, and stability.",
+      },
+      {
+        question: "Should buyers choose GSM before fabric structure?",
+        answer:
+          "GSM and structure should be considered together. Single Jersey, Interlock, Rib, and other knitted structures can behave differently even at similar weights.",
+      },
+      {
+        question: "Can Knitspeed help recommend T-shirt fabric weight?",
+        answer:
+          "Yes. Knitspeed can support sourcing discussions by matching target garment, buyer market, quantity, hand feel, and production requirements before quoting.",
+      },
+    ],
+  },
 ];
 
 export function getTextileKnowledgePage(slug) {
