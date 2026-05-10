@@ -444,3 +444,31 @@ Notes:
 - No schema changes were made during this verification pass
 - Intelligence fields remain separate from workflow fields
 - Direct linked Supabase schema query remains unavailable in this shell because no Supabase access token is present
+
+---
+
+## Phase 3.4 — Closed
+
+Status:
+- complete
+- stable checkpoint pushed as `de0dc52 Extract homepage article intent modules`
+- no further 3.4E sub-phases planned unless a real regression appears
+
+Summary:
+- Treated the article grid and buyer intent extraction as the final post-3.4 stabilization slice
+- Extracted homepage Finished Articles rendering into `src/components/articles/FinishedArticleGrid.jsx`
+- Extracted local/session buyer intent helpers into `src/lib/buyerIntent.js`
+- Kept `getFeaturedArticles()` in `src/App.jsx` for a deliberately small slice
+- Preserved selected article state, quote field prefill, scroll-to-quote behavior, quote metadata payload, and buyer intent event writes
+- Kept Prime scoring, Supabase schema, auth, admin dashboard behavior, quote form fields, and Phase 3.5 implementation untouched
+
+Verification:
+- `npm run build`
+- `npm run lint`
+- browser smoke confirmed 9 curated article cards render with first slug `30s-combed-cotton-single-jersey`
+- browser smoke confirmed `Quote this article` sets selected article, prefills quote fields, scrolls to quote form, preserves hidden article metadata, and keeps buyer intent event write path
+
+Next active phase:
+- Phase 3.5 LLM Discovery / Authority Layer planning
+- inspect current routing and data shape before any Phase 3.5 patch
+- do not implement Phase 3.5 until Jay approves the first build slice

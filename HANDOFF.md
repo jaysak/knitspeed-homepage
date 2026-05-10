@@ -15,7 +15,7 @@ Read these files first:
 4. `HANDOFF.md`
 
 Magic words for next boot:
-> Jarvis, read `HANDOFF.md`, `PROJECT_ROADMAP.md`, `DECISIONS.md`, and `SESSIONS.md`. Confirm current checkpoint is `6628c5e`, 3.4A-D are complete, Phase 3.5 is planned-only, then propose the next safe slice before patching.
+> Jarvis, read `HANDOFF.md`, `PROJECT_ROADMAP.md`, `DECISIONS.md`, and `SESSIONS.md`. Confirm current checkpoint is `de0dc52`, Phase 3.4 is closed, Phase 3.5 is planning-active, then propose the next safe slice before patching.
 
 ---
 
@@ -25,7 +25,7 @@ Branch:
 - `main`
 
 Latest product checkpoint:
-- `6628c5e Add Prime lead scoring`
+- `de0dc52 Extract homepage article intent modules`
 
 Remote:
 - `origin/main`
@@ -147,11 +147,12 @@ Verified so far:
 
 ---
 
-# IMPLEMENTED CHECKPOINT
+# COMPLETED CHECKPOINT
 
 ## Phase 3.4E — Lead Action Workflow
 
 Status:
+- Phase 3.4 closed
 - stable checkpoint verified
 - build and lint passing
 - live SQL applied
@@ -173,6 +174,8 @@ Implemented files:
 - `supabase/migrations/202605101820_add_lead_action_workflow_fields.sql`
 - `supabase/migrations/202605101905_stabilize_lead_action_workflow.sql`
 - `src/pages/AdminLeadsDashboard.jsx`
+- `src/components/articles/FinishedArticleGrid.jsx`
+- `src/lib/buyerIntent.js`
 
 Implemented behavior:
 - authenticated update RLS policy for `quote_leads`
@@ -185,6 +188,7 @@ Implemented behavior:
 - workflow filters for needs follow-up, scheduled follow-up, untouched over 3 days, and unassigned open leads
 - follow-up due and unassigned open lead KPI cards
 - workflow fields included in CSV export
+- final post-3.4 stabilization extracted homepage article grid and buyer intent helpers without behavior changes
 
 Verified so far:
 - `npm run build` passes
@@ -194,12 +198,14 @@ Verified so far:
 - authenticated `/admin/leads` screenshot displays Follow-ups due, Unassigned open, workflow filter, Action controls, Notes controls, and Last touched display
 - code inspection confirms `lead_status`, `lead_owner`, `sales_notes`, `follow_up_at`, and `last_contact_at` save through Supabase updates and are reloaded through `select("*")`
 - dashboard metrics, workflow filters, and CSV export use canonical workflow fields with compatibility fallbacks only
+- homepage smoke confirmed curated Finished Articles order, selected article state, quote field prefill, quote metadata payload, scroll-to-quote behavior, and buyer intent event path still work after extraction
 
 Notes:
 - Prime scoring logic was not changed
 - homepage and quote payload were not changed
 - stable workflow field names are `lead_owner` and `follow_up_at`; prior `assigned_owner` and `next_followup_at` are compatibility fields only
 - intelligence fields remain separate from workflow fields
+- do not create more 3.4E sub-phases unless there is a real regression
 - linked Supabase schema queries from this shell are still blocked by missing Supabase access token
 - Supabase migration history still has the known remote mismatch around `20260508`; apply the 3.4E SQL intentionally rather than broad-pushing migrations unless history is repaired
 
@@ -210,8 +216,8 @@ Notes:
 ## Phase 3.5 — LLM Discovery / Authority Layer
 
 Status:
-- planned only
-- DO NOT BUILD YET unless Jay explicitly asks to start Phase 3.5
+- planning-active
+- do not implement until Jay explicitly approves the first Phase 3.5 build slice
 
 Goal:
 - turn Knitspeed into a machine-readable textile knowledge authority
@@ -238,16 +244,18 @@ Completion gate for quote/lead work:
 
 Status:
 - inspected 2026-05-10
-- stabilization refactor in progress and verified for extracted slices
+- Phase 3.4 stabilization closed and verified
 
 Current shape:
-- `src/App.jsx` is about 535 lines
+- `src/App.jsx` is about 435 lines
 - `src/pages/AdminLeadsDashboard.jsx` owns `/admin/leads`
 - `src/pages/AdminBuyersDashboard.jsx` owns `/admin/buyers`
 - `src/components/QuoteForm.jsx` owns the rendered quote form
+- `src/components/articles/FinishedArticleGrid.jsx` owns homepage Finished Articles rendering
+- `src/lib/buyerIntent.js` owns local/session buyer intent helper functions
 - `src/lib/leadInsights.js` owns shared lead count helpers
 - `src/lib/textileLabels.js` owns shared textile display labels
-- homepage article sections, route branching, quote submit logic, and buyer intent tracking still live in `App.jsx`
+- route branching, quote submit logic, and selected article state still live in `App.jsx`
 
 Future component boundaries:
 - `src/pages/HomePage.jsx`
