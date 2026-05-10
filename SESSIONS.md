@@ -775,3 +775,27 @@ Notes:
 - no fake GSM, MOQ, inventory, or product availability claims added
 - no CMS, sitemap, Supabase, admin, quote flow, or scoring changes made
 
+
+---
+
+## Phase 3.5J — Multi-Article Schema Refinement
+
+Status:
+- implemented and verified
+
+Summary:
+- updated canonical knowledge URL helper to support full page objects and canonical paths
+- refined Article and FAQPage schema builders for multiple knowledge articles
+- expanded organization knowsAbout terms for Compact Cotton and apparel fabric sourcing
+- preserved JSON-LD script count and schema types on article pages
+
+Verification:
+- npm run build
+- npm run lint
+- browser smoke confirmed Compact Cotton article has 4 JSON-LD scripts
+- browser smoke confirmed schema types: Organization, Article, FAQPage, BreadcrumbList
+- browser smoke confirmed Compact Cotton Article schema URL is canonical
+
+Notes:
+- no CMS, sitemap, Supabase, quote flow, admin, or scoring changes made
+

@@ -2,8 +2,13 @@ export const KNITSPEED_SITE_URL = "https://knitspeed-homepage.vercel.app";
 
 const ORGANIZATION_ID = `${KNITSPEED_SITE_URL}/#organization`;
 
-export function getCanonicalKnowledgeUrl(slug) {
-  return `${KNITSPEED_SITE_URL}/knowledge/${slug}`;
+export function getCanonicalKnowledgeUrl(pageOrSlug) {
+  const path =
+    typeof pageOrSlug === "string"
+      ? `/knowledge/${pageOrSlug}`
+      : pageOrSlug.canonicalPath || `/knowledge/${pageOrSlug.slug}`;
+
+  return `${KNITSPEED_SITE_URL}${path}`;
 }
 
 export function buildOrganizationSchema() {
@@ -22,12 +27,15 @@ export function buildOrganizationSchema() {
       "Thailand textile supplier",
       "Single Jersey fabric",
       "Interlock fabric",
+      "Compact Cotton",
+      "knitted fabric structures",
+      "apparel fabric sourcing",
     ],
   };
 }
 
 export function buildArticleSchema(page) {
-  const url = getCanonicalKnowledgeUrl(page.slug);
+  const url = getCanonicalKnowledgeUrl(page);
 
   return {
     "@context": "https://schema.org",
@@ -37,7 +45,10 @@ export function buildArticleSchema(page) {
     description: page.metaDescription || page.subtitle,
     url,
     mainEntityOfPage: url,
-    about: ["Single Jersey fabric", "Interlock fabric", "knitted fabric selection"],
+    about: page.tags?.length
+      ? page.tags
+      : ["knitted fabric selection", "apparel fabric sourcing"],
+    articleSection: page.category,
     author: {
       "@id": ORGANIZATION_ID,
     },
@@ -48,7 +59,7 @@ export function buildArticleSchema(page) {
 }
 
 export function buildFAQPageSchema(page) {
-  const url = getCanonicalKnowledgeUrl(page.slug);
+  const url = getCanonicalKnowledgeUrl(page);
 
   return {
     "@context": "https://schema.org",

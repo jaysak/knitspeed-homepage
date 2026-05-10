@@ -90,7 +90,7 @@ export default function KnowledgeArticlePage({ page }) {
     );
   }
 
-  const pageUrl = getCanonicalKnowledgeUrl(page.slug);
+  const pageUrl = getCanonicalKnowledgeUrl(page);
   const schema = [
     buildOrganizationSchema(),
     buildArticleSchema(page),

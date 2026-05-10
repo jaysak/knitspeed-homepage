@@ -585,3 +585,39 @@ Next likely safe slice:
 - keep lightweight
 - avoid routing overhaul unless necessary
 
+
+---
+
+## Phase 3.5J — Multi-Article Schema Refinement
+
+Status:
+- complete
+- verified locally
+
+Goal:
+- stabilize structured data behavior now that multiple knowledge articles exist
+
+Implemented:
+- page-object-aware canonical URL helper
+- canonical path support for knowledge article schema
+- topic/tag-based Article about metadata
+- expanded organization textile knowledge terms
+
+Verified:
+- npm run build passes
+- npm run lint passes
+- browser smoke confirmed article JSON-LD remains stable
+- browser smoke confirmed Compact Cotton canonical Article URL is correct
+
+Rules preserved:
+- no CMS
+- no sitemap
+- no Supabase changes
+- no quote flow changes
+- no admin dashboard changes
+
+Next likely safe slice:
+- Phase 3.5K — Knowledge Index Metadata
+- add document title/meta description for `/knowledge`
+- optionally add lightweight CollectionPage schema only if kept simple
+
