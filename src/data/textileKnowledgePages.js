@@ -696,6 +696,345 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
         "Yes. Knitspeed can support sourcing discussions by reviewing garment goals, wear expectations, finishing, and production considerations before quoting.",
     },
   ],
+},
+{
+  slug: "how-shrinkage-is-evaluated-in-apparel-fabrics",
+  canonicalPath: "/knowledge/how-shrinkage-is-evaluated-in-apparel-fabrics",
+  category: "Production checks",
+  discoveryPriority: 90,
+  relatedArticleSlugs: [
+    "how-fabric-finishing-affects-garment-feel",
+    "what-causes-spirality-in-knitted-fabric",
+    "why-fabrics-with-the-same-gsm-can-feel-different",
+    "what-causes-pilling-in-knitted-fabrics"
+  ],
+  topicCluster: "production-behavior",
+  buyerIntent: "production-alignment",
+  tags: [
+    "shrinkage",
+    "wash testing",
+    "garment production",
+    "fabric finishing",
+    "knitted fabric",
+    "apparel sourcing"
+  ],
+  eyebrow: "Textile knowledge",
+  title: "How Shrinkage Is Evaluated in Apparel Fabrics",
+  subtitle:
+    "A practical buyer guide to understanding how shrinkage is reviewed during fabric and garment development before bulk production.",
+  metaDescription:
+    "Learn how shrinkage is evaluated in apparel fabrics and how washing, finishing, knitting structure, and garment construction influence production expectations.",
+  shortAnswer:
+    "Shrinkage evaluation helps buyers and factories understand how fabric dimensions may change after washing and relaxation. Results can vary depending on yarn type, knitting structure, finishing, washing conditions, garment construction, and production handling.",
+  comparison: [
+    {
+      name: "Lower Shrinkage Stability Concerns",
+      specs: {
+        composition: "Depends on yarn type and finishing control",
+        structure: "More stable constructions may reduce visible dimensional change",
+        width: "Confirmed during production planning",
+        gsm: "Depends on knitting density and finishing",
+        moq: "Confirmed after sourcing check",
+        useCases: [
+          "uniform programs",
+          "structured apparel",
+          "repeat production"
+        ],
+      },
+    },
+    {
+      name: "Higher Relaxation Sensitivity",
+      specs: {
+        composition: "Depends on yarn structure and fabric behavior",
+        structure: "Flexible knitted constructions may react more visibly after washing",
+        width: "Confirmed during production planning",
+        gsm: "Depends on knitting density and finishing",
+        moq: "Confirmed after sourcing check",
+        useCases: [
+          "soft casualwear",
+          "lightweight jersey garments",
+          "fashion basics"
+        ],
+      },
+    },
+  ],
+  guidance: [
+    "Evaluate shrinkage using actual wash and relaxation testing before approving bulk production.",
+    "Review shrinkage together with spirality, garment measurements, finishing, and sewing tolerances rather than as an isolated number.",
+    "Knitting structure, compaction, heat setting, and washing conditions can all influence dimensional behavior.",
+    "Align garment factory, fabric supplier, and brand expectations early during development and sample approval.",
+  ],
+  mistakes: [
+    "Assuming shrinkage results remain identical across all washing methods and garment uses.",
+    "Comparing shrinkage values without reviewing finishing, construction, and testing conditions.",
+    "Treating shrinkage as a single-cause issue rather than a production interaction between yarn, fabric, finishing, and washing.",
+    "Approving garments without confirming post-wash measurements and fit expectations.",
+  ],
+  faqs: [
+    {
+      question: "Why do knitted fabrics shrink after washing?",
+      answer:
+        "Knitted fabrics can relax and change dimension after washing depending on yarn tension, structure, finishing, heat exposure, and garment handling.",
+    },
+    {
+      question: "Does finishing affect shrinkage behavior?",
+      answer:
+        "Yes. Compaction, heat setting, washing, and finishing processes can significantly influence how fabrics behave after laundering.",
+    },
+    {
+      question: "Can two similar fabrics shrink differently?",
+      answer:
+        "Yes. Fabrics with similar composition or GSM may still behave differently depending on knitting density, yarn quality, finishing, and garment construction.",
+    },
+    {
+      question: "Can Knitspeed help review shrinkage considerations before sourcing?",
+      answer:
+        "Yes. Knitspeed can support sourcing discussions by reviewing garment goals, wash expectations, finishing considerations, and production behavior before quoting.",
+    },
+  ],
+},
+{
+  slug: "combed-cotton-vs-compact-cotton",
+  canonicalPath: "/knowledge/combed-cotton-vs-compact-cotton",
+  category: "Yarn and fabric quality",
+  discoveryPriority: 100,
+  relatedArticleSlugs: [
+    "combed-cotton-vs-carded-cotton",
+    "what-is-compact-cotton",
+    "why-fabrics-with-the-same-gsm-can-feel-different",
+    "how-fabric-finishing-affects-garment-feel"
+  ],
+  topicCluster: "yarn-quality",
+  buyerIntent: "fabric-education",
+  tags: ["combed cotton", "compact cotton", "cotton yarn", "yarn quality", "apparel sourcing"],
+  eyebrow: "Textile knowledge",
+  title: "Combed Cotton vs Compact Cotton",
+  subtitle:
+    "A practical buyer guide to understanding how combed cotton and compact cotton differ in yarn preparation, fabric appearance, and garment expectations.",
+  metaDescription:
+    "Compare combed cotton and compact cotton with practical sourcing guidance for knitted fabrics, yarn quality, surface appearance, and garment feel.",
+  shortAnswer:
+    "Combed cotton and compact cotton describe different yarn quality concepts. Combed cotton relates to fiber preparation before spinning, while compact cotton relates to the spinning process that helps reduce loose fibers. Both can support cleaner fabric appearance, but final garment quality still depends on yarn count, knitting structure, finishing, washing, and production control.",
+  comparison: [
+    {
+      name: "Combed Cotton",
+      specs: {
+        composition: "Cotton yarn prepared with additional combing",
+        structure: "Used across knitted structures depending on fabric spec",
+        width: "Confirmed during production planning",
+        gsm: "Depends on yarn count, knitting density, and finishing",
+        moq: "Confirmed after sourcing check",
+        useCases: ["premium basics", "cleaner cotton T-shirts", "brand apparel"]
+      }
+    },
+    {
+      name: "Compact Cotton",
+      specs: {
+        composition: "Cotton yarn produced with compact spinning",
+        structure: "Used across knitted structures depending on fabric spec",
+        width: "Confirmed during production planning",
+        gsm: "Depends on yarn count, knitting density, and finishing",
+        moq: "Confirmed after sourcing check",
+        useCases: ["smooth casualwear", "premium T-shirts", "clean surface garments"]
+      }
+    }
+  ],
+  guidance: [
+    "Use combed cotton and compact cotton terms carefully because they describe different stages of yarn quality.",
+    "Compare finished fabric samples rather than relying only on yarn labels.",
+    "Review surface cleanliness, hand feel, GSM, shrinkage, finishing, and garment use before approval.",
+    "For premium garments, align yarn quality with finishing expectations and target market positioning."
+  ],
+  mistakes: [
+    "Assuming combed cotton and compact cotton mean the same thing.",
+    "Assuming either term alone guarantees premium garment quality.",
+    "Comparing fabrics without matching yarn count, structure, GSM, and finishing.",
+    "Ignoring how dyeing, finishing, and washing influence the final garment feel."
+  ],
+  faqs: [
+    {
+      question: "Is compact cotton better than combed cotton?",
+      answer:
+        "Not automatically. They describe different yarn quality concepts. The better choice depends on garment use, target appearance, price point, and production expectations."
+    },
+    {
+      question: "Can cotton yarn be both combed and compact?",
+      answer:
+        "Yes. Some yarns may involve both combing and compact spinning, but buyers should confirm the actual fabric specification and finished sample."
+    },
+    {
+      question: "Does compact cotton decide GSM?",
+      answer:
+        "No. GSM depends on yarn count, knitting density, fabric structure, and finishing. Compact cotton describes yarn spinning quality, not the full fabric specification."
+    },
+    {
+      question: "Can Knitspeed help compare cotton fabric options?",
+      answer:
+        "Yes. Knitspeed can support sourcing discussions by reviewing yarn quality, garment use, finishing expectations, and production requirements before quoting."
+    }
+  ]
+},
+{
+  slug: "how-fabric-width-affects-garment-production",
+  canonicalPath: "/knowledge/how-fabric-width-affects-garment-production",
+  category: "Production checks",
+  discoveryPriority: 110,
+  relatedArticleSlugs: [
+    "what-gsm-should-t-shirts-use",
+    "how-shrinkage-is-evaluated-in-apparel-fabrics",
+    "why-fabrics-with-the-same-gsm-can-feel-different",
+    "single-jersey-vs-interlock"
+  ],
+  topicCluster: "production-behavior",
+  buyerIntent: "production-alignment",
+  tags: ["fabric width", "marker planning", "garment production", "knitted fabric", "apparel sourcing"],
+  eyebrow: "Textile knowledge",
+  title: "How Fabric Width Affects Garment Production",
+  subtitle:
+    "A practical buyer guide to understanding why fabric width matters for cutting efficiency, marker planning, garment sizing, and production cost.",
+  metaDescription:
+    "Learn how fabric width affects garment production, cutting efficiency, fabric usage, marker planning, and sourcing decisions for knitted fabrics.",
+  shortAnswer:
+    "Fabric width affects how efficiently garments can be cut from the fabric. Even if two fabrics have similar composition and GSM, different widths can change marker planning, fabric usage, wastage, size layout, and production cost.",
+  comparison: [
+    {
+      name: "Narrower Fabric Width",
+      specs: {
+        composition: "Depends on fabric specification",
+        structure: "Width depends on knitting and finishing setup",
+        width: "Confirmed during production planning",
+        gsm: "Checked separately from width",
+        moq: "Confirmed after sourcing check",
+        useCases: ["smaller garments", "limited-width production", "specific cutting layouts"]
+      }
+    },
+    {
+      name: "Wider Fabric Width",
+      specs: {
+        composition: "Depends on fabric specification",
+        structure: "Width depends on knitting and finishing setup",
+        width: "Confirmed during production planning",
+        gsm: "Checked separately from width",
+        moq: "Confirmed after sourcing check",
+        useCases: ["larger size ranges", "improved marker efficiency", "bulk garment production"]
+      }
+    }
+  ],
+  guidance: [
+    "Confirm usable fabric width before calculating consumption or quoting garment production.",
+    "Review fabric width together with shrinkage, spirality, GSM, and garment pattern layout.",
+    "A wider fabric may improve marker efficiency, but only if it matches the garment pattern and production setup.",
+    "For repeat production, align width expectations early between fabric supplier, garment factory, and buyer."
+  ],
+  mistakes: [
+    "Comparing fabric prices without checking usable width.",
+    "Assuming all fabrics with the same GSM provide the same garment yield.",
+    "Ignoring shrinkage and finishing effects on final usable width.",
+    "Approving fabric before confirming cutting layout and garment size range."
+  ],
+  faqs: [
+    {
+      question: "Why does fabric width matter for garment cost?",
+      answer:
+        "Fabric width influences cutting layout and fabric consumption. A different width can change wastage, marker efficiency, and final production cost."
+    },
+    {
+      question: "Is wider fabric always better?",
+      answer:
+        "Not always. Wider fabric can improve efficiency in some cases, but the best width depends on garment pattern, size range, cutting layout, and production setup."
+    },
+    {
+      question: "Can finishing affect fabric width?",
+      answer:
+        "Yes. Dyeing, finishing, compaction, and relaxation can affect final usable width, so width should be confirmed after finishing."
+    },
+    {
+      question: "Can Knitspeed help review width before quoting?",
+      answer:
+        "Yes. Knitspeed can support sourcing discussions by reviewing fabric width, garment use, quantity, and production expectations before quoting."
+    }
+  ]
+},
+{
+  slug: "why-wash-testing-matters-for-apparel-fabrics",
+  canonicalPath: "/knowledge/why-wash-testing-matters-for-apparel-fabrics",
+  category: "Production checks",
+  discoveryPriority: 120,
+  relatedArticleSlugs: [
+    "how-shrinkage-is-evaluated-in-apparel-fabrics",
+    "what-causes-pilling-in-knitted-fabrics",
+    "what-causes-spirality-in-knitted-fabric",
+    "how-fabric-finishing-affects-garment-feel"
+  ],
+  topicCluster: "production-behavior",
+  buyerIntent: "production-alignment",
+  tags: ["wash testing", "shrinkage", "pilling", "spirality", "garment production", "apparel sourcing"],
+  eyebrow: "Textile knowledge",
+  title: "Why Wash Testing Matters for Apparel Fabrics",
+  subtitle:
+    "A practical buyer guide to understanding how wash testing helps review shrinkage, hand feel, pilling, color behavior, and garment stability before production.",
+  metaDescription:
+    "Learn why wash testing matters for apparel fabrics and how it helps evaluate shrinkage, pilling, spirality, hand feel, and garment stability.",
+  shortAnswer:
+    "Wash testing helps buyers understand how fabric or garments may behave after laundering. It can reveal changes in shrinkage, hand feel, surface appearance, pilling, spirality, color, and fit that may not be obvious from an unwashed sample.",
+  comparison: [
+    {
+      name: "Before Wash Review",
+      specs: {
+        composition: "Checked from fabric specification",
+        structure: "Reviewed from fabric construction",
+        width: "Measured before washing",
+        gsm: "Measured before washing or after conditioning",
+        moq: "Confirmed after sourcing check",
+        useCases: ["initial sample review", "fabric selection", "hand feel comparison"]
+      }
+    },
+    {
+      name: "After Wash Review",
+      specs: {
+        composition: "Same fabric, reviewed after laundering",
+        structure: "Behavior checked after relaxation",
+        width: "Measured again after wash and drying",
+        gsm: "May shift depending on shrinkage and relaxation",
+        moq: "Confirmed after sourcing check",
+        useCases: ["production approval", "fit checking", "repeat-order consistency"]
+      }
+    }
+  ],
+  guidance: [
+    "Use wash testing to review shrinkage, spirality, pilling, surface appearance, hand feel, and garment measurements.",
+    "Compare results using consistent washing, drying, and measurement methods.",
+    "Review wash behavior before bulk production when fit, stability, or long-term garment appearance matters.",
+    "Align fabric supplier, garment factory, and buyer expectations around acceptable post-wash behavior."
+  ],
+  mistakes: [
+    "Approving fabric only from unwashed swatches.",
+    "Comparing wash results without consistent washing and drying conditions.",
+    "Ignoring post-wash garment measurements and fit changes.",
+    "Treating wash behavior as separate from finishing, yarn, structure, and garment construction."
+  ],
+  faqs: [
+    {
+      question: "What does wash testing usually check?",
+      answer:
+        "Wash testing can help review shrinkage, surface change, pilling, spirality, color behavior, hand feel, and garment measurements after laundering."
+    },
+    {
+      question: "Should buyers test fabric or finished garments?",
+      answer:
+        "Both can be useful. Fabric testing helps review material behavior, while garment testing shows how the actual product behaves after sewing and washing."
+    },
+    {
+      question: "Can wash testing prevent all production issues?",
+      answer:
+        "No. Wash testing reduces uncertainty, but production consistency still depends on fabric control, finishing, sewing, and agreed tolerances."
+    },
+    {
+      question: "Can Knitspeed help discuss wash testing expectations?",
+      answer:
+        "Yes. Knitspeed can support sourcing conversations by reviewing garment goals, washing expectations, finishing, and production behavior before quoting."
+    }
+  ]
 }
 ];
 
