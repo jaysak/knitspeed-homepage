@@ -721,3 +721,30 @@ Notes:
 - no new textile content pages were added
 - no CMS, sitemap, Supabase, quote flow, admin, or scoring changes made
 
+
+---
+
+## Phase 3.5I — Second Hand-Authored Knowledge Article
+
+Status:
+- implemented and verified
+
+Summary:
+- added hand-authored Compact Cotton knowledge article
+- added route `/knowledge/what-is-compact-cotton`
+- connected Compact Cotton page to existing knowledge registry and topic clustering
+- enabled related knowledge linking back to Single Jersey vs Interlock
+- preserved conservative textile sourcing language
+
+Verification:
+- npm run build
+- npm run lint
+- browser smoke confirmed `/knowledge` lists both implemented articles
+- browser smoke confirmed Compact Cotton article renders
+- browser smoke confirmed existing Single Jersey vs Interlock article still renders
+- browser smoke confirmed JSON-LD count remains 4 on article pages
+
+Notes:
+- no fake GSM, MOQ, inventory, or product availability claims added
+- no CMS, sitemap, Supabase, admin, quote flow, or scoring changes made
+

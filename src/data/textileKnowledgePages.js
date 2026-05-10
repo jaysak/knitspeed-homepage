@@ -75,6 +75,82 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
       },
     ],
   },
+  {
+    slug: "what-is-compact-cotton",
+    canonicalPath: "/knowledge/what-is-compact-cotton",
+    category: "Yarn and fabric quality",
+    discoveryPriority: 20,
+    relatedArticleSlugs: ["single-jersey-vs-interlock"],
+    topicCluster: "yarn-quality",
+    buyerIntent: "fabric-education",
+    tags: ["compact cotton", "combed cotton", "cotton fabric", "yarn quality", "apparel sourcing"],
+    eyebrow: "Textile knowledge",
+    title: "What Is Compact Cotton?",
+    subtitle:
+      "A practical buyer guide to compact cotton yarn and why it matters for knitted fabric appearance, hand feel, and production quality.",
+    metaDescription:
+      "Learn what compact cotton means for knitted fabrics, including yarn quality, fabric surface, buyer checks, and apparel sourcing considerations.",
+    shortAnswer:
+      "Compact cotton is cotton yarn made with a spinning process that helps reduce loose fibers and improve yarn smoothness. For buyers, compact cotton can support a cleaner fabric surface, smoother hand feel, and better appearance in finished garments, but the final fabric still depends on yarn count, knitting structure, dyeing, finishing, and production control.",
+    comparison: [
+      {
+        name: "Compact Cotton",
+        specs: {
+          composition: "Cotton yarn produced with compact spinning",
+          structure: "Used across knitted structures depending on fabric spec",
+          width: "Confirmed by production spec",
+          gsm: "Depends on yarn count, knitting density, and finishing",
+          moq: "Confirmed after sourcing check",
+          useCases: ["premium T-shirts", "smooth casualwear", "brand apparel"],
+        },
+      },
+      {
+        name: "Regular Cotton Yarn",
+        specs: {
+          composition: "Cotton yarn produced through standard spinning routes",
+          structure: "Used across many knitted and woven fabric types",
+          width: "Confirmed by production spec",
+          gsm: "Depends on yarn count, knitting density, and finishing",
+          moq: "Confirmed after sourcing check",
+          useCases: ["basic T-shirts", "general apparel", "cost-sensitive production"],
+        },
+      },
+    ],
+    guidance: [
+      "Choose compact cotton when the garment needs a cleaner surface, smoother hand feel, or more premium appearance.",
+      "Do not judge compact cotton by the yarn name alone. Confirm fabric sample, GSM, width, shrinkage, color, and finishing before production.",
+      "Compact cotton can improve appearance, but it does not replace good knitting, dyeing, finishing, and quality control.",
+      "For brand apparel or repeat production, compare compact cotton options against target price, hand feel, color performance, and production consistency.",
+    ],
+    mistakes: [
+      "Assuming compact cotton automatically means the final fabric will be premium without checking finishing and production quality.",
+      "Comparing compact cotton and regular cotton without matching yarn count, structure, GSM, and finishing.",
+      "Choosing only by price without considering garment positioning, target market, and repeat-order consistency.",
+      "Using one sample as the full production standard without confirming tolerance and bulk behavior.",
+    ],
+    faqs: [
+      {
+        question: "Is compact cotton the same as combed cotton?",
+        answer:
+          "No. Combed cotton refers to a fiber preparation process that removes shorter fibers. Compact cotton refers to a spinning process that helps make the yarn smoother and reduce loose fibers. A yarn can involve both quality concepts, but they are not the same term.",
+      },
+      {
+        question: "Is compact cotton always better?",
+        answer:
+          "Not always. Compact cotton can be useful for cleaner and smoother fabrics, but the best choice depends on garment use, target price, production quantity, finishing, and buyer expectations.",
+      },
+      {
+        question: "Does compact cotton decide the GSM?",
+        answer:
+          "No. GSM depends on yarn count, knitting density, fabric structure, and finishing. Compact cotton describes yarn quality, not the complete fabric specification.",
+      },
+      {
+        question: "Can Knitspeed help source compact cotton fabric?",
+        answer:
+          "Yes. Knitspeed can support sourcing discussions by matching compact cotton fabric options with garment use, quantity, target market, and production needs.",
+      },
+    ],
+  },
 ];
 
 export function getTextileKnowledgePage(slug) {

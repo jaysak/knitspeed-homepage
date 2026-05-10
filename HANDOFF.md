@@ -471,3 +471,79 @@ Next likely safe slice:
 - candidate: What Is Compact Cotton?
 - keep it conservative and grounded in real textile terminology
 
+
+---
+
+## Phase 3.5I — Second Hand-Authored Knowledge Article
+
+Status:
+- complete
+- verified locally
+
+Goal:
+- expand knowledge coverage carefully with one real buyer-facing textile education article
+
+Implemented:
+- Compact Cotton knowledge article
+- `/knowledge/what-is-compact-cotton` route
+- registry integration
+- topic/tag metadata
+- related knowledge linking
+
+Verified:
+- npm run build passes
+- npm run lint passes
+- browser smoke confirmed both knowledge articles render
+- browser smoke confirmed `/knowledge` lists implemented pages only
+
+Rules preserved:
+- no fake specs
+- no CMS
+- no sitemap
+- no Supabase changes
+- no quote flow changes
+- no admin dashboard changes
+
+Next likely safe slice:
+- Phase 3.5J — Knowledge Schema Refinement for Multiple Articles
+- keep lightweight
+- avoid routing overhaul unless necessary
+
+
+---
+
+## Phase 3.5I — Second Hand-Authored Knowledge Article
+
+Status:
+- complete
+- verified locally
+
+Goal:
+- expand knowledge coverage carefully with one real buyer-facing textile education article
+
+Implemented:
+- Compact Cotton knowledge article
+- `/knowledge/what-is-compact-cotton` route
+- registry integration
+- topic/tag metadata
+- related knowledge linking
+
+Verified:
+- npm run build passes
+- npm run lint passes
+- browser smoke confirmed both knowledge articles render
+- browser smoke confirmed `/knowledge` lists implemented pages only
+
+Rules preserved:
+- no fake specs
+- no CMS
+- no sitemap
+- no Supabase changes
+- no quote flow changes
+- no admin dashboard changes
+
+Next likely safe slice:
+- Phase 3.5J — Knowledge Schema Refinement for Multiple Articles
+- keep lightweight
+- avoid routing overhaul unless necessary
+
