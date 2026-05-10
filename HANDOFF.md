@@ -729,3 +729,40 @@ Next likely safe slice:
 - Phase 3.5N — Add lightweight knowledge 404 state
 - keep it local and simple
 
+
+---
+
+## Phase 3.5N — Lightweight Knowledge 404 State
+
+Status:
+- complete
+- verified locally
+
+Goal:
+- provide graceful recovery for invalid knowledge article routes
+
+Implemented:
+- lightweight knowledge fallback page
+- implemented article recovery links
+- navigation back to `/knowledge`
+- pathname-based unknown route handling
+
+Verified:
+- `npm run build` passes
+- `npm run lint` passes
+- browser smoke confirmed existing knowledge pages remain stable
+- browser smoke confirmed invalid knowledge routes render fallback page
+
+Rules preserved:
+- no React Router
+- no CMS
+- no sitemap
+- no Supabase changes
+- no quote flow changes
+- no admin dashboard changes
+
+Next likely safe slice:
+- Phase 3.5O — Lightweight related-topic recommendation refinement
+- keep internal-linking focused and registry-driven
+- avoid SEO over-engineering
+

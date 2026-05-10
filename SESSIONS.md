@@ -874,3 +874,36 @@ Verification:
 Notes:
 - no CMS, sitemap, Supabase, quote flow, admin, or scoring changes made
 
+
+---
+
+## Phase 3.5N — Lightweight Knowledge 404 State
+
+Status:
+- implemented and verified
+
+Summary:
+- added lightweight fallback page for unknown `/knowledge/*` routes
+- added recovery navigation back to `/knowledge`
+- exposed implemented knowledge article links from the fallback state
+- preserved lightweight pathname routing approach without React Router
+
+Implemented files:
+- `src/pages/KnowledgeNotFoundPage.jsx`
+- `src/App.jsx`
+
+Verification:
+- `npm run build`
+- `npm run lint`
+- browser smoke confirmed `/knowledge` still renders
+- browser smoke confirmed existing knowledge article routes still render
+- browser smoke confirmed `/knowledge/test-missing` renders fallback page
+
+Notes:
+- no CMS
+- no sitemap
+- no Supabase changes
+- no admin dashboard changes
+- no quote flow changes
+- no Prime scoring changes
+

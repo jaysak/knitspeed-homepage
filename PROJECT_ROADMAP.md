@@ -487,7 +487,8 @@ Status:
 No implementation started yet.
 
 Current active phase:
-- 3.4C Buyer Qualification Layer
+- 3.5N Lightweight Knowledge 404 State complete
+- next likely slice: 3.5O Lightweight related-topic recommendation refinement
 
 ---
 

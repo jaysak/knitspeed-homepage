@@ -14,9 +14,13 @@ import AdminLeadsDashboard from "./pages/AdminLeadsDashboard";
 import AdminBuyersDashboard from "./pages/AdminBuyersDashboard";
 import KnowledgeArticlePage from "./pages/KnowledgeArticlePage";
 import KnowledgeIndexPage from "./pages/KnowledgeIndexPage";
+import KnowledgeNotFoundPage from "./pages/KnowledgeNotFoundPage";
 import QuoteForm from "./components/QuoteForm";
 import FinishedArticleGrid from "./components/articles/FinishedArticleGrid";
-import { getKnowledgePageFromPathname } from "./lib/knowledgeRegistry";
+import {
+  getKnowledgePageFromPathname,
+  getAllKnowledgePages,
+} from "./lib/knowledgeRegistry";
 import { supabase } from "./lib/supabaseClient";
 import { buildBuyerIntentNote, writeBuyerIntentEvent } from "./lib/buyerIntent";
 import {
@@ -183,6 +187,14 @@ export default function App() {
 
   if (knowledgePage) {
     return <KnowledgeArticlePage page={knowledgePage} />;
+  }
+
+  if (pathname.startsWith("/knowledge/")) {
+    return (
+      <KnowledgeNotFoundPage
+        articles={getAllKnowledgePages()}
+      />
+    );
   }
 
   async function handleQuoteSubmit(e) {
