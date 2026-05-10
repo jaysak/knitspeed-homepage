@@ -179,7 +179,7 @@ export default function App() {
     );
   }
 
-  if (pathname === "/knowledge") {
+  if (pathname === "/knowledge" || pathname === "/knowledge/") {
     return <KnowledgeIndexPage />;
   }
 
