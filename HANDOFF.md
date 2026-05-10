@@ -949,3 +949,24 @@ Next likely safe slice:
 - Phase 3.5U — continue one hand-authored buyer guide only
 - keep the same registry-driven architecture
 - do not add CMS, sitemap, React Router, Supabase changes, admin changes, quote flow changes, or Prime scoring changes
+
+---
+
+# LATEST KNOWLEDGE CHECKPOINTS
+
+Completed:
+- Phase 3.5U — Why Fabrics With the Same GSM Can Feel Different
+- Phase 3.5V — What Causes Pilling in Knitted Fabrics?
+
+Current knowledge graph now covers:
+- structure
+- yarn quality
+- GSM
+- spirality
+- finishing
+- garment feel
+- pilling and wear behavior
+
+Important implementation note:
+- future article insertion should use the safe final-array-marker pattern
+- run `node --check src/data/textileKnowledgePages.js` before build/lint

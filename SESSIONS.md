@@ -1078,3 +1078,41 @@ Rules preserved:
 Notes:
 - this guide upgrades the knowledge layer toward garment outcome intelligence
 - key buyer trust concept: similar composition and GSM can still produce different garment feel depending on finishing and production control
+
+---
+
+## Phase 3.5U — GSM Feel Buyer Guide
+
+Status:
+- complete
+- committed and pushed as `5ae392a Add GSM fabric feel knowledge guide`
+
+Summary:
+- added hand-authored guide: Why Fabrics With the Same GSM Can Feel Different
+- strengthened semantic bridge between GSM, yarn quality, finishing, knitting density, hand feel, and garment behavior
+- preserved sourcing-aware and production-dependent language
+
+Verification:
+- `npm run build` passes
+- `npm run lint` passes
+
+---
+
+## Phase 3.5V — Pilling Buyer Guide
+
+Status:
+- complete
+- pending git checkpoint if not already committed separately
+
+Summary:
+- added hand-authored guide: What Causes Pilling in Knitted Fabrics?
+- strengthened fabric behavior intelligence around yarn quality, finishing, washing, garment friction, and wear expectations
+- used safe framing: pilling as fabric behavior/wear consideration, not automatic defect blame
+
+Verification:
+- `node --check src/data/textileKnowledgePages.js` passes
+- `npm run build` passes
+- `npm run lint` passes
+
+Notes:
+- new safe insertion pattern confirmed: insert object before final array closing marker using `,\nNEW_OBJECT\n];`

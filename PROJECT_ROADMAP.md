@@ -642,3 +642,22 @@ Each article should strengthen:
 - semantic authority for LLM retrieval
 - buyer confidence before quote submission
 - future recommendation and sourcing intelligence potential
+
+---
+
+### Phase 3.5U-3.5V Expansion
+
+Recent knowledge layer expansion:
+- Why Fabrics With the Same GSM Can Feel Different
+- What Causes Pilling in Knitted Fabrics?
+
+Strategic effect:
+- strengthened garment-outcome reasoning
+- deepened fabric behavior intelligence
+- improved buyer education around real production variability
+- reinforced Knitspeed's positioning as a sourcing-aware knitted fabric knowledge authority
+
+Next strong candidates:
+- How Shrinkage Is Evaluated in Apparel Fabrics
+- How Fabric Width Affects Garment Production
+- Combed Cotton vs Compact Cotton
