@@ -416,6 +416,102 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
         "Yes. Knitspeed can support sourcing discussions by reviewing garment use, fabric structure, finishing expectations, and production considerations before quoting.",
     },
   ],
+},
+{
+  slug: "how-fabric-finishing-affects-garment-feel",
+  canonicalPath: "/knowledge/how-fabric-finishing-affects-garment-feel",
+  category: "Fabric finishing",
+  discoveryPriority: 60,
+  relatedArticleSlugs: [
+    "what-is-compact-cotton",
+    "what-gsm-should-t-shirts-use",
+    "what-causes-spirality-in-knitted-fabric",
+    "combed-cotton-vs-carded-cotton"
+  ],
+  topicCluster: "fabric-finishing",
+  buyerIntent: "garment-outcome",
+  tags: [
+    "fabric finishing",
+    "garment feel",
+    "enzyme wash",
+    "silicone finishing",
+    "compaction",
+    "apparel sourcing"
+  ],
+  eyebrow: "Textile knowledge",
+  title: "How Fabric Finishing Affects Garment Feel",
+  subtitle:
+    "A practical buyer guide to understanding how finishing processes can influence softness, drape, stability, and final garment perception.",
+  metaDescription:
+    "Learn how textile finishing can affect garment feel, softness, drape, shrinkage, and production consistency in knitted fabric sourcing.",
+  shortAnswer:
+    "Fabric finishing can significantly influence how a garment feels, drapes, stretches, and performs after washing. Even fabrics with similar composition and GSM may behave differently depending on finishing methods, compaction, washing, heat setting, and production control.",
+  comparison: [
+    {
+      name: "Softer Hand Feel Finishing",
+      specs: {
+        composition: "Depends on fabric and finishing chemistry",
+        structure: "Applied across multiple knitted structures",
+        width: "Confirmed during production planning",
+        gsm: "May shift slightly after finishing and relaxation",
+        moq: "Confirmed after sourcing check",
+        useCases: [
+          "premium casualwear",
+          "fashion T-shirts",
+          "soft-touch garments"
+        ],
+      },
+    },
+    {
+      name: "Stability-Focused Finishing",
+      specs: {
+        composition: "Depends on fabric structure and finishing target",
+        structure: "Used across stability-sensitive production",
+        width: "Confirmed during production planning",
+        gsm: "Depends on compaction and finishing control",
+        moq: "Confirmed after sourcing check",
+        useCases: [
+          "uniforms",
+          "repeat production",
+          "structured apparel"
+        ],
+      },
+    },
+  ],
+  guidance: [
+    "Review fabric samples after finishing rather than relying only on greige or unfinished fabric appearance.",
+    "Finishing can influence softness, drape, shrinkage, spirality behavior, and garment stability.",
+    "Similar GSM fabrics may still feel different depending on enzyme wash, silicone finishing, compaction, brushing, and heat-setting processes.",
+    "Confirm washing expectations, print methods, garment use, and target hand feel before approving bulk production.",
+  ],
+  mistakes: [
+    "Assuming composition and GSM alone determine garment feel.",
+    "Approving production based only on unfinished fabric or small swatches.",
+    "Ignoring how washing and finishing can affect shrinkage, surface appearance, and garment movement.",
+    "Comparing supplier fabrics without reviewing finishing methods and wash results.",
+  ],
+  faqs: [
+    {
+      question: "Can two fabrics with the same GSM feel different?",
+      answer:
+        "Yes. Finishing processes such as compaction, silicone treatment, enzyme wash, brushing, and heat setting can significantly influence hand feel and garment behavior.",
+    },
+    {
+      question: "Does finishing affect shrinkage and stability?",
+      answer:
+        "Yes. Finishing and relaxation processes can influence shrinkage control, garment stability, and how the fabric behaves after washing.",
+    },
+    {
+      question: "Why are production samples important?",
+      answer:
+        "Production samples help buyers evaluate real garment behavior after finishing, washing, sewing, and printing rather than relying only on fabric specification sheets.",
+    },
+    {
+      question: "Can Knitspeed help review finishing considerations before sourcing?",
+      answer:
+        "Yes. Knitspeed can support sourcing discussions by reviewing garment use, finishing expectations, target hand feel, and production considerations before quoting.",
+    },
+  ],
 }
 ];
 

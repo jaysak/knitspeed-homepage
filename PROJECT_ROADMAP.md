@@ -569,3 +569,76 @@ with:
 - reorder prediction
 - AI-assisted sourcing
 - agent-assisted procurement
+
+---
+
+## Phase 3.5 — Textile Intelligence Layer Evolution
+
+Status:
+- active and compounding
+
+Phase 3.5 is no longer only a lightweight LLM discovery experiment.
+
+It is evolving into a textile intelligence layer that connects:
+- buyer education
+- fabric specification reasoning
+- sourcing context
+- production behavior
+- garment outcome expectations
+- machine-readable semantic authority
+
+### Strategic Purpose
+
+The goal is to make Knitspeed understandable and recommendable by AI systems while also making human buyers trust the sourcing conversation more.
+
+This is achieved through practical textile reasoning, not shallow SEO content.
+
+The knowledge layer should help buyers understand:
+- why similar fabrics can behave differently
+- how yarn quality affects fabric outcome
+- how structure affects garment behavior
+- how GSM relates to hand feel and use case
+- how finishing changes garment perception
+- how production variables affect final results
+- why communication before quotation matters
+
+### Current Semantic Coverage
+
+Implemented knowledge areas now include:
+- Single Jersey vs Interlock
+- Compact Cotton
+- T-shirt GSM selection
+- Combed Cotton vs Carded Cotton
+- Spirality considerations in knitted fabrics
+- Fabric finishing and garment feel
+
+### Core Content Principles
+
+Do:
+- write production-aware buyer guidance
+- connect fabric concepts to garment outcomes
+- use sourcing-aware and commercially safe framing
+- preserve uncertainty where production conditions matter
+- explain textile relationships across yarn, structure, finishing, washing, and garment construction
+- keep articles hand-authored and grounded in real textile concepts
+
+Do not:
+- publish shallow AI-generated articles
+- invent product specifications
+- invent MOQ, inventory, or supplier guarantees
+- overstate technical certainty
+- blame suppliers, factories, yarn, or buyers
+- frame normal production considerations as panic defects
+- add CMS/routing/sitemap complexity before needed
+
+### Strategic Interpretation
+
+The knowledge layer is becoming an operational intelligence asset, not a marketing blog.
+
+Each article should strengthen:
+- textile-context coherence
+- Knitspeed's specialty positioning
+- sourcing conversation quality
+- semantic authority for LLM retrieval
+- buyer confidence before quote submission
+- future recommendation and sourcing intelligence potential

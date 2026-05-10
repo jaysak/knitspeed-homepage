@@ -1002,3 +1002,79 @@ Notes:
 - no admin dashboard changes
 - no quote flow changes
 
+
+---
+
+## Phase 3.5S — Spirality Buyer Guide
+
+Status:
+- complete
+- committed and pushed as `90fc820 Add knitted fabric spirality knowledge guide`
+
+Goal:
+- deepen Knitspeed's production-aware textile knowledge graph with fabric behavior intelligence
+
+Summary:
+- added hand-authored spirality knowledge guide
+- added route `/knowledge/what-causes-spirality-in-knitted-fabric`
+- framed spirality as a production and fabric behavior consideration rather than defect-panic content
+- connected topic to Single Jersey, Compact Cotton, GSM, and Combed vs Carded Cotton guides
+- strengthened semantic coverage around yarn twist, knitted structure, finishing, washing, garment construction, and sourcing communication
+
+Verification:
+- `npm run build` passes
+- `npm run lint` passes
+- article route renders through existing registry-driven resolver
+- `/knowledge` index picks up article through existing registry/search/filter system
+
+Rules preserved:
+- no CMS
+- no sitemap
+- no routing overhaul
+- no Supabase changes
+- no admin dashboard changes
+- no quote flow changes
+- no Prime scoring changes
+- no fake textile specs, MOQ, inventory, or hard technical guarantees
+
+Notes:
+- this article strengthened the LLM Discovery layer from fabric catalog knowledge toward manufacturing/process understanding
+- commercially safe framing was preserved: production-aware, sourcing-aware, non-blame-oriented
+
+---
+
+## Phase 3.5T — Fabric Finishing Garment Feel Guide
+
+Status:
+- complete
+- pending git checkpoint if not already committed separately
+
+Goal:
+- expand textile intelligence from fabric specification into garment-outcome reasoning
+
+Summary:
+- added hand-authored finishing knowledge guide
+- added route `/knowledge/how-fabric-finishing-affects-garment-feel`
+- explained how finishing can influence softness, drape, stability, shrinkage behavior, and final garment perception
+- connected finishing to Compact Cotton, GSM, Spirality, and Combed vs Carded Cotton guides
+- strengthened semantic coverage around compaction, enzyme wash, silicone finishing, brushing, heat setting, washing, and production sample approval
+
+Verification:
+- `npm run build` passes
+- `npm run lint` passes
+- route is expected to render through existing registry-driven resolver
+- `/knowledge` index should pick up article through existing registry/search/filter system
+
+Rules preserved:
+- no CMS
+- no sitemap
+- no routing overhaul
+- no Supabase changes
+- no admin dashboard changes
+- no quote flow changes
+- no Prime scoring changes
+- no fake finishing guarantees or fake production claims
+
+Notes:
+- this guide upgrades the knowledge layer toward garment outcome intelligence
+- key buyer trust concept: similar composition and GSM can still produce different garment feel depending on finishing and production control

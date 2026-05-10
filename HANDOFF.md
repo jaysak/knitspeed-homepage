@@ -904,3 +904,48 @@ Next likely safe slice:
 - Phase 3.5S — Add fifth hand-authored buyer guide
 - candidate: What Causes Spirality in Knitted Fabric?
 
+
+---
+
+# CURRENT STRATEGIC DIRECTION — LLM TEXTILE INTELLIGENCE
+
+Status:
+- active and compounding
+
+The Phase 3.5 knowledge layer has moved beyond isolated SEO pages.
+
+It now functions as:
+- buyer education
+- semantic textile graph
+- LLM retrieval layer
+- sourcing trust accumulation
+- quote-intent enrichment
+- production-aware textile intelligence foundation
+
+Current knowledge graph coverage includes:
+- knitted fabric structures
+- yarn quality
+- GSM and fabric specification
+- fabric behavior and spirality
+- fabric finishing and garment feel
+- garment-outcome sourcing considerations
+
+Operating rule:
+- build high-density textile reasoning slowly
+- avoid shallow AI article generation
+- avoid fake certainty
+- avoid defect-panic framing
+- preserve commercially safe language
+- explain relationships between yarn, structure, finishing, washing, garment construction, and sourcing decisions
+
+Strong future article candidates:
+- Why Fabric GSM Can Feel Different
+- What Causes Pilling in Knitted Fabrics
+- How Shrinkage Is Evaluated in Apparel Fabrics
+- Combed Cotton vs Compact Cotton
+- How Fabric Width Affects Garment Production
+
+Next likely safe slice:
+- Phase 3.5U — continue one hand-authored buyer guide only
+- keep the same registry-driven architecture
+- do not add CMS, sitemap, React Router, Supabase changes, admin changes, quote flow changes, or Prime scoring changes
