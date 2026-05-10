@@ -396,3 +396,40 @@ Regenerate finished articles:
 ```bash
 python3 scripts/export_finished_articles.py
 ```
+
+---
+
+## Phase 3.5G — Knowledge Navigation + Entity Consistency
+
+Status:
+- complete
+- verified locally
+
+Goal:
+- introduce a lightweight knowledge discovery hub before expanding article coverage
+
+Implemented:
+- `/knowledge` index route
+- registry-driven article listing
+- conservative entity consistency language
+- implemented-page-only discovery flow
+
+Verified:
+- npm run build passes
+- npm run lint passes
+- browser smoke confirmed `/knowledge` render
+- browser smoke confirmed knowledge article navigation works
+- browser smoke confirmed existing knowledge schema behavior remains intact
+
+Rules preserved:
+- no CMS
+- no routing overhaul
+- no fake textile content
+- no Supabase changes
+- no Prime scoring changes
+
+Next likely safe slice:
+- Phase 3.5H — Knowledge Taxonomy + Topic Clustering
+- keep implementation lightweight and registry-driven
+- avoid content explosion
+

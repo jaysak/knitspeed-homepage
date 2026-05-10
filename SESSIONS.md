@@ -657,3 +657,35 @@ Next likely slice:
 - update handoff checkpoint after commit
 - consider Phase 3.5E v2 only after live lead submission verification if needed
 - otherwise move to a small 3.5 stabilization/docs slice before expanding knowledge pages
+
+---
+
+## Phase 3.5G — Knowledge Navigation + Entity Consistency
+
+Status:
+- implemented and verified
+
+Summary:
+- added lightweight `/knowledge` index page
+- connected registry-driven knowledge navigation
+- preserved conservative entity language for Knitspeed and GSC
+- exposed implemented knowledge pages only
+- preserved existing knowledge article route and attribution flow
+
+Implemented files:
+- src/pages/KnowledgeIndexPage.jsx
+- src/App.jsx
+
+Verification:
+- npm run build
+- npm run lint
+- browser smoke confirmed `/knowledge` renders
+- browser smoke confirmed article navigation works
+- browser smoke confirmed JSON-LD count remains 4 on knowledge article page
+- browser smoke confirmed homepage quote/article flow still works
+
+Notes:
+- no fake knowledge pages added
+- no CMS or sitemap introduced
+- no Supabase or dashboard changes made
+

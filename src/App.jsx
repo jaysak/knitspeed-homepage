@@ -13,6 +13,7 @@ import Login from "./pages/Login";
 import AdminLeadsDashboard from "./pages/AdminLeadsDashboard";
 import AdminBuyersDashboard from "./pages/AdminBuyersDashboard";
 import KnowledgeArticlePage from "./pages/KnowledgeArticlePage";
+import KnowledgeIndexPage from "./pages/KnowledgeIndexPage";
 import QuoteForm from "./components/QuoteForm";
 import FinishedArticleGrid from "./components/articles/FinishedArticleGrid";
 import { getKnowledgePageBySlug } from "./lib/knowledgeRegistry";
@@ -172,6 +173,10 @@ export default function App() {
         </ProtectedRoute>
       </AuthProvider>
     );
+  }
+
+  if (pathname === "/knowledge") {
+    return <KnowledgeIndexPage />;
   }
 
   if (pathname === "/knowledge/single-jersey-vs-interlock") {
