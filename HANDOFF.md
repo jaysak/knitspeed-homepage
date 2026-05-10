@@ -70,7 +70,7 @@ Verified 3.4B slice 3:
 
 ---
 
-# CURRENT TASK
+# COMPLETED CHECKPOINT
 
 ## Phase 3.4C — Buyer Qualification Layer
 
@@ -107,6 +107,41 @@ Verified so far:
 Do not build yet:
 - Phase 3.5 LLM Discovery / Authority Layer
 - Phase 3.5 is planned after 3.4C, not before it
+
+---
+
+# CURRENT TASK
+
+## Phase 3.4D — Prime Lead Scoring
+
+Status:
+- complete
+- authenticated `/admin/leads` visual confirmation completed
+
+Goal:
+- rank Prime leads using existing `quote_leads` fields only
+
+Implemented approach:
+- deterministic scoring helper in `src/lib/leadInsights.js`
+- no new Supabase table
+- no schema change
+- no quote form change
+
+Score factors:
+- Prime source
+- article intent
+- quote quantity
+- monthly usage
+- buyer type
+- production stage
+- sourcing pain points
+- commercial usage type
+
+Verified so far:
+- `npm run build` passes
+- `npm run lint` passes
+- live lead sanity check scores recent qualified leads as Hot and older article leads as Warm
+- authenticated `/admin/leads` displays Hot Prime leads card, Top Prime lead scores card, and row-level Score column
 
 Completion gate for quote/lead work:
 1. `npm run build` passes

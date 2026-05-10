@@ -302,3 +302,37 @@ Verification:
 - `npm run lint`
 - browser smoke confirmed collapsed default state
 - browser smoke confirmed expand/collapse reveals all optional qualification fields
+
+---
+
+## Phase 3.4D — Prime Lead Scoring
+
+Status:
+- complete and verified
+
+Summary:
+- Added deterministic Prime lead scoring helper
+- Scores use existing `quote_leads` data only
+- Added Hot Prime leads dashboard card
+- Added Top Prime lead scores card with score reasons
+- Added row-level Score column to `/admin/leads`
+- No schema changes
+- No quote form changes
+
+Scoring factors:
+- Prime source
+- article intent
+- quote quantity
+- monthly usage
+- buyer type
+- production stage
+- sourcing pain points
+- commercial usage type
+
+Verification:
+- `npm run build`
+- `npm run lint`
+- live data sanity check scored current qualified 3.4C leads as Hot
+- live data sanity check scored older article leads as Warm
+- authenticated `/admin/leads` visual confirmation completed from Jay's logged-in browser
+- dashboard displays Hot Prime leads card, Top Prime lead scores card, row-level Score column, and Hot/Warm/Watch score pills

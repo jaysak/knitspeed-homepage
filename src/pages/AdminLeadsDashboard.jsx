@@ -1,11 +1,17 @@
 import { useEffect, useState } from "react";
 import { useProfile } from "../auth/useProfile";
 import { supabase } from "../lib/supabaseClient";
-import { getTopCounts } from "../lib/leadInsights";
+import { getTopCounts, scorePrimeLead } from "../lib/leadInsights";
 import { titleize, usageSegmentLabels } from "../lib/textileLabels";
 
 const brand = {
   navy: "#123044",
+};
+
+const scoreTierStyles = {
+  Hot: "bg-rose-100 text-rose-700",
+  Warm: "bg-amber-100 text-amber-700",
+  Watch: "bg-slate-100 text-slate-600",
 };
 
 export default function AdminLeadsDashboard() {
@@ -151,6 +157,15 @@ export default function AdminLeadsDashboard() {
     leads.length > 0 ? Math.round((confirmedCount / leads.length) * 100) : 0;
 
   const primeLeads = leads.filter((lead) => (lead.lead_priority || "random") === "prime");
+  const scoredLeads = leads.map((lead) => ({
+    ...lead,
+    primeScore: scorePrimeLead(lead),
+  }));
+  const hotPrimeLeads = scoredLeads.filter((lead) => lead.primeScore.tier === "Hot");
+  const topScoredPrimeLeads = [...scoredLeads]
+    .filter((lead) => (lead.lead_priority || "random") === "prime")
+    .sort((a, b) => b.primeScore.score - a.primeScore.score)
+    .slice(0, 5);
   const primeArticleLeads = primeLeads.filter(
     (lead) => lead.article_name || lead.article_slug
   );
@@ -164,7 +179,7 @@ export default function AdminLeadsDashboard() {
     .sort((a, b) => new Date(b.created_at || 0) - new Date(a.created_at || 0))
     .slice(0, 5);
 
-  const filteredLeads = leads.filter((lead) => {
+  const filteredLeads = scoredLeads.filter((lead) => {
     const search = searchText.toLowerCase();
 
     const matchesSearch =
@@ -424,6 +439,41 @@ export default function AdminLeadsDashboard() {
           </div>
         </div>
 
+        <div className="mb-6 grid gap-4 lg:grid-cols-3">
+          <div className="rounded-3xl bg-white p-5 shadow-sm">
+            <div className="text-sm text-slate-500">Hot Prime leads</div>
+            <div className="mt-2 text-3xl font-extrabold">{hotPrimeLeads.length}</div>
+            <div className="mt-1 text-xs text-slate-500">
+              Score 70+ from current lead data
+            </div>
+          </div>
+
+          <div className="rounded-3xl bg-white p-5 shadow-sm lg:col-span-2">
+            <div className="mb-3 text-sm text-slate-500">Top Prime lead scores</div>
+            <div className="space-y-3">
+              {topScoredPrimeLeads.length ? (
+                topScoredPrimeLeads.map((lead) => (
+                  <div key={lead.id || `${lead.created_at}-${lead.customer_name}`} className="flex items-start justify-between gap-4 text-sm">
+                    <div>
+                      <div className="font-semibold text-slate-700">
+                        {lead.customer_name || "Unknown buyer"}
+                      </div>
+                      <div className="text-xs text-slate-500">
+                        {lead.primeScore.reasons.slice(0, 3).join(" · ") || "No score reasons yet"}
+                      </div>
+                    </div>
+                    <span className={`rounded-full px-2 py-1 text-xs font-bold ${scoreTierStyles[lead.primeScore.tier]}`}>
+                      {lead.primeScore.tier} {lead.primeScore.score}
+                    </span>
+                  </div>
+                ))
+              ) : (
+                <div className="text-sm text-slate-400">No Prime scores yet.</div>
+              )}
+            </div>
+          </div>
+        </div>
+
         <div className="mb-5 flex flex-col gap-3 md:flex-row">
           <input
             type="text"
@@ -465,6 +515,7 @@ export default function AdminLeadsDashboard() {
                     <th className="px-4 py-3">Width</th>
                     <th className="px-4 py-3">Qty</th>
                     <th className="px-4 py-3">Usage</th>
+                    <th className="px-4 py-3">Score</th>
                     <th className="px-4 py-3">Status</th>
                   </tr>
                 </thead>
@@ -510,6 +561,14 @@ export default function AdminLeadsDashboard() {
                             {lead.sourcing_pain_points}
                           </div>
                         ) : null}
+                      </td>
+                      <td className="px-4 py-3">
+                        <span className={`rounded-full px-2 py-1 text-xs font-bold ${scoreTierStyles[lead.primeScore.tier]}`}>
+                          {lead.primeScore.tier} {lead.primeScore.score}
+                        </span>
+                        <div className="mt-1 max-w-40 text-xs text-slate-500">
+                          {lead.primeScore.reasons.slice(0, 2).join(" · ") || "-"}
+                        </div>
                       </td>
                       <td className="px-4 py-3">
                         <select
