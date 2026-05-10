@@ -85,6 +85,11 @@ export default function AdminLeadsDashboard() {
       "quantity_value",
       "quantity_unit",
       "usage_type",
+      "monthly_usage_kg",
+      "buyer_type",
+      "target_market",
+      "production_stage",
+      "sourcing_pain_points",
       "lead_status",
       "message",
     ];
@@ -169,7 +174,11 @@ export default function AdminLeadsDashboard() {
       (lead.fabric_type || "").toLowerCase().includes(search) ||
       (lead.article_name || "").toLowerCase().includes(search) ||
       (lead.article_slug || "").toLowerCase().includes(search) ||
-      (lead.usage_segment || "").toLowerCase().includes(search);
+      (lead.usage_segment || "").toLowerCase().includes(search) ||
+      (lead.buyer_type || "").toLowerCase().includes(search) ||
+      (lead.target_market || "").toLowerCase().includes(search) ||
+      (lead.production_stage || "").toLowerCase().includes(search) ||
+      (lead.sourcing_pain_points || "").toLowerCase().includes(search);
 
     const matchesStatus =
       statusFilter === "all" ||
@@ -468,6 +477,11 @@ export default function AdminLeadsDashboard() {
                       <td className="px-4 py-3 font-semibold">
                         {lead.customer_name || "-"}
                         <div className="text-xs font-normal text-slate-500">{lead.company_name || ""}</div>
+                        {lead.buyer_type || lead.target_market ? (
+                          <div className="mt-1 text-xs font-normal text-slate-500">
+                            {[lead.buyer_type, lead.target_market].filter(Boolean).join(" · ")}
+                          </div>
+                        ) : null}
                       </td>
                       <td className="px-4 py-3">{lead.phone_line || "-"}</td>
                       <td className="px-4 py-3">
@@ -481,7 +495,22 @@ export default function AdminLeadsDashboard() {
                       <td className="px-4 py-3">
                         {lead.quantity_value ? `${lead.quantity_value} ${lead.quantity_unit || ""}` : "-"}
                       </td>
-                      <td className="px-4 py-3">{lead.usage_type || "-"}</td>
+                      <td className="px-4 py-3">
+                        {lead.usage_type || "-"}
+                        {lead.monthly_usage_kg ? (
+                          <div className="text-xs text-slate-500">
+                            Monthly: {lead.monthly_usage_kg} kg
+                          </div>
+                        ) : null}
+                        {lead.production_stage ? (
+                          <div className="text-xs text-slate-500">{lead.production_stage}</div>
+                        ) : null}
+                        {lead.sourcing_pain_points ? (
+                          <div className="max-w-56 truncate text-xs text-slate-500">
+                            {lead.sourcing_pain_points}
+                          </div>
+                        ) : null}
+                      </td>
                       <td className="px-4 py-3">
                         <select
                           className={`rounded-full px-3 py-1 text-xs font-bold outline-none ${getLeadStatusStyle(lead.lead_status || "new")}`}

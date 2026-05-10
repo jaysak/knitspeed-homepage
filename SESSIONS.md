@@ -252,3 +252,33 @@ Summary:
 Notes:
 - planned after 3.4C because Prime lead qualification should stabilize before scaling inbound discovery traffic
 - initial future technical direction includes `src/lib/seoSchema.js`, `src/components/SEOJsonLd.jsx`, lightweight implementation, and no initial routing overhaul
+
+---
+
+## Phase 3.4C — Buyer Qualification Layer
+
+Status:
+- complete and verified
+
+Summary:
+- Added nullable buyer qualification columns to `quote_leads`
+- Added optional qualification fields to the quote form
+- Added qualification fields to the quote insert payload
+- Surfaced buyer type, target market, monthly usage, production stage, and sourcing pain points in `/admin/leads`
+
+Implemented fields:
+- `monthly_usage_kg`
+- `buyer_type`
+- `target_market`
+- `production_stage`
+- `sourcing_pain_points`
+
+Verification:
+- live Supabase schema confirmed all five columns exist
+- `npm run build`
+- `npm run lint`
+- browser quote submission succeeded with success banner
+- Supabase query confirmed latest test lead `3.4C Pain Point Test`
+- latest test lead includes article attribution and qualification fields
+- authenticated `/admin/leads` visual confirmation completed from Jay's logged-in browser
+- dashboard displays `3.4C Pain Point Test`, buyer type, target market, monthly usage, production stage, and sourcing pain points

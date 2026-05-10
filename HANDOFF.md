@@ -70,25 +70,39 @@ Verified 3.4B slice 3:
 
 ---
 
-# NEXT TASK
+# CURRENT TASK
 
 ## Phase 3.4C — Buyer Qualification Layer
+
+Status:
+- complete
+- Supabase nullable columns applied
+- authenticated `/admin/leads` visual confirmation completed
 
 Goal:
 - qualify Prime leads before scaling inbound discovery traffic
 
-Planned fields:
-- monthly usage
-- buyer type: brand / factory / trader / reseller
-- target market
-- production vs sampling
-- sourcing pain points
+Implemented fields:
+- `monthly_usage_kg`
+- `buyer_type`
+- `target_market`
+- `production_stage`
+- `sourcing_pain_points`
 
-First slice:
-- inspect current `quote_leads` schema
-- inspect `src/components/QuoteForm.jsx`
-- decide whether columns already exist or require a migration
-- do not patch UI until schema path is clear
+Implemented files:
+- `supabase/migrations/202605101245_add_buyer_qualification_fields.sql`
+- `src/components/QuoteForm.jsx`
+- `src/App.jsx`
+- `src/pages/AdminLeadsDashboard.jsx`
+
+Verified so far:
+- live `quote_leads` schema includes all five qualification columns
+- `npm run build` passes
+- `npm run lint` passes
+- local browser quote submission succeeded
+- Supabase insert succeeded with no `403` or `400`
+- latest verified test lead appears in `quote_leads`: `3.4C Pain Point Test`
+- authenticated `/admin/leads` displays `3.4C Pain Point Test` with buyer type, target market, monthly usage, production stage, and sourcing pain points
 
 Do not build yet:
 - Phase 3.5 LLM Discovery / Authority Layer

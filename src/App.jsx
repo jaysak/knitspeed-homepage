@@ -235,6 +235,11 @@ export default function App() {
       quantity_value: form.get("quantity_value") ? Number(form.get("quantity_value")) : null,
       quantity_unit: form.get("quantity_unit") || "kg",
       usage_type: form.get("usage_type") || "",
+      monthly_usage_kg: form.get("monthly_usage_kg") ? Number(form.get("monthly_usage_kg")) : null,
+      buyer_type: form.get("buyer_type") || "",
+      target_market: form.get("target_market") || "",
+      production_stage: form.get("production_stage") || "",
+      sourcing_pain_points: form.get("sourcing_pain_points") || "",
       message,
     };
 
