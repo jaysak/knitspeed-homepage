@@ -116,6 +116,39 @@ Implemented in slice 3:
 - fallback keeps top generated articles if allowlist has no matches
 - verified with build, lint, and browser smoke test
 
+---
+
+# STABILIZATION INSPECTION
+
+Status:
+- inspected 2026-05-10
+- no refactor performed
+
+Current shape:
+- `src/App.jsx` is about 1,650 lines
+- it currently contains public homepage, quote flow, inbound leads dashboard, buyer intelligence dashboard, routing, and tracking helpers
+
+Future component boundaries:
+- `src/pages/HomePage.jsx`
+- `src/pages/AdminLeadsDashboard.jsx`
+- `src/pages/AdminBuyersDashboard.jsx`
+- `src/components/articles/FinishedArticleGrid.jsx`
+- `src/components/quote/QuoteForm.jsx`
+- `src/components/admin/LeadInsightCards.jsx`
+- `src/lib/buyerIntent.js`
+
+Risk areas:
+- homepage sections are growing around article curation and quote intent
+- admin leads dashboard is accumulating analytics, filters, status updates, and export logic
+- buyer dashboard has similar table/filter/update patterns that may duplicate lead dashboard patterns
+- tracking currently mixes local browser events with quote payload enrichment
+- quote insert still falls back to local storage, so failures must remain visible during verification
+- Supabase migration history has a known remote mismatch around `20260508`; avoid broad migration changes until repaired intentionally
+
+Recommended next stabilization step:
+- before adding more dashboard features, split `AdminLeadsDashboard` and shared lead insight helpers out of `App.jsx`
+- keep behavior identical and verify with build, lint, and `/admin/leads` browser flow
+
 Estimated time:
 - 1-2 hours remaining for next useful slice
 
