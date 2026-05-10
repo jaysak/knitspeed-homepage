@@ -13,8 +13,9 @@ import Login from "./pages/Login";
 import AdminLeadsDashboard from "./pages/AdminLeadsDashboard";
 import AdminBuyersDashboard from "./pages/AdminBuyersDashboard";
 import QuoteForm from "./components/QuoteForm";
+import FinishedArticleGrid from "./components/articles/FinishedArticleGrid";
 import { supabase } from "./lib/supabaseClient";
-import { titleize, usageSegmentLabels } from "./lib/textileLabels";
+import { buildBuyerIntentNote, writeBuyerIntentEvent } from "./lib/buyerIntent";
 import {
   ArrowRight,
   MessageCircle,
@@ -42,9 +43,6 @@ const buyerTypes = [
   "Sampling",
 ];
 
-const BUYER_INTENT_STORAGE_KEY = "knitspeed_buyer_intent_events";
-const MAX_BUYER_INTENT_EVENTS = 100;
-
 function getPrimaryWidth(article) {
   return article?.availableWidths?.[0] || "";
 }
@@ -67,59 +65,6 @@ function getFeaturedArticles() {
 }
 
 const featuredArticles = getFeaturedArticles();
-
-function readBuyerIntentEvents() {
-  try {
-    return JSON.parse(localStorage.getItem(BUYER_INTENT_STORAGE_KEY) || "[]");
-  } catch (error) {
-    console.warn("Could not read buyer intent events:", error);
-    return [];
-  }
-}
-
-function writeBuyerIntentEvent(eventType, article, details = {}) {
-  if (!article?.seoSlug) return null;
-
-  const event = {
-    event_type: eventType,
-    article_name: article.articleName,
-    article_slug: article.seoSlug,
-    usage_segment: article.usageSegment,
-    material_family: article.materialFamily,
-    fabric_structure: article.fabricStructure,
-    linked_products: article.linkedProducts,
-    created_at: new Date().toISOString(),
-    ...details,
-  };
-
-  const events = readBuyerIntentEvents();
-  events.push(event);
-  localStorage.setItem(
-    BUYER_INTENT_STORAGE_KEY,
-    JSON.stringify(events.slice(-MAX_BUYER_INTENT_EVENTS))
-  );
-
-  return event;
-}
-
-function buildBuyerIntentNote(article) {
-  if (!article?.seoSlug) return "";
-
-  const matchingEvents = readBuyerIntentEvents().filter(
-    (event) => event.article_slug === article.seoSlug
-  );
-  const quoteClicks = matchingEvents.filter(
-    (event) => event.event_type === "article_quote_click"
-  ).length;
-
-  return [
-    "Prime intent:",
-    article.articleName,
-    `slug=${article.seoSlug}`,
-    `usage=${article.usageSegment || "unknown"}`,
-    `quote_clicks=${quoteClicks}`,
-  ].join(" ");
-}
 
 
 export default function App() {
@@ -427,61 +372,11 @@ export default function App() {
         </div>
       </section>
 
-      <section id="products" className="mx-auto max-w-7xl px-5 py-16">
-        <div className="mb-10 flex flex-col justify-between gap-4 md:flex-row md:items-end">
-          <div>
-            <h2 className="text-3xl font-extrabold md:text-4xl" style={{ color: brand.navy }}>Finished Articles</h2>
-            <p className="mt-3 text-slate-600">Buyer-facing fabric articles mapped from current production data.</p>
-          </div>
-          <a href="#quote" className="font-bold text-sky-600">Request custom GSM / color →</a>
-        </div>
-
-        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-          {featuredArticles.map((article) => (
-            <article
-              key={article.articleId}
-              data-article-slug={article.seoSlug}
-              className="overflow-hidden rounded-2xl border border-sky-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-sky-100"
-            >
-              <div className="flex min-h-32 flex-col justify-between p-6" style={{ background: `linear-gradient(135deg, ${brand.paleBlue}, #fff)` }}>
-                <div className="flex items-center justify-between gap-3">
-                  <span className="rounded-full bg-white px-3 py-1 text-xs font-bold text-sky-700 shadow-sm">
-                    {usageSegmentLabels[article.usageSegment] || titleize(article.usageSegment)}
-                  </span>
-                  <span className="text-xs font-semibold text-slate-500">
-                    {article.linkedProducts} SKU{article.linkedProducts === 1 ? "" : "s"}
-                  </span>
-                </div>
-                <h3 className="mt-5 text-xl font-extrabold leading-snug" style={{ color: brand.navy }}>
-                  {article.articleName}
-                </h3>
-              </div>
-              <div className="p-6">
-                <div className="flex flex-wrap gap-2 text-xs font-semibold text-slate-600">
-                  <span className="rounded-full bg-slate-100 px-3 py-1">{titleize(article.materialFamily)}</span>
-                  <span className="rounded-full bg-slate-100 px-3 py-1">{titleize(article.fabricStructure)}</span>
-                  {article.yarnCount ? (
-                    <span className="rounded-full bg-slate-100 px-3 py-1">{article.yarnCount}s</span>
-                  ) : null}
-                </div>
-                <p className="mt-4 text-sm leading-6 text-slate-600">
-                  {article.availableWidths.length
-                    ? `Available widths: ${article.availableWidths.slice(0, 4).join('", ')}"`
-                    : "Width options confirmed after inquiry."}
-                </p>
-                <button
-                  type="button"
-                  onClick={() => handleArticleSelect(article)}
-                  className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-bold text-white shadow-sm transition hover:opacity-90"
-                  style={{ backgroundColor: brand.blue }}
-                >
-                  Quote this article <ArrowRight size={16} />
-                </button>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
+      <FinishedArticleGrid
+        articles={featuredArticles}
+        brand={brand}
+        onArticleSelect={handleArticleSelect}
+      />
 
       <section className="mx-auto max-w-7xl px-5 pb-16">
         <div className="rounded-[2rem] p-8 md:p-12" style={{ backgroundColor: brand.paleBlue }}>
