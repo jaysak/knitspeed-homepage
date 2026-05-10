@@ -151,6 +151,7 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
       },
     ],
   },
+
 ];
 
 export function getTextileKnowledgePage(slug) {

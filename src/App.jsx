@@ -187,6 +187,14 @@ export default function App() {
     );
   }
 
+  if (pathname === "/knowledge/what-is-compact-cotton") {
+    return (
+      <KnowledgeArticlePage
+        page={getKnowledgePageBySlug("what-is-compact-cotton")}
+      />
+    );
+  }
+
   if (pathname === "/knowledge/single-jersey-vs-interlock") {
     return (
       <KnowledgeArticlePage
