@@ -22,7 +22,7 @@ Branch:
 - `main`
 
 Latest product checkpoint:
-- `0004816 Complete Prime article quote flow`
+- `0e5a6ab Refactor dashboard pages and quote form structure`
 
 Remote:
 - `origin/main`
@@ -41,7 +41,7 @@ Supabase migration note:
 
 # COMPLETED CHECKPOINT
 
-## Phase 3.4A — Prime Article Quote Flow
+## Phase 3.4A-3.4B — Prime Article Flow + Buyer Intent
 
 Status:
 - complete
@@ -54,51 +54,45 @@ Implemented:
 - article quote button
 - selected article state
 - quote metadata payload wiring
+- local/session article intent tracking
+- Prime dashboard insight cards
+- curated homepage article allowlist/order layer
+- authenticated quote insert RLS fix
+- modular dashboard and quote form refactor
 - build and lint passing
+
+Verified 3.4B slice 3:
+- file: `src/data/featuredArticleSlugs.js`
+- homepage uses approved slugs first
+- generated article data remains untouched
+- fallback keeps top generated articles if allowlist has no matches
+- verified with build, lint, and browser smoke test
 
 ---
 
 # NEXT TASK
 
-## Phase 3.4B — Buyer Intent Tracking
+## Phase 3.4C — Buyer Qualification Layer
 
 Goal:
-- track buyer interest in articles before and during quote submission
+- qualify Prime leads before scaling inbound discovery traffic
 
-Current status:
-- slice 1 implemented locally
-- slice 2 implemented as dashboard insight cards
-- no database schema changes yet
+Planned fields:
+- monthly usage
+- buyer type: brand / factory / trader / reseller
+- target market
+- production vs sampling
+- sourcing pain points
 
-Possible subtasks:
-1. Decide whether intent should graduate into Supabase:
-   - `lead_activity`
-   - additional fields on `quote_leads`
-   - delayed until article pages exist
-2. Add top article/category counters to dashboard
-3. Improve distinction between rendered article cards and truly viewed articles
-4. Decide retention/analytics policy for local intent events
+First slice:
+- inspect current `quote_leads` schema
+- inspect `src/components/QuoteForm.jsx`
+- decide whether columns already exist or require a migration
+- do not patch UI until schema path is clear
 
-Implemented in slice 1:
-- local/session article intent tracking
-- quote click tracking
-- quote submit tracking
-- compact Prime intent note appended to quote message
-- dashboard article search/display visibility
-
-Implemented in slice 2:
-- Prime leads count card
-- top quoted articles card
-- top usage segments card
-- recent Prime article inquiries card
-- all insights use existing `quote_leads` data
-
-RLS fix after slice 2:
-- logged-in owner/admin quote submissions were failing with `403 Forbidden`
-- added `Allow authenticated quote lead inserts` policy on `quote_leads`
-- remote Supabase policy has been applied and verified
-- fresh quote submit reached Supabase and appeared in dashboard
-- verified test lead: `30s Combed Cotton Single Jersey`
+Do not build yet:
+- Phase 3.5 LLM Discovery / Authority Layer
+- Phase 3.5 is planned after 3.4C, not before it
 
 Completion gate for quote/lead work:
 1. `npm run build` passes
@@ -107,14 +101,6 @@ Completion gate for quote/lead work:
 4. Supabase insert succeeds with no `403` or `400` error
 5. latest test lead appears in `quote_leads`
 6. admin dashboard displays the new lead correctly
-
-Implemented in slice 3:
-- curated homepage article allowlist/order layer
-- file: `src/data/featuredArticleSlugs.js`
-- homepage uses approved slugs first
-- generated article data remains untouched
-- fallback keeps top generated articles if allowlist has no matches
-- verified with build, lint, and browser smoke test
 
 ---
 

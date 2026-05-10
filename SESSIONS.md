@@ -234,3 +234,21 @@ Notes:
 - this was an organization-only refactor
 - `src/auth` naming and `AuthProvider` / `useProfile` / `ProtectedRoute` were preserved
 - next likely stabilization target is moving homepage article grid or buyer intent helpers out of `App.jsx`
+
+---
+
+## Roadmap Planning — Phase 3.5 LLM Discovery
+
+Status:
+- planned only
+- do not build yet
+
+Summary:
+- Reframed Phase 3.5 from basic SEO product pages into an LLM Discovery / Authority Layer
+- Goal is machine-readable textile authority, not generic SEO traffic
+- Added planned structured knowledge pages, schema.org direction, entity consistency, and Prime Engine integration notes to `PROJECT_ROADMAP.md`
+- Confirmed Phase 3.4C Buyer Qualification Layer remains the next build priority
+
+Notes:
+- planned after 3.4C because Prime lead qualification should stabilize before scaling inbound discovery traffic
+- initial future technical direction includes `src/lib/seoSchema.js`, `src/components/SEOJsonLd.jsx`, lightweight implementation, and no initial routing overhaul
