@@ -6,6 +6,7 @@ import {
   WIDTH_INCHES,
 } from "./data/textileEnums";
 import { FINISHED_ARTICLES } from "./data/finishedArticles";
+import { FEATURED_ARTICLE_SLUGS } from "./data/featuredArticleSlugs";
 import { AuthProvider } from "./auth/AuthProvider";
 import ProtectedRoute from "./auth/ProtectedRoute";
 import Login from "./pages/Login";
@@ -48,10 +49,6 @@ const usageSegmentLabels = {
   tshirt: "T-shirt fabric",
 };
 
-const featuredArticles = [...FINISHED_ARTICLES]
-  .sort((a, b) => b.linkedProducts - a.linkedProducts)
-  .slice(0, 12);
-
 const BUYER_INTENT_STORAGE_KEY = "knitspeed_buyer_intent_events";
 const MAX_BUYER_INTENT_EVENTS = 100;
 
@@ -64,6 +61,25 @@ function titleize(value) {
 function getPrimaryWidth(article) {
   return article?.availableWidths?.[0] || "";
 }
+
+function getFeaturedArticles() {
+  const articleBySlug = new Map(
+    FINISHED_ARTICLES.map((article) => [article.seoSlug, article])
+  );
+  const curatedArticles = FEATURED_ARTICLE_SLUGS.map((slug) =>
+    articleBySlug.get(slug)
+  ).filter(Boolean);
+
+  if (curatedArticles.length) {
+    return curatedArticles;
+  }
+
+  return [...FINISHED_ARTICLES]
+    .sort((a, b) => b.linkedProducts - a.linkedProducts)
+    .slice(0, 12);
+}
+
+const featuredArticles = getFeaturedArticles();
 
 function readBuyerIntentEvents() {
   try {

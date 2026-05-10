@@ -180,3 +180,26 @@ Notes:
 - `supabase db push` is currently blocked by a remote migration-history mismatch around old version `20260508`
 - migration file is kept locally for repo history and future migration repair
 - completion gate satisfied for the 30s Combed Cotton test lead
+
+---
+
+## Phase 3.4B — Product Curation, Slice 3
+
+Status:
+- complete and verified
+
+Summary:
+- Added curated homepage article slug allowlist
+- Homepage now displays only approved finished articles in chosen order
+- Generated `src/data/finishedArticles.js` remains untouched
+- Fallback preserves existing top-article behavior if the curated list has no matches
+
+Verification:
+- `npm run build`
+- `npm run lint`
+- browser smoke test confirmed 9 curated cards render
+- browser smoke test confirmed unapproved generated article is hidden
+
+Notes:
+- curation lives in `src/data/featuredArticleSlugs.js`
+- future merchandising edits should update the allowlist, not generated article data

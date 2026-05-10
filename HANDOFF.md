@@ -108,6 +108,14 @@ Completion gate for quote/lead work:
 5. latest test lead appears in `quote_leads`
 6. admin dashboard displays the new lead correctly
 
+Implemented in slice 3:
+- curated homepage article allowlist/order layer
+- file: `src/data/featuredArticleSlugs.js`
+- homepage uses approved slugs first
+- generated article data remains untouched
+- fallback keeps top generated articles if allowlist has no matches
+- verified with build, lint, and browser smoke test
+
 Estimated time:
 - 1-2 hours remaining for next useful slice
 
