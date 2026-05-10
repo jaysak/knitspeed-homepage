@@ -12,8 +12,10 @@ import ProtectedRoute from "./auth/ProtectedRoute";
 import Login from "./pages/Login";
 import AdminLeadsDashboard from "./pages/AdminLeadsDashboard";
 import AdminBuyersDashboard from "./pages/AdminBuyersDashboard";
+import KnowledgeArticlePage from "./pages/KnowledgeArticlePage";
 import QuoteForm from "./components/QuoteForm";
 import FinishedArticleGrid from "./components/articles/FinishedArticleGrid";
+import { getTextileKnowledgePage } from "./data/textileKnowledgePages";
 import { supabase } from "./lib/supabaseClient";
 import { buildBuyerIntentNote, writeBuyerIntentEvent } from "./lib/buyerIntent";
 import {
@@ -141,6 +143,14 @@ export default function App() {
           <AdminBuyersDashboard />
         </ProtectedRoute>
       </AuthProvider>
+    );
+  }
+
+  if (pathname === "/knowledge/single-jersey-vs-interlock") {
+    return (
+      <KnowledgeArticlePage
+        page={getTextileKnowledgePage("single-jersey-vs-interlock")}
+      />
     );
   }
 

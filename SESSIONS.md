@@ -472,3 +472,56 @@ Next active phase:
 - Phase 3.5 LLM Discovery / Authority Layer planning
 - inspect current routing and data shape before any Phase 3.5 patch
 - do not implement Phase 3.5 until Jay approves the first build slice
+
+---
+
+## Phase 3.5A — LLM Discovery Layout Foundation
+
+Status:
+- complete
+- checkpoint pushed as `d6d225b Add LLM discovery layout foundation`
+
+Summary:
+- Added reusable knowledge layout components without mounting new routes
+- Added `KnowledgePageLayout`, `SpecSummaryGrid`, `FAQBlock`, and `QuoteCTA`
+- Kept homepage, admin dashboard, Prime scoring, quote payload, Supabase schema, and attribution flow unchanged
+
+Verification:
+- `npm run build`
+- `npm run lint`
+- browser smoke confirmed existing homepage still loads, Finished Articles still render, 9 article cards remain, and first slug remains `30s-combed-cotton-single-jersey`
+
+---
+
+## Phase 3.5B — First Real Knowledge Page Route
+
+Status:
+- implemented locally
+- pending Jay's git checkpoint
+
+Summary:
+- Added conservative hand-authored textile knowledge data in `src/data/textileKnowledgePages.js`
+- Added `src/pages/KnowledgeArticlePage.jsx`
+- Added one manual App route: `/knowledge/single-jersey-vs-interlock`
+- Built the first public LLM discovery page: Single Jersey vs Interlock
+- Used existing 3.5A layout components
+- Kept QuoteCTA as a simple link to `/#quote`
+- Did not change quote submission logic, quote payload schema, attribution tracking, admin dashboard, Supabase schema, Prime scoring, generated article data, or schema.org metadata
+
+Content notes:
+- no fake product specs
+- no fake inventory
+- no fake MOQ
+- GSM and width described as production-dependent rather than invented values
+- Knitspeed is framed as sourcing support, not exaggerated authority
+
+Verification:
+- `npm run build`
+- `npm run lint`
+- browser smoke confirmed `/knowledge/single-jersey-vs-interlock` renders title, short answer, comparison summary, buyer guidance, common mistakes, FAQ, and QuoteCTA
+- browser smoke confirmed homepage still renders hero, Finished Articles, 9 curated article cards, and first slug `30s-combed-cotton-single-jersey`
+
+Next likely slice:
+- Phase 3.5C Schema + metadata
+- inspect before patching
+- do not add schema.org until Jay approves the 3.5C slice

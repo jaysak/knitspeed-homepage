@@ -15,7 +15,7 @@ Read these files first:
 4. `HANDOFF.md`
 
 Magic words for next boot:
-> Jarvis, read `HANDOFF.md`, `PROJECT_ROADMAP.md`, `DECISIONS.md`, and `SESSIONS.md`. Confirm current checkpoint is `de0dc52`, Phase 3.4 is closed, Phase 3.5 is planning-active, then propose the next safe slice before patching.
+> Jarvis, read `HANDOFF.md`, `PROJECT_ROADMAP.md`, `DECISIONS.md`, and `SESSIONS.md`. Confirm current checkpoint is `d6d225b`, Phase 3.4 is closed, Phase 3.5A is complete, Phase 3.5B is implemented locally pending Jay's git checkpoint, then propose the next safe slice before patching.
 
 ---
 
@@ -25,7 +25,7 @@ Branch:
 - `main`
 
 Latest product checkpoint:
-- `de0dc52 Extract homepage article intent modules`
+- `d6d225b Add LLM discovery layout foundation`
 
 Remote:
 - `origin/main`
@@ -217,18 +217,40 @@ Notes:
 
 Status:
 - planning-active
-- do not implement until Jay explicitly approves the first Phase 3.5 build slice
+- 3.5A complete
+- 3.5B implemented locally pending Jay's git checkpoint
 
 Goal:
 - turn Knitspeed into a machine-readable textile knowledge authority
 - support future LLM discovery and high-intent inbound traffic
 
-First likely slice:
-- inspect current routing and data shape
-- plan lightweight knowledge-page structure
-- avoid routing overhaul
-- avoid fake/generated textile content
-- keep Prime Engine lead quality intact
+Phase plan:
+- 3.5A Layout foundation
+- 3.5B First real knowledge route
+- 3.5C Schema + metadata
+- 3.5D Internal linking + discovery flow
+- 3.5E Quote attribution integration refinement
+
+Implemented 3.5A:
+- `src/components/knowledge/KnowledgePageLayout.jsx`
+- `src/components/knowledge/SpecSummaryGrid.jsx`
+- `src/components/knowledge/FAQBlock.jsx`
+- `src/components/knowledge/QuoteCTA.jsx`
+
+Implemented 3.5B:
+- `src/data/textileKnowledgePages.js`
+- `src/pages/KnowledgeArticlePage.jsx`
+- route: `/knowledge/single-jersey-vs-interlock`
+- first real knowledge page: Single Jersey vs Interlock
+
+Rules:
+- no fake textile content
+- no bulk AI article generation
+- no routing overhaul
+- preserve Prime Engine attribution flow
+- preserve buyer-facing naming conventions
+- use reusable layouts first
+- implement incrementally with checkpoints
 
 Completion gate for quote/lead work:
 1. `npm run build` passes
@@ -250,12 +272,15 @@ Current shape:
 - `src/App.jsx` is about 435 lines
 - `src/pages/AdminLeadsDashboard.jsx` owns `/admin/leads`
 - `src/pages/AdminBuyersDashboard.jsx` owns `/admin/buyers`
+- `src/pages/KnowledgeArticlePage.jsx` owns first public knowledge article rendering
 - `src/components/QuoteForm.jsx` owns the rendered quote form
 - `src/components/articles/FinishedArticleGrid.jsx` owns homepage Finished Articles rendering
+- `src/components/knowledge/*` owns reusable knowledge page layout blocks
+- `src/data/textileKnowledgePages.js` owns conservative hand-authored textile knowledge page data
 - `src/lib/buyerIntent.js` owns local/session buyer intent helper functions
 - `src/lib/leadInsights.js` owns shared lead count helpers
 - `src/lib/textileLabels.js` owns shared textile display labels
-- route branching, quote submit logic, and selected article state still live in `App.jsx`
+- route branching, quote submit logic, selected article state, and minimal knowledge route branching still live in `App.jsx`
 
 Future component boundaries:
 - `src/pages/HomePage.jsx`

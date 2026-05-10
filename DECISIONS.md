@@ -60,6 +60,20 @@ Not every generated article belongs on the public homepage.
 
 Future product curation should use a separate allowlist/order config rather than editing generated article data by hand.
 
+## LLM Discovery Rules
+
+Phase 3.5 builds Knitspeed as a machine-readable textile knowledge authority.
+
+Rules:
+- no fake textile content
+- no bulk AI article generation
+- no routing overhaul
+- preserve Prime Engine attribution flow
+- preserve buyer-facing naming conventions
+- use reusable layouts first
+- implement incrementally with checkpoints
+- keep knowledge pages practical for buyers and grounded in real textile concepts
+
 ---
 
 # TECHNICAL DECISIONS
