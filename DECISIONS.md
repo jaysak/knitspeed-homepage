@@ -98,6 +98,20 @@ Default workflow:
 - build-test after meaningful patches
 - avoid broad rewrites unless explicitly refactoring
 
+## Completion Requires User-Flow Verification
+
+Do not mark task complete just because build and lint pass.
+
+For quote or lead work, completion requires:
+1. `npm run build` passes
+2. `npm run lint` passes
+3. local browser quote submission succeeds
+4. Supabase insert succeeds with no `403` or `400` error
+5. latest test lead appears in `quote_leads`
+6. admin dashboard displays the new lead correctly
+
+If any step fails, mark the work as `implemented but not verified` and document the blocker in `SESSIONS.md` and `HANDOFF.md`.
+
 ---
 
 # GIT DECISIONS

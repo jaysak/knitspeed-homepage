@@ -111,7 +111,7 @@ Files:
 ## Phase 3.4B — Buyer Intent Tracking, Slice 1
 
 Status:
-- complete
+- implemented but not fully verified
 
 Summary:
 - Added client-side buyer intent event helpers
@@ -130,6 +130,7 @@ Verification:
 Notes:
 - no Supabase schema changes yet
 - future 3.4B slices can decide whether `lead_activity` becomes a real table
+- later real quote submit exposed a Supabase `403 Forbidden` for logged-in owner sessions
 
 ---
 
@@ -159,7 +160,7 @@ Notes:
 ## Quote Insert RLS Fix
 
 Status:
-- complete
+- complete and end-to-end verified
 
 Summary:
 - Diagnosed `403 Forbidden` on quote insert while logged in as owner
@@ -171,7 +172,11 @@ Verification:
 - `npm run build`
 - `npm run lint`
 - remote policy check confirmed `Allow authenticated quote lead inserts`
+- local browser quote submission succeeded after policy fix
+- Supabase `quote_leads` query confirmed `30s Combed Cotton Single Jersey`
+- `/admin/leads` displayed the new lead and updated Prime insight cards
 
 Notes:
 - `supabase db push` is currently blocked by a remote migration-history mismatch around old version `20260508`
 - migration file is kept locally for repo history and future migration repair
+- completion gate satisfied for the 30s Combed Cotton test lead

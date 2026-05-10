@@ -97,6 +97,16 @@ RLS fix after slice 2:
 - logged-in owner/admin quote submissions were failing with `403 Forbidden`
 - added `Allow authenticated quote lead inserts` policy on `quote_leads`
 - remote Supabase policy has been applied and verified
+- fresh quote submit reached Supabase and appeared in dashboard
+- verified test lead: `30s Combed Cotton Single Jersey`
+
+Completion gate for quote/lead work:
+1. `npm run build` passes
+2. `npm run lint` passes
+3. local browser quote submission succeeds
+4. Supabase insert succeeds with no `403` or `400` error
+5. latest test lead appears in `quote_leads`
+6. admin dashboard displays the new lead correctly
 
 Estimated time:
 - 1-2 hours remaining for next useful slice
