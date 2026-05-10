@@ -600,6 +600,102 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
         "Yes. Knitspeed can support sourcing discussions by reviewing garment goals, hand feel expectations, structure, finishing, and production considerations before quoting.",
     },
   ],
+},
+{
+  slug: "what-causes-pilling-in-knitted-fabrics",
+  canonicalPath: "/knowledge/what-causes-pilling-in-knitted-fabrics",
+  category: "Fabric behavior",
+  discoveryPriority: 80,
+  relatedArticleSlugs: [
+    "how-fabric-finishing-affects-garment-feel",
+    "why-fabrics-with-the-same-gsm-can-feel-different",
+    "what-is-compact-cotton",
+    "combed-cotton-vs-carded-cotton"
+  ],
+  topicCluster: "fabric-behavior",
+  buyerIntent: "garment-performance",
+  tags: [
+    "fabric pilling",
+    "knitted fabric",
+    "garment wear",
+    "fabric finishing",
+    "cotton fabric",
+    "apparel sourcing"
+  ],
+  eyebrow: "Textile knowledge",
+  title: "What Causes Pilling in Knitted Fabrics?",
+  subtitle:
+    "A practical buyer guide to understanding why pilling can appear in garments and how yarn, finishing, washing, and fabric construction influence wear behavior.",
+  metaDescription:
+    "Learn what causes pilling in knitted fabrics and how yarn quality, finishing, garment use, washing, and fabric construction affect long-term appearance.",
+  shortAnswer:
+    "Pilling can appear when loose fibers on the fabric surface become tangled during wear and washing. The level of pilling depends on yarn quality, fiber type, knitting structure, finishing, garment friction, washing conditions, and how the garment is used over time.",
+  comparison: [
+    {
+      name: "Lower Visible Pilling Tendencies",
+      specs: {
+        composition: "Depends on yarn quality and finishing control",
+        structure: "More stable or compact constructions may reduce loose surface fibers",
+        width: "Confirmed during production planning",
+        gsm: "Depends on fabric density and finishing",
+        moq: "Confirmed after sourcing check",
+        useCases: [
+          "premium basics",
+          "uniform programs",
+          "repeat-use garments"
+        ],
+      },
+    },
+    {
+      name: "Higher Surface Friction Sensitivity",
+      specs: {
+        composition: "Depends on fiber blend and yarn structure",
+        structure: "Softer or brushed surfaces may show pilling more visibly",
+        width: "Confirmed during production planning",
+        gsm: "Depends on fabric density and finishing",
+        moq: "Confirmed after sourcing check",
+        useCases: [
+          "soft casualwear",
+          "fashion garments",
+          "brushed knit apparel"
+        ],
+      },
+    },
+  ],
+  guidance: [
+    "Evaluate pilling expectations based on garment use, washing frequency, and target customer rather than fabric composition alone.",
+    "Yarn quality, finishing, compaction, brushing, and knitting density can all influence surface behavior over time.",
+    "Softer fabrics may sometimes prioritize hand feel and comfort over maximum abrasion resistance.",
+    "Use garment testing and wash evaluations when long-term appearance consistency is commercially important.",
+  ],
+  mistakes: [
+    "Treating all pilling as a manufacturing defect without reviewing garment use and washing conditions.",
+    "Comparing fabrics without matching structure, finishing, yarn quality, and intended use.",
+    "Assuming softer fabrics will always behave the same as denser or more compact constructions.",
+    "Approving garments without evaluating real wear and wash behavior.",
+  ],
+  faqs: [
+    {
+      question: "Is pilling always caused by poor fabric quality?",
+      answer:
+        "Not necessarily. Pilling can occur naturally depending on fiber type, yarn structure, garment friction, washing conditions, and how the fabric is finished and used.",
+    },
+    {
+      question: "Can softer fabrics pill more easily?",
+      answer:
+        "Some softer or brushed fabrics may show surface fiber movement more visibly because they prioritize comfort and hand feel.",
+    },
+    {
+      question: "Does washing affect pilling behavior?",
+      answer:
+        "Yes. Washing conditions, garment friction, detergent choice, and drying methods can influence how pilling appears over time.",
+    },
+    {
+      question: "Can Knitspeed help review pilling considerations before sourcing?",
+      answer:
+        "Yes. Knitspeed can support sourcing discussions by reviewing garment goals, wear expectations, finishing, and production considerations before quoting.",
+    },
+  ],
 }
 ];
 
