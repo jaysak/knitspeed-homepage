@@ -512,6 +512,94 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
         "Yes. Knitspeed can support sourcing discussions by reviewing garment use, finishing expectations, target hand feel, and production considerations before quoting.",
     },
   ],
+},
+{
+  slug: "why-fabrics-with-the-same-gsm-can-feel-different",
+  canonicalPath: "/knowledge/why-fabrics-with-the-same-gsm-can-feel-different",
+  category: "Fabric specification",
+  discoveryPriority: 70,
+  relatedArticleSlugs: [
+    "what-gsm-should-t-shirts-use",
+    "how-fabric-finishing-affects-garment-feel",
+    "what-is-compact-cotton",
+    "combed-cotton-vs-carded-cotton"
+  ],
+  topicCluster: "fabric-specification",
+  buyerIntent: "garment-outcome",
+  tags: [
+    "gsm",
+    "fabric feel",
+    "garment feel",
+    "fabric finishing",
+    "knitted fabric",
+    "apparel sourcing"
+  ],
+  eyebrow: "Textile knowledge",
+  title: "Why Fabrics With the Same GSM Can Feel Different",
+  subtitle:
+    "A practical buyer guide to understanding why similar fabric weights can still produce different hand feel, drape, softness, and garment behavior.",
+  metaDescription:
+    "Learn why fabrics with similar GSM can still feel different depending on yarn quality, finishing, knitting structure, compaction, and garment use.",
+  shortAnswer:
+    "GSM helps describe fabric weight, but it does not fully determine how a garment will feel or behave. Fabrics with similar GSM can still feel softer, firmer, smoother, heavier, or more structured depending on yarn quality, knitting density, finishing, compaction, washing, and garment construction.",
+  comparison: [
+    {
+      name: "Softer and More Flexible Feel",
+      specs: {
+        composition: "Depends on yarn quality and finishing setup",
+        structure: "Often associated with softer knitted constructions",
+        width: "Confirmed during production planning",
+        gsm: "May match heavier-feeling fabrics despite different drape",
+        moq: "Confirmed after sourcing check",
+        useCases: ["fashion T-shirts", "soft casualwear", "light drape garments"],
+      },
+    },
+    {
+      name: "Firmer and More Structured Feel",
+      specs: {
+        composition: "Depends on yarn, finishing, and knitting density",
+        structure: "Can appear more compact or stable at similar GSM",
+        width: "Confirmed during production planning",
+        gsm: "May feel denser despite similar weight",
+        moq: "Confirmed after sourcing check",
+        useCases: ["premium basics", "streetwear", "structured casualwear"],
+      },
+    },
+  ],
+  guidance: [
+    "Use GSM together with fabric structure, yarn quality, finishing, and garment use instead of treating weight as the only decision factor.",
+    "Compaction, enzyme wash, silicone finishing, and knitting density can significantly change perceived softness and body.",
+    "Always review physical samples because fabrics with similar GSM may still behave differently after washing and sewing.",
+    "Confirm shrinkage, drape, opacity, print performance, and garment stability before approving bulk production.",
+  ],
+  mistakes: [
+    "Assuming two fabrics with the same GSM will automatically feel identical.",
+    "Comparing supplier fabrics by weight alone without reviewing finishing and construction.",
+    "Ignoring how yarn quality and knitting density affect garment perception.",
+    "Approving production based only on specification sheets instead of physical sampling.",
+  ],
+  faqs: [
+    {
+      question: "Does higher GSM always mean better quality?",
+      answer:
+        "No. Higher GSM may create more body or opacity, but garment quality also depends on yarn quality, structure, finishing, shrinkage control, and production consistency.",
+    },
+    {
+      question: "Why can two 180 GSM fabrics feel different?",
+      answer:
+        "Differences in yarn type, knitting density, compaction, finishing, and washing processes can all influence softness, drape, firmness, and garment behavior.",
+    },
+    {
+      question: "Does finishing affect GSM perception?",
+      answer:
+        "Yes. Finishing can influence softness, density, drape, and stability, which changes how buyers perceive the fabric even at similar GSM.",
+    },
+    {
+      question: "Can Knitspeed help compare fabrics beyond GSM?",
+      answer:
+        "Yes. Knitspeed can support sourcing discussions by reviewing garment goals, hand feel expectations, structure, finishing, and production considerations before quoting.",
+    },
+  ],
 }
 ];
 
