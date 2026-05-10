@@ -254,6 +254,17 @@ Features:
 
 ---
 
+# OPERATIONAL MEMORY FILES
+
+Use these root-level files to keep future sessions clean:
+
+- `PROJECT_ROADMAP.md` = where we are going
+- `DECISIONS.md` = what we must not forget
+- `SESSIONS.md` = what happened
+- `HANDOFF.md` = what to do next
+
+---
+
 # IMPORTANT DEVELOPMENT RULES
 
 ## Before major edits
