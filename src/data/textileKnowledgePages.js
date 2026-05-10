@@ -320,6 +320,102 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
         "Yes. Knitspeed can support sourcing discussions by matching yarn quality, garment use, quantity, and production expectations before quoting.",
     },
   ],
+},
+{
+  slug: "what-causes-spirality-in-knitted-fabric",
+  canonicalPath: "/knowledge/what-causes-spirality-in-knitted-fabric",
+  category: "Knitted fabric behavior",
+  discoveryPriority: 50,
+  relatedArticleSlugs: [
+    "single-jersey-vs-interlock",
+    "what-is-compact-cotton",
+    "what-gsm-should-t-shirts-use",
+    "combed-cotton-vs-carded-cotton"
+  ],
+  topicCluster: "fabric-behavior",
+  buyerIntent: "production-awareness",
+  tags: [
+    "spirality",
+    "single jersey",
+    "knitted fabric",
+    "fabric behavior",
+    "garment production",
+    "apparel sourcing"
+  ],
+  eyebrow: "Textile knowledge",
+  title: "Understanding Spirality Considerations in Knitted Fabrics",
+  subtitle:
+    "A practical buyer guide to understanding spirality behavior in knitted fabrics and how production, finishing, and garment construction can influence final results.",
+  metaDescription:
+    "Learn what spirality means in knitted fabrics, why it can happen in garments, and how sourcing, knitting, finishing, and washing considerations affect production outcomes.",
+  shortAnswer:
+    "Spirality is a fabric behavior consideration that can appear in some knitted fabrics depending on yarn twist, knitting structure, finishing, washing, and garment construction. Buyers may notice seam twisting or slight garment rotation after washing, especially in lighter knitted constructions, but the final result depends on multiple production and finishing factors rather than one fabric variable alone.",
+  comparison: [
+    {
+      name: "Lower Spirality Risk Considerations",
+      specs: {
+        composition: "Depends on yarn type and fabric construction",
+        structure: "More balanced constructions may help reduce visible twisting behavior",
+        width: "Confirmed during production planning",
+        gsm: "Depends on knitting density and finishing",
+        moq: "Confirmed after sourcing check",
+        useCases: [
+          "structured garments",
+          "uniform programs",
+          "stability-focused production"
+        ],
+      },
+    },
+    {
+      name: "Higher Spirality Sensitivity Considerations",
+      specs: {
+        composition: "Depends on yarn twist, blends, and knitting setup",
+        structure: "Lightweight or flexible knitted structures may show twisting more visibly",
+        width: "Confirmed during production planning",
+        gsm: "Depends on knitting density and finishing",
+        moq: "Confirmed after sourcing check",
+        useCases: [
+          "fashion T-shirts",
+          "soft casualwear",
+          "lightweight jersey garments"
+        ],
+      },
+    },
+  ],
+  guidance: [
+    "Discuss garment use, washing expectations, and target hand feel before confirming fabric specifications.",
+    "Single Jersey fabrics are widely used for softness and flexibility, but their structure can make spirality behavior more noticeable compared with more balanced constructions.",
+    "Confirm shrinkage, finishing, compaction, and cutting alignment during sample development before approving bulk production.",
+    "Use production samples and wash testing when garment stability is commercially important for the target market.",
+  ],
+  mistakes: [
+    "Treating spirality as a single-cause issue without reviewing knitting, finishing, washing, and garment construction together.",
+    "Assuming all knitted fabrics behave the same after washing and relaxation.",
+    "Approving production based only on fabric hand feel without checking wash behavior and garment movement.",
+    "Ignoring communication between fabric supplier, garment factory, and brand team during development.",
+  ],
+  faqs: [
+    {
+      question: "Is spirality considered a fabric defect?",
+      answer:
+        "Not necessarily. Spirality is often treated as a production and fabric behavior consideration that can vary depending on yarn, structure, finishing, garment construction, and washing conditions.",
+    },
+    {
+      question: "Why is spirality discussed more with Single Jersey fabrics?",
+      answer:
+        "Single Jersey fabrics are popular because they are soft, flexible, and efficient for many garments, but their structure can make twisting behavior more visible compared with more balanced knitted constructions.",
+    },
+    {
+      question: "Can finishing and washing affect spirality behavior?",
+      answer:
+        "Yes. Dyeing, finishing, compaction, washing, and garment construction can all influence how spirality appears in the final product.",
+    },
+    {
+      question: "Can Knitspeed help review fabric behavior considerations before production?",
+      answer:
+        "Yes. Knitspeed can support sourcing discussions by reviewing garment use, fabric structure, finishing expectations, and production considerations before quoting.",
+    },
+  ],
 }
 ];
 
