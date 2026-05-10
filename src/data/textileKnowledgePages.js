@@ -233,3 +233,98 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
 export function getTextileKnowledgePage(slug) {
   return TEXTILE_KNOWLEDGE_PAGES.find((page) => page.slug === slug) || null;
 }
+
+,
+{
+  slug: "combed-cotton-vs-carded-cotton",
+  canonicalPath: "/knowledge/combed-cotton-vs-carded-cotton",
+  category: "Yarn and fabric quality",
+  discoveryPriority: 40,
+  relatedArticleSlugs: [
+    "what-is-compact-cotton",
+    "what-gsm-should-t-shirts-use"
+  ],
+  topicCluster: "yarn-quality",
+  buyerIntent: "fabric-education",
+  tags: [
+    "combed cotton",
+    "carded cotton",
+    "cotton yarn",
+    "t-shirt fabric",
+    "apparel sourcing"
+  ],
+  eyebrow: "Textile knowledge",
+  title: "Combed Cotton vs Carded Cotton",
+  subtitle:
+    "A practical buyer guide to understanding combed and carded cotton for knitted fabric sourcing, garment feel, and production expectations.",
+  metaDescription:
+    "Compare combed cotton and carded cotton with practical sourcing guidance for knitted fabrics, garment feel, yarn quality, and apparel production.",
+  shortAnswer:
+    "Combed cotton and carded cotton are both cotton yarn categories, but they are processed differently before spinning. Combed cotton usually removes more short fibers and impurities, helping create a smoother and cleaner yarn appearance. Carded cotton is often more economical and can still perform well depending on the garment type, fabric structure, finishing, and production target.",
+  comparison: [
+    {
+      name: "Combed Cotton",
+      specs: {
+        composition: "Cotton yarn processed with additional combing preparation",
+        structure: "Used across knitted structures depending on fabric specification",
+        width: "Confirmed by production spec",
+        gsm: "Depends on yarn count, knitting density, and finishing",
+        moq: "Confirmed after sourcing check",
+        useCases: [
+          "premium T-shirts",
+          "brand apparel",
+          "smoother casualwear"
+        ],
+      },
+    },
+    {
+      name: "Carded Cotton",
+      specs: {
+        composition: "Cotton yarn prepared through standard carding processes",
+        structure: "Used across many knitted fabric categories",
+        width: "Confirmed by production spec",
+        gsm: "Depends on yarn count, knitting density, and finishing",
+        moq: "Confirmed after sourcing check",
+        useCases: [
+          "basic apparel",
+          "cost-sensitive production",
+          "general casualwear"
+        ],
+      },
+    },
+  ],
+  guidance: [
+    "Choose combed cotton when smoother appearance, cleaner yarn surface, or softer hand feel are important for the garment target.",
+    "Choose carded cotton when balancing cost efficiency and practical garment performance for the intended market.",
+    "Do not compare combed and carded cotton using yarn labels alone. Confirm fabric sample, GSM, width, shrinkage, and finishing before production approval.",
+    "Production quality, knitting control, dyeing, and finishing can influence final fabric performance as much as yarn category.",
+  ],
+  mistakes: [
+    "Assuming combed cotton automatically guarantees premium fabric quality.",
+    "Comparing suppliers without matching yarn count, GSM, structure, and finishing specifications.",
+    "Judging fabric quality from marketing labels without reviewing actual production samples.",
+    "Ignoring garment target market, print method, washing behavior, and production consistency.",
+  ],
+  faqs: [
+    {
+      question: "Is combed cotton always better than carded cotton?",
+      answer:
+        "Not always. Combed cotton can support smoother and cleaner fabric appearance, but carded cotton may still be appropriate depending on garment type, target customer, and pricing goals.",
+    },
+    {
+      question: "Does combed cotton affect GSM?",
+      answer:
+        "No. GSM depends on yarn count, knitting density, fabric structure, and finishing. Combed cotton describes yarn preparation quality rather than final fabric weight.",
+    },
+    {
+      question: "Can carded cotton still be used for T-shirts?",
+      answer:
+        "Yes. Many commercial T-shirts and casualwear products use carded cotton successfully depending on target price point, garment positioning, and finishing.",
+    },
+    {
+      question: "Can Knitspeed help compare cotton fabric options?",
+      answer:
+        "Yes. Knitspeed can support sourcing discussions by matching yarn quality, garment use, quantity, and production expectations before quoting.",
+    },
+  ],
+}

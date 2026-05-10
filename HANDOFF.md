@@ -837,3 +837,37 @@ Next likely safe slice:
 - candidate: Combed Cotton vs Carded Cotton
 - keep textile claims conservative and production-dependent
 
+
+---
+
+## Phase 3.5Q — Fourth Hand-Authored Buyer Guide
+
+Status:
+- complete
+- verified locally
+
+Goal:
+- strengthen yarn-quality textile education coverage with a high-intent buyer topic
+
+Implemented:
+- Combed Cotton vs Carded Cotton article
+- yarn-quality cluster expansion
+- related knowledge integration
+
+Verified:
+- `npm run build` passes
+- `npm run lint` passes
+- browser smoke confirmed article routing and related recommendations
+
+Rules preserved:
+- no React Router
+- no CMS
+- no sitemap
+- no Supabase changes
+- no quote flow changes
+- no admin dashboard changes
+
+Next likely safe slice:
+- Phase 3.5R — Lightweight article reading progress polish
+- keep UI-only and lightweight
+
