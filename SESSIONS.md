@@ -496,8 +496,8 @@ Verification:
 ## Phase 3.5B — First Real Knowledge Page Route
 
 Status:
-- implemented locally
-- pending Jay's git checkpoint
+- complete
+- checkpoint pushed as `aef2c3a Add first textile knowledge page`
 
 Summary:
 - Added conservative hand-authored textile knowledge data in `src/data/textileKnowledgePages.js`
@@ -524,4 +524,50 @@ Verification:
 Next likely slice:
 - Phase 3.5C Schema + metadata
 - inspect before patching
-- do not add schema.org until Jay approves the 3.5C slice
+- keep the slice lightweight and do not add sitemap/routing/CMS work
+
+---
+
+## Phase 3.5C — Lightweight Machine-Readable Discovery Layer
+
+Status:
+- implemented locally
+- verified with build, lint, and browser smoke
+- pending Jay's git checkpoint
+
+Summary:
+- Added `src/components/SEOJsonLd.jsx` for rendering one or more JSON-LD script tags from JSON-stringified schema objects
+- Added `src/lib/seoSchema.js` with conservative builders for Organization, Article, FAQPage, and BreadcrumbList
+- Wired structured data into `src/pages/KnowledgeArticlePage.jsx`
+- Added a conservative `metaDescription` field to the Single Jersey vs Interlock knowledge page data
+- Added page-level `document.title` and meta description handling without introducing Helmet or routing changes
+
+Schema notes:
+- Organization references Knitspeed and GSC Import Export Co., Ltd.
+- Entity language stays conservative: Thailand textile supplier and knitted fabric sourcing support
+- Article/FAQ/Breadcrumb schemas are scoped to `/knowledge/single-jersey-vs-interlock`
+- Production base URL is currently the safe constant `https://knitspeed-homepage.vercel.app`
+
+Verification:
+- `npm run build`
+- `npm run lint`
+- browser smoke confirmed `/knowledge/single-jersey-vs-interlock` renders `Single Jersey vs Interlock`
+- browser smoke confirmed 4 `application/ld+json` scripts with schema types Organization, Article, FAQPage, and BreadcrumbList
+- browser smoke confirmed meta description is set
+- browser smoke confirmed homepage still renders 9 existing `Quote this article` CTAs
+- browser console errors: none
+
+Rules preserved:
+- no routing overhaul
+- no React Router
+- no sitemap
+- no database/CMS/Supabase changes
+- no admin dashboard changes
+- no quote form or quote payload changes
+- no Prime scoring changes
+- no fake textile claims
+
+Next likely slice:
+- Phase 3.5D Internal linking + discovery flow
+- inspect before patching
+- do not change quote attribution until Phase 3.5E

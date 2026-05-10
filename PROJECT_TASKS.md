@@ -29,6 +29,13 @@ Last Updated: 2026-05-10
 - dashboard metrics, workflow filters, and CSV export aligned with canonical workflow fields
 - Prime scoring and homepage remain unchanged
 
+## LLM Discovery / Authority Layer
+- Phase 3.5A layout foundation complete
+- Phase 3.5B first real knowledge route complete: `/knowledge/single-jersey-vs-interlock`
+- Phase 3.5C lightweight machine-readable discovery layer implemented locally and verified
+- structured data added for Organization, Article, FAQPage, and BreadcrumbList
+- no fake textile claims, no bulk article generation, no routing overhaul, and no quote/admin/Prime behavior changes
+
 ---
 
 # NEXT TASKS 🚀
@@ -41,6 +48,34 @@ Estimate: 30–45 min
 - validation polish
 - success/error UX cleanup
 - optional field indicators
+
+---
+
+## PHASE 3.5D — Internal Linking + Discovery Flow
+Estimate: 45–90 min
+
+Goal:
+Make the first real knowledge page easier to discover from existing public surfaces without changing quote payloads or routing architecture.
+
+Rules:
+- inspect before patching
+- no fake textile content
+- no bulk AI article generation
+- no routing overhaul
+- preserve Prime Engine attribution flow
+- preserve current quote form behavior
+- no Supabase schema changes
+
+Potential deliverables:
+- minimal homepage or article-grid link to the knowledge page
+- reusable knowledge link/list pattern if it stays small
+- buyer-friendly internal link copy
+- browser smoke confirming homepage and knowledge route still render
+
+Checkpoint:
+- build and lint pass
+- visual smoke complete
+- commit only after Jay runs git commands locally
 
 ---
 

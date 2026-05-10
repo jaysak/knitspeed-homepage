@@ -5,6 +5,8 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
     title: "Single Jersey vs Interlock",
     subtitle:
       "A practical buyer guide to two common knitted fabric structures and how to choose between them for apparel production.",
+    metaDescription:
+      "Compare Single Jersey and Interlock knitted fabrics with practical buyer guidance for apparel sourcing, structure, hand feel, and production checks.",
     shortAnswer:
       "Single Jersey is usually chosen when buyers want a lighter, flexible knitted fabric with a clear front and back face. Interlock is usually chosen when buyers want a smoother, more stable double-knit fabric with a balanced face on both sides. The best choice depends on garment use, target hand feel, finishing, color, and production requirements.",
     comparison: [

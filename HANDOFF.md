@@ -15,7 +15,7 @@ Read these files first:
 4. `HANDOFF.md`
 
 Magic words for next boot:
-> Jarvis, read `HANDOFF.md`, `PROJECT_ROADMAP.md`, `DECISIONS.md`, and `SESSIONS.md`. Confirm current checkpoint is `d6d225b`, Phase 3.4 is closed, Phase 3.5A is complete, Phase 3.5B is implemented locally pending Jay's git checkpoint, then propose the next safe slice before patching.
+> Jarvis, read `HANDOFF.md`, `PROJECT_ROADMAP.md`, `DECISIONS.md`, and `SESSIONS.md`. Confirm current checkpoint is `aef2c3a`, Phase 3.4 is closed, Phase 3.5A and 3.5B are complete, Phase 3.5C is implemented locally pending Jay's git checkpoint, then propose the next safe slice before patching.
 
 ---
 
@@ -25,7 +25,7 @@ Branch:
 - `main`
 
 Latest product checkpoint:
-- `d6d225b Add LLM discovery layout foundation`
+- `aef2c3a Add first textile knowledge page`
 
 Remote:
 - `origin/main`
@@ -216,9 +216,10 @@ Notes:
 ## Phase 3.5 — LLM Discovery / Authority Layer
 
 Status:
-- planning-active
+- implementation-active
 - 3.5A complete
-- 3.5B implemented locally pending Jay's git checkpoint
+- 3.5B complete
+- 3.5C implemented locally pending Jay's git checkpoint
 
 Goal:
 - turn Knitspeed into a machine-readable textile knowledge authority
@@ -242,6 +243,19 @@ Implemented 3.5B:
 - `src/pages/KnowledgeArticlePage.jsx`
 - route: `/knowledge/single-jersey-vs-interlock`
 - first real knowledge page: Single Jersey vs Interlock
+
+Implemented 3.5C locally:
+- `src/components/SEOJsonLd.jsx`
+- `src/lib/seoSchema.js`
+- JSON-LD support for Organization, Article, FAQPage, and BreadcrumbList
+- knowledge page `document.title` and meta description handling
+- no route, quote form, admin dashboard, Supabase schema, Prime scoring, or homepage behavior changes
+
+Verified 3.5C locally:
+- `npm run build` passes
+- `npm run lint` passes
+- browser smoke confirmed `/knowledge/single-jersey-vs-interlock` renders and includes 4 `application/ld+json` scripts
+- browser smoke confirmed homepage still renders 9 existing article quote CTAs
 
 Rules:
 - no fake textile content
