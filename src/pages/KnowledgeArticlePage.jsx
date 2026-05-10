@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 
 import SEOJsonLd from "../components/SEOJsonLd";
 import FAQBlock from "../components/knowledge/FAQBlock";
@@ -13,6 +13,7 @@ import {
   buildOrganizationSchema,
   getCanonicalKnowledgeUrl,
 } from "../lib/seoSchema";
+import { writeBuyerIntentEvent } from "../lib/buyerIntent";
 
 function useKnowledgePageMeta(page) {
   useEffect(() => {
@@ -52,6 +53,26 @@ function useKnowledgePageMeta(page) {
 export default function KnowledgeArticlePage({ page }) {
   useKnowledgePageMeta(page);
 
+  const knowledgeArticle = useMemo(() => {
+    if (!page) return null;
+
+    return {
+      seoSlug: page.slug,
+      articleName: page.title,
+      usageSegment: "knowledge",
+      materialFamily: "",
+      fabricStructure: "",
+      linkedProducts: 0,
+      leadPriority: "prime",
+    };
+  }, [page]);
+
+  useEffect(() => {
+    if (!knowledgeArticle) return;
+
+    writeBuyerIntentEvent("knowledge_article_view", knowledgeArticle);
+  }, [knowledgeArticle]);
+
   if (!page) {
     return (
       <KnowledgePageLayout
@@ -86,6 +107,7 @@ export default function KnowledgeArticlePage({ page }) {
             description="Share your garment use, target hand feel, color, and quantity. Knitspeed can help narrow the sourcing options before quoting."
             href="/#quote"
             label="Request quote support"
+            article={knowledgeArticle}
           />
         }
       >

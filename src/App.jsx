@@ -74,7 +74,26 @@ export default function App() {
   const pathname = window.location.pathname;
   const [submitStatus, setSubmitStatus] = useState("");
   const [submitError, setSubmitError] = useState("");
-  const [selectedArticle, setSelectedArticle] = useState(null);
+  const [selectedArticle, setSelectedArticle] = useState(() => {
+    if (window.location.pathname !== "/") return null;
+
+    const storedKnowledgeArticle = sessionStorage.getItem(
+      "knitspeed_knowledge_article"
+    );
+
+    if (!storedKnowledgeArticle) return null;
+
+    try {
+      const parsedArticle = JSON.parse(storedKnowledgeArticle);
+      sessionStorage.removeItem("knitspeed_knowledge_article");
+
+      return parsedArticle?.seoSlug ? parsedArticle : null;
+    } catch (error) {
+      console.warn("Could not restore knowledge quote attribution:", error);
+      sessionStorage.removeItem("knitspeed_knowledge_article");
+      return null;
+    }
+  });
   const [selectedFabricStructure, setSelectedFabricStructure] = useState("");
   const [selectedMaterialFamily, setSelectedMaterialFamily] = useState("");
   const [selectedYarnCount, setSelectedYarnCount] = useState("");
@@ -87,6 +106,14 @@ export default function App() {
       writeBuyerIntentEvent("article_impression", article, {
         position: position + 1,
       });
+    });
+  }, [pathname]);
+
+  useEffect(() => {
+    if (pathname !== "/" || window.location.hash !== "#quote") return;
+
+    window.requestAnimationFrame(() => {
+      document.getElementById("quote")?.scrollIntoView({ behavior: "smooth" });
     });
   }, [pathname]);
 

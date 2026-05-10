@@ -220,7 +220,8 @@ Status:
 - 3.5A complete
 - 3.5B complete
 - 3.5C complete
-- 3.5D implemented locally pending Jay's git checkpoint
+- 3.5D complete
+- 3.5E v1 complete pending Jay's git checkpoint
 
 Goal:
 - turn Knitspeed into a machine-readable textile knowledge authority
@@ -232,6 +233,14 @@ Phase plan:
 - 3.5C Schema + metadata
 - 3.5D Internal linking + discovery flow
 - 3.5E Quote attribution integration refinement
+
+Implemented 3.5E v1:
+- knowledge page QuoteCTA stores lightweight knowledge article context in sessionStorage
+- knowledge CTA click records buyer intent event through existing helper
+- homepage quote form hydrates knowledge attribution through the existing selectedArticle contract
+- explicit #quote scroll handling brings users directly to the quote form after navigation
+- quote payload compatibility is preserved through existing article metadata fields
+- no Supabase schema, admin dashboard, routing, CMS, or scoring changes
 
 Implemented 3.5A:
 - `src/components/knowledge/KnowledgePageLayout.jsx`

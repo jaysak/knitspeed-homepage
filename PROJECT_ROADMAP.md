@@ -420,6 +420,18 @@ Every article/product page should eventually support:
 - lead scoring
 - sourcing pain-point capture
 
+Current implementation status:
+- 3.5A layout foundation complete
+- 3.5B first knowledge page route complete
+- 3.5C schema and metadata complete
+- 3.5D internal discovery links complete
+- 3.5E v1 knowledge quote attribution bridge complete
+
+3.5E v1 notes:
+- knowledge-page quote CTA now preserves article-like attribution into the existing Prime Engine quote flow
+- implementation reused the existing selectedArticle/article metadata contract
+- no Supabase schema, dashboard, routing overhaul, CMS, or scoring changes were made
+
 ### Future Data Capture Ideas
 
 Potential qualification fields:

@@ -1,11 +1,24 @@
 import { ArrowRight } from "lucide-react";
+import { writeBuyerIntentEvent } from "../../lib/buyerIntent";
 
 export default function QuoteCTA({
   title = "Request a fabric quote",
   description,
   href = "/#quote",
   label = "Get quote",
+  article,
 }) {
+  function handleClick() {
+    if (!article?.seoSlug) return;
+
+    writeBuyerIntentEvent("knowledge_quote_click", article);
+
+    sessionStorage.setItem(
+      "knitspeed_knowledge_article",
+      JSON.stringify(article)
+    );
+  }
+
   return (
     <section className="rounded-3xl bg-sky-50 p-6 md:p-8">
       <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
@@ -19,6 +32,7 @@ export default function QuoteCTA({
         </div>
         <a
           href={href}
+          onClick={handleClick}
           className="inline-flex items-center justify-center gap-2 rounded-full bg-sky-600 px-5 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-sky-700"
         >
           {label} <ArrowRight size={16} />

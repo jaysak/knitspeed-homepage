@@ -612,3 +612,48 @@ Next likely slice:
 - Phase 3.5E Quote attribution integration refinement
 - inspect before patching
 - keep attribution changes small and preserve existing article quote behavior
+
+---
+
+## Phase 3.5E v1 — Knowledge Quote Attribution Bridge
+
+Status:
+- complete
+- verified with build, lint, and browser smoke
+
+Summary:
+- Connected knowledge-page quote intent into the existing Prime Engine attribution flow
+- Reused the existing `selectedArticle`/article metadata contract instead of creating a parallel knowledge attribution system
+- Added knowledge quote click tracking through the existing buyer intent helper
+- Stored lightweight knowledge article context in `sessionStorage` before navigating from knowledge page to homepage quote form
+- Hydrated stored knowledge attribution into the homepage quote form
+- Added explicit `#quote` scroll handling after homepage render so knowledge CTA lands directly on the quote form
+- Kept quote payload structure compatible with existing article attribution fields
+- Did not add database fields, Supabase migrations, dashboard changes, routing overhaul, CMS logic, or scoring changes
+
+Implemented files:
+- `src/components/knowledge/QuoteCTA.jsx`
+- `src/pages/KnowledgeArticlePage.jsx`
+- `src/App.jsx`
+
+Verification:
+- `npm run lint` passes
+- `npm run build` passes
+- browser smoke confirmed `/knowledge/single-jersey-vs-interlock` CTA navigates to `/#quote`
+- browser smoke confirmed homepage scrolls directly to quote form after knowledge CTA click
+- browser smoke confirmed selected article panel shows `Single Jersey vs Interlock`
+- browser smoke confirmed existing Finished Article quote flow still works
+
+Rules preserved:
+- no Supabase/schema changes
+- no admin dashboard changes
+- no Prime scoring changes
+- no routing overhaul
+- no CMS
+- no fake textile content
+- existing Finished Article attribution remains intact
+
+Next likely slice:
+- update handoff checkpoint after commit
+- consider Phase 3.5E v2 only after live lead submission verification if needed
+- otherwise move to a small 3.5 stabilization/docs slice before expanding knowledge pages
