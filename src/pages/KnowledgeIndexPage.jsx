@@ -1,7 +1,11 @@
-import { getAllKnowledgePages } from "../lib/knowledgeRegistry";
+import {
+  getAllKnowledgePages,
+  getKnowledgeTopicClusters,
+} from "../lib/knowledgeRegistry";
 
 export default function KnowledgeIndexPage() {
   const pages = getAllKnowledgePages();
+  const clusters = getKnowledgeTopicClusters();
 
   return (
     <div className="bg-slate-50">
@@ -24,11 +28,32 @@ export default function KnowledgeIndexPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-5xl px-5 py-14">
+      <section className="mx-auto max-w-5xl px-5 py-10">
+        <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+          <p className="text-sm font-semibold uppercase tracking-wide text-sky-700">
+            Knowledge Topics
+          </p>
+
+          <div className="mt-4 flex flex-wrap gap-3">
+            {clusters.map((cluster) => (
+              <a
+                key={cluster.key}
+                href={`#${cluster.key}`}
+                className="rounded-full border border-slate-200 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-sky-300 hover:bg-sky-50 hover:text-sky-700"
+              >
+                {cluster.label} ({cluster.pages.length})
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-5xl px-5 pb-16">
         <div className="grid gap-6 md:grid-cols-2">
           {pages.map((page) => (
             <a
               key={page.slug}
+              id={page.topicCluster}
               href={page.canonicalPath}
               className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-sky-300 hover:shadow-md"
             >
@@ -43,6 +68,19 @@ export default function KnowledgeIndexPage() {
               <p className="mt-4 text-base leading-7 text-slate-600">
                 {page.metaDescription || page.subtitle}
               </p>
+
+              {page.tags?.length > 0 && (
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {page.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-600"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              )}
 
               <div className="mt-6 text-sm font-semibold text-sky-700">
                 Read article →

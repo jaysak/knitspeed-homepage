@@ -689,3 +689,35 @@ Notes:
 - no CMS or sitemap introduced
 - no Supabase or dashboard changes made
 
+
+---
+
+## Phase 3.5H — Knowledge Taxonomy + Topic Clustering
+
+Status:
+- implemented and verified
+
+Summary:
+- added lightweight knowledge topic clustering
+- added buyer-intent and tag metadata to the existing knowledge article
+- upgraded knowledge registry with topic cluster helpers
+- updated `/knowledge` hub to show topic chips and article tags
+- preserved implemented-page-only discovery behavior
+
+Implemented files:
+- src/data/textileKnowledgePages.js
+- src/lib/knowledgeRegistry.js
+- src/pages/KnowledgeIndexPage.jsx
+
+Verification:
+- npm run build
+- npm run lint
+- browser smoke confirmed `/knowledge` topic cluster display
+- browser smoke confirmed article navigation still works
+- browser smoke confirmed existing knowledge article route still renders
+- browser smoke confirmed JSON-LD count remains 4
+
+Notes:
+- no new textile content pages were added
+- no CMS, sitemap, Supabase, quote flow, admin, or scoring changes made
+

@@ -433,3 +433,41 @@ Next likely safe slice:
 - keep implementation lightweight and registry-driven
 - avoid content explosion
 
+
+---
+
+## Phase 3.5H — Knowledge Taxonomy + Topic Clustering
+
+Status:
+- complete
+- verified locally
+
+Goal:
+- strengthen knowledge organization before expanding article coverage
+
+Implemented:
+- topic cluster metadata
+- buyer intent metadata
+- tags for the implemented knowledge page
+- registry helpers for topic clusters
+- topic navigation on `/knowledge`
+
+Verified:
+- npm run build passes
+- npm run lint passes
+- browser smoke confirmed `/knowledge` topic display
+- browser smoke confirmed existing article page remains stable
+
+Rules preserved:
+- no fake pages
+- no CMS
+- no sitemap
+- no Supabase changes
+- no quote flow changes
+- no admin dashboard changes
+
+Next likely safe slice:
+- Phase 3.5I — Add second hand-authored knowledge article
+- candidate: What Is Compact Cotton?
+- keep it conservative and grounded in real textile terminology
+

@@ -5,6 +5,9 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
     category: "Knitted fabric structures",
     discoveryPriority: 10,
     relatedArticleSlugs: [],
+    topicCluster: "fabric-structures",
+    buyerIntent: "fabric-comparison",
+    tags: ["single jersey", "interlock", "knitted fabric", "fabric structure", "apparel sourcing"],
     eyebrow: "Textile knowledge",
     title: "Single Jersey vs Interlock",
     subtitle:

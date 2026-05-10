@@ -26,3 +26,34 @@ export function getRelatedKnowledgePages(slug) {
     .map((relatedSlug) => getKnowledgePageBySlug(relatedSlug))
     .filter(Boolean);
 }
+
+export function getKnowledgeTopicClusters() {
+  const clusters = new Map();
+
+  getAllKnowledgePages().forEach((page) => {
+    const clusterKey = page.topicCluster || "general";
+    const existing = clusters.get(clusterKey) || {
+      key: clusterKey,
+      label: formatClusterLabel(clusterKey),
+      pages: [],
+    };
+
+    existing.pages.push(page);
+    clusters.set(clusterKey, existing);
+  });
+
+  return Array.from(clusters.values());
+}
+
+export function getKnowledgePagesByCluster(clusterKey) {
+  return getAllKnowledgePages().filter(
+    (page) => (page.topicCluster || "general") === clusterKey
+  );
+}
+
+function formatClusterLabel(clusterKey) {
+  return clusterKey
+    .split("-")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+}
