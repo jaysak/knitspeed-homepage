@@ -122,11 +122,16 @@ Implemented in slice 3:
 
 Status:
 - inspected 2026-05-10
-- no refactor performed
+- stabilization refactor in progress and verified for extracted slices
 
 Current shape:
-- `src/App.jsx` is about 1,650 lines
-- it currently contains public homepage, quote flow, inbound leads dashboard, buyer intelligence dashboard, routing, and tracking helpers
+- `src/App.jsx` is about 535 lines
+- `src/pages/AdminLeadsDashboard.jsx` owns `/admin/leads`
+- `src/pages/AdminBuyersDashboard.jsx` owns `/admin/buyers`
+- `src/components/QuoteForm.jsx` owns the rendered quote form
+- `src/lib/leadInsights.js` owns shared lead count helpers
+- `src/lib/textileLabels.js` owns shared textile display labels
+- homepage article sections, route branching, quote submit logic, and buyer intent tracking still live in `App.jsx`
 
 Future component boundaries:
 - `src/pages/HomePage.jsx`
@@ -146,11 +151,12 @@ Risk areas:
 - Supabase migration history has a known remote mismatch around `20260508`; avoid broad migration changes until repaired intentionally
 
 Recommended next stabilization step:
-- before adding more dashboard features, split `AdminLeadsDashboard` and shared lead insight helpers out of `App.jsx`
-- keep behavior identical and verify with build, lint, and `/admin/leads` browser flow
+- extract homepage article grid and buyer intent helpers only if behavior can stay surgical
+- do not rename `src/auth`, `AuthProvider`, `useProfile`, or `ProtectedRoute` yet
+- quote form render was browser-smoked, but no new Supabase quote submission was performed during the refactor
 
 Estimated time:
-- 1-2 hours remaining for next useful slice
+- 45-90 minutes for the next useful stabilization slice
 
 ---
 

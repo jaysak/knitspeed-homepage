@@ -203,3 +203,34 @@ Verification:
 Notes:
 - curation lives in `src/data/featuredArticleSlugs.js`
 - future merchandising edits should update the allowlist, not generated article data
+
+---
+
+## Stabilization Refactor — Admin Leads Dashboard Split
+
+Status:
+- complete and verified
+
+Summary:
+- Extracted inbound leads dashboard from `src/App.jsx`
+- Added `src/pages/AdminLeadsDashboard.jsx`
+- Added shared lead insight helper module at `src/lib/leadInsights.js`
+- Extracted buyer dashboard into `src/pages/AdminBuyersDashboard.jsx`
+- Extracted rendered quote form into `src/components/QuoteForm.jsx`
+- Added shared textile label helper module at `src/lib/textileLabels.js`
+- Preserved `/admin/leads` UI and behavior
+- No database changes
+- No feature additions
+- No UI redesign
+
+Verification:
+- `npm run build`
+- `npm run lint`
+- browser visual smoke test confirmed `/admin/leads` still shows KPI cards, Prime intent cards, filters, lead table, and latest 30s Combed Cotton test lead
+- browser smoke test confirmed homepage still renders brand, Finished Articles, article quote buttons, and quote form
+- no new browser quote submission was performed during this refactor
+
+Notes:
+- this was an organization-only refactor
+- `src/auth` naming and `AuthProvider` / `useProfile` / `ProtectedRoute` were preserved
+- next likely stabilization target is moving homepage article grid or buyer intent helpers out of `App.jsx`
