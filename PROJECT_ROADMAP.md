@@ -193,6 +193,9 @@ Should:
 ## 3.4B
 Buyer intent tracking
 
+Status:
+- completed 2026-05-10
+
 Track:
 - viewed articles
 - quoted articles
@@ -208,12 +211,35 @@ Future:
 ## 3.4C
 Buyer qualification layer
 
+Status:
+- completed 2026-05-10
+
 Add fields:
 - monthly usage
 - brand/factory/trader
 - target market
 - production vs sampling
 - sourcing pain points
+
+---
+
+## 3.4D
+Prime lead scoring
+
+Status:
+- completed 2026-05-10
+
+Implemented:
+- deterministic scoring from existing `quote_leads` data
+- Hot / Warm / Watch tiers
+- dashboard score cards
+- row-level score column
+- explainable score reasons
+
+Rules:
+- no scoring table yet
+- no schema change yet
+- keep scoring explainable before any AI automation
 
 ---
 
@@ -226,7 +252,7 @@ Status:
 - DO NOT BUILD YET
 
 Priority:
-- after Phase 3.4C Buyer Qualification Layer
+- after Phase 3.4D Prime Lead Scoring
 
 Owner:
 - Jay + Jarvis + Codex
@@ -269,10 +295,10 @@ Most textile competitors expose shallow catalog pages only.
 DO NOT BUILD THIS YET.
 
 Current priority remains:
-- Phase 3.4C Buyer Qualification Layer
+- Phase 3.5 planning only until Jay explicitly starts the build
 
 Reason:
-- Prime lead qualification must stabilize before scaling inbound discovery traffic
+- Prime lead qualification and scoring are now stable enough to prepare discovery traffic carefully
 
 ### Current Foundation Already Completed
 

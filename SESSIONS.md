@@ -336,3 +336,23 @@ Verification:
 - live data sanity check scored older article leads as Warm
 - authenticated `/admin/leads` visual confirmation completed from Jay's logged-in browser
 - dashboard displays Hot Prime leads card, Top Prime lead scores card, row-level Score column, and Hot/Warm/Watch score pills
+
+---
+
+## Housekeeping — Post 3.4D Cleanup
+
+Status:
+- complete
+
+Summary:
+- Moved old untracked backup files into `.codex-backups/`
+- Added `.codex-backups/` to `.gitignore`
+- Updated roadmap to mark 3.4B, 3.4C, and 3.4D complete
+- Updated handoff to point to latest checkpoint and Phase 3.5 as planned next
+- Checked production Vercel homepage after 3.4D
+
+Notes:
+- backup files were archived locally, not deleted
+- Phase 3.5 remains planned-only until explicitly started
+- production homepage loads, Finished Articles render, quote form renders, and Optional Buyer Details is collapsed by default
+- production `/admin/leads` correctly shows protected access when unauthenticated

@@ -14,6 +14,9 @@ Read these files first:
 3. `SESSIONS.md`
 4. `HANDOFF.md`
 
+Magic words for next boot:
+> Jarvis, read `HANDOFF.md`, `PROJECT_ROADMAP.md`, `DECISIONS.md`, and `SESSIONS.md`. Confirm current checkpoint is `6628c5e`, 3.4A-D are complete, Phase 3.5 is planned-only, then propose the next safe slice before patching.
+
 ---
 
 # CURRENT REPO STATE
@@ -22,16 +25,15 @@ Branch:
 - `main`
 
 Latest product checkpoint:
-- `0e5a6ab Refactor dashboard pages and quote form structure`
+- `6628c5e Add Prime lead scoring`
 
 Remote:
 - `origin/main`
 
-Known local untracked backup files:
-- `scripts/build_products_master.py.bak-p1`
-- `src/App.jsx.bak-prime-payload`
+Local backup archive:
+- `.codex-backups/`
 
-Do not commit those backup files unless Jay explicitly asks.
+Do not commit local backup archives unless Jay explicitly asks.
 
 Supabase migration note:
 - `supabase db push` is currently blocked by a migration-history mismatch around remote version `20260508`
@@ -110,7 +112,7 @@ Do not build yet:
 
 ---
 
-# CURRENT TASK
+# COMPLETED CHECKPOINT
 
 ## Phase 3.4D — Prime Lead Scoring
 
@@ -142,6 +144,27 @@ Verified so far:
 - `npm run lint` passes
 - live lead sanity check scores recent qualified leads as Hot and older article leads as Warm
 - authenticated `/admin/leads` displays Hot Prime leads card, Top Prime lead scores card, and row-level Score column
+
+---
+
+# NEXT TASK
+
+## Phase 3.5 — LLM Discovery / Authority Layer
+
+Status:
+- planned only
+- DO NOT BUILD YET unless Jay explicitly asks to start Phase 3.5
+
+Goal:
+- turn Knitspeed into a machine-readable textile knowledge authority
+- support future LLM discovery and high-intent inbound traffic
+
+First likely slice:
+- inspect current routing and data shape
+- plan lightweight knowledge-page structure
+- avoid routing overhaul
+- avoid fake/generated textile content
+- keep Prime Engine lead quality intact
 
 Completion gate for quote/lead work:
 1. `npm run build` passes

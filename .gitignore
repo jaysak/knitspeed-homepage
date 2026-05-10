@@ -10,3 +10,6 @@ dist
 
 # Supabase generated temp files
 supabase/.temp/
+
+# Local Codex backup archive
+.codex-backups/
