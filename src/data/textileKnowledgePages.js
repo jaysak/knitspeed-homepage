@@ -228,14 +228,7 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
       },
     ],
   },
-];
-
-export function getTextileKnowledgePage(slug) {
-  return TEXTILE_KNOWLEDGE_PAGES.find((page) => page.slug === slug) || null;
-}
-
-,
-{
+  {
   slug: "combed-cotton-vs-carded-cotton",
   canonicalPath: "/knowledge/combed-cotton-vs-carded-cotton",
   category: "Yarn and fabric quality",
@@ -327,4 +320,9 @@ export function getTextileKnowledgePage(slug) {
         "Yes. Knitspeed can support sourcing discussions by matching yarn quality, garment use, quantity, and production expectations before quoting.",
     },
   ],
+}
+];
+
+export function getTextileKnowledgePage(slug) {
+  return TEXTILE_KNOWLEDGE_PAGES.find((page) => page.slug === slug) || null;
 }
