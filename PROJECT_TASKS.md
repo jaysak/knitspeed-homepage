@@ -341,3 +341,11 @@ Create a private textile intelligence and operational coordination system for GS
 NOT a public mass-registration marketplace.
 
 Relationship quality and operational intelligence are more important than platform scale.
+
+## Next Tasks — Phase 3.6C
+
+- Create `src/lib/intelligence/temporalSignals.js`
+- Define seasonal production pressure mapping
+- Define reorder-cycle and dye-queue sensitivity signals
+- Keep temporal intelligence internal only
+- Consider later CTA weighting, not UI expansion

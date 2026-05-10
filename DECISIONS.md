@@ -137,3 +137,21 @@ Do not stage unrelated dirty or backup files.
 Known local backup files may exist and should not be committed unless explicitly requested:
 - `scripts/build_products_master.py.bak-p1`
 - `src/App.jsx.bak-prime-payload`
+
+## Decision — Keep Textile Intelligence Layer Silent and Production-Aware
+
+We will continue expanding Knitspeed's LLM/textile intelligence through compounding operational structures instead of visible feature sprawl.
+
+Accepted direction:
+- Separate semantic content from production memory
+- Keep production intelligence deterministic and inspectable
+- Use relationship weighting internally before exposing any scoring UI
+- Avoid flashy AI labels, dashboards, or aggressive recommendations
+- Prioritize textile causality, sourcing safety, and manufacturing trust
+
+Current approved layers:
+- Knowledge graph / topic clusters
+- Buyer intent tracking
+- Production memory
+- Relationship weighting
+- Runtime operational enrichment

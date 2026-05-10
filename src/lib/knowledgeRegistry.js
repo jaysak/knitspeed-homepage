@@ -1,4 +1,6 @@
 import { TEXTILE_KNOWLEDGE_PAGES } from "../data/textileKnowledgePages";
+import { getProductionMemory } from "./production/productionMemory";
+import { getRelationshipWeight } from "./intelligence/relationshipWeights";
 
 const implementedKnowledgeSlugs = new Set(
   TEXTILE_KNOWLEDGE_PAGES.map((page) => page.slug)
@@ -40,10 +42,10 @@ export function getRelatedKnowledgePages(slug) {
         return false;
       }
 
-      return (
-        candidatePage.topicCluster &&
-        candidatePage.topicCluster === page.topicCluster
-      );
+      return scoreKnowledgeRelationship(page, candidatePage) > 0;
+    })
+    .sort((a, b) => {
+      return scoreKnowledgeRelationship(page, b) - scoreKnowledgeRelationship(page, a);
     })
     .slice(0, 2);
 
@@ -89,4 +91,58 @@ export function getKnowledgePageFromPathname(pathname) {
   const slug = pathname.replace("/knowledge/", "").replace(/\/$/, "");
 
   return getKnowledgePageBySlug(slug);
+}
+
+
+const PRODUCTION_MEMORY_SLUG_MAP = {
+  "single-jersey-vs-interlock": ["single-jersey", "interlock"],
+  "what-is-compact-cotton": ["compact-cotton"],
+  "what-gsm-should-t-shirts-use": ["single-jersey"]
+};
+
+export function getKnowledgePageProductionMemory(slug) {
+  const memoryKeys = PRODUCTION_MEMORY_SLUG_MAP[slug] || [];
+
+  return memoryKeys
+    .map((memoryKey) => ({
+      key: memoryKey,
+      memory: getProductionMemory(memoryKey)
+    }))
+    .filter((item) => Boolean(item.memory));
+}
+
+function scoreKnowledgeRelationship(sourcePage, candidatePage) {
+  if (!sourcePage || !candidatePage) return 0;
+
+  let score = 0;
+
+  if (sourcePage.topicCluster && sourcePage.topicCluster === candidatePage.topicCluster) {
+    score += 0.35;
+  }
+
+  if (sourcePage.buyerIntent && sourcePage.buyerIntent === candidatePage.buyerIntent) {
+    score += 0.2;
+  }
+
+  const sourceTags = new Set(sourcePage.tags || []);
+  const candidateTags = candidatePage.tags || [];
+  const sharedTags = candidateTags.filter((tag) => sourceTags.has(tag));
+
+  score += sharedTags.length * 0.08;
+
+  if (
+    sourcePage.topicCluster === "yarn-quality" &&
+    candidatePage.topicCluster === "fabric-specification"
+  ) {
+    score += getRelationshipWeight("yarn-to-structure")?.weight || 0;
+  }
+
+  if (
+    sourcePage.topicCluster === "fabric-structures" &&
+    candidatePage.topicCluster === "fabric-specification"
+  ) {
+    score += getRelationshipWeight("structure-to-dyeing")?.weight || 0;
+  }
+
+  return Number(score.toFixed(2));
 }

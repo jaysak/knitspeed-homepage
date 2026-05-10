@@ -1182,3 +1182,17 @@ Summary:
 Operational note:
 - `/knowledge` = index page
 - `/knowledge/:slug` = article page
+
+## Phase 3.6A–3.6B — Production Memory + Relationship Weighting
+
+- Added silent production memory layer at `src/lib/production/productionMemory.js`
+- Added calm production considerations UI via `src/components/production/ProductionMemoryPanel.jsx`
+- Wired production memory into `KnowledgeArticlePage.jsx`
+- Added runtime `getKnowledgePageProductionMemory(slug)` enrichment in `knowledgeRegistry.js`
+- Added relationship weighting layer at `src/lib/intelligence/relationshipWeights.js`
+- Upgraded related knowledge fallback logic to use hidden textile relationship scoring
+- Build passed after each step
+- Visual confirmation passed on knowledge pages
+
+Strategic note:
+This phase moves Knitspeed from static textile knowledge content toward production-aware textile intelligence, while keeping the UI calm, sourcing-safe, and non-chaotic.

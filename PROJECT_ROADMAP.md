@@ -680,3 +680,16 @@ Near-future opportunities:
 - production glossary layer
 - garment category knowledge paths
 - structured textile semantic schema
+
+## Phase 3.6 Roadmap — Textile Operational Intelligence
+
+### Completed
+- Phase 3.6A: Production Memory Layer v0
+- Phase 3.6B: Relationship Weighting Engine v0
+
+### Next
+- Phase 3.6C: Temporal Manufacturing Intelligence
+- Add seasonal production pressure signals
+- Add quote urgency inference
+- Add sourcing stability signals
+- Keep all signals internal before exposing customer-facing logic
