@@ -296,7 +296,7 @@ export default function App() {
           <nav className="hidden items-center gap-7 text-sm font-medium text-slate-600 md:flex">
             <a href="#products" className="hover:text-sky-600">Products</a>
             <a href="#why" className="hover:text-sky-600">Why Us</a>
-            <a href="/knowledge/single-jersey-vs-interlock" className="hover:text-sky-600">Knowledge</a>
+            <a href="/knowledge" className="hover:text-sky-600">Knowledge</a>
             <a href="#quote" className="hover:text-sky-600">Quote</a>
             <a href="#contact" className="hover:text-sky-600">Contact</a>
           </nav>
@@ -450,7 +450,7 @@ export default function App() {
             </div>
 
             <a
-              href="/knowledge/single-jersey-vs-interlock"
+              href="/knowledge"
               className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-4 text-center font-bold text-white shadow-sm transition hover:translate-y-[-1px]"
               style={{ backgroundColor: brand.blue }}
             >
@@ -510,7 +510,7 @@ export default function App() {
           <div className="text-sm text-slate-300">
             www.knitspeed.com • Facebook: Knitspeed • 090-912-4154
             <span className="mx-2 text-slate-500">•</span>
-            <a href="/knowledge/single-jersey-vs-interlock" className="text-sky-200 hover:text-white">
+            <a href="/knowledge" className="text-sky-200 hover:text-white">
               Textile Knowledge
             </a>
           </div>
