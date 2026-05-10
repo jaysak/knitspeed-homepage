@@ -661,3 +661,22 @@ Next strong candidates:
 - How Shrinkage Is Evaluated in Apparel Fabrics
 - How Fabric Width Affects Garment Production
 - Combed Cotton vs Compact Cotton
+
+---
+
+### Phase 3.5W-3.5Y Completion
+
+Completed:
+- production behavior knowledge expansion
+- grouped knowledge browsing structure
+- article CTA flow polish
+
+Strategic result:
+- Knitspeed knowledge layer now behaves more like an operational textile intelligence system than a marketing blog
+
+Near-future opportunities:
+- lightweight "Knowledge Basis" trust block
+- related guide recommendation refinement
+- production glossary layer
+- garment category knowledge paths
+- structured textile semantic schema

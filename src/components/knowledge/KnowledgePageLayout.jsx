@@ -27,7 +27,7 @@ export default function KnowledgePageLayout({
 
       <div className="mx-auto max-w-5xl px-5 py-12">
         <div className="space-y-12">{children}</div>
-        {cta ? <div className="mt-12">{cta}</div> : null}
+        {cta ? <div className="mt-12 border-4 border-red-500 p-4">{cta}</div> : null}
       </div>
     </main>
   );

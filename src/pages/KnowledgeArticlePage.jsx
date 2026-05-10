@@ -112,8 +112,8 @@ export default function KnowledgeArticlePage({ page }) {
         subtitle={page.subtitle}
         cta={
           <QuoteCTA
-            title="Need help choosing a knitted fabric?"
-            description="Share your garment use, target hand feel, color, and quantity. Knitspeed can help narrow the sourcing options before quoting."
+            title="Need help applying this to a real fabric order?"
+            description="Share your garment use, target hand feel, color, quantity, and production expectations. Knitspeed can help narrow the sourcing options before quoting."
             href="/#quote"
             label="Request quote support"
             article={knowledgeArticle}
@@ -179,6 +179,8 @@ export default function KnowledgeArticlePage({ page }) {
             </div>
           </section>
         )}
+
+
       </KnowledgePageLayout>
     </>
   );

@@ -970,3 +970,39 @@ Current knowledge graph now covers:
 Important implementation note:
 - future article insertion should use the safe final-array-marker pattern
 - run `node --check src/data/textileKnowledgePages.js` before build/lint
+
+---
+
+# LATEST KNOWLEDGE SYSTEM STATE
+
+Knowledge layer now includes:
+- yarn quality intelligence
+- fabric structure intelligence
+- GSM interpretation
+- finishing behavior
+- spirality behavior
+- pilling behavior
+- shrinkage evaluation
+- wash testing context
+- fabric width production effects
+
+System characteristics:
+- sourcing-aware
+- production-aware
+- commercially safe
+- avoids panic framing
+- avoids blame-oriented language
+- designed for long-term semantic authority
+
+Knowledge index now grouped by:
+- Fabric Structures
+- Yarn Quality
+- Fabric Specification
+- Fabric Behavior
+- Fabric Finishing
+- Production Behavior
+
+Important operational lesson:
+- Quote CTA debugging issue was route confusion:
+  - `/knowledge` = index
+  - `/knowledge/:slug` = article page

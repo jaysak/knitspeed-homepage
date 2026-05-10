@@ -1116,3 +1116,69 @@ Verification:
 
 Notes:
 - new safe insertion pattern confirmed: insert object before final array closing marker using `,\nNEW_OBJECT\n];`
+
+---
+
+## Phase 3.5W — Production Behavior Expansion
+
+Status:
+- complete
+- committed and pushed
+
+Summary:
+- added production-oriented textile intelligence guides:
+  - How Shrinkage Is Evaluated in Apparel Fabrics
+  - Combed Cotton vs Compact Cotton
+  - How Fabric Width Affects Garment Production
+  - Why Wash Testing Matters for Apparel Fabrics
+
+Strategic effect:
+- strengthened production-awareness layer
+- expanded garment outcome reasoning
+- improved sourcing and wash-behavior context
+- reinforced operational textile intelligence positioning
+
+Verification:
+- `npm run build` passes
+- `npm run lint` passes
+
+---
+
+## Phase 3.5X — Knowledge Index Grouping
+
+Status:
+- complete
+- committed and pushed as `22e7433 Group knowledge index by topic cluster`
+
+Summary:
+- grouped `/knowledge` index by topic clusters
+- improved browseability and semantic organization
+
+Current clusters:
+- Fabric Structures
+- Yarn Quality
+- Fabric Specification
+- Fabric Behavior
+- Fabric Finishing
+- Production Behavior
+
+Verification:
+- visual confirmation completed
+- grouped layout rendering correctly
+
+---
+
+## Phase 3.5Y — Knowledge CTA Flow Polish
+
+Status:
+- complete
+- verified visually
+
+Summary:
+- confirmed Quote CTA renders correctly on article routes
+- CTA placement validated after Related Guides / article flow
+- debugging confusion traced to checking `/knowledge` index route instead of `/knowledge/:slug`
+
+Operational note:
+- `/knowledge` = index page
+- `/knowledge/:slug` = article page
