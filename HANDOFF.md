@@ -147,6 +147,60 @@ Verified so far:
 
 ---
 
+# IMPLEMENTED CHECKPOINT
+
+## Phase 3.4E — Lead Action Workflow
+
+Status:
+- implemented locally
+- build and lint passing
+- live SQL applied
+- authenticated visual confirmation completed from Jay's browser
+
+Goal:
+- add operational CRM behavior to inbound Prime leads without changing scoring or quote intake
+
+Implemented fields:
+- `assigned_owner`
+- `next_followup_at`
+
+Existing workflow fields used:
+- `sales_notes`
+- `last_contact_at`
+- `lead_status`
+
+Implemented files:
+- `supabase/migrations/202605101820_add_lead_action_workflow_fields.sql`
+- `src/pages/AdminLeadsDashboard.jsx`
+
+Implemented behavior:
+- authenticated update RLS policy for `quote_leads`
+- owner assignment per lead
+- next follow-up timestamp per lead
+- internal sales notes per lead
+- automatic `last_contact_at` update when notes are changed
+- workflow filters for needs follow-up, scheduled follow-up, untouched over 3 days, and unassigned open leads
+- follow-up due and unassigned open lead KPI cards
+- workflow fields included in CSV export
+
+Verified so far:
+- `npm run build` passes
+- `npm run lint` passes
+- local browser smoke reached protected `/admin/leads` gate
+- Jay applied the 3.4E SQL successfully in Supabase
+- authenticated `/admin/leads` screenshot displays Follow-ups due, Unassigned open, workflow filter, Action controls, Notes controls, and Last touched display
+
+Not yet verified:
+- linked Supabase schema, because local shell has no Supabase access token
+- owner/note/follow-up persistence after page refresh
+
+Notes:
+- Prime scoring logic was not changed
+- homepage and quote payload were not changed
+- Supabase migration history still has the known remote mismatch around `20260508`; apply the 3.4E SQL intentionally rather than broad-pushing migrations unless history is repaired
+
+---
+
 # NEXT TASK
 
 ## Phase 3.5 — LLM Discovery / Authority Layer

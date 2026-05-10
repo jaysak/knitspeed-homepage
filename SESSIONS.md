@@ -356,3 +356,34 @@ Notes:
 - Phase 3.5 remains planned-only until explicitly started
 - production homepage loads, Finished Articles render, quote form renders, and Optional Buyer Details is collapsed by default
 - production `/admin/leads` correctly shows protected access when unauthenticated
+
+---
+
+## Phase 3.4E — Lead Action Workflow
+
+Status:
+- implemented locally
+- live SQL applied
+- authenticated visual confirmation completed from Jay's browser
+
+Summary:
+- Added nullable `assigned_owner` and `next_followup_at` fields for quote lead action workflow
+- Added authenticated update RLS policy for `quote_leads`
+- Restored internal sales notes workflow in `/admin/leads` using existing `sales_notes` and `last_contact_at`
+- Added follow-up due and unassigned open lead dashboard cards
+- Added workflow filter for needs follow-up, scheduled follow-up, untouched over 3 days, and unassigned open leads
+- Added owner, follow-up datetime, and internal notes controls to lead rows
+- Added workflow fields to CSV export
+- Kept Prime scoring helper and homepage quote flow unchanged
+
+Verification:
+- `npm run build`
+- `npm run lint`
+- local browser route smoke reached protected `/admin/leads` gate
+- Jay applied the 3.4E SQL successfully in Supabase
+- Jay's authenticated `/admin/leads` screenshot confirmed Follow-ups due, Unassigned open, workflow filter, Action controls, Notes controls, and Last touched display
+
+Notes:
+- Linked Supabase schema query was attempted, but this shell has no Supabase access token
+- New migration is `supabase/migrations/202605101820_add_lead_action_workflow_fields.sql`
+- Owner/note/follow-up persistence after page refresh should be confirmed before final 3.4E commit

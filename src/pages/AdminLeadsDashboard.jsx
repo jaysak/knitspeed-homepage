@@ -25,6 +25,7 @@ export default function AdminLeadsDashboard() {
   const [searchText, setSearchText] = useState("");
   const [priorityFilter, setPriorityFilter] = useState("all");
   const [statusFilter, setStatusFilter] = useState("all");
+  const [workflowFilter, setWorkflowFilter] = useState("all");
 
   const leadStatuses = [
     "new",
@@ -50,6 +51,29 @@ export default function AdminLeadsDashboard() {
     return leadStatusStyles[status] || "bg-slate-100 text-slate-600";
   }
 
+  function isClosedLead(lead) {
+    return ["confirmed", "dead"].includes(lead.lead_status || "new");
+  }
+
+  function getFollowupState(lead) {
+    if (!lead.next_followup_at || isClosedLead(lead)) return "none";
+
+    const followupAt = new Date(lead.next_followup_at).getTime();
+    if (Number.isNaN(followupAt)) return "none";
+
+    return followupAt <= currentTimeMs ? "due" : "scheduled";
+  }
+
+  function toDatetimeLocalValue(value) {
+    if (!value) return "";
+
+    const date = new Date(value);
+    if (Number.isNaN(date.getTime())) return "";
+
+    const timezoneOffsetMs = date.getTimezoneOffset() * 60 * 1000;
+    return new Date(date.getTime() - timezoneOffsetMs).toISOString().slice(0, 16);
+  }
+
   async function updateLeadStatus(leadId, nextStatus) {
     const previousLeads = leads;
 
@@ -69,6 +93,46 @@ export default function AdminLeadsDashboard() {
       setLeads(previousLeads);
       alert("Could not update lead status. Reverted.");
     }
+  }
+
+  async function updateLeadAction(leadId, changes) {
+    const previousLeads = leads;
+
+    setLeads((current) =>
+      current.map((lead) =>
+        lead.id === leadId ? { ...lead, ...changes } : lead
+      )
+    );
+
+    const { error } = await supabase
+      .from("quote_leads")
+      .update(changes)
+      .eq("id", leadId);
+
+    if (error) {
+      console.error("Failed to update lead action fields:", error);
+      setLeads(previousLeads);
+      alert("Could not update lead workflow fields. Reverted.");
+    }
+  }
+
+  function updateLeadOwner(leadId, assignedOwner) {
+    updateLeadAction(leadId, { assigned_owner: assignedOwner.trim() || null });
+  }
+
+  function updateLeadFollowup(leadId, nextFollowupValue) {
+    updateLeadAction(leadId, {
+      next_followup_at: nextFollowupValue
+        ? new Date(nextFollowupValue).toISOString()
+        : null,
+    });
+  }
+
+  function updateLeadNotes(leadId, salesNotes) {
+    updateLeadAction(leadId, {
+      sales_notes: salesNotes,
+      last_contact_at: salesNotes.trim() ? new Date().toISOString() : null,
+    });
   }
 
   function exportLeadsCsv() {
@@ -97,6 +161,10 @@ export default function AdminLeadsDashboard() {
       "production_stage",
       "sourcing_pain_points",
       "lead_status",
+      "assigned_owner",
+      "next_followup_at",
+      "last_contact_at",
+      "sales_notes",
       "message",
     ];
 
@@ -152,6 +220,10 @@ export default function AdminLeadsDashboard() {
     const ageDays = (currentTimeMs - createdAt.getTime()) / (1000 * 60 * 60 * 24);
     return ageDays > 3;
   }).length;
+  const dueFollowups = leads.filter((lead) => getFollowupState(lead) === "due").length;
+  const unassignedOpenLeads = leads.filter(
+    (lead) => !isClosedLead(lead) && !lead.assigned_owner
+  ).length;
 
   const conversionRate =
     leads.length > 0 ? Math.round((confirmedCount / leads.length) * 100) : 0;
@@ -203,7 +275,19 @@ export default function AdminLeadsDashboard() {
       priorityFilter === "all" ||
       (lead.lead_priority || "random") === priorityFilter;
 
-    return matchesSearch && matchesStatus && matchesPriority;
+    const leadWorkflowState = getFollowupState(lead);
+    const matchesWorkflow =
+      workflowFilter === "all" ||
+      (workflowFilter === "needs_followup" && leadWorkflowState === "due") ||
+      (workflowFilter === "scheduled_followup" && leadWorkflowState === "scheduled") ||
+      (workflowFilter === "untouched_3_days" && !lead.last_contact_at && !isClosedLead(lead) && (() => {
+        const createdAt = new Date(lead.created_at);
+        const ageDays = (currentTimeMs - createdAt.getTime()) / (1000 * 60 * 60 * 24);
+        return ageDays > 3;
+      })()) ||
+      (workflowFilter === "unassigned" && !isClosedLead(lead) && !lead.assigned_owner);
+
+    return matchesSearch && matchesStatus && matchesPriority && matchesWorkflow;
   });
 
   useEffect(() => {
@@ -346,6 +430,20 @@ export default function AdminLeadsDashboard() {
             </div>
           </div>
 
+          <div className="rounded-3xl bg-fuchsia-50 p-5 shadow-sm">
+            <div className="text-sm text-slate-500">Follow-ups due</div>
+            <div className="mt-2 text-3xl font-extrabold">
+              {dueFollowups}
+            </div>
+          </div>
+
+          <div className="rounded-3xl bg-white p-5 shadow-sm">
+            <div className="text-sm text-slate-500">Unassigned open</div>
+            <div className="mt-2 text-3xl font-extrabold">
+              {unassignedOpenLeads}
+            </div>
+          </div>
+
           <div className="rounded-3xl bg-white p-5 shadow-sm">
             <div className="text-sm text-slate-500">Conversion rate</div>
             <div className="mt-2 text-3xl font-extrabold">
@@ -474,13 +572,13 @@ export default function AdminLeadsDashboard() {
           </div>
         </div>
 
-        <div className="mb-5 flex flex-col gap-3 md:flex-row">
+        <div className="mb-5 grid gap-3 md:grid-cols-4">
           <input
             type="text"
             placeholder="Search customer, company, fabric..."
             value={searchText}
             onChange={(e) => setSearchText(e.target.value)}
-            className="rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none focus:border-sky-400"
+            className="rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none focus:border-sky-400 md:col-span-2"
           />
 
           <select
@@ -494,6 +592,18 @@ export default function AdminLeadsDashboard() {
                 {status}
               </option>
             ))}
+          </select>
+
+          <select
+            value={workflowFilter}
+            onChange={(e) => setWorkflowFilter(e.target.value)}
+            className="rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none focus:border-sky-400"
+          >
+            <option value="all">All workflows</option>
+            <option value="needs_followup">Needs follow-up</option>
+            <option value="scheduled_followup">Scheduled follow-up</option>
+            <option value="untouched_3_days">Untouched &gt; 3 days</option>
+            <option value="unassigned">Unassigned open</option>
           </select>
         </div>
 
@@ -517,6 +627,8 @@ export default function AdminLeadsDashboard() {
                     <th className="px-4 py-3">Usage</th>
                     <th className="px-4 py-3">Score</th>
                     <th className="px-4 py-3">Status</th>
+                    <th className="px-4 py-3">Action</th>
+                    <th className="px-4 py-3">Notes</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-100">
@@ -583,6 +695,57 @@ export default function AdminLeadsDashboard() {
                             </option>
                           ))}
                         </select>
+                      </td>
+                      <td className="min-w-64 px-4 py-3">
+                        <div className="space-y-2">
+                          <input
+                            type="text"
+                            defaultValue={lead.assigned_owner || ""}
+                            placeholder="Owner"
+                            onBlur={(e) => {
+                              if (e.target.value !== (lead.assigned_owner || "")) {
+                                updateLeadOwner(lead.id, e.target.value);
+                              }
+                            }}
+                            disabled={!lead.id}
+                            className="w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-xs outline-none focus:border-sky-400 disabled:bg-slate-50"
+                          />
+                          <input
+                            type="datetime-local"
+                            defaultValue={toDatetimeLocalValue(lead.next_followup_at)}
+                            onBlur={(e) => {
+                              if (e.target.value !== toDatetimeLocalValue(lead.next_followup_at)) {
+                                updateLeadFollowup(lead.id, e.target.value);
+                              }
+                            }}
+                            disabled={!lead.id}
+                            className="w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-xs outline-none focus:border-sky-400 disabled:bg-slate-50"
+                          />
+                          {getFollowupState(lead) === "due" ? (
+                            <div className="text-xs font-semibold text-rose-600">Follow-up due</div>
+                          ) : getFollowupState(lead) === "scheduled" ? (
+                            <div className="text-xs font-semibold text-slate-500">Follow-up scheduled</div>
+                          ) : null}
+                        </div>
+                      </td>
+                      <td className="min-w-72 px-4 py-3">
+                        <textarea
+                          defaultValue={lead.sales_notes || ""}
+                          placeholder="Internal sales notes..."
+                          rows={3}
+                          onBlur={(e) => {
+                            if (e.target.value !== (lead.sales_notes || "")) {
+                              updateLeadNotes(lead.id, e.target.value);
+                            }
+                          }}
+                          disabled={!lead.id}
+                          className="w-full resize-y rounded-xl border border-slate-200 bg-white px-3 py-2 text-xs outline-none focus:border-sky-400 disabled:bg-slate-50"
+                        />
+                        {lead.last_contact_at ? (
+                          <div className="mt-1 text-xs text-slate-400">
+                            Last touched: {new Date(lead.last_contact_at).toLocaleString()}
+                          </div>
+                        ) : null}
                       </td>
                     </tr>
                   ))}
