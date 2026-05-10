@@ -222,60 +222,78 @@ export default function QuoteForm({
         </select>
       </div>
 
-      <div className="mt-6 mb-2 text-sm font-semibold text-slate-500">
-        Buyer qualification (optional)
-      </div>
+      <details className="mt-6 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3">
+        <summary className="cursor-pointer list-none">
+          <div className="flex items-start justify-between gap-4">
+            <div>
+              <div className="text-sm font-semibold text-slate-700">
+                Optional Buyer Details
+              </div>
+              <p className="mt-1 text-xs leading-5 text-slate-500">
+                Help us recommend suitable fabric options, MOQ, and production planning faster.
+              </p>
+            </div>
+            <span className="mt-1 text-sm font-bold text-sky-600">+</span>
+          </div>
+        </summary>
 
-      <div className="grid gap-4 sm:grid-cols-2">
-        <input
-          className="rounded-2xl border border-slate-200 px-4 py-3 outline-none transition focus:border-sky-400 focus:ring-4 focus:ring-sky-100"
-          name="monthly_usage_kg"
-          type="number"
-          min="0"
-          placeholder="Monthly usage (KG)"
-        />
+        <div className="mt-4 grid gap-4 sm:grid-cols-2">
+          <input
+            className="rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none transition focus:border-sky-400 focus:ring-4 focus:ring-sky-100"
+            name="monthly_usage_kg"
+            type="number"
+            min="0"
+            placeholder="Monthly usage (KG)"
+          />
 
-        <select
-          className="rounded-2xl border border-slate-200 px-4 py-3 outline-none transition focus:border-sky-400 focus:ring-4 focus:ring-sky-100"
-          name="buyer_type"
-          defaultValue=""
-        >
-          <option value="">Buyer type</option>
-          <option>Brand</option>
-          <option>Garment factory</option>
-          <option>Trader</option>
-          <option>Reseller</option>
-          <option>Print shop</option>
-          <option>Other buyer</option>
-        </select>
+          <select
+            className="rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none transition focus:border-sky-400 focus:ring-4 focus:ring-sky-100"
+            name="buyer_type"
+            defaultValue=""
+          >
+            <option value="">Buyer type</option>
+            <option>Brand</option>
+            <option>Garment factory</option>
+            <option>Trader</option>
+            <option>Reseller</option>
+            <option>Print shop</option>
+            <option>Other buyer</option>
+          </select>
 
-        <select
-          className="rounded-2xl border border-slate-200 px-4 py-3 outline-none transition focus:border-sky-400 focus:ring-4 focus:ring-sky-100"
-          name="target_market"
-          defaultValue=""
-        >
-          <option value="">Target market</option>
-          <option>Thailand domestic</option>
-          <option>Export</option>
-          <option>Online brand</option>
-          <option>Corporate uniform</option>
-          <option>Streetwear</option>
-          <option>Sportswear</option>
-        </select>
+          <select
+            className="rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none transition focus:border-sky-400 focus:ring-4 focus:ring-sky-100"
+            name="target_market"
+            defaultValue=""
+          >
+            <option value="">Target market</option>
+            <option>Thailand domestic</option>
+            <option>Export</option>
+            <option>Online brand</option>
+            <option>Corporate uniform</option>
+            <option>Streetwear</option>
+            <option>Sportswear</option>
+          </select>
 
-        <select
-          className="rounded-2xl border border-slate-200 px-4 py-3 outline-none transition focus:border-sky-400 focus:ring-4 focus:ring-sky-100"
-          name="production_stage"
-          defaultValue=""
-        >
-          <option value="">Production stage</option>
-          <option>Sampling</option>
-          <option>Production ready</option>
-          <option>Reorder</option>
-          <option>Price checking</option>
-          <option>Need recommendation</option>
-        </select>
-      </div>
+          <select
+            className="rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none transition focus:border-sky-400 focus:ring-4 focus:ring-sky-100"
+            name="production_stage"
+            defaultValue=""
+          >
+            <option value="">Production stage</option>
+            <option>Sampling</option>
+            <option>Production ready</option>
+            <option>Reorder</option>
+            <option>Price checking</option>
+            <option>Need recommendation</option>
+          </select>
+
+          <textarea
+            className="min-h-24 rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none transition focus:border-sky-400 focus:ring-4 focus:ring-sky-100 sm:col-span-2"
+            name="sourcing_pain_points"
+            placeholder="Sourcing pain points (pricing, MOQ, delivery, color matching, consistency)"
+          />
+        </div>
+      </details>
 
       <div className="mt-5 mb-2 text-sm font-semibold text-slate-500">
         Additional details (optional)
@@ -285,12 +303,6 @@ export default function QuoteForm({
         className="min-h-28 w-full rounded-2xl border border-slate-200 px-4 py-3 outline-none transition focus:border-sky-400 focus:ring-4 focus:ring-sky-100"
         name="message"
         placeholder="Message / special requirements"
-      />
-
-      <textarea
-        className="mt-4 min-h-24 w-full rounded-2xl border border-slate-200 px-4 py-3 outline-none transition focus:border-sky-400 focus:ring-4 focus:ring-sky-100"
-        name="sourcing_pain_points"
-        placeholder="Sourcing pain points (pricing, MOQ, delivery, color matching, consistency)"
       />
 
       <p className="mt-4 text-sm leading-6 text-slate-500">

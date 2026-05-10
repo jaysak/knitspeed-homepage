@@ -282,3 +282,23 @@ Verification:
 - latest test lead includes article attribution and qualification fields
 - authenticated `/admin/leads` visual confirmation completed from Jay's logged-in browser
 - dashboard displays `3.4C Pain Point Test`, buyer type, target market, monthly usage, production stage, and sourcing pain points
+
+---
+
+## Phase 3.4C — Buyer Qualification UX Refinement
+
+Status:
+- complete and verified
+
+Summary:
+- Converted buyer qualification fields into a collapsed optional section
+- Default state is collapsed
+- Label is `Optional Buyer Details`
+- Helper text explains that details improve fabric, MOQ, and production planning recommendations
+- No schema, routing, or quote payload changes
+
+Verification:
+- `npm run build`
+- `npm run lint`
+- browser smoke confirmed collapsed default state
+- browser smoke confirmed expand/collapse reveals all optional qualification fields
