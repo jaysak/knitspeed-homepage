@@ -130,3 +130,26 @@ Verification:
 Notes:
 - no Supabase schema changes yet
 - future 3.4B slices can decide whether `lead_activity` becomes a real table
+
+---
+
+## Phase 3.4B — Buyer Intent Tracking, Slice 2
+
+Status:
+- complete
+
+Summary:
+- Added lightweight Prime intent insight cards to `/admin/leads`
+- Uses existing `quote_leads` data only
+- Shows Prime lead count
+- Shows top quoted articles
+- Shows top usage segments
+- Shows recent Prime article inquiries
+
+Verification:
+- `npm run build`
+- `npm run lint`
+
+Notes:
+- no Supabase tables or migrations added
+- insights currently use the loaded dashboard lead window

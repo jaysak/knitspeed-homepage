@@ -63,6 +63,7 @@ Goal:
 
 Current status:
 - slice 1 implemented locally
+- slice 2 implemented as dashboard insight cards
 - no database schema changes yet
 
 Possible subtasks:
@@ -80,6 +81,13 @@ Implemented in slice 1:
 - quote submit tracking
 - compact Prime intent note appended to quote message
 - dashboard article search/display visibility
+
+Implemented in slice 2:
+- Prime leads count card
+- top quoted articles card
+- top usage segments card
+- recent Prime article inquiries card
+- all insights use existing `quote_leads` data
 
 Estimated time:
 - 1-2 hours remaining for next useful slice

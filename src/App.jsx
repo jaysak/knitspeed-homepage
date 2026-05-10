@@ -118,6 +118,19 @@ function buildBuyerIntentNote(article) {
   ].join(" ");
 }
 
+function getTopCounts(items, limit = 5) {
+  return Object.entries(
+    items.reduce((acc, item) => {
+      if (!item) return acc;
+      acc[item] = (acc[item] || 0) + 1;
+      return acc;
+    }, {})
+  )
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, limit)
+    .map(([label, count]) => ({ label, count }));
+}
+
 
 function AdminLeadsDashboard() {
   const { profile, profileLoading } = useProfile();
@@ -255,6 +268,20 @@ function AdminLeadsDashboard() {
 
   const conversionRate =
     leads.length > 0 ? Math.round((confirmedCount / leads.length) * 100) : 0;
+
+  const primeLeads = leads.filter((lead) => (lead.lead_priority || "random") === "prime");
+  const primeArticleLeads = primeLeads.filter(
+    (lead) => lead.article_name || lead.article_slug
+  );
+  const topQuotedArticles = getTopCounts(
+    primeArticleLeads.map((lead) => lead.article_name || lead.article_slug)
+  );
+  const topUsageSegments = getTopCounts(
+    primeArticleLeads.map((lead) => lead.usage_segment)
+  );
+  const recentPrimeArticleInquiries = [...primeArticleLeads]
+    .sort((a, b) => new Date(b.created_at || 0) - new Date(a.created_at || 0))
+    .slice(0, 5);
 
   const filteredLeads = leads.filter((lead) => {
     const search = searchText.toLowerCase();
@@ -440,6 +467,76 @@ function AdminLeadsDashboard() {
             </div>
           </div>
 
+        </div>
+
+        <div className="mb-6 grid gap-4 lg:grid-cols-4">
+          <div className="rounded-3xl bg-white p-5 shadow-sm">
+            <div className="text-sm text-slate-500">Prime leads</div>
+            <div className="mt-2 text-3xl font-extrabold">{primeLeads.length}</div>
+            <div className="mt-1 text-xs text-slate-500">
+              {leads.length ? `${Math.round((primeLeads.length / leads.length) * 100)}% of loaded leads` : "No leads loaded"}
+            </div>
+          </div>
+
+          <div className="rounded-3xl bg-white p-5 shadow-sm">
+            <div className="mb-3 text-sm text-slate-500">Top quoted articles</div>
+            <div className="space-y-3">
+              {topQuotedArticles.length ? (
+                topQuotedArticles.map((item) => (
+                  <div key={item.label} className="flex items-start justify-between gap-3 text-sm">
+                    <span className="font-semibold text-slate-700">{item.label}</span>
+                    <span className="rounded-full bg-sky-50 px-2 py-0.5 text-xs font-bold text-sky-700">
+                      {item.count}
+                    </span>
+                  </div>
+                ))
+              ) : (
+                <div className="text-sm text-slate-400">No article quotes yet.</div>
+              )}
+            </div>
+          </div>
+
+          <div className="rounded-3xl bg-white p-5 shadow-sm">
+            <div className="mb-3 text-sm text-slate-500">Top usage segments</div>
+            <div className="space-y-3">
+              {topUsageSegments.length ? (
+                topUsageSegments.map((item) => (
+                  <div key={item.label} className="flex items-center justify-between gap-3 text-sm">
+                    <span className="font-semibold text-slate-700">
+                      {usageSegmentLabels[item.label] || titleize(item.label)}
+                    </span>
+                    <span className="rounded-full bg-emerald-50 px-2 py-0.5 text-xs font-bold text-emerald-700">
+                      {item.count}
+                    </span>
+                  </div>
+                ))
+              ) : (
+                <div className="text-sm text-slate-400">No usage segments yet.</div>
+              )}
+            </div>
+          </div>
+
+          <div className="rounded-3xl bg-white p-5 shadow-sm">
+            <div className="mb-3 text-sm text-slate-500">Recent Prime article inquiries</div>
+            <div className="space-y-3">
+              {recentPrimeArticleInquiries.length ? (
+                recentPrimeArticleInquiries.map((lead) => (
+                  <div key={lead.id || `${lead.created_at}-${lead.article_slug}`} className="text-sm">
+                    <div className="font-semibold text-slate-700">
+                      {lead.article_name || lead.article_slug}
+                    </div>
+                    <div className="text-xs text-slate-500">
+                      {[lead.customer_name || "Unknown buyer", lead.created_at ? new Date(lead.created_at).toLocaleDateString() : ""]
+                        .filter(Boolean)
+                        .join(" · ")}
+                    </div>
+                  </div>
+                ))
+              ) : (
+                <div className="text-sm text-slate-400">No Prime article inquiries yet.</div>
+              )}
+            </div>
+          </div>
         </div>
 
         <div className="mb-5 flex flex-col gap-3 md:flex-row">
