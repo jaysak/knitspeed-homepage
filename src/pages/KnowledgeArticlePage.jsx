@@ -158,7 +158,7 @@ export default function KnowledgeArticlePage({ page }) {
         {relatedPages.length > 0 && (
           <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
             <p className="text-sm font-semibold uppercase tracking-wide text-sky-700">
-              Related Textile Knowledge
+              Related Buyer Guides
             </p>
             <div className="mt-4 grid gap-3 md:grid-cols-2">
               {relatedPages.map((relatedPage) => (
@@ -168,6 +168,7 @@ export default function KnowledgeArticlePage({ page }) {
                   className="rounded-2xl border border-slate-200 p-4 transition hover:border-sky-300 hover:bg-sky-50"
                 >
                   <h3 className="font-semibold text-slate-950">{relatedPage.title}</h3>
+                  <p className="mt-1 text-xs font-medium uppercase tracking-wide text-sky-700">{relatedPage.category}</p>
                   <p className="mt-2 text-sm leading-6 text-slate-600">
                     {relatedPage.metaDescription || relatedPage.subtitle}
                   </p>

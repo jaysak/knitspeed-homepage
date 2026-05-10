@@ -17,14 +17,37 @@ export function getKnowledgePageBySlug(slug) {
 export function getRelatedKnowledgePages(slug) {
   const page = getKnowledgePageBySlug(slug);
 
-  if (!page?.relatedArticleSlugs?.length) {
+  if (!page) {
     return [];
   }
 
-  return page.relatedArticleSlugs
+  const explicitRelatedPages = (page.relatedArticleSlugs || [])
     .filter((relatedSlug) => implementedKnowledgeSlugs.has(relatedSlug))
     .map((relatedSlug) => getKnowledgePageBySlug(relatedSlug))
     .filter(Boolean);
+
+  const explicitSlugs = new Set(
+    explicitRelatedPages.map((relatedPage) => relatedPage.slug)
+  );
+
+  const clusterFallbackPages = getAllKnowledgePages()
+    .filter((candidatePage) => {
+      if (candidatePage.slug === page.slug) {
+        return false;
+      }
+
+      if (explicitSlugs.has(candidatePage.slug)) {
+        return false;
+      }
+
+      return (
+        candidatePage.topicCluster &&
+        candidatePage.topicCluster === page.topicCluster
+      );
+    })
+    .slice(0, 2);
+
+  return [...explicitRelatedPages, ...clusterFallbackPages];
 }
 
 export function getKnowledgeTopicClusters() {

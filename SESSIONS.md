@@ -907,3 +907,34 @@ Notes:
 - no quote flow changes
 - no Prime scoring changes
 
+
+---
+
+## Phase 3.5O — Lightweight Related-Topic Refinement
+
+Status:
+- implemented and verified
+
+Summary:
+- preserved manual related article relationships
+- added lightweight topic-cluster fallback recommendations
+- improved related knowledge discovery without CMS or routing complexity
+- added category labels to related knowledge cards
+
+Implemented files:
+- `src/lib/knowledgeRegistry.js`
+- `src/pages/KnowledgeArticlePage.jsx`
+
+Verification:
+- `npm run build`
+- `npm run lint`
+- browser smoke confirmed related knowledge recommendations render across implemented article pages
+
+Notes:
+- no CMS
+- no sitemap
+- no Supabase changes
+- no admin dashboard changes
+- no quote flow changes
+- no Prime scoring changes
+

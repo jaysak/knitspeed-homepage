@@ -766,3 +766,37 @@ Next likely safe slice:
 - keep internal-linking focused and registry-driven
 - avoid SEO over-engineering
 
+
+---
+
+## Phase 3.5O — Lightweight Related-Topic Refinement
+
+Status:
+- complete
+- verified locally
+
+Goal:
+- improve internal knowledge discovery while keeping architecture lightweight
+
+Implemented:
+- topic-cluster fallback recommendations
+- preservation of manual related article ordering
+- category labels for related article cards
+
+Verified:
+- `npm run build` passes
+- `npm run lint` passes
+- browser smoke confirmed related recommendations render correctly
+
+Rules preserved:
+- no React Router
+- no CMS
+- no sitemap
+- no Supabase changes
+- no quote flow changes
+- no admin dashboard changes
+
+Next likely safe slice:
+- Phase 3.5P — Lightweight knowledge search/filtering on `/knowledge`
+- keep registry-driven and client-side only
+
