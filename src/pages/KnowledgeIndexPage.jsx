@@ -203,43 +203,73 @@ export default function KnowledgeIndexPage() {
         </div>
 
         {filteredPages.length > 0 ? (
-          <div className="grid gap-6 md:grid-cols-2">
-            {filteredPages.map((page) => (
-              <a
-                key={page.slug}
-                href={page.canonicalPath}
-                className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-sky-300 hover:shadow-md"
-              >
-                <p className="text-xs font-semibold uppercase tracking-wide text-sky-700">
-                  {page.category}
-                </p>
+          <div className="space-y-10">
+            {clusters
+              .filter((cluster) =>
+                filteredPages.some((page) => page.topicCluster === cluster.key)
+              )
+              .map((cluster) => {
+                const clusterPages = filteredPages.filter(
+                  (page) => page.topicCluster === cluster.key
+                );
 
-                <h2 className="mt-3 text-2xl font-extrabold text-slate-950">
-                  {page.title}
-                </h2>
+                return (
+                  <section key={cluster.key}>
+                    <div className="mb-4 flex items-end justify-between gap-4">
+                      <div>
+                        <p className="text-xs font-semibold uppercase tracking-wide text-sky-700">
+                          Topic Cluster
+                        </p>
+                        <h2 className="mt-1 text-2xl font-extrabold text-slate-950">
+                          {cluster.label}
+                        </h2>
+                      </div>
+                      <p className="text-sm font-semibold text-slate-500">
+                        {clusterPages.length} guide{clusterPages.length === 1 ? "" : "s"}
+                      </p>
+                    </div>
 
-                <p className="mt-4 text-base leading-7 text-slate-600">
-                  {page.metaDescription || page.subtitle}
-                </p>
+                    <div className="grid gap-6 md:grid-cols-2">
+                      {clusterPages.map((page) => (
+                        <a
+                          key={page.slug}
+                          href={page.canonicalPath}
+                          className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-sky-300 hover:shadow-md"
+                        >
+                          <p className="text-xs font-semibold uppercase tracking-wide text-sky-700">
+                            {page.category}
+                          </p>
 
-                {page.tags?.length > 0 && (
-                  <div className="mt-5 flex flex-wrap gap-2">
-                    {page.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-600"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                )}
+                          <h3 className="mt-3 text-2xl font-extrabold text-slate-950">
+                            {page.title}
+                          </h3>
 
-                <div className="mt-6 text-sm font-semibold text-sky-700">
-                  Read article →
-                </div>
-              </a>
-            ))}
+                          <p className="mt-4 text-base leading-7 text-slate-600">
+                            {page.metaDescription || page.subtitle}
+                          </p>
+
+                          {page.tags?.length > 0 && (
+                            <div className="mt-5 flex flex-wrap gap-2">
+                              {page.tags.map((tag) => (
+                                <span
+                                  key={tag}
+                                  className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-600"
+                                >
+                                  {tag}
+                                </span>
+                              ))}
+                            </div>
+                          )}
+
+                          <div className="mt-6 text-sm font-semibold text-sky-700">
+                            Read article →
+                          </div>
+                        </a>
+                      ))}
+                    </div>
+                  </section>
+                );
+              })}
           </div>
         ) : (
           <div className="rounded-3xl border border-dashed border-slate-300 bg-white p-8 text-center">
