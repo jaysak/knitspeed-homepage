@@ -1209,3 +1209,48 @@ Next likely safe slice:
 Magic words for next boot:
 > Jarvis, continue Knitspeed from Phase 3.6C Operational Inference Expansion. Quote urgency inference, sourcing stability inference, and buyer intent progression memory are active. Build/lint pass and browser smoke remained stable. First inspect HANDOFF.md, PROJECT_ROADMAP.md, DECISIONS.md, SESSIONS.md, and git status before patching.
 
+
+---
+
+# CURRENT CHECKPOINT — Phase 3.6D Operational Recommendation Intelligence
+
+Status:
+- implemented
+- build and lint passing
+
+Implemented:
+- `src/lib/intelligence/operationalRecommendations.js`
+- `src/lib/intelligence/quotePreparationIntelligence.js`
+- operational context now includes recommendation and quote-preparation intelligence
+
+Current hidden intelligence stack:
+- semantic textile graph
+- production memory
+- relationship weighting
+- manufacturing causality
+- operational context
+- temporal manufacturing signals
+- quote urgency inference
+- sourcing stability inference
+- buyer intent progression memory
+- operational recommendation intelligence
+- quote preparation intelligence
+
+Verified:
+- `npm run build` passes
+- `npm run lint` passes
+
+Rules preserved:
+- no Supabase changes
+- no admin dashboard changes
+- no quote flow changes
+- no visible AI scoring
+- no recommendation UI yet
+
+Next:
+- pause after Phase 3.6 completion checkpoint
+- later consider Phase 3.7 Internal Sales OS bridge or 3.6 UI surfacing only after review
+
+Magic words for next boot:
+> Jarvis, continue Knitspeed after Phase 3.6D. Operational recommendation intelligence and quote preparation intelligence are implemented, build/lint pass, and 3.6 hidden sourcing-copilot primitives are established. First inspect HANDOFF.md, PROJECT_ROADMAP.md, DECISIONS.md, SESSIONS.md, and git status before patching.
+

@@ -1503,3 +1503,42 @@ Next likely slice:
 - hidden recommendation seeding only
 - no UI expansion yet
 
+
+---
+
+## 2026-05-11 — Phase 3.6D Operational Recommendation + Quote Preparation Intelligence
+
+Status:
+- implemented and verified
+
+Summary:
+- added hidden operational recommendation intelligence
+- added hidden quote preparation intelligence
+- operational context can now derive:
+  - recommended operational checks
+  - recommended sampling focus
+  - recommended discussion topics
+  - quote readiness level
+  - missing discussion areas
+  - preparation focus
+
+Implemented files:
+- `src/lib/intelligence/operationalRecommendations.js`
+- `src/lib/intelligence/quotePreparationIntelligence.js`
+- `src/lib/knowledgeRegistry.js`
+
+Verification:
+- `npm run build` passes
+- `npm run lint` passes
+
+Strategic effect:
+- Phase 3.6 now has sourcing-copilot primitives without visible AI UI
+- system remains deterministic, inspectable, and manufacturing-aware
+
+Rules preserved:
+- no Supabase changes
+- no admin dashboard changes
+- no quote flow changes
+- no visible AI scoring
+- no recommendation UI yet
+

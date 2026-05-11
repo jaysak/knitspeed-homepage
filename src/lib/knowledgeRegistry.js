@@ -8,6 +8,8 @@ import { getManufacturingCausalitySummary } from "./intelligence/manufacturingCa
 import { getQuoteUrgencyInference } from "./intelligence/quoteUrgencyInference";
 import { getSourcingStabilityInference } from "./intelligence/sourcingStabilityInference";
 import { getBuyerIntentProgression } from "./intelligence/buyerIntentProgression";
+import { getOperationalRecommendations } from "./intelligence/operationalRecommendations";
+import { getQuotePreparationIntelligence } from "./intelligence/quotePreparationIntelligence";
 
 const implementedKnowledgeSlugs = new Set(
   TEXTILE_KNOWLEDGE_PAGES.map((page) => page.slug)
@@ -179,12 +181,24 @@ export function getKnowledgePageOperationalContext(slug) {
 
   const signals = getOperationalContextForPage(page);
 
-  return {
+  const enrichedContext = {
     signals,
     summary: summarizeOperationalContext(signals),
     urgency: getQuoteUrgencyInference(page),
     sourcingStability: getSourcingStabilityInference(page),
     buyerIntentProgression: getBuyerIntentProgression(page)
+  };
+
+  const recommendations = getOperationalRecommendations(page, enrichedContext);
+
+  const recommendationContext = {
+    ...enrichedContext,
+    recommendations
+  };
+
+  return {
+    ...recommendationContext,
+    quotePreparation: getQuotePreparationIntelligence(recommendationContext)
   };
 }
 

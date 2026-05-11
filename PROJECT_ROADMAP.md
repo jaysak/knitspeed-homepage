@@ -884,3 +884,23 @@ Next:
 - hidden recommendation and sourcing-guidance seeding
 - future procurement intelligence foundation
 
+
+---
+
+## Phase 3.6D — Operational Recommendation Intelligence
+
+Status:
+- implemented
+
+Implemented:
+- operational recommendation seeds
+- quote preparation intelligence
+- hidden sourcing discussion guidance
+- hidden sampling focus inference
+- hidden quote-readiness inference
+
+Strategic result:
+- Knitspeed now has early sourcing-copilot primitives beneath the textile knowledge layer
+- Intelligence remains deterministic and inspectable
+- No visible AI feature sprawl introduced
+
