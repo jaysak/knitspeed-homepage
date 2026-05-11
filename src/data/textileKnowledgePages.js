@@ -1854,7 +1854,161 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
       "what-causes-spirality-in-knitted-fabric",
       "how-fabric-width-affects-garment-production"
     ]
-  }
+  },
+
+  {
+    slug: "why-size-ratio-affects-fabric-consumption",
+    title: "Why Size Ratio Affects Fabric Consumption",
+    shortTitle: "Size Ratio & Fabric Use",
+    metaDescription:
+      "Learn why garment size ratios affect fabric consumption, marker efficiency, cutting waste, and apparel quotation planning.",
+    topicCluster: "Garment Production",
+    buyerIntent: "understand garment consumption planning",
+    tags: ["size ratio", "fabric consumption", "marker efficiency", "cutting waste", "garment production"],
+    fabricFamilies: ["knitted fabrics"],
+    yarnFamilies: ["cotton", "cotton blends"],
+    processFamilies: ["cutting", "marker planning", "garment production"],
+    riskSignals: ["fabric consumption variance", "cutting waste", "quotation mismatch"],
+    buyerJourneyStage: "production planning",
+    summary:
+      "Size ratio affects fabric consumption because every size uses fabric differently. A production order with more large sizes, oversized fits, or inefficient grading can consume more fabric than a simple average estimate suggests.",
+    shortAnswer:
+      "Size ratio changes fabric consumption because garment panels scale differently across sizes, and marker efficiency depends on how those panels fit together during cutting.",
+    sections: [
+      {
+        heading: "Why size ratio matters",
+        body:
+          "A garment order is rarely made from one size only. When a style includes XS, S, M, L, XL, and larger sizes, each size has different panel dimensions. The final fabric requirement depends on the full size breakdown, not only the sample size."
+      },
+      {
+        heading: "Marker efficiency changes by size mix",
+        body:
+          "Factories arrange garment panels on fabric markers before cutting. Some size combinations nest efficiently, while others leave more unused space. A size ratio with many larger sizes or uneven quantities can reduce marker efficiency."
+      },
+      {
+        heading: "Grading does not scale perfectly",
+        body:
+          "When a garment is graded from one size to another, length, width, sleeve shape, and body panel dimensions may change at different rates. This means fabric usage does not always increase in a perfectly straight line."
+      },
+      {
+        heading: "Why quotations can differ",
+        body:
+          "Two factories may estimate fabric consumption differently because they use different marker assumptions, cutting layouts, wastage allowances, fabric width assumptions, or size-ratio expectations."
+      }
+    ],
+    guidance: [
+      "Share the intended size breakdown before final fabric estimation.",
+      "Separate sampling consumption from bulk production consumption.",
+      "Check whether the quotation assumes balanced sizes or larger-size-heavy production.",
+      "Confirm whether fabric width and tubular or open-width form were considered."
+    ],
+    mistakes: [
+      "Assuming one sample size represents the full order.",
+      "Ignoring larger-size ratios when estimating fabric needs.",
+      "Comparing factory quotations without checking marker assumptions.",
+      "Treating fabric GSM as the only factor affecting fabric usage."
+    ],
+    faqs: [
+      {
+        question: "Does a larger size ratio always increase fabric consumption?",
+        answer:
+          "Usually it increases average consumption, but the exact effect depends on marker efficiency, fabric width, garment shape, and cutting layout."
+      },
+      {
+        question: "Why can two factories give different fabric usage estimates?",
+        answer:
+          "They may use different marker layouts, wastage allowances, size assumptions, or production experience for the same garment style."
+      },
+      {
+        question: "Should buyers provide size ratio before quotation?",
+        answer:
+          "Yes. Size ratio helps suppliers estimate fabric needs more realistically, especially for bulk production."
+      }
+    ],
+    related: [
+      "how-fabric-width-affects-garment-yield",
+      "how-gsm-width-and-yield-affect-fabric-usage",
+      "why-factories-estimate-fabric-consumption-differently",
+      "tubular-vs-open-width-fabric"
+    ]
+  },
+  {
+    slug: "why-oversized-garments-use-more-fabric",
+    title: "Why Oversized Garments Use More Fabric",
+    shortTitle: "Oversized Garment Fabric Use",
+    metaDescription:
+      "Understand why oversized T-shirts and streetwear garments often require more fabric because of fit, panel geometry, width, cutting efficiency, and garment construction.",
+    topicCluster: "Garment Production",
+    buyerIntent: "understand oversized garment fabric planning",
+    tags: ["oversized t-shirt", "streetwear", "fabric usage", "garment yield", "cutting efficiency"],
+    fabricFamilies: ["single jersey", "interlock", "rib", "knitted fabrics"],
+    yarnFamilies: ["cotton", "compact cotton", "cotton blends"],
+    processFamilies: ["cutting", "garment production", "marker planning"],
+    riskSignals: ["higher fabric consumption", "yield variance", "quotation mismatch"],
+    buyerJourneyStage: "style development",
+    summary:
+      "Oversized garments often use more fabric because the body, sleeve, shoulder, and length dimensions expand beyond standard fit assumptions. This affects cutting efficiency, marker layout, and final fabric consumption.",
+    shortAnswer:
+      "Oversized garments use more fabric because larger panels and relaxed silhouettes reduce marker efficiency and increase average garment consumption.",
+    sections: [
+      {
+        heading: "Oversized fit changes garment geometry",
+        body:
+          "Oversized garments are not just standard garments made one size larger. They often have wider bodies, dropped shoulders, longer sleeves, wider hems, and different proportions. These changes increase fabric area per garment."
+      },
+      {
+        heading: "Fabric width becomes more important",
+        body:
+          "When garment panels become wider, they may no longer fit efficiently across the fabric width. This can create more unused fabric during cutting or require different layout planning."
+      },
+      {
+        heading: "GSM does not explain everything",
+        body:
+          "A heavier GSM fabric affects garment weight, but oversized consumption is also driven by panel size, fit, construction, and marker efficiency. Two garments with the same GSM can use very different fabric quantities."
+      },
+      {
+        heading: "Streetwear production needs clearer assumptions",
+        body:
+          "Oversized streetwear often requires extra attention during quotation because fit expectation, shrinkage allowance, finishing, and washing behavior can all affect the final garment outcome."
+      }
+    ],
+    guidance: [
+      "Share garment measurements, not only desired GSM.",
+      "Clarify whether the fit is regular, relaxed, boxy, or oversized.",
+      "Check fabric width before estimating bulk consumption.",
+      "Use sample approval to confirm final hand feel, shrinkage, and silhouette."
+    ],
+    mistakes: [
+      "Assuming oversized means simply choosing a larger size.",
+      "Estimating fabric use from GSM alone.",
+      "Ignoring dropped shoulders and wider body panels.",
+      "Comparing oversized and regular-fit quotations directly."
+    ],
+    faqs: [
+      {
+        question: "Does oversized fit always cost more?",
+        answer:
+          "It often increases fabric usage, but final cost depends on fabric type, width, GSM, cutting efficiency, finishing, and order quantity."
+      },
+      {
+        question: "Why does fabric width matter for oversized garments?",
+        answer:
+          "Wider garment panels may fit less efficiently across the fabric width, which can increase cutting waste or reduce yield."
+      },
+      {
+        question: "Is GSM the main reason oversized garments feel heavier?",
+        answer:
+          "GSM matters, but oversized garments also use more fabric area, so total garment weight can increase even when GSM stays the same."
+      }
+    ],
+    related: [
+      "why-size-ratio-affects-fabric-consumption",
+      "how-fabric-width-affects-garment-yield",
+      "how-gsm-width-and-yield-affect-fabric-usage",
+      "what-gsm-should-t-shirts-use"
+    ]
+  },
+
 ];
 
 export function getTextileKnowledgePage(slug) {
