@@ -2468,6 +2468,159 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
     ]
   },
 
+  {
+    slug: "why-prints-crack-after-washing",
+    title: "Why Prints Crack After Washing",
+    shortTitle: "Print Cracking After Washing",
+    metaDescription:
+      "Learn why garment prints can crack after washing because of print chemistry, curing, fabric stretch, shrinkage, placement, and laundering behavior.",
+    topicCluster: "decoration-printing",
+    buyerIntent: "understand print durability before apparel production",
+    tags: ["print cracking", "screen printing", "wash testing", "print durability", "garment production"],
+    fabricFamilies: ["single jersey", "interlock", "rib", "knitted fabrics"],
+    yarnFamilies: ["cotton", "compact cotton", "cotton blends"],
+    processFamilies: ["screen printing", "washing", "garment production"],
+    riskSignals: ["print cracking", "wash behavior", "stretch stress", "surface instability"],
+    buyerJourneyStage: "sampling and approval",
+    summary:
+      "Prints can crack after washing when the print layer, curing, fabric stretch, shrinkage, and laundering behavior are not well balanced for the garment.",
+    shortAnswer:
+      "Print cracking usually comes from interaction between the printed layer and the fabric. Stretch, shrinkage, curing, washing, and print placement all matter.",
+    sections: [
+      {
+        heading: "The print layer and fabric move differently",
+        body:
+          "Knitted fabric stretches and recovers during wearing and washing. If the printed layer cannot move with the fabric, cracks may appear over time."
+      },
+      {
+        heading: "Curing and print chemistry matter",
+        body:
+          "Print durability depends on proper curing, suitable ink or print chemistry, and compatibility with the fabric surface. Even good fabric can perform poorly if the print process is not controlled."
+      },
+      {
+        heading: "Shrinkage can stress the print",
+        body:
+          "When fabric shrinks or relaxes after washing, the print layer may experience stress. This is especially important for large prints, high-stretch fabrics, or garments with heavy movement areas."
+      },
+      {
+        heading: "Wash testing reveals real behavior",
+        body:
+          "A print may look acceptable immediately after production but show cracking, stiffness, or surface change after washing. Testing the finished garment is safer than judging the print alone."
+      }
+    ],
+    guidance: [
+      "Wash test printed garments before bulk approval.",
+      "Check print behavior on the actual production fabric.",
+      "Review curing quality and print method with the printer.",
+      "Consider print placement, garment fit, and expected stretch."
+    ],
+    mistakes: [
+      "Approving print appearance before washing.",
+      "Testing artwork on a different fabric from bulk production.",
+      "Ignoring shrinkage interaction with large print areas.",
+      "Assuming cracking is caused by only one factor."
+    ],
+    faqs: [
+      {
+        question: "Does print cracking always mean bad fabric?",
+        answer:
+          "No. Cracking can relate to print chemistry, curing, stretch, shrinkage, washing, placement, and garment use."
+      },
+      {
+        question: "Are large prints more likely to crack?",
+        answer:
+          "Large prints can face more stress because they cover more fabric surface and may reduce stretch across a wider area."
+      },
+      {
+        question: "Should printed samples be washed before approval?",
+        answer:
+          "Yes. Washing helps reveal cracking risk, shrinkage interaction, stiffness, and final garment feel."
+      }
+    ],
+    related: [
+      "why-large-prints-affect-garment-feel",
+      "why-print-placement-matters-on-stretch-fabrics",
+      "why-screen-printing-behaves-differently-on-fabrics",
+      "why-garments-change-after-washing"
+    ]
+  },
+  {
+    slug: "why-some-prints-feel-heavier-than-others",
+    title: "Why Some Prints Feel Heavier Than Others",
+    shortTitle: "Why Prints Feel Heavy",
+    metaDescription:
+      "Understand why some garment prints feel heavier or stiffer because of print coverage, ink deposit, print method, fabric softness, GSM, and washing behavior.",
+    topicCluster: "decoration-printing",
+    buyerIntent: "understand print hand feel before apparel production",
+    tags: ["print hand feel", "screen printing", "heavy print", "garment comfort", "streetwear"],
+    fabricFamilies: ["single jersey", "interlock", "knitted fabrics"],
+    yarnFamilies: ["cotton", "compact cotton", "cotton blends"],
+    processFamilies: ["screen printing", "garment production", "washing"],
+    riskSignals: ["print stiffness", "heavy hand feel", "reduced drape", "comfort mismatch"],
+    buyerJourneyStage: "style development",
+    summary:
+      "Some prints feel heavier because print coverage, ink deposit, print method, and fabric softness change how the printed area bends, stretches, and feels against the body.",
+    shortAnswer:
+      "Prints feel heavier when the printed layer adds noticeable thickness, stiffness, or surface coverage compared with the softness and stretch of the base fabric.",
+    sections: [
+      {
+        heading: "Print coverage affects weight and stiffness",
+        body:
+          "A small logo may feel light, while a large solid print can create a thicker surface layer. More coverage usually makes the printed area feel more structured."
+      },
+      {
+        heading: "Ink deposit changes hand feel",
+        body:
+          "Different print methods and ink deposits create different surface textures. A thicker deposit can feel heavier, less breathable, or less flexible."
+      },
+      {
+        heading: "Soft fabrics make print weight more noticeable",
+        body:
+          "On soft or lightweight knitted fabrics, a heavy print can stand out more clearly because the printed area behaves differently from the surrounding fabric."
+      },
+      {
+        heading: "Washing can change print feel",
+        body:
+          "After washing, fabric relaxation and print surface behavior can change how heavy, stiff, or flexible the print feels."
+      }
+    ],
+    guidance: [
+      "Match print method with desired garment comfort.",
+      "Review print hand feel on the actual fabric.",
+      "Check large solid prints after washing.",
+      "Consider whether the garment is regular fit, oversized, or high-movement."
+    ],
+    mistakes: [
+      "Judging print only by visual appearance.",
+      "Ignoring print thickness and surface coverage.",
+      "Using heavy print layers on very soft fabrics without testing.",
+      "Approving artwork before checking worn garment comfort."
+    ],
+    faqs: [
+      {
+        question: "Why does a large print feel stiff?",
+        answer:
+          "Large prints cover more surface area and may add a thicker print layer, reducing softness, stretch, or drape in that zone."
+      },
+      {
+        question: "Can washing soften a print?",
+        answer:
+          "Sometimes washing changes print hand feel, but it can also reveal stiffness, cracking, or surface change depending on the print method."
+      },
+      {
+        question: "Does GSM control print feel?",
+        answer:
+          "GSM matters, but print feel also depends on ink deposit, coverage, fabric surface, finishing, and washing behavior."
+      }
+    ],
+    related: [
+      "why-large-prints-affect-garment-feel",
+      "why-screen-printing-behaves-differently-on-fabrics",
+      "why-two-garments-made-from-the-same-fabric-can-feel-different",
+      "what-gsm-should-t-shirts-use"
+    ]
+  },
+
 ];
 
 export function getTextileKnowledgePage(slug) {
