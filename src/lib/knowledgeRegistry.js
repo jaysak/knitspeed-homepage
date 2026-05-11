@@ -10,6 +10,7 @@ import { getSourcingStabilityInference } from "./intelligence/sourcingStabilityI
 import { getBuyerIntentProgression } from "./intelligence/buyerIntentProgression";
 import { getOperationalRecommendations } from "./intelligence/operationalRecommendations";
 import { getQuotePreparationIntelligence } from "./intelligence/quotePreparationIntelligence";
+import { getSourcingContinuityMemory } from "./intelligence/sourcingContinuityMemory";
 
 const implementedKnowledgeSlugs = new Set(
   TEXTILE_KNOWLEDGE_PAGES.map((page) => page.slug)
@@ -196,9 +197,20 @@ export function getKnowledgePageOperationalContext(slug) {
     recommendations
   };
 
-  return {
+  const quotePreparation =
+    getQuotePreparationIntelligence(recommendationContext);
+
+  const continuityContext = {
     ...recommendationContext,
-    quotePreparation: getQuotePreparationIntelligence(recommendationContext)
+    quotePreparation
+  };
+
+  return {
+    ...continuityContext,
+    sourcingContinuity: getSourcingContinuityMemory(
+      page,
+      continuityContext
+    )
   };
 }
 
