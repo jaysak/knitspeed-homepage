@@ -2,7 +2,10 @@ export const cottonKnitDyeingPainpoints = {
   slug: "dyeing-painpoints-cotton-knits",
   title: "Dyeing Painpoints in Cotton Knitted Fabric",
   category: "Dyeing & Finishing",
-  expertSource: "Mr. Kasame",
+  sourceModel: "internal_manufacturing_knowledge",
+  visibility: "internal_only",
+  ownership: "Knitspeed",
+  validationMethod: "factory_experience_plus_technical_validation",
 
   painpoints: [
     {

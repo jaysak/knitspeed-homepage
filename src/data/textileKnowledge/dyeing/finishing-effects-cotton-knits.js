@@ -2,7 +2,10 @@ export const finishingEffectsCottonKnits = {
   slug: "finishing-effects-cotton-knits",
   title: "Finishing Effects on Cotton Knitted Fabric",
   category: "Finishing",
-  expertSource: "Mr. Kasame",
+  sourceModel: "internal_manufacturing_knowledge",
+  visibility: "internal_only",
+  ownership: "Knitspeed",
+  validationMethod: "factory_experience_plus_technical_validation",
 
   overview:
     "Finishing determines the final commercial character of cotton knitted fabric. It affects handfeel, shrinkage, width, GSM, appearance, and customer perception.",

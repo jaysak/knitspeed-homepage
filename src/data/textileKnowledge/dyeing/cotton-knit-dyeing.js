@@ -3,7 +3,10 @@ export const cottonKnitDyeingKnowledge = {
   title: "Cotton Knit Dyeing Process",
   category: "Dyeing & Finishing",
   sourceType: "factory_experience_plus_technical_validation",
-  expertSource: "Mr. Kasame",
+  sourceModel: "internal_manufacturing_knowledge",
+  visibility: "internal_only",
+  ownership: "Knitspeed",
+  validationMethod: "factory_experience_plus_technical_validation",
   commercialPurpose:
     "Help customers understand real dyeing risks, production dependencies, and quality-control checkpoints for cotton knitted fabric.",
 

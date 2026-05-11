@@ -2,7 +2,10 @@ export const reactiveDyeingCottonKnowledge = {
   slug: "reactive-dyeing-cotton",
   title: "Reactive Dyeing for Cotton Knits",
   category: "Dyeing Chemistry",
-  expertSource: "Mr. Kasame",
+  sourceModel: "internal_manufacturing_knowledge",
+  visibility: "internal_only",
+  ownership: "Knitspeed",
+  validationMethod: "factory_experience_plus_technical_validation",
 
   overview:
     "Reactive dyeing is widely used for cotton because reactive dyes form a chemical bond with cellulose fiber. The process can produce bright shades and good washing fastness when properly controlled.",
