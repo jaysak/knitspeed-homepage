@@ -721,7 +721,7 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
     "why-fabrics-with-the-same-gsm-can-feel-different",
     "what-causes-pilling-in-knitted-fabrics"
   ],
-  topicCluster: "production-behavior",
+  topicCluster: "textile-production",
   buyerIntent: "production-alignment",
   tags: [
     "shrinkage",
@@ -898,7 +898,7 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
     "why-fabrics-with-the-same-gsm-can-feel-different",
     "single-jersey-vs-interlock"
   ],
-  topicCluster: "production-behavior",
+  topicCluster: "textile-production",
   buyerIntent: "production-alignment",
   tags: ["fabric width", "marker planning", "garment production", "knitted fabric", "apparel sourcing"],
   eyebrow: "Textile knowledge",
@@ -979,7 +979,7 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
     "what-causes-spirality-in-knitted-fabric",
     "how-fabric-finishing-affects-garment-feel"
   ],
-  topicCluster: "production-behavior",
+  topicCluster: "textile-production",
   buyerIntent: "production-alignment",
   tags: ["wash testing", "shrinkage", "pilling", "spirality", "garment production", "apparel sourcing"],
   eyebrow: "Textile knowledge",
@@ -1494,7 +1494,7 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
   slug: "why-cotton-knits-shrink-after-dyeing",
   title: "Why Cotton Knits Shrink After Dyeing",
   category: "Textile Production",
-  topicCluster: "Textile Production",
+  topicCluster: "textile-production",
   buyerIntent: "Understand shrinkage after dyeing and finishing",
   discoveryPriority: 45,
   tags: ["shrinkage", "cotton", "knitted fabric", "dyeing", "compacting"],
