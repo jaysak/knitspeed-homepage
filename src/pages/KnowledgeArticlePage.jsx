@@ -10,11 +10,14 @@ import ManufacturingSensitivityNote from "../components/knowledge/ManufacturingS
 import KnowledgeWatermark from "../components/branding/KnowledgeWatermark";
 import SpecSummaryGrid from "../components/knowledge/SpecSummaryGrid";
 import ProductionMemoryPanel from "../components/production/ProductionMemoryPanel";
+import ProductionRelationshipsPanel from "../components/production/ProductionRelationshipsPanel";
 import MobileDisclosure from "../components/ui/MobileDisclosure";
 import { writeBuyerIntentEvent } from "../lib/buyerIntent";
 import { getKnowledgePageProductionMemory,
   getKnowledgePageOperationalContext,
-  getKnowledgePageManufacturingSensitivity, getRelatedKnowledgePages } from "../lib/knowledgeRegistry";
+  getKnowledgePageManufacturingSensitivity,
+  getKnowledgePageManufacturingCausality,
+  getRelatedKnowledgePages } from "../lib/knowledgeRegistry";
 import {
   KNITSPEED_SITE_URL,
   buildArticleSchema,
@@ -98,8 +101,9 @@ export default function KnowledgeArticlePage({ page }) {
     return getRelatedKnowledgePages(page.slug);
   }, [page]);
 
-  const operationalContext = getKnowledgePageOperationalContext(page.slug);
-  const manufacturingSensitivity = getKnowledgePageManufacturingSensitivity(page.slug);
+  const operationalContext = getKnowledgePageOperationalContext(page?.slug);
+  const manufacturingSensitivity = getKnowledgePageManufacturingSensitivity(page?.slug);
+  const manufacturingCausality = getKnowledgePageManufacturingCausality(page?.slug);
 
   const productionMemoryItems = useMemo(() => {
     if (!page) return [];
@@ -177,6 +181,12 @@ export default function KnowledgeArticlePage({ page }) {
         <MobileDisclosure title="Sourcing context">
           <OperationalContextBlock context={operationalContext} />
         </MobileDisclosure>
+
+        {manufacturingCausality?.affectedAreas?.length > 0 && (
+          <MobileDisclosure title="Production relationships">
+            <ProductionRelationshipsPanel summary={manufacturingCausality} />
+          </MobileDisclosure>
+        )}
 
         <ManufacturingSensitivityNote sensitivity={manufacturingSensitivity} />
 

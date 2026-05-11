@@ -83,7 +83,7 @@ const SLUG_SIGNAL_MAP = {
   "what-is-compact-cotton": ["compactCotton"],
   "single-jersey-vs-interlock": ["singleJersey", "interlock"],
   "what-causes-spirality-in-knitted-fabric": ["singleJersey"],
-  "reactive-dyeing-for-cotton-knits": ["reactiveDyeing"],
+  "reactive-dyeing-cotton": ["reactiveDyeing"],
   "why-dark-shades-need-more-dyeing-control": ["darkShade", "reactiveDyeing"],
   "compacting-vs-stentering-for-cotton-knits": ["compacting"],
 };
