@@ -1435,3 +1435,55 @@ Rules preserved:
 Magic words for next boot:
 > Jarvis, continue Knitspeed from Phase 3.7H consolidation checkpoint. Decoration intelligence expansion is complete, article expansion is intentionally paused, and next direction is Phase 3.8A Procurement Continuity Intelligence. Focus on silent operational continuity reasoning and sourcing-memory intelligence only. First inspect HANDOFF.md, PROJECT_ROADMAP.md, DECISIONS.md, SESSIONS.md, and git status before patching.
 
+
+---
+
+# CURRENT CHECKPOINT — Phase 3.8A–3.8E Procurement Cognition Layer
+
+Status:
+- stable architecture checkpoint
+- build/lint/probe passing
+- procurement cognition layer active
+- no UI expansion
+- no schema changes
+- no article expansion
+
+Implemented:
+- Phase 3.8A: procurement continuity memory enrichment
+- Phase 3.8B: buyer journey accumulation layer
+- Phase 3.8C: weighted procurement cognition
+- Phase 3.8D: temporal procurement signal weighting
+- Phase 3.8E: intelligence observability through internal probe
+
+Current intelligence stack:
+- semantic textile graph
+- manufacturing causality
+- operational recommendations
+- quote preparation intelligence
+- sourcing continuity memory
+- buyer journey cognition
+- weighted intent interpretation
+- temporal signal weighting
+- probe observability
+
+Strategic result:
+- Knitspeed now reasons beyond isolated content pages
+- system can interpret sourcing trajectory, repeated operational concerns, weighted intent, and procurement readiness
+- intelligence remains deterministic, inspectable, and hidden from public UX
+
+Rules preserved:
+- no AI chatbot layer
+- no recommendation spam
+- no buyer score UI
+- no dashboard bloat
+- no user-profiling language
+- no generic content expansion
+
+Next likely safe direction:
+- pause expansion
+- inspect cognition quality over real usage
+- later consider quote-context continuity bridge only after review
+
+Magic words for next boot:
+> Jarvis, continue Knitspeed from Phase 3.8 procurement cognition checkpoint. Phase 3.8A–3.8E are implemented with sourcing continuity memory, buyer journey accumulation, weighted procurement cognition, temporal signal weighting, and probe observability. Build/lint/probe pass. Do not add more articles or UI. First inspect HANDOFF.md, PROJECT_ROADMAP.md, DECISIONS.md, SESSIONS.md, and git status before patching.
+

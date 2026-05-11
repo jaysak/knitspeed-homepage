@@ -3,6 +3,8 @@ import {
   getKnowledgePageOperationalContext
 } from "../../src/lib/knowledgeRegistry.js";
 
+import { getBuyerJourneyIntelligence } from "../../src/lib/buyerIntent.js";
+
 const TEST_SLUGS = [
   "single-jersey-vs-interlock",
   "what-is-compact-cotton",
@@ -46,4 +48,16 @@ for (const slug of TEST_SLUGS) {
 
   console.log("\n--- sourcing continuity");
   console.log(context?.sourcingContinuity);
+}
+
+console.log("\n================================================");
+console.log("buyer journey intelligence");
+
+try {
+  console.log(getBuyerJourneyIntelligence());
+} catch (error) {
+  console.log({
+    unavailable: true,
+    reason: error?.message || "buyer journey intelligence unavailable in this environment"
+  });
 }

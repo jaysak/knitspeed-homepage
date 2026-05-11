@@ -319,3 +319,35 @@ UI rule:
 - avoid engagement-gamification patterns
 - keep operational intelligence mostly hidden and inspectable
 
+
+---
+
+## Decision — Procurement Cognition Must Remain Deterministic and Hidden
+
+Knitspeed procurement intelligence should remain deterministic, inspectable, and operationally grounded.
+
+Accepted intelligence layers:
+- sourcing continuity memory
+- buyer journey accumulation
+- weighted procurement cognition
+- temporal signal weighting
+- internal probe observability
+
+Rules:
+- no visible AI scoring UI
+- no recommendation spam
+- no engagement optimization
+- no black-box buyer profiling
+- no dashboard bloat
+- no generic personalization language
+
+Purpose:
+- interpret operational sourcing context
+- identify repeated concern patterns
+- distinguish active sourcing momentum from stale curiosity
+- support future quote-context continuity
+- preserve calm sourcing-aware UX
+
+Priority:
+- intelligence depth and coherence over feature count
+

@@ -1663,3 +1663,48 @@ Next planned direction:
 - operational concern-pattern reasoning
 - silent deterministic operational enrichment
 
+
+---
+
+## Session — Phase 3.8A–3.8E Procurement Cognition Layer
+
+Status:
+- implemented and verified
+
+Implemented:
+- enriched `sourcingContinuityMemory.js` with:
+  - concernPattern
+  - continuityIntensity
+  - procurementReadiness
+- extended `buyerIntent.js` with:
+  - journey accumulation
+  - operationalThemes
+  - repeatedConcernFamilies
+  - sourcingTrajectory
+  - journeyIntensity
+  - quoteIntentStrength
+  - weightedIntentScore
+  - weightedIntentTier
+- extended `relationshipWeights.js` with:
+  - buyer intent event weights
+  - operational concern weights
+  - temporal signal multiplier
+- extended probe observability in:
+  - `scripts/intelligence/probeKnowledgeIntelligence.js`
+- normalized browser/Node environment safety for buyer intent storage
+
+Verification:
+- npm run lint passes
+- npm run build passes
+- npm run probe:intelligence passes
+
+Strategic result:
+- Knitspeed now has deterministic procurement cognition primitives
+- system can interpret operational sourcing trajectory and repeated concerns across knowledge journeys
+- intelligence remains hidden, inspectable, and non-UI
+
+Notes:
+- Node probe returns empty buyer journey state when localStorage is unavailable
+- this is expected and environment-safe
+- remaining Node `--localstorage-file` warning is external runtime noise, not app failure
+
