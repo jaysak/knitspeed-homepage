@@ -2162,6 +2162,159 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
     ]
   },
 
+  {
+    slug: "why-garments-change-after-washing",
+    title: "Why Garments Change After Washing",
+    shortTitle: "Garment Change After Washing",
+    metaDescription:
+      "Understand why garments can change after washing because of shrinkage, relaxation, finishing behavior, fabric recovery, garment construction, and production processes.",
+    topicCluster: "garment-production",
+    buyerIntent: "understand garment wash behavior before production",
+    tags: ["washing", "shrinkage", "garment behavior", "fabric recovery", "garment finishing"],
+    fabricFamilies: ["single jersey", "interlock", "rib", "knitted fabrics"],
+    yarnFamilies: ["cotton", "compact cotton", "cotton blends"],
+    processFamilies: ["washing", "finishing", "garment production"],
+    riskSignals: ["shrinkage", "torque release", "shape distortion", "garment recovery"],
+    buyerJourneyStage: "production planning",
+    summary:
+      "Garments can change after washing because fabric tension, finishing, shrinkage, recovery, sewing construction, and garment treatment all interact during laundering and drying.",
+    shortAnswer:
+      "Washing can change garment size, feel, drape, twist, and surface appearance because knitted fabrics continue relaxing after production and finishing.",
+    sections: [
+      {
+        heading: "Fabric relaxation continues after production",
+        body:
+          "Knitted fabrics hold tension during knitting, dyeing, finishing, cutting, and sewing. Washing allows some of that tension to relax, which can change garment dimensions and feel."
+      },
+      {
+        heading: "Shrinkage is not the only change",
+        body:
+          "Garments may also experience torque release, drape changes, surface texture shifts, or recovery differences after washing. Two garments with similar shrinkage percentages can still behave differently."
+      },
+      {
+        heading: "Garment construction affects wash behavior",
+        body:
+          "Seam tension, panel layout, print placement, embroidery, and garment construction can influence how a garment reacts after laundering."
+      },
+      {
+        heading: "Finishing influences the final result",
+        body:
+          "Compacting, heat setting, enzyme washing, silicone finishing, and other production processes can affect how stable the garment remains after repeated washing."
+      }
+    ],
+    guidance: [
+      "Wash test garments before bulk approval when possible.",
+      "Evaluate garment shape and feel after washing, not only before washing.",
+      "Check recovery and twist behavior on soft knitted fabrics.",
+      "Consider garment construction together with fabric selection."
+    ],
+    mistakes: [
+      "Treating shrinkage as the only wash-related concern.",
+      "Approving garments before wash testing.",
+      "Ignoring construction tension and sewing behavior.",
+      "Assuming finished garments will remain identical after laundering."
+    ],
+    faqs: [
+      {
+        question: "Why can garments twist after washing?",
+        answer:
+          "Twisting can relate to yarn torque, knitting structure, garment construction, washing behavior, and relaxation after production."
+      },
+      {
+        question: "Does compacting completely stop shrinkage?",
+        answer:
+          "Compacting helps stability, but garments can still change depending on fabric behavior, washing conditions, and construction."
+      },
+      {
+        question: "Why can garment feel change after washing?",
+        answer:
+          "Washing can affect surface texture, softness, drape, recovery, and finishing behavior."
+      }
+    ],
+    related: [
+      "why-cotton-knits-shrink-after-dyeing",
+      "how-fabric-finishing-affects-garment-feel",
+      "why-wash-testing-matters-for-apparel-fabrics",
+      "what-causes-spirality-in-knitted-fabric"
+    ]
+  },
+  {
+    slug: "why-two-garments-made-from-the-same-fabric-can-feel-different",
+    title: "Why Two Garments Made From the Same Fabric Can Feel Different",
+    shortTitle: "Same Fabric Different Feel",
+    metaDescription:
+      "Learn why garments made from the same fabric can still feel different because of finishing, sewing, washing, print treatment, garment construction, and production handling.",
+    topicCluster: "garment-production",
+    buyerIntent: "understand garment feel variation before production",
+    tags: ["garment feel", "fabric finishing", "washing", "construction", "production handling"],
+    fabricFamilies: ["single jersey", "interlock", "rib", "knitted fabrics"],
+    yarnFamilies: ["cotton", "compact cotton", "cotton blends"],
+    processFamilies: ["finishing", "washing", "garment production", "printing"],
+    riskSignals: ["feel inconsistency", "surface variation", "construction variation"],
+    buyerJourneyStage: "sampling and approval",
+    summary:
+      "Two garments made from the same fabric can still feel different because garment construction, finishing, washing, printing, embroidery, and production handling all influence the final result.",
+    shortAnswer:
+      "Fabric is only one part of garment feel. Construction, finishing, washing, and decoration processes can all change how the final garment feels during wear.",
+    sections: [
+      {
+        heading: "Fabric alone does not define garment feel",
+        body:
+          "Two garments may start from the same fabric roll but still feel different after sewing, washing, finishing, printing, or garment treatment."
+      },
+      {
+        heading: "Construction changes drape and recovery",
+        body:
+          "Seam tension, panel layout, collar structure, and stitching methods can influence how soft, stable, or structured the garment feels."
+      },
+      {
+        heading: "Decoration layers affect surface feel",
+        body:
+          "Screen printing, embroidery, washing treatments, and garment finishing can change stiffness, softness, stretch behavior, and hand feel."
+      },
+      {
+        heading: "Production handling matters",
+        body:
+          "Cutting tension, storage conditions, washing procedures, and production sequencing can all influence the final garment outcome."
+      }
+    ],
+    guidance: [
+      "Evaluate finished garments instead of fabric swatches alone.",
+      "Check garment feel after printing or washing treatments.",
+      "Review construction details during sample approval.",
+      "Compare washed garments under the same conditions."
+    ],
+    mistakes: [
+      "Assuming the same fabric guarantees identical garment feel.",
+      "Ignoring print or embroidery influence on softness.",
+      "Approving fabric separately from finished garment behavior.",
+      "Comparing garments washed under different conditions."
+    ],
+    faqs: [
+      {
+        question: "Can printing change garment softness?",
+        answer:
+          "Yes. Some print methods can increase surface stiffness or change stretch and drape behavior."
+      },
+      {
+        question: "Why do two factories produce slightly different garment feel?",
+        answer:
+          "Construction methods, washing, finishing, sewing tension, and production handling can vary between factories."
+      },
+      {
+        question: "Does garment washing affect final feel?",
+        answer:
+          "Yes. Washing can change softness, recovery, drape, texture, and how finishing behaves."
+      }
+    ],
+    related: [
+      "why-garments-change-after-washing",
+      "how-fabric-finishing-affects-garment-feel",
+      "why-screen-printing-behaves-differently-on-fabrics",
+      "why-embroidery-affects-fabric-behavior"
+    ]
+  },
+
 ];
 
 export function getTextileKnowledgePage(slug) {
