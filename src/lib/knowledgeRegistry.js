@@ -112,6 +112,17 @@ export function getKnowledgePageProductionMemory(slug) {
     .filter((item) => Boolean(item.memory));
 }
 
+
+export function getKnowledgePageTemporalSignals(slug) {
+  const page = getKnowledgePageBySlug(slug);
+
+  if (!page) {
+    return null;
+  }
+
+  return getTemporalManufacturingSignals(page);
+}
+
 function scoreKnowledgeRelationship(sourcePage, candidatePage) {
   if (!sourcePage || !candidatePage) return 0;
 
