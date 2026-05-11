@@ -731,3 +731,35 @@ Next:
 - hidden sourcing stability weighting
 - future procurement intelligence foundation
 
+
+---
+
+## Dyeing Intelligence Expansion
+
+Status:
+- active
+- expanding successfully
+
+Current coverage:
+- cotton knit dyeing
+- lab dip vs bulk shade
+- dark shade control
+- colorfastness
+- shrinkage after dyeing
+- compacting vs stentering
+- finishing effects
+- reactive dyeing
+
+Strategic role:
+- manufacturing-aware semantic authority
+- buyer education
+- sourcing trust
+- LLM retrieval strengthening
+- operational textile positioning
+
+Future possibility:
+- sourcing context layer
+- cotton market awareness
+- production volatility notes
+- textile operational updates
+

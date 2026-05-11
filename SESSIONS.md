@@ -1245,3 +1245,37 @@ Strategic effect:
 - strengthens manufacturing trust and sourcing realism
 - deepens semantic authority around cotton knitted fabric production behavior
 
+
+---
+
+## Dyeing Knowledge Expansion Sprint
+
+Status:
+- implemented and verified
+
+Added knowledge pages:
+- Why Lab Dip and Bulk Shade Can Differ
+- Why Dark Shades Need More Dyeing Control
+- What Affects Colorfastness in Cotton Knits?
+- Why Cotton Knits Shrink After Dyeing
+- Compacting vs Stentering for Cotton Knits
+
+System improvements:
+- strengthened textile manufacturing semantic authority
+- expanded operational dyeing intelligence
+- improved related knowledge graph depth
+- added fallback canonical routing behavior for knowledge cards
+
+Verification:
+- routes render correctly
+- related article links work
+- knowledge index cards navigate correctly
+- build passes
+- lint passes
+
+Strategic effect:
+- stronger LLM textile retrieval surface
+- stronger buyer education layer
+- stronger sourcing-trust positioning
+- better manufacturing-aware semantic clustering
+

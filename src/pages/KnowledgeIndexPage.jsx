@@ -233,7 +233,7 @@ export default function KnowledgeIndexPage() {
                       {clusterPages.map((page) => (
                         <a
                           key={page.slug}
-                          href={page.canonicalPath}
+                          href={page.canonicalPath || `/knowledge/${page.slug}`}
                           className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-sky-300 hover:shadow-md"
                         >
                           <p className="text-xs font-semibold uppercase tracking-wide text-sky-700">

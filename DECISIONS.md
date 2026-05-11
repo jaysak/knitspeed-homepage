@@ -181,3 +181,28 @@ Rejected direction:
 - noisy prediction UX
 - fake automation language
 
+
+---
+
+## Decision — Expand Textile Knowledge Through Manufacturing Reality
+
+Knitspeed knowledge expansion should prioritize:
+- production behavior
+- sourcing realism
+- dyeing and finishing causality
+- operational textile understanding
+
+Avoid:
+- generic SEO spam
+- shallow article generation
+- broad unrelated content expansion
+
+Preferred expansion areas:
+- dyeing
+- finishing
+- shrinkage
+- colorfastness
+- wash behavior
+- garment outcome logic
+- sourcing expectations
+
