@@ -131,7 +131,7 @@ const CLUSTER_LABELS = {
   "fabric-behavior": "Fabric Behavior",
   "fabric-specification": "Fabric Specification",
   "fabric-finishing": "Fabric Finishing",
-  "production-behavior": "Production Behavior",
+  "textile-production": "Textile Production",
   "yarn-quality": "Yarn Quality",
   "fabric-dyeing": "Fabric Dyeing",
   "garment-production": "Garment Production"

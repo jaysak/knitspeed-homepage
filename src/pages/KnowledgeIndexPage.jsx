@@ -64,7 +64,7 @@ const CLUSTER_DESCRIPTIONS = {
     "Dyeing process guidance, color behavior, and production-sensitive sourcing considerations.",
   "Fabric Finishing":
     "Finishing process considerations for hand feel, stability, and garment performance.",
-  "Production Behavior":
+  "Textile Production":
     "Production-aware sourcing guidance for garment manufacturing and wash outcome.",
 };
 

@@ -32,11 +32,11 @@ const RELATED_GUIDE_LABELS = {
   "fabric-behavior": "Related Fabric Behavior Guides",
   "fabric-specification": "Related Fabric Specification Guides",
   "fabric-finishing": "Related Finishing Guides",
-  "production-behavior": "Related Production Behavior Guides",
+  "textile-production": "Related Textile Production Guides",
   "yarn-quality": "Related Yarn Quality Guides",
   "Fabric Dyeing": "Related Dyeing Guides",
   "Fabric Finishing": "Related Finishing Guides",
-  "Production Behavior": "Related Production Behavior Guides",
+  "Textile Production": "Related Textile Production Guides",
 };
 
 function getRelatedGuideLabel(page) {
