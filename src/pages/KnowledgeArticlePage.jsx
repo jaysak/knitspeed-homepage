@@ -10,6 +10,7 @@ import ManufacturingSensitivityNote from "../components/knowledge/ManufacturingS
 import KnowledgeWatermark from "../components/branding/KnowledgeWatermark";
 import SpecSummaryGrid from "../components/knowledge/SpecSummaryGrid";
 import ProductionMemoryPanel from "../components/production/ProductionMemoryPanel";
+import MobileDisclosure from "../components/ui/MobileDisclosure";
 import { writeBuyerIntentEvent } from "../lib/buyerIntent";
 import { getKnowledgePageProductionMemory,
   getKnowledgePageOperationalContext,
@@ -169,9 +170,13 @@ export default function KnowledgeArticlePage({ page }) {
           </div>
         </section>
 
-        <ProductionMemoryPanel items={productionMemoryItems} />
+        <MobileDisclosure title="Production notes">
+          <ProductionMemoryPanel items={productionMemoryItems} />
+        </MobileDisclosure>
 
-        <OperationalContextBlock context={operationalContext} />
+        <MobileDisclosure title="Sourcing context">
+          <OperationalContextBlock context={operationalContext} />
+        </MobileDisclosure>
 
         <ManufacturingSensitivityNote sensitivity={manufacturingSensitivity} />
 
@@ -193,29 +198,33 @@ export default function KnowledgeArticlePage({ page }) {
           </ul>
         </section>
 
-        <FAQBlock title="Buyer FAQ" items={page.faqs} />
+        <MobileDisclosure title="Buyer FAQ">
+          <FAQBlock title="Buyer FAQ" items={page.faqs} />
+        </MobileDisclosure>
 
         {relatedPages.length > 0 && (
-          <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-            <p className="text-sm font-semibold uppercase tracking-wide text-sky-700">
-              {getRelatedGuideLabel(page)}
-            </p>
-            <div className="mt-4 grid gap-3 md:grid-cols-2">
-              {relatedPages.map((relatedPage) => (
-                <a
-                  key={relatedPage.slug}
-                  href={relatedPage.canonicalPath}
-                  className="rounded-2xl border border-slate-200 p-4 transition hover:border-sky-300 hover:bg-sky-50"
-                >
-                  <h3 className="font-semibold text-slate-950">{relatedPage.title}</h3>
-                  <p className="mt-1 text-xs font-medium uppercase tracking-wide text-sky-700">{relatedPage.category}</p>
-                  <p className="mt-2 text-sm leading-6 text-slate-600">
-                    {relatedPage.metaDescription || relatedPage.subtitle}
-                  </p>
-                </a>
-              ))}
-            </div>
-          </section>
+          <MobileDisclosure title={getRelatedGuideLabel(page)}>
+            <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+              <p className="text-sm font-semibold uppercase tracking-wide text-sky-700">
+                {getRelatedGuideLabel(page)}
+              </p>
+              <div className="mt-4 grid gap-3 md:grid-cols-2">
+                {relatedPages.map((relatedPage) => (
+                  <a
+                    key={relatedPage.slug}
+                    href={relatedPage.canonicalPath}
+                    className="rounded-2xl border border-slate-200 p-4 transition hover:border-sky-300 hover:bg-sky-50"
+                  >
+                    <h3 className="font-semibold text-slate-950">{relatedPage.title}</h3>
+                    <p className="mt-1 text-xs font-medium uppercase tracking-wide text-sky-700">{relatedPage.category}</p>
+                    <p className="mt-2 text-sm leading-6 text-slate-600">
+                      {relatedPage.metaDescription || relatedPage.subtitle}
+                    </p>
+                  </a>
+                ))}
+              </div>
+            </section>
+          </MobileDisclosure>
         )}
 
 
