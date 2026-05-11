@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { writeBuyerIntentEvent } from "../../lib/buyerIntent";
+import { storeQuoteAttribution } from "../../lib/quoteAttribution";
 
 export default function QuoteCTA({
   title = "Request a fabric quote",
@@ -13,10 +14,7 @@ export default function QuoteCTA({
 
     writeBuyerIntentEvent("knowledge_quote_click", article);
 
-    sessionStorage.setItem(
-      "knitspeed_knowledge_article",
-      JSON.stringify(article)
-    );
+    storeQuoteAttribution(article);
   }
 
   return (

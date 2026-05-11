@@ -23,6 +23,7 @@ import {
 } from "./lib/knowledgeRegistry";
 import { supabase } from "./lib/supabaseClient";
 import { buildBuyerIntentNote, writeBuyerIntentEvent } from "./lib/buyerIntent";
+import { consumeQuoteAttribution, scrollToQuoteSection } from "./lib/quoteAttribution";
 import {
   ArrowRight,
   MessageCircle,
@@ -82,22 +83,7 @@ export default function App() {
   const [selectedArticle, setSelectedArticle] = useState(() => {
     if (window.location.pathname !== "/") return null;
 
-    const storedKnowledgeArticle = sessionStorage.getItem(
-      "knitspeed_knowledge_article"
-    );
-
-    if (!storedKnowledgeArticle) return null;
-
-    try {
-      const parsedArticle = JSON.parse(storedKnowledgeArticle);
-      sessionStorage.removeItem("knitspeed_knowledge_article");
-
-      return parsedArticle?.seoSlug ? parsedArticle : null;
-    } catch (error) {
-      console.warn("Could not restore knowledge quote attribution:", error);
-      sessionStorage.removeItem("knitspeed_knowledge_article");
-      return null;
-    }
+    return consumeQuoteAttribution();
   });
   const [selectedFabricStructure, setSelectedFabricStructure] = useState("");
   const [selectedMaterialFamily, setSelectedMaterialFamily] = useState("");
@@ -117,9 +103,7 @@ export default function App() {
   useEffect(() => {
     if (pathname !== "/" || window.location.hash !== "#quote") return;
 
-    window.requestAnimationFrame(() => {
-      document.getElementById("quote")?.scrollIntoView({ behavior: "smooth" });
-    });
+    scrollToQuoteSection();
   }, [pathname]);
 
   function handleArticleSelect(article) {
@@ -131,7 +115,7 @@ export default function App() {
     setSelectedYarnCount(article.yarnCount || "");
     setSelectedWidthInches(getPrimaryWidth(article));
 
-    document.getElementById("quote")?.scrollIntoView({ behavior: "smooth" });
+    scrollToQuoteSection();
   }
 
   function clearSelectedArticle() {
