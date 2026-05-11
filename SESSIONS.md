@@ -1196,3 +1196,52 @@ Operational note:
 
 Strategic note:
 This phase moves Knitspeed from static textile knowledge content toward production-aware textile intelligence, while keeping the UI calm, sourcing-safe, and non-chaotic.
+
+---
+
+## Phase 3.6C — Dyeing Knowledge + Temporal Manufacturing Signals
+
+Status:
+- implemented and visually verified
+
+Summary:
+- added production-aware dyeing knowledge pages:
+  - Cotton Knit Dyeing Process
+  - Dyeing Painpoints in Cotton Knitted Fabric
+  - Reactive Dyeing for Cotton Knits
+  - Finishing Effects on Cotton Knitted Fabric
+- preserved sourcing-safe and commercially safe textile language
+- kept manufacturing intelligence internal and deterministic
+- added hidden temporal manufacturing intelligence layer
+- added seasonal production pressure logic
+- added dyeing complexity scoring
+- added sourcing volatility signals
+- added production readiness signals
+- connected temporal manufacturing signals into runtime knowledge enrichment
+- preserved calm UX with no visible AI feature sprawl
+
+Technical notes:
+- dyeing knowledge initially existed outside the registry-driven article array
+- pages were merged into `src/data/textileKnowledgePages.js`
+- `KnowledgeArticlePage.jsx` was hardened against optional sections:
+  - comparison
+  - guidance
+  - mistakes
+  - faqs
+- related buyer guide links were normalized to `/knowledge/:slug`
+
+Verification:
+- `npm run build` passes
+- dyeing routes render correctly
+- related knowledge links navigate correctly
+- no routing overhaul introduced
+- no CMS introduced
+- no Supabase changes
+- no admin dashboard changes
+- no Prime scoring changes
+
+Strategic effect:
+- Knitspeed knowledge layer now includes operational dyeing intelligence
+- strengthens manufacturing trust and sourcing realism
+- deepens semantic authority around cotton knitted fabric production behavior
+

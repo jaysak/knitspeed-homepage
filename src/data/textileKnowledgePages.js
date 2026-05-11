@@ -1035,7 +1035,244 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
         "Yes. Knitspeed can support sourcing conversations by reviewing garment goals, washing expectations, finishing, and production behavior before quoting."
     }
   ]
+},
+
+{
+  slug: "cotton-knit-dyeing",
+  title: "Cotton Knit Dyeing Process",
+  category: "Dyeing & Finishing",
+  topicCluster: "Fabric Dyeing",
+  buyerIntent: "Understand cotton knit dyeing process before quotation",
+  tags: ["cotton", "knitted fabric", "dyeing", "finishing", "production"],
+  metaDescription:
+    "A practical overview of cotton knit dyeing, including preparation, dyeing, washing, finishing, shrinkage, shade control, and production risk.",
+  shortAnswer:
+    "Cotton knit dyeing is not only a color process. It can affect shade, shrinkage, width, GSM, hand feel, spirality, and delivery reliability.",
+  sections: [
+    {
+      heading: "Why dyeing matters for cotton knitted fabric",
+      body:
+        "Cotton knitted fabric changes during wet processing. The fabric relaxes, absorbs dye, goes through washing and finishing, and may change in width, GSM, shrinkage behavior, surface feel, and garment performance."
+    },
+    {
+      heading: "Typical dyeing process flow",
+      body:
+        "A practical dyeing route may include greige inspection, preparation, scouring, bleaching when needed, dyeing, washing or soaping, softener or finishing, drying, compacting, inspection, and packing."
+    },
+    {
+      heading: "Production variables buyers should understand",
+      body:
+        "Shade result, shrinkage, GSM, width, hand feel, and delivery timing depend on yarn, knitting tension, pretreatment, dyeing recipe, machine loading, water quality, finishing method, and inspection control."
+    }
+  ],
+  guidance: [
+    "Confirm whether the buyer is discussing greige fabric or finished fabric.",
+    "Clarify color standard, lab dip requirement, finished GSM, finished width, and shrinkage tolerance.",
+    "Treat dark shades and rush dyeing as higher-risk production cases.",
+    "Discuss testing expectations before bulk dyeing when colorfastness, shrinkage, or garment fit matters."
+  ],
+  mistakes: [
+    "Assuming lab dip approval guarantees exact bulk shade.",
+    "Comparing greige width directly with finished width.",
+    "Ignoring shrinkage and spirality risks in cotton single jersey.",
+    "Treating dyeing as separate from finishing and garment outcome."
+  ],
+  faqs: [
+    {
+      question: "Does dyeing affect cotton knit fabric size?",
+      answer:
+        "Yes. Wet processing and finishing can change width, GSM, shrinkage, and fabric relaxation behavior."
+    },
+    {
+      question: "Why can lab dip and bulk shade look different?",
+      answer:
+        "Lab dip and bulk dyeing use different scale, fabric movement, liquor ratio, and production conditions, so shade control still requires careful monitoring."
+    },
+    {
+      question: "Why are dark colors more sensitive?",
+      answer:
+        "Dark reactive shades usually need stronger dyeing and washing control, especially for washing and rubbing fastness."
+    }
+  ]
+},
+
+{
+  slug: "dyeing-painpoints-cotton-knits",
+  title: "Dyeing Painpoints in Cotton Knitted Fabric",
+  category: "Dyeing & Finishing",
+  topicCluster: "Fabric Dyeing",
+  buyerIntent: "Understand common dyeing risks in cotton knits",
+  tags: ["dyeing", "cotton", "shade", "shrinkage", "quality control"],
+  metaDescription:
+    "Common dyeing painpoints in cotton knitted fabric, including shade variation, shrinkage, spirality, GSM change, colorfastness, and reprocess risk.",
+  shortAnswer:
+    "Most cotton knit dyeing painpoints come from production variables that affect shade, stability, hand feel, and final garment behavior.",
+  sections: [
+    {
+      heading: "Common cotton knit dyeing painpoints",
+      body:
+        "Important painpoints include lab dip and bulk shade difference, uneven dyeing, cotton absorbency variation, shrinkage, spirality, GSM and width change, dark shade fastness, and handfeel inconsistency."
+    },
+    {
+      heading: "Why these problems happen",
+      body:
+        "Dyeing results depend on yarn lot, cotton absorbency, knitting tension, pretreatment, dyeing recipe, machine condition, washing, finishing chemical, and compacting control."
+    },
+    {
+      heading: "How Knitspeed should frame the risk",
+      body:
+        "These issues should be explained as normal production considerations, not panic defects. The goal is to align expectations before quotation and bulk production."
+    }
+  ],
+  guidance: [
+    "Ask whether the shade is new or repeat.",
+    "Confirm whether lab dip, strike-off, or bulk approval is required.",
+    "Check if the garment has strict shrinkage or fit requirements.",
+    "Flag dark shades, single jersey, and urgent lead times as higher attention cases."
+  ],
+  mistakes: [
+    "Promising exact shade without tolerance discussion.",
+    "Ignoring colorfastness requirements for dark shades.",
+    "Approving only hand feel without reviewing shrinkage and width.",
+    "Using rush dyeing when the buyer needs strict testing."
+  ],
+  faqs: [
+    {
+      question: "Is shade variation always a defect?",
+      answer:
+        "Not always. Some variation risk exists in textile production, which is why standards, tolerances, and approval steps should be discussed clearly."
+    },
+    {
+      question: "Can re-dyeing fix all dyeing problems?",
+      answer:
+        "No. Reprocessing may improve shade but can also affect strength, hand feel, shrinkage, and delivery timing."
+    },
+    {
+      question: "Why does cotton absorb dye differently?",
+      answer:
+        "Cotton fiber quality, yarn lot, pretreatment, and fabric preparation can influence dye absorption and shade behavior."
+    }
+  ]
+},
+
+{
+  slug: "reactive-dyeing-cotton",
+  title: "Reactive Dyeing for Cotton Knits",
+  category: "Dyeing Chemistry",
+  topicCluster: "Fabric Dyeing",
+  buyerIntent: "Understand reactive dyeing for cotton knitted fabric",
+  tags: ["reactive dyeing", "cotton", "colorfastness", "dark shade", "washing"],
+  metaDescription:
+    "A buyer-friendly explanation of reactive dyeing for cotton knits, including dye fixation, washing, dark shade risk, and colorfastness considerations.",
+  shortAnswer:
+    "Reactive dyeing is commonly used for cotton because reactive dyes bond with cellulose fiber, but process control and washing are critical for reliable shade and fastness.",
+  sections: [
+    {
+      heading: "What reactive dyeing does",
+      body:
+        "Reactive dyes are used on cotton because they can form a chemical bond with cellulose fiber. This helps achieve useful shade brightness and washing performance when the process is controlled well."
+    },
+    {
+      heading: "Why washing and soaping matter",
+      body:
+        "After dyeing, unfixed dye must be removed through washing and soaping. Poor removal can create rubbing or washing fastness problems, especially in dark shades."
+    },
+    {
+      heading: "Commercial sourcing implication",
+      body:
+        "Reactive dyeing can be reliable, but buyers should allow realistic time for lab dip, bulk dyeing, washing, finishing, and testing when needed."
+    }
+  ],
+  guidance: [
+    "Use extra caution with black, navy, deep red, and other dark shades.",
+    "Confirm washing and rubbing fastness requirements early.",
+    "Do not separate dyeing discussion from finishing and delivery timing.",
+    "Explain that urgent dyeing can increase quality-control risk."
+  ],
+  mistakes: [
+    "Assuming dark shades behave like light shades.",
+    "Skipping colorfastness discussion before quotation.",
+    "Ignoring washing control after dye fixation.",
+    "Treating dyeing recipe alone as the whole quality result."
+  ],
+  faqs: [
+    {
+      question: "Is reactive dyeing suitable for cotton?",
+      answer:
+        "Yes. Reactive dyeing is widely used for cotton, but good pretreatment, dyeing control, washing, and finishing remain important."
+    },
+    {
+      question: "Why do dark shades need more attention?",
+      answer:
+        "Dark shades use heavier dye depth and need stronger washing and fastness control to reduce rubbing or washing complaints."
+    },
+    {
+      question: "Does reactive dyeing guarantee perfect colorfastness?",
+      answer:
+        "No. Colorfastness depends on the full process, including dye selection, fixation, washing, soaping, finishing, and testing conditions."
+    }
+  ]
+},
+
+{
+  slug: "finishing-effects-cotton-knits",
+  title: "Finishing Effects on Cotton Knitted Fabric",
+  category: "Fabric Finishing",
+  topicCluster: "Fabric Finishing",
+  buyerIntent: "Understand how finishing changes cotton knit fabric behavior",
+  tags: ["finishing", "cotton", "hand feel", "compacting", "shrinkage"],
+  metaDescription:
+    "How finishing affects cotton knitted fabric, including hand feel, shrinkage, compacting, width, GSM, surface appearance, and production expectations.",
+  shortAnswer:
+    "Finishing gives cotton knit fabric its final commercial character. It can change softness, width, GSM, shrinkage behavior, surface appearance, and garment feel.",
+  sections: [
+    {
+      heading: "What finishing controls",
+      body:
+        "Finishing helps control the final touch, appearance, stability, shrinkage behavior, width, GSM, and surface character of cotton knitted fabric."
+    },
+    {
+      heading: "Common finishing routes",
+      body:
+        "Softener finishing can improve touch, enzyme or bio-polish can clean the surface, silicone can create smoother hand feel, compacting can improve dimensional stability, and stentering can control width and appearance."
+    },
+    {
+      heading: "Tradeoffs buyers should understand",
+      body:
+        "Softness, stability, GSM, width, shrinkage, absorbency, and delivery time cannot always be maximized together. Finishing choices should match garment goals."
+    }
+  ],
+  guidance: [
+    "Clarify whether the buyer prioritizes softness, stability, width, GSM, or shrinkage.",
+    "Use approved samples carefully because bulk finishing can still vary.",
+    "Discuss compacting when shrinkage control is important.",
+    "Avoid promising maximum softness and maximum dimensional stability without tradeoff discussion."
+  ],
+  mistakes: [
+    "Approving only softness without checking shrinkage.",
+    "Ignoring how compacting affects width and GSM.",
+    "Treating finishing as decoration rather than production control.",
+    "Expecting greige fabric hand feel to represent finished fabric."
+  ],
+  faqs: [
+    {
+      question: "Can finishing change fabric hand feel?",
+      answer:
+        "Yes. Softener, silicone, enzyme, drying, and compacting can all influence the final touch and garment perception."
+    },
+    {
+      question: "Does compacting prevent all shrinkage?",
+      answer:
+        "No. Compacting can improve dimensional stability, but shrinkage still depends on fabric structure, yarn, finishing, washing, and garment construction."
+    },
+    {
+      question: "Can finishing affect GSM and width?",
+      answer:
+        "Yes. Finishing tension, drying, stentering, and compacting can influence finished GSM and width."
+    }
+  ]
 }
+
 ];
 
 export function getTextileKnowledgePage(slug) {

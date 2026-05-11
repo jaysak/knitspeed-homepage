@@ -1006,3 +1006,44 @@ Important operational lesson:
 - Quote CTA debugging issue was route confusion:
   - `/knowledge` = index
   - `/knowledge/:slug` = article page
+
+---
+
+# CURRENT CHECKPOINT — Phase 3.6C
+
+Status:
+- stable local checkpoint
+- dyeing knowledge system active
+- temporal manufacturing intelligence active internally
+
+Implemented:
+- production-aware dyeing knowledge pages
+- registry-driven dyeing routes
+- temporal manufacturing signal layer
+- seasonal pressure logic
+- dyeing complexity scoring
+- sourcing volatility signals
+- production readiness scoring
+- defensive knowledge article rendering
+- normalized related knowledge routing
+
+Verified:
+- dyeing article routes render
+- related buyer guide links work
+- build passes
+- calm UX preserved
+
+Current architecture direction:
+semantic textile authority
+→ production memory
+→ relationship weighting
+→ temporal manufacturing intelligence
+→ future sourcing intelligence
+
+Next likely safe slice:
+- Phase 3.6C-2 — Quote urgency inference
+- hidden operational weighting only
+- no UI changes
+- no schema changes
+- no dashboard expansion
+

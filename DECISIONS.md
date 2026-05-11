@@ -155,3 +155,29 @@ Current approved layers:
 - Production memory
 - Relationship weighting
 - Runtime operational enrichment
+
+---
+
+## Decision — Dyeing Knowledge Ownership
+
+Dyeing and manufacturing intelligence should remain owned by Knitspeed as internal manufacturing knowledge.
+
+Rules:
+- do not expose individual expert/operator names publicly in frontend metadata
+- preserve human expertise internally while keeping platform authority unified
+- frame dyeing behavior as production-aware operational guidance
+- avoid defect-panic or blame-oriented language
+- preserve sourcing-safe and commercially safe positioning
+
+Accepted architecture:
+- semantic textile authority
+- production memory
+- relationship weighting
+- temporal manufacturing signals
+
+Rejected direction:
+- flashy AI dashboards
+- exposed internal scoring systems
+- noisy prediction UX
+- fake automation language
+

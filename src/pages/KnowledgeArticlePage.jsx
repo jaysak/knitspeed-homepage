@@ -135,7 +135,7 @@ export default function KnowledgeArticlePage({ page }) {
         <section>
           <h2 className="text-2xl font-extrabold text-slate-900">Comparison summary</h2>
           <div className="mt-5 grid gap-6 lg:grid-cols-2">
-            {page.comparison.map((item) => (
+            {(page.comparison || []).map((item) => (
               <div key={item.name}>
                 <h3 className="mb-3 text-lg font-extrabold text-slate-900">{item.name}</h3>
                 <SpecSummaryGrid specs={item.specs} />
@@ -149,7 +149,7 @@ export default function KnowledgeArticlePage({ page }) {
         <section>
           <h2 className="text-2xl font-extrabold text-slate-900">Practical buyer guidance</h2>
           <ul className="mt-5 space-y-3 text-base leading-7 text-slate-600">
-            {page.guidance.map((item) => (
+            {(page.guidance || []).map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>
@@ -158,7 +158,7 @@ export default function KnowledgeArticlePage({ page }) {
         <section>
           <h2 className="text-2xl font-extrabold text-slate-900">Common mistakes</h2>
           <ul className="mt-5 space-y-3 text-base leading-7 text-slate-600">
-            {page.mistakes.map((item) => (
+            {(page.mistakes || []).map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>

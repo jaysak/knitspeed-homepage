@@ -1,3 +1,4 @@
+import { getTemporalManufacturingSignals } from "./intelligence/temporalManufacturingSignals"
 import { TEXTILE_KNOWLEDGE_PAGES } from "../data/textileKnowledgePages";
 import { getProductionMemory } from "./production/productionMemory";
 import { getRelationshipWeight } from "./intelligence/relationshipWeights";

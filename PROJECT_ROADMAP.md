@@ -693,3 +693,41 @@ Near-future opportunities:
 - Add quote urgency inference
 - Add sourcing stability signals
 - Keep all signals internal before exposing customer-facing logic
+
+---
+
+## Phase 3.6C — Temporal Manufacturing Intelligence
+
+Status:
+- active
+- first implementation complete
+
+Implemented:
+- seasonal production pressure signals
+- dyeing complexity weighting
+- sourcing volatility signals
+- production readiness signals
+- operational dyeing knowledge expansion
+
+Strategic direction:
+- hidden operational intelligence only
+- deterministic and inspectable logic
+- no visible AI clutter
+- no noisy operational dashboards
+- preserve calm sourcing-aware UX
+
+Current manufacturing intelligence coverage:
+- cotton knit dyeing process
+- dyeing painpoints
+- reactive dyeing
+- finishing effects
+- shrinkage and width behavior
+- colorfastness considerations
+- spirality considerations
+- operational production guidance
+
+Next:
+- quote urgency inference
+- hidden sourcing stability weighting
+- future procurement intelligence foundation
+
