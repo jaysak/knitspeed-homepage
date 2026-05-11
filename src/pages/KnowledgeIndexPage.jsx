@@ -45,6 +45,35 @@ function useKnowledgeIndexMeta() {
   }, []);
 }
 
+
+const CLUSTER_DESCRIPTIONS = {
+  "fabric-structures":
+    "Understanding knitted fabric construction, stability, and garment behavior.",
+  "fabric-behavior":
+    "Production-aware guidance for shrinkage, spirality, pilling, and wash behavior.",
+  "fabric-specification":
+    "Practical GSM, width, and specification guidance for apparel sourcing.",
+  "fabric-finishing":
+    "How finishing processes influence hand feel, stability, and garment outcome.",
+  "yarn-quality":
+    "How yarn selection affects fabric appearance, surface clarity, and performance.",
+  "production-behavior":
+    "Operational textile considerations across knitting, finishing, and garment production.",
+  "Fabric Dyeing":
+    "Dyeing process guidance, color behavior, and production-sensitive sourcing considerations.",
+  "Fabric Finishing":
+    "Finishing process considerations for hand feel, stability, and garment performance.",
+  "Production Behavior":
+    "Production-aware sourcing guidance for garment manufacturing and wash outcome.",
+};
+
+function getClusterDescription(clusterKey) {
+  return (
+    CLUSTER_DESCRIPTIONS[clusterKey] ||
+    "Textile sourcing and production guidance."
+  );
+}
+
 function normalizeText(value) {
   return String(value || "").toLowerCase().trim();
 }
@@ -223,6 +252,10 @@ export default function KnowledgeIndexPage() {
                         <h2 className="mt-1 text-2xl font-extrabold text-slate-950">
                           {cluster.label}
                         </h2>
+
+                        <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
+                          {getClusterDescription(cluster.key)}
+                        </p>
                       </div>
                       <p className="text-sm font-semibold text-slate-500">
                         {clusterPages.length} guide{clusterPages.length === 1 ? "" : "s"}

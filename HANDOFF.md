@@ -1072,3 +1072,48 @@ If watermark is not visible:
 Magic words for next boot:
 > Jarvis, continue Knitspeed from checkpoint after operational context, manufacturing sensitivity, and knowledge watermark sprint. Repo is `knitspeed-homepage` at `/Users/jaythaveesak/Desktop/knitspeed-homepage`. Latest strategic state: semantic textile authority + dyeing intelligence + operational context + manufacturing sensitivity are active. Watermark was added but visual confirmation may still be pending. First check `HANDOFF.md`, `PROJECT_ROADMAP.md`, `DECISIONS.md`, and `SESSIONS.md`, then inspect git status before patching.
 
+
+---
+
+# CURRENT CHECKPOINT — Phase 3.6A Semantic Textile Knowledge Graph
+
+Status:
+- established
+- build and lint passing
+- visual confirmation completed
+
+Implemented:
+- semantic article metadata:
+  - fabricFamilies
+  - yarnFamilies
+  - processFamilies
+  - riskSignals
+  - buyerJourneyStage
+- weighted related knowledge scoring now uses shared semantic textile metadata
+- related guide headings adapt by topic cluster
+- `/knowledge` cluster headings now include calm semantic descriptions
+- subtle knowledge watermark remains intentionally very light
+
+Verified:
+- `npm run build` passes
+- `npm run lint` passes
+- `/knowledge` visually reads as a structured textile intelligence hub
+- article related guide headings are semantic instead of generic
+
+Do next:
+- 3.6A-5 Mobile Progressive Disclosure Layer
+  - make dense secondary sections collapsible on mobile only
+  - candidates: Related Guides, FAQ, Operational Context, Production Memory
+  - keep core article content expanded
+- after that: 3.6B Manufacturing Intelligence Layer
+
+Do not do next:
+- no CMS
+- no routing overhaul
+- no Supabase changes
+- no admin dashboard changes
+- no quote flow changes
+- no noisy AI UI
+
+Magic words for next boot:
+> Jarvis, continue Knitspeed from Phase 3.6A checkpoint. Semantic textile knowledge graph is established, build/lint passed, and `/knowledge` visual check is complete. Next safe slice is 3.6A-5 Mobile Progressive Disclosure Layer before starting 3.6B Manufacturing Intelligence. First inspect HANDOFF.md, PROJECT_ROADMAP.md, DECISIONS.md, and SESSIONS.md, then inspect git status before patching.

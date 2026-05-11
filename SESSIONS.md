@@ -1339,3 +1339,48 @@ Notes:
 - no further design interference planned after this pass
 - if not visible, check opacity, z-index, asset path, and dev server refresh
 
+
+---
+
+## Phase 3.6A — Semantic Textile Knowledge Graph
+
+Status:
+- established
+- build and lint passing
+- visual confirmation completed on `/knowledge`
+
+Summary:
+- added semantic metadata primitives to knowledge articles:
+  - fabricFamilies
+  - yarnFamilies
+  - processFamilies
+  - riskSignals
+  - buyerJourneyStage
+- upgraded related knowledge scoring to use semantic textile relationships
+- related guide headings now adapt by topic cluster
+- `/knowledge` cluster navigation now includes calm semantic descriptions
+- preserved lightweight architecture and editorial textile intelligence feel
+
+Strategic effect:
+- knowledge pages now behave as structured textile intelligence nodes
+- related guides are no longer only tag/category based
+- textile causality, production risk, buyer journey, yarn/process/fabric relationships can now compound
+- foundation is ready for future mobile progressive disclosure and manufacturing intelligence expansion
+
+Verification:
+- `npm run build` passes
+- `npm run lint` passes
+- visual check confirmed `/knowledge` feels like a structured textile intelligence hub
+
+Rules preserved:
+- no CMS
+- no routing overhaul
+- no Supabase changes
+- no admin dashboard changes
+- no quote flow changes
+- no Prime scoring changes
+- no flashy AI UI
+
+Next:
+- Phase 3.6A-5 Mobile Progressive Disclosure Layer
+- then Phase 3.6B Manufacturing Intelligence Layer

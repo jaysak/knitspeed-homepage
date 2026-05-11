@@ -814,3 +814,36 @@ Rules:
 - keep focus on textile intelligence and buyer education
 - no aggressive visual redesign
 
+
+---
+
+## Phase 3.6A — Semantic Textile Knowledge Graph
+
+Status:
+- established
+
+Purpose:
+- turn knowledge articles from flat educational pages into structured textile intelligence nodes
+- support better related guide logic, semantic navigation, future buyer-intent inference, and manufacturing intelligence
+
+Implemented:
+- semantic metadata primitives:
+  - fabricFamilies
+  - yarnFamilies
+  - processFamilies
+  - riskSignals
+  - buyerJourneyStage
+- weighted semantic relationship scoring
+- contextual related-guide labels
+- knowledge cluster descriptions on `/knowledge`
+- calm semantic hub structure
+
+Strategic role:
+- foundation for textile reasoning
+- foundation for future sourcing-intent inference
+- foundation for manufacturing-aware recommendations
+- foundation for future operational textile intelligence
+
+Next:
+- 3.6A-5 Mobile Progressive Disclosure Layer
+- 3.6B Manufacturing Intelligence Layer

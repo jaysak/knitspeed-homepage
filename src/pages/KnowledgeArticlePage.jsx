@@ -23,6 +23,22 @@ import {
   getCanonicalKnowledgeUrl,
 } from "../lib/seoSchema";
 
+const RELATED_GUIDE_LABELS = {
+  "fabric-structures": "Related Fabric Structure Guides",
+  "fabric-behavior": "Related Fabric Behavior Guides",
+  "fabric-specification": "Related Fabric Specification Guides",
+  "fabric-finishing": "Related Finishing Guides",
+  "production-behavior": "Related Production Behavior Guides",
+  "yarn-quality": "Related Yarn Quality Guides",
+  "Fabric Dyeing": "Related Dyeing Guides",
+  "Fabric Finishing": "Related Finishing Guides",
+  "Production Behavior": "Related Production Behavior Guides",
+};
+
+function getRelatedGuideLabel(page) {
+  return RELATED_GUIDE_LABELS[page?.topicCluster] || "Related Textile Guides";
+}
+
 function useKnowledgePageMeta(page) {
   useEffect(() => {
     if (!page) {
@@ -182,7 +198,7 @@ export default function KnowledgeArticlePage({ page }) {
         {relatedPages.length > 0 && (
           <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
             <p className="text-sm font-semibold uppercase tracking-wide text-sky-700">
-              Related Buyer Guides
+              {getRelatedGuideLabel(page)}
             </p>
             <div className="mt-4 grid gap-3 md:grid-cols-2">
               {relatedPages.map((relatedPage) => (

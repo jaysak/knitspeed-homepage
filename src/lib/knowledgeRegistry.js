@@ -152,6 +152,13 @@ export function getKnowledgePageManufacturingSensitivity(slug) {
   return getManufacturingSensitivity(page);
 }
 
+
+function countSharedValues(sourceValues = [], candidateValues = []) {
+  const sourceSet = new Set(sourceValues || []);
+
+  return (candidateValues || []).filter((value) => sourceSet.has(value)).length;
+}
+
 function scoreKnowledgeRelationship(sourcePage, candidatePage) {
   if (!sourcePage || !candidatePage) return 0;
 
@@ -171,6 +178,18 @@ function scoreKnowledgeRelationship(sourcePage, candidatePage) {
 
   score += sharedTags.length * 0.08;
 
+  score += countSharedValues(sourcePage.fabricFamilies, candidatePage.fabricFamilies) * 0.14;
+  score += countSharedValues(sourcePage.yarnFamilies, candidatePage.yarnFamilies) * 0.12;
+  score += countSharedValues(sourcePage.processFamilies, candidatePage.processFamilies) * 0.1;
+  score += countSharedValues(sourcePage.riskSignals, candidatePage.riskSignals) * 0.16;
+
+  if (
+    sourcePage.buyerJourneyStage &&
+    sourcePage.buyerJourneyStage === candidatePage.buyerJourneyStage
+  ) {
+    score += 0.12;
+  }
+
   if (
     sourcePage.topicCluster === "yarn-quality" &&
     candidatePage.topicCluster === "fabric-specification"
@@ -186,4 +205,24 @@ function scoreKnowledgeRelationship(sourcePage, candidatePage) {
   }
 
   return Number(score.toFixed(2));
+}
+
+
+export function getProductionSensitiveKnowledgePages() {
+  return getAllKnowledgePages()
+    .map((page) => ({
+      ...page,
+      manufacturingSensitivity: getKnowledgePageManufacturingSensitivity(page.slug)
+    }))
+    .filter((page) => {
+      const level = page.manufacturingSensitivity?.level;
+      return level === "high" || level === "moderate";
+    })
+    .sort((a, b) => {
+      return (
+        (b.manufacturingSensitivity?.score || 0) -
+        (a.manufacturingSensitivity?.score || 0)
+      );
+    })
+    .slice(0, 6);
 }

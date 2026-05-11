@@ -220,3 +220,30 @@ Rules:
 - preserve clean editorial sourcing-intelligence feel
 - avoid further design interference unless needed for readability or trust
 
+
+---
+
+## Decision — Semantic Textile Graph Before Manufacturing Intelligence
+
+Knitspeed knowledge pages should now be treated as structured textile intelligence nodes, not flat articles.
+
+Accepted semantic primitives:
+- fabricFamilies
+- yarnFamilies
+- processFamilies
+- riskSignals
+- buyerJourneyStage
+
+Rules:
+- use semantic relationships to improve related guide logic
+- keep relationship scoring deterministic and inspectable
+- preserve calm editorial UX
+- avoid noisy AI labels or dashboard-style recommendations
+- keep mobile density management as progressive disclosure, not hidden content
+
+Sequencing:
+1. semantic graph foundation
+2. mobile progressive disclosure
+3. manufacturing intelligence expansion
+4. buyer-intent inference
+5. operational textile OS
