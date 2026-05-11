@@ -2015,7 +2015,7 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
     shortTitle: "Screen Print & Fabric Behavior",
     metaDescription:
       "Learn why screen printing can behave differently across knitted fabrics depending on GSM, surface texture, finishing, shrinkage, washing, and garment construction.",
-    topicCluster: "garment-production",
+    topicCluster: "decoration-printing",
     buyerIntent: "understand print compatibility before apparel production",
     tags: ["screen printing", "fabric surface", "print cracking", "streetwear", "wash testing"],
     fabricFamilies: ["single jersey", "interlock", "rib", "knitted fabrics"],
@@ -2091,7 +2091,7 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
     shortTitle: "Embroidery & Fabric Stability",
     metaDescription:
       "Understand how embroidery can affect knitted fabric behavior through needle tension, fabric stability, GSM, stretch, distortion, and wash performance.",
-    topicCluster: "garment-production",
+    topicCluster: "decoration-printing",
     buyerIntent: "understand embroidery compatibility before apparel production",
     tags: ["embroidery", "fabric stability", "needle tension", "garment decoration", "wash behavior"],
     fabricFamilies: ["single jersey", "interlock", "rib", "knitted fabrics"],
@@ -2321,7 +2321,7 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
     shortTitle: "Large Prints & Garment Feel",
     metaDescription:
       "Understand why large screen prints can affect garment feel, stretch, drape, breathability, washing behavior, and comfort on knitted apparel.",
-    topicCluster: "garment-production",
+    topicCluster: "decoration-printing",
     buyerIntent: "understand large print effects before apparel production",
     tags: ["large print", "screen printing", "garment feel", "streetwear", "print hand feel"],
     fabricFamilies: ["single jersey", "interlock", "knitted fabrics"],
@@ -2397,7 +2397,7 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
     shortTitle: "Print Placement on Stretch Fabrics",
     metaDescription:
       "Learn why print placement matters on stretch knitted fabrics because movement zones, seams, rib areas, garment fit, and washing behavior affect print durability and appearance.",
-    topicCluster: "garment-production",
+    topicCluster: "decoration-printing",
     buyerIntent: "understand print placement risk before production",
     tags: ["print placement", "stretch fabric", "screen printing", "garment movement", "print durability"],
     fabricFamilies: ["single jersey", "rib", "interlock", "knitted fabrics"],
