@@ -1862,7 +1862,7 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
     shortTitle: "Size Ratio & Fabric Use",
     metaDescription:
       "Learn why garment size ratios affect fabric consumption, marker efficiency, cutting waste, and apparel quotation planning.",
-    topicCluster: "Garment Production",
+    topicCluster: "garment-production",
     buyerIntent: "understand garment consumption planning",
     tags: ["size ratio", "fabric consumption", "marker efficiency", "cutting waste", "garment production"],
     fabricFamilies: ["knitted fabrics"],
@@ -1938,7 +1938,7 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
     shortTitle: "Oversized Garment Fabric Use",
     metaDescription:
       "Understand why oversized T-shirts and streetwear garments often require more fabric because of fit, panel geometry, width, cutting efficiency, and garment construction.",
-    topicCluster: "Garment Production",
+    topicCluster: "garment-production",
     buyerIntent: "understand oversized garment fabric planning",
     tags: ["oversized t-shirt", "streetwear", "fabric usage", "garment yield", "cutting efficiency"],
     fabricFamilies: ["single jersey", "interlock", "rib", "knitted fabrics"],
@@ -2015,7 +2015,7 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
     shortTitle: "Screen Print & Fabric Behavior",
     metaDescription:
       "Learn why screen printing can behave differently across knitted fabrics depending on GSM, surface texture, finishing, shrinkage, washing, and garment construction.",
-    topicCluster: "Garment Production",
+    topicCluster: "garment-production",
     buyerIntent: "understand print compatibility before apparel production",
     tags: ["screen printing", "fabric surface", "print cracking", "streetwear", "wash testing"],
     fabricFamilies: ["single jersey", "interlock", "rib", "knitted fabrics"],
@@ -2091,7 +2091,7 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
     shortTitle: "Embroidery & Fabric Stability",
     metaDescription:
       "Understand how embroidery can affect knitted fabric behavior through needle tension, fabric stability, GSM, stretch, distortion, and wash performance.",
-    topicCluster: "Garment Production",
+    topicCluster: "garment-production",
     buyerIntent: "understand embroidery compatibility before apparel production",
     tags: ["embroidery", "fabric stability", "needle tension", "garment decoration", "wash behavior"],
     fabricFamilies: ["single jersey", "interlock", "rib", "knitted fabrics"],
