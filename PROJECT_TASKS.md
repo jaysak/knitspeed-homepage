@@ -349,3 +349,12 @@ Relationship quality and operational intelligence are more important than platfo
 - Define reorder-cycle and dye-queue sensitivity signals
 - Keep temporal intelligence internal only
 - Consider later CTA weighting, not UI expansion
+
+## Completed Local Slice — Phase 3.6B-3
+
+- Added Production Relationships UI for knowledge articles
+- Reuses hidden manufacturing causality summaries from `src/lib/intelligence/manufacturingCausality.js`
+- Shows max 3 affected production areas in a calm sourcing-aware card
+- Preserves mobile progressive disclosure behavior
+- Verified with build, lint, and browser visual smoke
+- Pending Jay's git checkpoint

@@ -275,3 +275,47 @@ Reason:
 - prevent ontology drift
 - preserve semantic graph integrity
 - stabilize future recommendation and inference systems
+
+---
+
+## Decision — Freeze Knowledge Breadth and Shift Toward Intelligence Depth
+
+The Knitspeed knowledge layer has reached sufficient semantic coverage for the current operational scope.
+
+Approximate current scale:
+- ~40 high-density textile operational knowledge articles
+
+Platform boundary:
+- fabric
+- dyeing
+- finishing
+- garment production
+- decoration behavior
+- washing behavior
+- sourcing outcomes
+- operational manufacturing causality
+
+Avoid future drift into:
+- generic fashion media
+- trend content
+- broad printing-industry encyclopedic expansion
+- lifestyle/editorial content
+- shallow SEO expansion
+
+Strategic direction now shifts toward:
+- semantic continuity
+- operational inference
+- procurement continuity intelligence
+- sourcing-memory reasoning
+- manufacturing causality weighting
+- deterministic operational enrichment
+
+Priority rule:
+- future defensibility should come from intelligence depth, not article quantity
+
+UI rule:
+- preserve calm sourcing-aware UX
+- avoid noisy AI recommendation systems
+- avoid engagement-gamification patterns
+- keep operational intelligence mostly hidden and inspectable
+

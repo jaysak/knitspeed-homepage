@@ -2620,6 +2620,355 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
       "what-gsm-should-t-shirts-use"
     ]
   },
+  {
+    slug: "why-puff-prints-behave-differently-on-knitted-fabrics",
+    title: "Why Puff Prints Behave Differently on Knitted Fabrics",
+    shortTitle: "Puff Print Behavior",
+    metaDescription:
+      "Understand why puff prints behave differently depending on fabric stretch, GSM, washing, curing, and knitted fabric structure.",
+    topicCluster: "decoration-printing",
+    buyerIntent: "understand puff print behavior before apparel production",
+    tags: ["puff print", "screen printing", "stretch", "streetwear", "washing"],
+    fabricFamilies: ["single jersey", "interlock", "knitted fabrics"],
+    yarnFamilies: ["cotton", "compact cotton", "cotton blends"],
+    processFamilies: ["screen printing", "garment production", "washing"],
+    riskSignals: ["surface distortion", "print cracking", "reduced stretch", "wash behavior"],
+    buyerJourneyStage: "style development",
+    summary:
+      "Puff prints react differently across knitted fabrics because expansion height, stretch behavior, washing, and curing interact with fabric structure and garment movement.",
+    shortAnswer:
+      "Puff prints create raised surface texture, so fabric stretch, washing, curing, and garment movement affect durability and appearance more visibly.",
+    sections: [
+      {
+        heading: "Raised prints respond differently to stretch",
+        body:
+          "Because puff prints sit higher above the fabric surface, movement and stretch can affect cracking, expansion consistency, and surface appearance more noticeably."
+      },
+      {
+        heading: "Fabric softness changes puff perception",
+        body:
+          "Soft knitted fabrics may create stronger contrast between the raised print and surrounding garment surface."
+      },
+      {
+        heading: "Washing affects texture and expansion",
+        body:
+          "Washing can influence print texture, softness, recovery, and visual consistency depending on print chemistry and curing quality."
+      }
+    ],
+    guidance: [
+      "Test puff prints after washing before bulk approval.",
+      "Review puff height consistency on production fabric.",
+      "Consider stretch zones and oversized silhouettes carefully."
+    ],
+    mistakes: [
+      "Approving puff print only before washing.",
+      "Ignoring stretch behavior around large puff areas.",
+      "Testing puff texture on different fabric from production."
+    ],
+    faqs: [
+      {
+        question: "Do puff prints crack more easily?",
+        answer:
+          "Puff prints may show cracking more visibly if stretch, curing, washing, or garment movement are not aligned with the fabric behavior."
+      }
+    ],
+    related: [
+      "why-large-prints-affect-garment-feel",
+      "what-causes-print-cracking-on-tshirts",
+      "why-screen-printing-behaves-differently-on-fabrics"
+    ]
+  },
+  {
+    slug: "dtg-vs-screen-printing-on-knitted-garments",
+    title: "DTG vs Screen Printing on Knitted Garments",
+    shortTitle: "DTG vs Screen Printing",
+    metaDescription:
+      "Compare DTG and screen printing behavior on knitted garments, including surface feel, durability, color appearance, and washing behavior.",
+    topicCluster: "decoration-printing",
+    buyerIntent: "compare garment printing methods before production",
+    tags: ["DTG", "screen printing", "garment printing", "washing", "print durability"],
+    fabricFamilies: ["single jersey", "interlock", "knitted fabrics"],
+    yarnFamilies: ["cotton", "compact cotton"],
+    processFamilies: ["printing", "garment production", "washing"],
+    riskSignals: ["wash behavior", "surface variation", "print durability"],
+    buyerJourneyStage: "material comparison",
+    summary:
+      "DTG and screen printing create different visual, surface, and durability behavior depending on artwork style, garment use, fabric surface, and washing conditions.",
+    shortAnswer:
+      "DTG usually creates softer detailed prints, while screen printing can provide stronger opacity and durability depending on ink system and production control.",
+    sections: [
+      {
+        heading: "Surface feel can differ",
+        body:
+          "DTG often produces a softer print surface for detailed artwork, while screen printing may create thicker or more structured coverage depending on ink deposit."
+      },
+      {
+        heading: "Artwork style influences method choice",
+        body:
+          "Detailed gradients and photographic artwork may behave differently from bold graphics or large solid areas."
+      },
+      {
+        heading: "Washing behavior still matters",
+        body:
+          "Both methods should be checked after washing because print feel, color appearance, and surface behavior can change after laundering."
+      }
+    ],
+    guidance: [
+      "Review print feel on actual production fabric.",
+      "Wash test printed samples before approval.",
+      "Match print method with artwork style and garment use."
+    ],
+    mistakes: [
+      "Choosing print method only from online visuals.",
+      "Ignoring washing and stretch behavior.",
+      "Comparing prints on different fabric bases."
+    ],
+    faqs: [
+      {
+        question: "Is DTG softer than screen printing?",
+        answer:
+          "Sometimes DTG feels softer, but softness also depends on fabric surface, pretreatment, ink coverage, and garment finishing."
+      }
+    ],
+    related: [
+      "why-screen-printing-behaves-differently-on-fabrics",
+      "why-some-prints-feel-heavier-than-others",
+      "why-large-prints-affect-garment-feel"
+    ]
+  },
+  {
+    slug: "how-heat-transfer-prints-affect-durability",
+    title: "How Heat Transfer Prints Affect Durability",
+    shortTitle: "Heat Transfer Durability",
+    metaDescription:
+      "Understand how heat transfer prints can affect durability, washing behavior, stretch, and garment feel on knitted apparel.",
+    topicCluster: "decoration-printing",
+    buyerIntent: "understand heat transfer durability before production",
+    tags: ["heat transfer", "print durability", "washing", "stretch", "garment feel"],
+    fabricFamilies: ["single jersey", "interlock", "knitted fabrics"],
+    yarnFamilies: ["cotton", "cotton blends", "poly blends"],
+    processFamilies: ["heat transfer", "washing", "garment production"],
+    riskSignals: ["surface peeling", "reduced stretch", "wash behavior"],
+    buyerJourneyStage: "production planning",
+    summary:
+      "Heat transfer durability depends on fabric surface, stretch, washing conditions, transfer quality, and garment use.",
+    shortAnswer:
+      "Heat transfer prints can perform well, but durability depends on application quality, washing behavior, fabric stretch, and garment movement.",
+    sections: [
+      {
+        heading: "Stretch influences transfer durability",
+        body:
+          "High-stretch garments can place additional stress on transfer areas, especially around movement zones."
+      },
+      {
+        heading: "Washing conditions matter",
+        body:
+          "Repeated washing, heat exposure, and garment abrasion can affect transfer appearance and durability over time."
+      },
+      {
+        heading: "Fabric surface affects adhesion",
+        body:
+          "Different fabric surfaces and finishing conditions can influence how transfers bond and behave after production."
+      }
+    ],
+    guidance: [
+      "Wash test transfers before bulk approval.",
+      "Review stretch recovery around transfer zones.",
+      "Align transfer method with garment use expectations."
+    ],
+    mistakes: [
+      "Ignoring stretch behavior on activewear or oversized garments.",
+      "Approving transfers before wash testing.",
+      "Using transfer samples on different production fabrics."
+    ],
+    faqs: [
+      {
+        question: "Do heat transfers always peel?",
+        answer:
+          "Not necessarily. Durability depends on transfer quality, application control, washing, stretch, and garment use."
+      }
+    ],
+    related: [
+      "what-causes-print-cracking-on-tshirts",
+      "why-large-prints-affect-garment-feel",
+      "why-screen-printing-behaves-differently-on-fabrics"
+    ]
+  }
+,
+  {
+    slug: "how-printing-affects-garment-breathability",
+    title: "How Printing Affects Garment Breathability",
+    shortTitle: "Print Breathability",
+    metaDescription:
+      "Understand how print coverage, ink deposit, garment construction, and fabric structure can affect breathability and comfort in printed garments.",
+    topicCluster: "decoration-printing",
+    buyerIntent: "understand garment comfort before print production",
+    tags: ["print breathability", "screen printing", "garment comfort", "fabric airflow", "streetwear"],
+    fabricFamilies: ["single jersey", "interlock", "knitted fabrics"],
+    yarnFamilies: ["cotton", "compact cotton", "cotton blends"],
+    processFamilies: ["screen printing", "garment production", "washing"],
+    riskSignals: ["reduced airflow", "comfort mismatch", "heavy coverage", "heat retention"],
+    buyerJourneyStage: "style development",
+    summary:
+      "Printing can affect garment breathability because print coverage changes airflow, surface flexibility, moisture release, and heat retention across the fabric.",
+    shortAnswer:
+      "Large or dense print coverage can reduce airflow and change how breathable a garment feels during wear.",
+    sections: [
+      {
+        heading: "Print coverage affects airflow",
+        body:
+          "Large solid print areas may reduce airflow through the fabric surface, especially on lightweight knitted garments."
+      },
+      {
+        heading: "Fabric softness changes comfort perception",
+        body:
+          "Soft fabrics can make heavy print coverage feel more noticeable because the printed zone behaves differently from the surrounding fabric."
+      },
+      {
+        heading: "Garment use matters",
+        body:
+          "Comfort expectations differ between fashion garments, oversized streetwear, uniforms, and activewear."
+      }
+    ],
+    guidance: [
+      "Check breathability expectations before approving large print areas.",
+      "Match print method with garment use and climate expectations.",
+      "Wash test garments after printing."
+    ],
+    mistakes: [
+      "Assuming all print methods feel equally breathable.",
+      "Ignoring wearer comfort during long-term use.",
+      "Judging print comfort only before washing."
+    ],
+    faqs: [
+      {
+        question: "Do large prints reduce breathability?",
+        answer:
+          "Large print areas can reduce airflow and change how heat and moisture move through the garment."
+      }
+    ],
+    related: [
+      "why-large-prints-affect-garment-feel",
+      "why-some-prints-feel-heavier-than-others",
+      "why-screen-printing-behaves-differently-on-fabrics"
+    ]
+  },
+  {
+    slug: "how-discharge-printing-behaves-on-knitted-fabrics",
+    title: "How Discharge Printing Behaves on Knitted Fabrics",
+    shortTitle: "Discharge Printing Behavior",
+    metaDescription:
+      "Learn how discharge printing behaves differently depending on dyeing, fabric composition, washing, and knitted fabric structure.",
+    topicCluster: "decoration-printing",
+    buyerIntent: "understand discharge printing before production",
+    tags: ["discharge printing", "washing", "fabric dyeing", "print softness", "streetwear"],
+    fabricFamilies: ["single jersey", "interlock", "knitted fabrics"],
+    yarnFamilies: ["cotton", "compact cotton", "cotton blends"],
+    processFamilies: ["printing", "dyeing", "washing"],
+    riskSignals: ["shade variation", "washing sensitivity", "surface inconsistency"],
+    buyerJourneyStage: "production planning",
+    summary:
+      "Discharge printing interacts closely with dyeing behavior, fabric composition, washing, and garment finishing conditions.",
+    shortAnswer:
+      "Discharge printing removes or replaces dye in selected areas, so fabric composition, dyeing method, and washing behavior strongly affect the final result.",
+    sections: [
+      {
+        heading: "Dyeing conditions influence discharge behavior",
+        body:
+          "Different dyeing processes and shades may react differently during discharge printing."
+      },
+      {
+        heading: "Fabric composition matters",
+        body:
+          "Some fibers and blends may respond differently to discharge chemistry and washing behavior."
+      },
+      {
+        heading: "Washing affects final appearance",
+        body:
+          "Garment washing can change softness, contrast, and surface appearance after discharge printing."
+      }
+    ],
+    guidance: [
+      "Test discharge printing on actual production fabric.",
+      "Review wash appearance after printing.",
+      "Confirm dyeing and fabric composition before bulk production."
+    ],
+    mistakes: [
+      "Assuming discharge behaves the same across all fabrics.",
+      "Ignoring washing influence on final appearance.",
+      "Testing on different fabric from production bulk."
+    ],
+    faqs: [
+      {
+        question: "Does discharge printing always feel softer?",
+        answer:
+          "Sometimes discharge prints feel softer, but softness still depends on fabric surface, dyeing, washing, and finishing."
+      }
+    ],
+    related: [
+      "reactive-dyeing-for-cotton-knits",
+      "why-screen-printing-behaves-differently-on-fabrics",
+      "what-affects-colorfastness-in-cotton-knits"
+    ]
+  },
+  {
+    slug: "how-printed-garments-change-after-repeated-washing",
+    title: "How Printed Garments Change After Repeated Washing",
+    shortTitle: "Print Aging After Washing",
+    metaDescription:
+      "Understand how repeated washing can affect print appearance, softness, cracking, fading, stretch, and garment feel over time.",
+    topicCluster: "decoration-printing",
+    buyerIntent: "understand long-term print durability before production",
+    tags: ["print aging", "washing", "garment durability", "print cracking", "garment feel"],
+    fabricFamilies: ["single jersey", "interlock", "knitted fabrics"],
+    yarnFamilies: ["cotton", "compact cotton", "cotton blends"],
+    processFamilies: ["printing", "washing", "garment production"],
+    riskSignals: ["surface aging", "print cracking", "fading", "comfort change"],
+    buyerJourneyStage: "post-sampling",
+    summary:
+      "Repeated washing can gradually change print appearance, softness, flexibility, color perception, and garment feel depending on fabric behavior and print method.",
+    shortAnswer:
+      "Printed garments may change over time because washing, abrasion, stretch, and garment use affect both the fabric and printed surface.",
+    sections: [
+      {
+        heading: "Print surfaces age differently",
+        body:
+          "Some print layers become softer over time, while others may reveal cracking, fading, or texture change after repeated washing."
+      },
+      {
+        heading: "Fabric behavior still matters",
+        body:
+          "Shrinkage, stretch recovery, and fabric movement continue affecting print durability throughout garment use."
+      },
+      {
+        heading: "Wear conditions influence aging",
+        body:
+          "Frequent washing, heat exposure, abrasion, and garment use all influence how prints age."
+      }
+    ],
+    guidance: [
+      "Wash test garments multiple times before approval when durability is important.",
+      "Review print feel and stretch after repeated laundering.",
+      "Align print expectations with garment use category."
+    ],
+    mistakes: [
+      "Evaluating print durability only before washing.",
+      "Ignoring stretch and abrasion during wear.",
+      "Assuming all print methods age similarly."
+    ],
+    faqs: [
+      {
+        question: "Do all prints crack over time?",
+        answer:
+          "Not always. Aging depends on print method, curing, washing conditions, fabric stretch, and garment use."
+      }
+    ],
+    related: [
+      "what-causes-print-cracking-on-tshirts",
+      "why-large-prints-affect-garment-feel",
+      "how-printing-affects-garment-breathability"
+    ]
+  }
 
 ];
 

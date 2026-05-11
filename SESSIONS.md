@@ -1617,3 +1617,49 @@ Current semantic direction:
 - decoration durability reasoning
 - garment wash behavior intelligence
 - apparel production realism
+
+---
+
+## Session — Phase 3.7H Decoration Intelligence Consolidation
+
+Summary:
+- completed final planned decoration-intelligence expansion
+- stabilized semantic scope boundary for the Knitspeed knowledge platform
+- intentionally paused further article expansion
+
+Implemented:
+- puff print behavior
+- DTG vs screen printing behavior
+- heat transfer durability
+- print breathability
+- discharge printing behavior
+- print aging after repeated washing
+
+Verification:
+- npm run lint passes
+- npm run build passes
+- npm run probe:intelligence passes
+
+Strategic outcome:
+- semantic textile graph now covers:
+  - fabric structures
+  - yarn quality
+  - dyeing
+  - finishing
+  - garment production
+  - decoration behavior
+  - wash durability
+  - sourcing realism
+  - operational garment outcomes
+
+Important decision:
+- article expansion intentionally paused after reaching approximately 40 operational knowledge articles
+- future expansion priority shifts from semantic breadth to intelligence depth
+
+Next planned direction:
+- Phase 3.8A Procurement Continuity Intelligence
+- operational continuity memory
+- sourcing-context accumulation
+- operational concern-pattern reasoning
+- silent deterministic operational enrichment
+

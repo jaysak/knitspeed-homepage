@@ -1372,3 +1372,66 @@ Next likely safe slice:
   - print breathability
 - preserve calm sourcing-aware editorial UX
 - preserve deterministic inspectable logic
+
+---
+
+# CURRENT CHECKPOINT — Phase 3.7H Decoration Intelligence Consolidation
+
+Status:
+- stable semantic checkpoint
+- build/lint/probe passing
+- decoration intelligence expansion complete
+- article expansion intentionally paused
+
+Implemented:
+- puff print behavior
+- DTG vs screen printing behavior
+- heat transfer durability
+- print breathability
+- discharge printing behavior
+- print aging after repeated washing
+
+Strategic clarification:
+- Knitspeed knowledge scope is now intentionally bounded
+- platform focus remains:
+  fabric → production → garment outcome → sourcing intelligence
+- avoid drifting into generic fashion/design/printing-industry content expansion
+
+Current platform identity:
+- production-aware textile sourcing intelligence
+- semantic textile operational infrastructure
+- deterministic operational reasoning system
+
+Important strategic decision:
+- no further article expansion planned for now
+- semantic breadth considered sufficient (~40 high-density operational articles)
+- future defensibility should come from:
+  - semantic continuity
+  - operational inference
+  - procurement intelligence
+  - sourcing continuity memory
+  - manufacturing causality reasoning
+
+Next likely safe slice:
+- Phase 3.8A — Procurement Continuity Intelligence
+
+Planned direction:
+- hidden operational continuity memory
+- deterministic sourcing-context accumulation
+- operational concern pattern recognition
+- knowledge journey signal interpretation
+- no visible AI recommendation UI
+- no dashboard expansion
+- no scoring UX
+- no chatbot layer
+
+Rules preserved:
+- calm editorial UX
+- deterministic inspectable logic
+- no ontology drift
+- no AI gimmick UI
+- no semantic cluster sprawl
+
+Magic words for next boot:
+> Jarvis, continue Knitspeed from Phase 3.7H consolidation checkpoint. Decoration intelligence expansion is complete, article expansion is intentionally paused, and next direction is Phase 3.8A Procurement Continuity Intelligence. Focus on silent operational continuity reasoning and sourcing-memory intelligence only. First inspect HANDOFF.md, PROJECT_ROADMAP.md, DECISIONS.md, SESSIONS.md, and git status before patching.
+
