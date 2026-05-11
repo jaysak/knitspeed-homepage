@@ -5,10 +5,12 @@ import FAQBlock from "../components/knowledge/FAQBlock";
 import KnowledgePageLayout from "../components/knowledge/KnowledgePageLayout";
 import QuoteCTA from "../components/knowledge/QuoteCTA";
 import ReadingProgressBar from "../components/knowledge/ReadingProgressBar";
+import OperationalContextBlock from "../components/knowledge/OperationalContextBlock";
 import SpecSummaryGrid from "../components/knowledge/SpecSummaryGrid";
 import ProductionMemoryPanel from "../components/production/ProductionMemoryPanel";
 import { writeBuyerIntentEvent } from "../lib/buyerIntent";
-import { getKnowledgePageProductionMemory, getRelatedKnowledgePages } from "../lib/knowledgeRegistry";
+import { getKnowledgePageProductionMemory,
+  getKnowledgePageOperationalContext, getRelatedKnowledgePages } from "../lib/knowledgeRegistry";
 import {
   KNITSPEED_SITE_URL,
   buildArticleSchema,
@@ -75,6 +77,8 @@ export default function KnowledgeArticlePage({ page }) {
 
     return getRelatedKnowledgePages(page.slug);
   }, [page]);
+
+  const operationalContext = getKnowledgePageOperationalContext(page.slug);
 
   const productionMemoryItems = useMemo(() => {
     if (!page) return [];
@@ -145,6 +149,8 @@ export default function KnowledgeArticlePage({ page }) {
         </section>
 
         <ProductionMemoryPanel items={productionMemoryItems} />
+
+        <OperationalContextBlock context={operationalContext} />
 
         <section>
           <h2 className="text-2xl font-extrabold text-slate-900">Practical buyer guidance</h2>
