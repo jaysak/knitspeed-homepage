@@ -1,3 +1,4 @@
+import { getOperationalContextForPage, summarizeOperationalContext } from "./operations/operationalContext";
 import { getTemporalManufacturingSignals } from "./intelligence/temporalManufacturingSignals"
 import { TEXTILE_KNOWLEDGE_PAGES } from "../data/textileKnowledgePages";
 import { getProductionMemory } from "./production/productionMemory";
@@ -121,6 +122,22 @@ export function getKnowledgePageTemporalSignals(slug) {
   }
 
   return getTemporalManufacturingSignals(page);
+}
+
+
+export function getKnowledgePageOperationalContext(slug) {
+  const page = getKnowledgePageBySlug(slug);
+
+  if (!page) {
+    return null;
+  }
+
+  const signals = getOperationalContextForPage(page);
+
+  return {
+    signals,
+    summary: summarizeOperationalContext(signals)
+  };
 }
 
 function scoreKnowledgeRelationship(sourcePage, candidatePage) {
