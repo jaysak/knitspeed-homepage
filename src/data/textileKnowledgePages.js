@@ -2009,6 +2009,159 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
     ]
   },
 
+  {
+    slug: "why-screen-printing-behaves-differently-on-fabrics",
+    title: "Why Screen Printing Behaves Differently on Fabrics",
+    shortTitle: "Screen Print & Fabric Behavior",
+    metaDescription:
+      "Learn why screen printing can behave differently across knitted fabrics depending on GSM, surface texture, finishing, shrinkage, washing, and garment construction.",
+    topicCluster: "Garment Production",
+    buyerIntent: "understand print compatibility before apparel production",
+    tags: ["screen printing", "fabric surface", "print cracking", "streetwear", "wash testing"],
+    fabricFamilies: ["single jersey", "interlock", "rib", "knitted fabrics"],
+    yarnFamilies: ["cotton", "compact cotton", "cotton blends"],
+    processFamilies: ["screen printing", "garment production", "finishing", "washing"],
+    riskSignals: ["print cracking", "shade variation", "surface instability", "wash behavior"],
+    buyerJourneyStage: "style development",
+    summary:
+      "Screen printing behaves differently across fabrics because print result depends on fabric surface, stretch, GSM, finishing, shrinkage, washing, and garment construction. The same print artwork can look and perform differently on different knitted fabrics.",
+    shortAnswer:
+      "Screen printing depends on more than artwork. Fabric surface, stretch, finishing, shrinkage, and washing behavior all affect print clarity, hand feel, cracking risk, and durability.",
+    sections: [
+      {
+        heading: "Fabric surface affects print clarity",
+        body:
+          "A smoother fabric surface usually supports cleaner print edges, while a hairier or more uneven surface may affect sharpness. Yarn quality, knitting structure, and finishing all influence how the print sits on the fabric."
+      },
+      {
+        heading: "Stretch changes print behavior",
+        body:
+          "Knitted fabrics stretch during wearing and washing. If the print layer cannot move with the fabric, cracking or distortion can appear more easily, especially on high-stretch areas or oversized silhouettes."
+      },
+      {
+        heading: "GSM is only one part of print planning",
+        body:
+          "Higher GSM can provide a more stable printing base, but GSM alone does not guarantee print quality. Surface texture, finishing, shrinkage control, and washing behavior often matter just as much."
+      },
+      {
+        heading: "Wash testing matters after printing",
+        body:
+          "Printing adds another production layer on top of fabric behavior. A fabric that looks stable before printing should still be checked after washing because shrinkage, print hand feel, and surface change can affect the final garment."
+      }
+    ],
+    guidance: [
+      "Confirm fabric surface and finishing before bulk printing.",
+      "Test print placement on actual production fabric when possible.",
+      "Check wash behavior after printing, not only before printing.",
+      "Match print technique with garment fit, stretch, and expected use."
+    ],
+    mistakes: [
+      "Assuming the same artwork behaves the same on every fabric.",
+      "Choosing fabric by GSM only without checking surface behavior.",
+      "Ignoring stretch when planning large print areas.",
+      "Approving fabric and print separately without wash testing the combined result."
+    ],
+    faqs: [
+      {
+        question: "Why can the same print look different on two fabrics?",
+        answer:
+          "Because fabric surface, yarn quality, finishing, stretch, and absorbency can affect print coverage, sharpness, hand feel, and durability."
+      },
+      {
+        question: "Does heavier GSM always print better?",
+        answer:
+          "Not always. Heavier GSM may improve stability, but print result also depends on surface smoothness, finishing, washing behavior, and print technique."
+      },
+      {
+        question: "Why does screen print crack after washing?",
+        answer:
+          "Cracking can relate to print chemistry, fabric stretch, curing, washing, shrinkage, and how much the printed area moves during wear."
+      }
+    ],
+    related: [
+      "how-fabric-finishing-affects-garment-feel",
+      "what-gsm-should-t-shirts-use",
+      "why-wash-testing-matters-for-apparel-fabrics",
+      "why-oversized-garments-use-more-fabric"
+    ]
+  },
+  {
+    slug: "why-embroidery-affects-fabric-behavior",
+    title: "Why Embroidery Affects Fabric Behavior",
+    shortTitle: "Embroidery & Fabric Stability",
+    metaDescription:
+      "Understand how embroidery can affect knitted fabric behavior through needle tension, fabric stability, GSM, stretch, distortion, and wash performance.",
+    topicCluster: "Garment Production",
+    buyerIntent: "understand embroidery compatibility before apparel production",
+    tags: ["embroidery", "fabric stability", "needle tension", "garment decoration", "wash behavior"],
+    fabricFamilies: ["single jersey", "interlock", "rib", "knitted fabrics"],
+    yarnFamilies: ["cotton", "compact cotton", "cotton blends"],
+    processFamilies: ["embroidery", "garment production", "washing", "finishing"],
+    riskSignals: ["fabric distortion", "puckering", "needle damage", "wash behavior"],
+    buyerJourneyStage: "style development",
+    summary:
+      "Embroidery affects fabric behavior because stitched decoration adds thread, tension, needle penetration, and local stiffness to the garment. Fabric stability, GSM, stretch, and finishing all influence whether embroidery sits cleanly after production and washing.",
+    shortAnswer:
+      "Embroidery changes local fabric behavior by adding stitch tension and structure. Stable fabric, suitable backing, proper placement, and wash testing help reduce puckering, distortion, and uneven appearance.",
+    sections: [
+      {
+        heading: "Embroidery adds tension to fabric",
+        body:
+          "Embroidery is not only a surface decoration. The stitching pulls on the fabric, and that tension can affect how the area around the artwork sits, especially on soft or stretchy knitted fabrics."
+      },
+      {
+        heading: "Fabric stability matters",
+        body:
+          "More stable fabrics usually handle embroidery better than very light, stretchy, or unstable fabrics. GSM helps, but structure, finishing, and stretch behavior are also important."
+      },
+      {
+        heading: "Placement changes risk",
+        body:
+          "Embroidery placed near seams, ribs, curved panels, or high-stretch areas can behave differently from embroidery on a flat chest panel. Placement should be checked together with garment construction."
+      },
+      {
+        heading: "Washing can reveal hidden issues",
+        body:
+          "A garment may look acceptable immediately after embroidery but change after washing. Shrinkage, thread tension, and fabric recovery can reveal puckering or distortion."
+      }
+    ],
+    guidance: [
+      "Check embroidery on the actual fabric, not only on a generic sample base.",
+      "Use suitable backing or stabilizer when needed.",
+      "Avoid assuming light stretch fabrics will hold dense embroidery cleanly.",
+      "Wash test decorated samples before bulk production approval."
+    ],
+    mistakes: [
+      "Treating embroidery as separate from fabric selection.",
+      "Ignoring fabric stretch and recovery.",
+      "Using dense embroidery on unstable fabric without testing.",
+      "Approving decoration before checking washed garment behavior."
+    ],
+    faqs: [
+      {
+        question: "Why does embroidery cause puckering?",
+        answer:
+          "Puckering can happen when stitch tension, backing, fabric stretch, or shrinkage behavior are not balanced for the fabric and artwork."
+      },
+      {
+        question: "Is higher GSM better for embroidery?",
+        answer:
+          "Higher GSM can help stability, but it is not the only factor. Structure, stretch, finishing, backing, and artwork density also matter."
+      },
+      {
+        question: "Should embroidery be wash tested?",
+        answer:
+          "Yes. Washing can reveal shrinkage, puckering, thread tension issues, and changes in how the decorated area sits on the garment."
+      }
+    ],
+    related: [
+      "why-screen-printing-behaves-differently-on-fabrics",
+      "how-fabric-finishing-affects-garment-feel",
+      "why-wash-testing-matters-for-apparel-fabrics",
+      "what-causes-pilling-in-knitted-fabrics"
+    ]
+  },
+
 ];
 
 export function getTextileKnowledgePage(slug) {
