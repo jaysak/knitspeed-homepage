@@ -2315,6 +2315,159 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
     ]
   },
 
+  {
+    slug: "why-large-prints-affect-garment-feel",
+    title: "Why Large Prints Affect Garment Feel",
+    shortTitle: "Large Prints & Garment Feel",
+    metaDescription:
+      "Understand why large screen prints can affect garment feel, stretch, drape, breathability, washing behavior, and comfort on knitted apparel.",
+    topicCluster: "garment-production",
+    buyerIntent: "understand large print effects before apparel production",
+    tags: ["large print", "screen printing", "garment feel", "streetwear", "print hand feel"],
+    fabricFamilies: ["single jersey", "interlock", "knitted fabrics"],
+    yarnFamilies: ["cotton", "compact cotton", "cotton blends"],
+    processFamilies: ["screen printing", "garment production", "washing"],
+    riskSignals: ["print stiffness", "reduced stretch", "print cracking", "wash behavior"],
+    buyerJourneyStage: "style development",
+    summary:
+      "Large prints can change garment feel because the print layer adds surface coverage, stiffness, weight, and reduced stretch across a wider area of the fabric.",
+    shortAnswer:
+      "Large prints affect garment feel because they cover more fabric surface, which can reduce softness, stretch, drape, and breathability compared with smaller prints.",
+    sections: [
+      {
+        heading: "Large print coverage changes hand feel",
+        body:
+          "A small logo may have little effect on garment feel, while a large chest or back print can create a noticeable surface layer. The wearer may feel more stiffness, less softness, or reduced flexibility in the printed area."
+      },
+      {
+        heading: "Print area affects stretch",
+        body:
+          "Knitted fabric stretches naturally, but the printed layer may stretch differently. When a large print covers a high-movement area, cracking, distortion, or tightness can become more noticeable."
+      },
+      {
+        heading: "Garment weight and drape can change",
+        body:
+          "Large prints add material to the garment surface. This can slightly change how the garment hangs, especially on softer fabrics, lightweight jerseys, or oversized styles."
+      },
+      {
+        heading: "Wash testing is important",
+        body:
+          "Large print areas should be checked after washing because shrinkage, curing, print chemistry, and fabric recovery can all affect the final garment appearance and feel."
+      }
+    ],
+    guidance: [
+      "Test large prints on the actual production fabric.",
+      "Check stretch and recovery in printed areas.",
+      "Review hand feel after washing, not only immediately after printing.",
+      "Match print size with fabric weight, fit, and expected comfort."
+    ],
+    mistakes: [
+      "Assuming a large print feels the same as a small logo.",
+      "Ignoring stretch behavior in large printed zones.",
+      "Approving artwork without checking garment comfort.",
+      "Testing print on a different fabric from bulk production."
+    ],
+    faqs: [
+      {
+        question: "Do large prints make garments feel heavier?",
+        answer:
+          "They can add surface weight and stiffness, especially when print coverage is large or the print layer is thick."
+      },
+      {
+        question: "Can large screen prints crack?",
+        answer:
+          "Cracking can happen when print chemistry, curing, fabric stretch, shrinkage, or washing behavior are not well matched."
+      },
+      {
+        question: "Should large prints be wash tested?",
+        answer:
+          "Yes. Washing helps reveal print feel, cracking risk, shrinkage interaction, and surface changes."
+      }
+    ],
+    related: [
+      "why-screen-printing-behaves-differently-on-fabrics",
+      "why-garments-change-after-washing",
+      "why-oversized-garments-use-more-fabric",
+      "why-two-garments-made-from-the-same-fabric-can-feel-different"
+    ]
+  },
+  {
+    slug: "why-print-placement-matters-on-stretch-fabrics",
+    title: "Why Print Placement Matters on Stretch Fabrics",
+    shortTitle: "Print Placement on Stretch Fabrics",
+    metaDescription:
+      "Learn why print placement matters on stretch knitted fabrics because movement zones, seams, rib areas, garment fit, and washing behavior affect print durability and appearance.",
+    topicCluster: "garment-production",
+    buyerIntent: "understand print placement risk before production",
+    tags: ["print placement", "stretch fabric", "screen printing", "garment movement", "print durability"],
+    fabricFamilies: ["single jersey", "rib", "interlock", "knitted fabrics"],
+    yarnFamilies: ["cotton", "cotton blends", "compact cotton"],
+    processFamilies: ["screen printing", "garment production", "washing"],
+    riskSignals: ["print distortion", "print cracking", "seam interaction", "stretch recovery"],
+    buyerJourneyStage: "style development",
+    summary:
+      "Print placement matters on stretch fabrics because different garment areas move, stretch, and recover differently during wear and washing.",
+    shortAnswer:
+      "Print placement affects durability and appearance because high-stretch areas, seams, ribs, and curved panels place more stress on the printed layer.",
+    sections: [
+      {
+        heading: "Different garment areas move differently",
+        body:
+          "Chest, shoulder, sleeve, side seam, rib, and hem areas do not stretch in the same way. A print placed on a stable panel may behave differently from a print placed near a seam or high-movement zone."
+      },
+      {
+        heading: "Seams and ribs increase complexity",
+        body:
+          "Printing across seams, rib panels, or uneven surfaces can affect print clarity and durability. These areas may stretch or recover differently from the main body fabric."
+      },
+      {
+        heading: "Fit changes print stress",
+        body:
+          "A tight garment places more stretch stress on printed areas, while oversized garments may create different drape and folding behavior. Print placement should be considered together with fit."
+      },
+      {
+        heading: "Washing can reveal placement issues",
+        body:
+          "After washing, fabric recovery, shrinkage, and print movement can reveal distortion or cracking that was not obvious immediately after printing."
+      }
+    ],
+    guidance: [
+      "Avoid placing large prints across high-stretch zones without testing.",
+      "Check artwork placement together with garment measurements.",
+      "Review print behavior near seams, ribs, and curved panels.",
+      "Wash test printed samples before bulk approval."
+    ],
+    mistakes: [
+      "Treating all garment panels as equally stable.",
+      "Ignoring seam and rib interaction.",
+      "Approving print placement without considering garment fit.",
+      "Testing artwork flat but not on the worn or washed garment."
+    ],
+    faqs: [
+      {
+        question: "Why does print crack near seams?",
+        answer:
+          "Seams can create uneven surface tension, thickness changes, and movement stress that affect how the print layer behaves."
+      },
+      {
+        question: "Is print placement more important on stretch fabrics?",
+        answer:
+          "Yes. Stretch fabrics move and recover during wear, so placement can strongly affect print durability and appearance."
+      },
+      {
+        question: "Should print placement be checked on the actual garment?",
+        answer:
+          "Yes. Placement should be reviewed on the garment shape, not only on flat artwork."
+      }
+    ],
+    related: [
+      "why-large-prints-affect-garment-feel",
+      "why-screen-printing-behaves-differently-on-fabrics",
+      "why-embroidery-affects-fabric-behavior",
+      "tubular-vs-open-width-fabric"
+    ]
+  },
+
 ];
 
 export function getTextileKnowledgePage(slug) {
