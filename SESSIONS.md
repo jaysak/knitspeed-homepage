@@ -1542,3 +1542,40 @@ Rules preserved:
 - no visible AI scoring
 - no recommendation UI yet
 
+
+---
+
+## 2026-05-11 — Phase 3.7B Garment Production Intelligence Expansion
+
+Status:
+- implemented and verified
+
+Summary:
+- expanded textile knowledge graph into garment-production intelligence
+- added garment-production semantic cluster
+- introduced operational garment manufacturing education content
+- validated new semantic domains through behavioral intelligence probes
+
+Implemented garment-production articles:
+- `how-fabric-width-affects-garment-yield`
+- `how-gsm-width-and-yield-affect-fabric-usage`
+- `tubular-vs-open-width-fabric`
+- `why-factories-estimate-fabric-consumption-differently`
+
+Strategic expansion:
+- garment yield reasoning
+- tubular vs open-width operational behavior
+- marker efficiency awareness
+- cutting and consumption logic
+- quotation realism education
+- GSM/width/yardage operational understanding
+
+Behavioral verification:
+- probe system continued passing after semantic expansion
+- recommendation outputs remained proportional and stable
+- intelligence architecture absorbed new garment domain cleanly
+
+Architectural significance:
+- platform evolved from textile-only intelligence into textile + garment manufacturing intelligence
+- existing operational inference layers successfully generalized into garment-production semantics
+

@@ -126,11 +126,25 @@ export function getKnowledgeFreshnessBadge(page) {
   return null;
 }
 
+const CLUSTER_LABELS = {
+  "fabric-structures": "Fabric Structures",
+  "fabric-behavior": "Fabric Behavior",
+  "fabric-specification": "Fabric Specification",
+  "fabric-finishing": "Fabric Finishing",
+  "production-behavior": "Production Behavior",
+  "yarn-quality": "Yarn Quality",
+  "fabric-dyeing": "Fabric Dyeing",
+  "garment-production": "Garment Production"
+};
+
 function formatClusterLabel(clusterKey) {
-  return clusterKey
-    .split("-")
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(" ");
+  return (
+    CLUSTER_LABELS[clusterKey] ||
+    clusterKey
+      .split("-")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ")
+  );
 }
 
 export function getKnowledgePageFromPathname(pathname) {

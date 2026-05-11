@@ -1619,7 +1619,242 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
     }
   ]
 }
+,
 
+  {
+    slug: "how-fabric-width-affects-garment-yield",
+    canonicalPath: "/knowledge/how-fabric-width-affects-garment-yield",
+    title: "How Fabric Width Affects Garment Yield",
+    eyebrow: "Garment production intelligence",
+    category: "Garment Production",
+    topicCluster: "garment-production",
+    buyerIntent: "Understand how fabric width affects cutting efficiency, wastage, and garment costing.",
+    tags: ["fabric width", "garment yield", "cutting", "marker efficiency", "tubular width"],
+    fabricFamilies: ["single-jersey", "interlock"],
+    yarnFamilies: [],
+    processFamilies: ["cutting", "garment-production"],
+    riskSignals: ["yield-sensitivity", "consumption-variation"],
+    buyerJourneyStage: "production-planning",
+    discoveryPriority: 80,
+    publishedAt: "2026-05-11",
+    metaDescription:
+      "Learn how fabric width, tubular width, body size, and marker efficiency affect garment yield, fabric consumption, and apparel costing.",
+    subtitle:
+      "Fabric width can strongly influence how efficiently fabric is cut into garments. The same GSM and fabric type can produce different garment costs depending on width, size range, and marker planning.",
+    shortAnswer:
+      "Fabric width affects how many garment pieces can be placed across the fabric during cutting. Better width alignment can reduce wastage, improve marker efficiency, and make fabric consumption more predictable. Poor width matching can increase leftover fabric, especially for larger sizes or wide garment panels.",
+    comparison: [
+      {
+        name: "Narrower or poorly matched width",
+        specs: [
+          { label: "Cutting efficiency", value: "May create more leftover side waste" },
+          { label: "Best concern to check", value: "Body width, panel size, and marker layout" },
+          { label: "Cost impact", value: "Can increase consumption per garment" }
+        ]
+      },
+      {
+        name: "Better matched width",
+        specs: [
+          { label: "Cutting efficiency", value: "Can improve marker placement" },
+          { label: "Best concern to check", value: "Size range and garment pattern width" },
+          { label: "Cost impact", value: "Can support more predictable yield" }
+        ]
+      }
+    ],
+    guidance: [
+      "Fabric width should be evaluated together with garment body size, sleeve size, shrinkage allowance, and cutting method.",
+      "Tubular fabric may be convenient for some T-shirt production, but the usable width still needs to match the garment pattern.",
+      "Open-width fabric can give different marker flexibility, especially when garment panels are wide or size ranges are mixed.",
+      "A cheaper fabric price per kilogram does not always mean cheaper garment cost if yield is poor.",
+      "Before quoting bulk orders, buyers should clarify garment size range, pattern dimensions, and whether the factory cuts tubular or open-width fabric."
+    ],
+    mistakes: [
+      "Assuming GSM alone determines garment consumption.",
+      "Ignoring body-size and pattern layout when comparing fabric options.",
+      "Comparing fabric prices without checking cutting yield.",
+      "Treating tubular width as automatically efficient for every T-shirt style.",
+      "Forgetting that shrinkage allowance can affect usable cutting dimensions."
+    ],
+    faqs: [
+      {
+        question: "Does wider fabric always save cost?",
+        answer:
+          "Not always. Wider fabric can improve yield only when the garment pattern can use the width efficiently. If the marker layout does not fit well, some width may still become waste."
+      },
+      {
+        question: "Why can two factories estimate different fabric consumption?",
+        answer:
+          "Factories may use different marker layouts, cutting methods, shrinkage assumptions, size ratios, and fabric-width assumptions. These differences can change consumption per garment."
+      },
+      {
+        question: "Is tubular fabric better for T-shirts?",
+        answer:
+          "Tubular fabric can be useful for some T-shirt programs, but it depends on body width, side-seam requirements, print placement, shrinkage expectations, and cutting workflow."
+      }
+    ],
+    relatedArticleSlugs: [
+      "what-gsm-should-t-shirts-use",
+      "why-fabrics-with-the-same-gsm-can-feel-different",
+      "how-fabric-width-affects-garment-production"
+    ]
+  },
+
+  {
+    slug: "how-gsm-width-and-yield-affect-fabric-usage",
+    canonicalPath: "/knowledge/how-gsm-width-and-yield-affect-fabric-usage",
+    title: "How GSM, Width, and Yield Affect Fabric Usage",
+    eyebrow: "Garment costing intelligence",
+    category: "Garment Production",
+    topicCluster: "garment-production",
+    buyerIntent: "Understand why fabric consumption depends on GSM, width, cutting yield, and garment design together.",
+    tags: ["GSM", "fabric usage", "yardage", "garment costing", "fabric consumption"],
+    fabricFamilies: ["single-jersey", "interlock", "rib"],
+    yarnFamilies: [],
+    processFamilies: ["cutting", "garment-production"],
+    riskSignals: ["yield-sensitivity", "consumption-variation", "shrinkage-risk"],
+    buyerJourneyStage: "production-planning",
+    discoveryPriority: 81,
+    publishedAt: "2026-05-11",
+    metaDescription:
+      "Understand why GSM alone does not predict fabric consumption. Fabric width, cutting yield, shrinkage, and garment pattern layout all affect usage and cost.",
+    subtitle:
+      "GSM tells fabric weight per square meter, but garment usage also depends on width, yield, shrinkage, and pattern efficiency.",
+    shortAnswer:
+      "GSM helps estimate fabric weight, but it does not fully determine how much fabric a garment uses. Width, marker efficiency, shrinkage allowance, garment size, and pattern shape all affect consumption. This is why two fabrics with similar GSM can still lead to different costing results.",
+    comparison: [
+      {
+        name: "GSM-only thinking",
+        specs: [
+          { label: "Useful for", value: "Understanding fabric weight and hand feel direction" },
+          { label: "Missing factor", value: "Cutting yield and usable width" },
+          { label: "Risk", value: "Over-simple garment cost estimates" }
+        ]
+      },
+      {
+        name: "GSM + width + yield thinking",
+        specs: [
+          { label: "Useful for", value: "More realistic fabric usage planning" },
+          { label: "Includes", value: "Marker, shrinkage, size range, and wastage" },
+          { label: "Benefit", value: "Better sourcing and quotation conversations" }
+        ]
+      }
+    ],
+    guidance: [
+      "GSM should be combined with fabric width when estimating fabric usage.",
+      "Yardage or meter usage changes when usable width changes, even if GSM remains the same.",
+      "Garment size range matters because larger panels can reduce marker efficiency.",
+      "Shrinkage allowance should be considered before final consumption planning.",
+      "For serious costing, buyers should align with the factory on pattern, marker efficiency, cutting method, and fabric width."
+    ],
+    mistakes: [
+      "Trying to convert GSM to garment cost without knowing fabric width.",
+      "Assuming one yard of every fabric gives the same garment output.",
+      "Ignoring shrinkage when estimating usage.",
+      "Comparing fabric by kilogram price only.",
+      "Forgetting that garment pattern shape can affect yield."
+    ],
+    faqs: [
+      {
+        question: "Can GSM be converted directly to yards?",
+        answer:
+          "Not by itself. GSM is weight per square meter, while yardage depends on fabric width. To relate GSM to fabric weight per yard, the usable width must be known."
+      },
+      {
+        question: "Why does width matter in GSM-to-yard thinking?",
+        answer:
+          "A wider fabric covers more area per linear yard or meter. The same GSM fabric will weigh more per linear yard if the width is wider."
+      },
+      {
+        question: "Why does garment consumption differ even with the same GSM?",
+        answer:
+          "Because garment consumption depends on marker efficiency, width, shrinkage allowance, size range, and pattern shape, not GSM alone."
+      }
+    ],
+    relatedArticleSlugs: [
+      "how-fabric-width-affects-garment-yield",
+      "what-gsm-should-t-shirts-use",
+      "how-shrinkage-is-evaluated-in-apparel-fabrics"
+    ]
+  },
+
+  {
+    slug: "tubular-vs-open-width-fabric",
+    canonicalPath: "/knowledge/tubular-vs-open-width-fabric",
+    title: "Tubular vs Open Width Fabric",
+    eyebrow: "Garment production intelligence",
+    category: "Garment Production",
+    topicCluster: "garment-production",
+    buyerIntent: "Understand how tubular and open-width fabric affect cutting, seams, yield, printing, and garment planning.",
+    tags: ["tubular fabric", "open width", "cutting", "garment yield", "T-shirt production"],
+    fabricFamilies: ["single-jersey", "rib", "interlock"],
+    yarnFamilies: [],
+    processFamilies: ["cutting", "garment-production"],
+    riskSignals: ["yield-sensitivity", "consumption-variation", "print-placement"],
+    buyerJourneyStage: "production-planning",
+    discoveryPriority: 82,
+    publishedAt: "2026-05-11",
+    metaDescription:
+      "Understand the difference between tubular and open-width fabric, and how each affects garment cutting, side seams, marker efficiency, print placement, and production planning.",
+    subtitle:
+      "Tubular and open-width fabric can both be useful, but they affect cutting, garment layout, seams, and production planning in different ways.",
+    shortAnswer:
+      "Tubular fabric is knitted as a tube, while open-width fabric is slit and processed flat. Tubular fabric may reduce side seams for some T-shirt styles, but open-width fabric can offer more flexible marker planning, print placement, and cutting control. The better choice depends on garment design, size range, shrinkage expectations, and production workflow.",
+    comparison: [
+      {
+        name: "Tubular fabric",
+        specs: [
+          { label: "Form", value: "Knitted as a tube" },
+          { label: "Common use", value: "Some T-shirt and body fabric programs" },
+          { label: "Planning concern", value: "Body width, twist, shrinkage, and print placement" }
+        ]
+      },
+      {
+        name: "Open-width fabric",
+        specs: [
+          { label: "Form", value: "Fabric opened and processed flat" },
+          { label: "Common use", value: "Flexible cutting and marker planning" },
+          { label: "Planning concern", value: "Usable width, edge control, and marker efficiency" }
+        ]
+      }
+    ],
+    guidance: [
+      "Tubular fabric can be efficient when the tube circumference matches the garment body size and production method.",
+      "Open-width fabric can provide more flexibility for marker planning, larger sizes, side-seam garments, and certain printing workflows.",
+      "Print placement should be discussed early because tubular fabric and open-width fabric can affect alignment and handling differently.",
+      "Fabric twist, spirality, shrinkage, and finishing behavior can influence whether tubular fabric remains suitable after processing.",
+      "Before choosing tubular or open width, buyers should clarify garment style, size range, side-seam preference, print requirements, and cutting method."
+    ],
+    mistakes: [
+      "Assuming tubular fabric is always cheaper or more efficient.",
+      "Ignoring size range when selecting tubular width.",
+      "Forgetting that print placement may be easier to control with open-width cutting in some programs.",
+      "Comparing fabric options without checking usable width after finishing.",
+      "Treating side-seam removal as automatically better for every garment."
+    ],
+    faqs: [
+      {
+        question: "Is tubular fabric always better for T-shirts?",
+        answer:
+          "No. Tubular fabric can be useful for some T-shirt programs, but it depends on body width, size range, shrinkage, side-seam preference, print placement, and factory workflow."
+      },
+      {
+        question: "Why would a factory prefer open-width fabric?",
+        answer:
+          "Open-width fabric can give more flexibility in marker layout, cutting control, side-seam construction, and some print or placement requirements."
+      },
+      {
+        question: "Does tubular fabric reduce fabric consumption?",
+        answer:
+          "Sometimes, but not always. Consumption depends on whether the tube width matches the garment pattern efficiently and how much allowance is needed for shrinkage, twist, and cutting control."
+      }
+    ],
+    relatedArticleSlugs: [
+      "how-fabric-width-affects-garment-yield",
+      "how-gsm-width-and-yield-affect-fabric-usage",
+      "what-causes-spirality-in-knitted-fabric",
+      "how-fabric-width-affects-garment-production"
+    ]
+  }
 ];
 
 export function getTextileKnowledgePage(slug) {

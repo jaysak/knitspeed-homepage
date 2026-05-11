@@ -1254,3 +1254,53 @@ Next:
 Magic words for next boot:
 > Jarvis, continue Knitspeed after Phase 3.6D. Operational recommendation intelligence and quote preparation intelligence are implemented, build/lint pass, and 3.6 hidden sourcing-copilot primitives are established. First inspect HANDOFF.md, PROJECT_ROADMAP.md, DECISIONS.md, SESSIONS.md, and git status before patching.
 
+
+---
+
+# CURRENT CHECKPOINT — Phase 3.7B Garment Production Intelligence
+
+Status:
+- stable
+- build/lint/probe passing
+
+Implemented:
+- garment-production semantic cluster
+- garment manufacturing operational knowledge expansion
+- garment yield and consumption intelligence
+- tubular/open-width production reasoning
+- quotation realism education
+
+Current major garment-production articles:
+- How Fabric Width Affects Garment Yield
+- How GSM, Width, and Yield Affect Fabric Usage
+- Tubular vs Open Width Fabric
+- Why Two Factories Estimate Fabric Consumption Differently
+
+Probe system:
+- `npm run probe:intelligence`
+- behavioral intelligence verification operational
+- hidden reasoning outputs validated after semantic expansion
+
+Architectural state:
+- textile intelligence
+- garment manufacturing intelligence
+- operational sourcing intelligence
+- sourcing continuity memory
+- behavioral verification infrastructure
+
+Rules preserved:
+- calm editorial UX
+- no AI clutter
+- deterministic inspectable logic
+- no admin/dashboard sprawl
+- semantic-first architecture
+
+Next likely direction:
+- garment size range consumption intelligence
+- print/decorative production intelligence
+- deeper apparel manufacturing semantics
+- future procurement continuity evolution
+
+Magic words for next boot:
+> Jarvis, continue Knitspeed from Phase 3.7B Garment Production Intelligence. Garment-production semantic cluster and operational manufacturing articles are active, probe/build/lint pass, and behavioral verification infrastructure is operational. First inspect HANDOFF.md, PROJECT_ROADMAP.md, DECISIONS.md, SESSIONS.md, and git status before patching.
+

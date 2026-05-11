@@ -7,7 +7,11 @@ const TEST_SLUGS = [
   "single-jersey-vs-interlock",
   "what-is-compact-cotton",
   "what-causes-spirality-in-knitted-fabric",
-  "what-affects-colorfastness-in-cotton-knits"
+  "what-affects-colorfastness-in-cotton-knits",
+  "how-fabric-width-affects-garment-yield",
+  "how-gsm-width-and-yield-affect-fabric-usage",
+  "tubular-vs-open-width-fabric",
+  "tubular-vs-open-width-fabric"
 ];
 
 for (const slug of TEST_SLUGS) {
