@@ -1052,6 +1052,8 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
 
 {
   slug: "cotton-knit-dyeing",
+  publishedAt: "2026-05-11",
+  updatedAt: "2026-05-11",
   title: "Cotton Knit Dyeing Process",
   category: "Dyeing & Finishing",
   topicCluster: "Fabric Dyeing",
@@ -1289,6 +1291,8 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
 
 {
   slug: "why-lab-dip-and-bulk-shade-can-differ",
+  publishedAt: "2026-05-11",
+  updatedAt: "2026-05-11",
   title: "Why Lab Dip and Bulk Shade Can Differ",
   category: "Dyeing & Finishing",
   topicCluster: "Fabric Dyeing",
@@ -1354,6 +1358,8 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
 
 {
   slug: "why-dark-shades-need-more-dyeing-control",
+  publishedAt: "2026-05-11",
+  updatedAt: "2026-05-11",
   title: "Why Dark Shades Need More Dyeing Control",
   category: "Dyeing & Finishing",
   topicCluster: "Fabric Dyeing",
@@ -1419,6 +1425,8 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
 
 {
   slug: "what-affects-colorfastness-in-cotton-knits",
+  publishedAt: "2026-05-11",
+  updatedAt: "2026-05-11",
   title: "What Affects Colorfastness in Cotton Knits?",
   category: "Dyeing & Finishing",
   topicCluster: "Fabric Dyeing",

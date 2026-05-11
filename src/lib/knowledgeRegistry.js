@@ -79,6 +79,46 @@ export function getKnowledgePagesByCluster(clusterKey) {
   );
 }
 
+
+export function getKnowledgeFreshnessBadge(page) {
+  if (!page?.publishedAt && !page?.updatedAt) {
+    return null;
+  }
+
+  const now = new Date();
+  const THIRTY_DAYS = 1000 * 60 * 60 * 24 * 30;
+
+  const publishedAt = page.publishedAt
+    ? new Date(page.publishedAt)
+    : null;
+
+  const updatedAt = page.updatedAt
+    ? new Date(page.updatedAt)
+    : null;
+
+  if (
+    publishedAt &&
+    now - publishedAt <= THIRTY_DAYS
+  ) {
+    return {
+      label: "New",
+      tone: "new",
+    };
+  }
+
+  if (
+    updatedAt &&
+    now - updatedAt <= THIRTY_DAYS
+  ) {
+    return {
+      label: "Updated",
+      tone: "updated",
+    };
+  }
+
+  return null;
+}
+
 function formatClusterLabel(clusterKey) {
   return clusterKey
     .split("-")

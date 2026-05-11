@@ -9,6 +9,7 @@ import {
 } from "../lib/seoSchema";
 import {
   getAllKnowledgePages,
+  getKnowledgeFreshnessBadge,
   getKnowledgeTopicClusters,
 } from "../lib/knowledgeRegistry";
 
@@ -104,15 +105,22 @@ function pageMatchesSearch(page, searchTerm) {
 export default function KnowledgeIndexPage() {
   useKnowledgeIndexMeta();
 
-  const pages = getAllKnowledgePages();
-  const clusters = getKnowledgeTopicClusters();
+  const pages = useMemo(() => getAllKnowledgePages(), []);
+  const clusters = useMemo(() => getKnowledgeTopicClusters(), []);
   const [searchTerm, setSearchTerm] = useState("");
   const [activeCluster, setActiveCluster] = useState("all");
 
+  const hasNewGuides = pages.some(
+    (page) => getKnowledgeFreshnessBadge(page)?.label === "New"
+  );
+
   const filteredPages = useMemo(() => {
     return pages.filter((page) => {
+      const freshnessBadge = getKnowledgeFreshnessBadge(page);
       const matchesCluster =
-        activeCluster === "all" || page.topicCluster === activeCluster;
+        activeCluster === "all" ||
+        page.topicCluster === activeCluster ||
+        (activeCluster === "new" && freshnessBadge?.label === "New");
 
       return matchesCluster && pageMatchesSearch(page, searchTerm);
     });
@@ -193,6 +201,20 @@ export default function KnowledgeIndexPage() {
               All topics ({pages.length})
             </button>
 
+            {hasNewGuides && (
+              <button
+                type="button"
+                onClick={() => setActiveCluster("new")}
+                className={`rounded-full border px-4 py-2 text-sm font-semibold transition ${
+                  activeCluster === "new"
+                    ? "border-emerald-300 bg-emerald-50 text-emerald-800"
+                    : "border-slate-200 text-slate-700 hover:border-emerald-300 hover:bg-emerald-50 hover:text-emerald-700"
+                }`}
+              >
+                New guides ({pages.filter((page) => getKnowledgeFreshnessBadge(page)?.label === "New").length})
+              </button>
+            )}
+
             {clusters.map((cluster) => (
               <button
                 key={cluster.key}
@@ -263,19 +285,31 @@ export default function KnowledgeIndexPage() {
                     </div>
 
                     <div className="grid gap-6 md:grid-cols-2">
-                      {clusterPages.map((page) => (
-                        <a
-                          key={page.slug}
-                          href={page.canonicalPath || `/knowledge/${page.slug}`}
-                          className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-sky-300 hover:shadow-md"
-                        >
-                          <p className="text-xs font-semibold uppercase tracking-wide text-sky-700">
-                            {page.category}
-                          </p>
+                      {clusterPages.map((page) => {
+                        const freshnessBadge = getKnowledgeFreshnessBadge(page);
 
-                          <h3 className="mt-3 text-2xl font-extrabold text-slate-950">
-                            {page.title}
-                          </h3>
+                        return (
+                          <a
+                            key={page.slug}
+                            href={page.canonicalPath || `/knowledge/${page.slug}`}
+                            className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-sky-300 hover:shadow-md"
+                          >
+                            <div className="flex items-start justify-between gap-3">
+                              <p className="text-xs font-semibold uppercase tracking-wide text-sky-700">
+                                {page.category}
+                              </p>
+
+                              {freshnessBadge && (
+                                <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide text-emerald-700">
+                                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                                  {freshnessBadge.label}
+                                </span>
+                              )}
+                            </div>
+
+                            <h3 className="mt-3 text-2xl font-extrabold text-slate-950">
+                              {page.title}
+                            </h3>
 
                           <p className="mt-4 text-base leading-7 text-slate-600">
                             {page.metaDescription || page.subtitle}
@@ -294,11 +328,12 @@ export default function KnowledgeIndexPage() {
                             </div>
                           )}
 
-                          <div className="mt-6 text-sm font-semibold text-sky-700">
-                            Read article →
-                          </div>
-                        </a>
-                      ))}
+                            <div className="mt-6 text-sm font-semibold text-sky-700">
+                              Read article →
+                            </div>
+                          </a>
+                        );
+                      })}
                     </div>
                   </section>
                 );
