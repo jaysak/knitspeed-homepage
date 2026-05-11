@@ -1047,3 +1047,28 @@ Next likely safe slice:
 - no schema changes
 - no dashboard expansion
 
+
+---
+
+# LATEST CHECKPOINT TARGET — Knowledge Branding Watermark
+
+Current status:
+- watermark component added
+- watermark asset expected at `public/branding/knitspeed-watermark.png`
+- knowledge article page imports and renders `KnowledgeWatermark`
+- visual confirmation still needed after local dev refresh
+
+If watermark is not visible:
+1. confirm asset exists:
+   `ls -l public/branding/knitspeed-watermark.png`
+2. confirm component import exists in:
+   `src/pages/KnowledgeArticlePage.jsx`
+3. confirm `<KnowledgeWatermark />` renders near `<ReadingProgressBar />`
+4. temporarily increase opacity in:
+   `src/components/branding/KnowledgeWatermark.jsx`
+   from `opacity-[0.045]` to `opacity-[0.12]`
+5. confirm z-index/background layering
+
+Magic words for next boot:
+> Jarvis, continue Knitspeed from checkpoint after operational context, manufacturing sensitivity, and knowledge watermark sprint. Repo is `knitspeed-homepage` at `/Users/jaythaveesak/Desktop/knitspeed-homepage`. Latest strategic state: semantic textile authority + dyeing intelligence + operational context + manufacturing sensitivity are active. Watermark was added but visual confirmation may still be pending. First check `HANDOFF.md`, `PROJECT_ROADMAP.md`, `DECISIONS.md`, and `SESSIONS.md`, then inspect git status before patching.
+

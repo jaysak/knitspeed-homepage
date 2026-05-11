@@ -795,3 +795,22 @@ Strategic role:
 - future quote intelligence foundation
 - future procurement intelligence foundation
 
+
+---
+
+## Knowledge Branding Layer
+
+Status:
+- lightweight implementation added
+
+Purpose:
+- make knowledge pages subtly recognizable as Knitspeed-owned material
+- support buyer sharing and marketing team usage
+- preserve clean sourcing-intelligence aesthetic
+
+Rules:
+- branding must remain subtle
+- avoid banner-heavy marketing design
+- keep focus on textile intelligence and buyer education
+- no aggressive visual redesign
+

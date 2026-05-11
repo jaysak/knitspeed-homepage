@@ -206,3 +206,17 @@ Preferred expansion areas:
 - garment outcome logic
 - sourcing expectations
 
+
+---
+
+## Decision — Subtle Knowledge Branding Only
+
+Knowledge pages may carry a subtle Knitspeed watermark or ownership cue.
+
+Rules:
+- do not overpower the article content
+- do not convert knowledge pages into marketing banners
+- keep watermark barely noticeable
+- preserve clean editorial sourcing-intelligence feel
+- avoid further design interference unless needed for readability or trust
+

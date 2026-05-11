@@ -1313,3 +1313,29 @@ UX result:
 - no realtime-news chaos
 - sourcing-aware and manufacturing-aware positioning preserved
 
+
+---
+
+## Knowledge Branding Watermark Sprint
+
+Status:
+- implemented locally
+- visual confirmation pending after dev refresh
+
+Added:
+- subtle Knitspeed watermark asset for knowledge pages
+- `public/branding/knitspeed-watermark.png`
+- `src/components/branding/KnowledgeWatermark.jsx`
+- watermark injection into knowledge article pages
+
+Intent:
+- add barely noticeable brand presence to knowledge pages
+- support customer-facing sharing after sales visits
+- preserve calm editorial/product knowledge feel
+- avoid heavy branding or design interference
+
+Notes:
+- watermark should remain subtle
+- no further design interference planned after this pass
+- if not visible, check opacity, z-index, asset path, and dev server refresh
+

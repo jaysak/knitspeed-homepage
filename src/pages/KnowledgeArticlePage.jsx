@@ -7,6 +7,7 @@ import QuoteCTA from "../components/knowledge/QuoteCTA";
 import ReadingProgressBar from "../components/knowledge/ReadingProgressBar";
 import OperationalContextBlock from "../components/knowledge/OperationalContextBlock";
 import ManufacturingSensitivityNote from "../components/knowledge/ManufacturingSensitivityNote";
+import KnowledgeWatermark from "../components/branding/KnowledgeWatermark";
 import SpecSummaryGrid from "../components/knowledge/SpecSummaryGrid";
 import ProductionMemoryPanel from "../components/production/ProductionMemoryPanel";
 import { writeBuyerIntentEvent } from "../lib/buyerIntent";
@@ -119,6 +120,7 @@ export default function KnowledgeArticlePage({ page }) {
   return (
     <>
       <ReadingProgressBar />
+      <KnowledgeWatermark />
       <SEOJsonLd schema={schema} />
       <KnowledgePageLayout
         eyebrow={page.eyebrow}
