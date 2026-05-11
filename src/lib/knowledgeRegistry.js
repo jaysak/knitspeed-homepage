@@ -4,6 +4,7 @@ import { getTemporalManufacturingSignals } from "./intelligence/temporalManufact
 import { TEXTILE_KNOWLEDGE_PAGES } from "../data/textileKnowledgePages";
 import { getProductionMemory } from "./production/productionMemory";
 import { getRelationshipWeight } from "./intelligence/relationshipWeights";
+import { getManufacturingCausalitySummary } from "./intelligence/manufacturingCausality";
 
 const implementedKnowledgeSlugs = new Set(
   TEXTILE_KNOWLEDGE_PAGES.map((page) => page.slug)
@@ -192,11 +193,31 @@ export function getKnowledgePageManufacturingSensitivity(slug) {
   return getManufacturingSensitivity(page);
 }
 
+export function getKnowledgePageManufacturingCausality(slug) {
+  return getManufacturingCausalitySummary(slug);
+}
+
 
 function countSharedValues(sourceValues = [], candidateValues = []) {
   const sourceSet = new Set(sourceValues || []);
 
   return (candidateValues || []).filter((value) => sourceSet.has(value)).length;
+}
+
+function getSharedCausalityCount(sourcePage, candidatePage) {
+  const sourceCausality =
+    getKnowledgePageManufacturingCausality(sourcePage.slug);
+
+  const candidateCausality =
+    getKnowledgePageManufacturingCausality(candidatePage.slug);
+
+  const sourceAreas =
+    sourceCausality?.affectedAreas || [];
+
+  const candidateAreas =
+    candidateCausality?.affectedAreas || [];
+
+  return countSharedValues(sourceAreas, candidateAreas);
 }
 
 function scoreKnowledgeRelationship(sourcePage, candidatePage) {
@@ -222,6 +243,7 @@ function scoreKnowledgeRelationship(sourcePage, candidatePage) {
   score += countSharedValues(sourcePage.yarnFamilies, candidatePage.yarnFamilies) * 0.12;
   score += countSharedValues(sourcePage.processFamilies, candidatePage.processFamilies) * 0.1;
   score += countSharedValues(sourcePage.riskSignals, candidatePage.riskSignals) * 0.16;
+  score += getSharedCausalityCount(sourcePage, candidatePage) * 0.05;
 
   if (
     sourcePage.buyerJourneyStage &&
