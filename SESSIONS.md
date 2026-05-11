@@ -1708,3 +1708,32 @@ Notes:
 - this is expected and environment-safe
 - remaining Node `--localstorage-file` warning is external runtime noise, not app failure
 
+
+## 2026-05-12 — Phase 4.1A–4.1B Production Hardening
+
+Completed:
+- Centralized site URL handling via siteConfig.js
+- Added canonical URL abstraction and reusable metadata hook
+- Added runtime canonical tag support
+- Added baseline OG/Twitter metadata
+- Added robots.txt
+- Hardened quote attribution continuity flow
+- Added versioned + TTL-based quote attribution restoration
+- Centralized quote scroll restoration behavior
+
+Production status:
+- Build/lint passing
+- Remote GitHub synced
+- Vercel deployment verified
+- Knowledge routes stable
+- No routing overhaul introduced
+- Article expansion intentionally frozen
+
+Current Phase:
+- Phase 4 production hardening
+- Focus shifted from semantic breadth to deployment stability, continuity, observability, and domain readiness
+
+Next:
+- Phase 4.1C deterministic production observability
+- Knowledge integrity verification scripts
+- Canonical/SEO deployment sanity verification

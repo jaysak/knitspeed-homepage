@@ -351,3 +351,26 @@ Purpose:
 Priority:
 - intelligence depth and coherence over feature count
 
+
+## 2026-05-12 — Phase 4 production hardening direction
+
+Decision:
+Freeze semantic/article expansion and prioritize production hardening.
+
+Rationale:
+Knowledge breadth and procurement cognition reached stable operational depth. Current bottlenecks are deployment stability, quote continuity, metadata consistency, observability, and domain migration readiness.
+
+Implementation direction:
+- Keep architecture lightweight
+- Avoid routing overhaul
+- Avoid CMS/admin expansion
+- Avoid telemetry SaaS dependencies
+- Preserve calm sourcing-aware UX
+- Prefer deterministic verification over runtime analytics noise
+
+Production hardening priorities:
+1. Metadata + canonical stability
+2. Quote continuity resilience
+3. Deterministic observability tooling
+4. SEO/indexing sanity
+5. Domain migration readiness
