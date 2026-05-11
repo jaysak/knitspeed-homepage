@@ -13,6 +13,7 @@ import ProductionMemoryPanel from "../components/production/ProductionMemoryPane
 import ProductionRelationshipsPanel from "../components/production/ProductionRelationshipsPanel";
 import MobileDisclosure from "../components/ui/MobileDisclosure";
 import { writeBuyerIntentEvent } from "../lib/buyerIntent";
+import { usePageMeta } from "../lib/usePageMeta";
 import { getKnowledgePageProductionMemory,
   getKnowledgePageOperationalContext,
   getKnowledgePageManufacturingSensitivity,
@@ -43,43 +44,12 @@ function getRelatedGuideLabel(page) {
   return RELATED_GUIDE_LABELS[page?.topicCluster] || "Related Textile Guides";
 }
 
-function useKnowledgePageMeta(page) {
-  useEffect(() => {
-    if (!page) {
-      return undefined;
-    }
-
-    const previousTitle = document.title;
-    const description = page.metaDescription || page.subtitle || "";
-    let metaDescription = document.querySelector('meta[name="description"]');
-    const createdMetaDescription = !metaDescription;
-    const previousDescription = metaDescription?.getAttribute("content");
-
-    if (!metaDescription) {
-      metaDescription = document.createElement("meta");
-      metaDescription.setAttribute("name", "description");
-      document.head.appendChild(metaDescription);
-    }
-
-    document.title = `${page.title} | Knitspeed Textile Knowledge`;
-    metaDescription.setAttribute("content", description);
-
-    return () => {
-      document.title = previousTitle;
-
-      if (createdMetaDescription) {
-        metaDescription.remove();
-      } else if (previousDescription === null) {
-        metaDescription.removeAttribute("content");
-      } else {
-        metaDescription.setAttribute("content", previousDescription);
-      }
-    };
-  }, [page]);
-}
-
 export default function KnowledgeArticlePage({ page }) {
-  useKnowledgePageMeta(page);
+  usePageMeta({
+    title: page ? `${page.title} | Knitspeed Textile Knowledge` : undefined,
+    description: page ? page.metaDescription || page.subtitle || "" : undefined,
+    canonicalUrl: page ? getCanonicalKnowledgeUrl(page) : undefined,
+  });
 
   const knowledgeArticle = useMemo(() => {
     if (!page) return null;

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+# Sitemap will be enabled after canonical domain migration is finalized.

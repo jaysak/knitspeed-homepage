@@ -1,4 +1,6 @@
-export const KNITSPEED_SITE_URL = "https://knitspeed-homepage.vercel.app";
+import { SITE_URL, buildAbsoluteUrl } from "./siteConfig";
+
+export const KNITSPEED_SITE_URL = SITE_URL;
 
 const ORGANIZATION_ID = `${KNITSPEED_SITE_URL}/#organization`;
 
@@ -8,7 +10,7 @@ export function getCanonicalKnowledgeUrl(pageOrSlug) {
       ? `/knowledge/${pageOrSlug}`
       : pageOrSlug.canonicalPath || `/knowledge/${pageOrSlug.slug}`;
 
-  return `${KNITSPEED_SITE_URL}${path}`;
+  return buildAbsoluteUrl(path);
 }
 
 export function buildOrganizationSchema() {
@@ -77,7 +79,7 @@ export function buildFAQPageSchema(page) {
 }
 
 export function buildKnowledgeCollectionSchema(pages) {
-  const url = `${KNITSPEED_SITE_URL}/knowledge`;
+  const url = buildAbsoluteUrl("/knowledge");
 
   return {
     "@context": "https://schema.org",

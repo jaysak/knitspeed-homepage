@@ -1,6 +1,7 @@
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 
 import SEOJsonLd from "../components/SEOJsonLd";
+import { usePageMeta } from "../lib/usePageMeta";
 import {
   buildBreadcrumbSchema,
   buildKnowledgeCollectionSchema,
@@ -12,40 +13,6 @@ import {
   getKnowledgeFreshnessBadge,
   getKnowledgeTopicClusters,
 } from "../lib/knowledgeRegistry";
-
-function useKnowledgeIndexMeta() {
-  useEffect(() => {
-    const previousTitle = document.title;
-    let metaDescription = document.querySelector('meta[name="description"]');
-    const createdMetaDescription = !metaDescription;
-    const previousDescription = metaDescription?.getAttribute("content");
-
-    if (!metaDescription) {
-      metaDescription = document.createElement("meta");
-      metaDescription.setAttribute("name", "description");
-      document.head.appendChild(metaDescription);
-    }
-
-    document.title = "Textile Knowledge | Knitspeed";
-    metaDescription.setAttribute(
-      "content",
-      "Practical knitted fabric sourcing guidance from Knitspeed and GSC Import Export Co., Ltd."
-    );
-
-    return () => {
-      document.title = previousTitle;
-
-      if (createdMetaDescription) {
-        metaDescription.remove();
-      } else if (previousDescription === null) {
-        metaDescription.removeAttribute("content");
-      } else {
-        metaDescription.setAttribute("content", previousDescription);
-      }
-    };
-  }, []);
-}
-
 
 const CLUSTER_DESCRIPTIONS = {
   "fabric-structures":
@@ -103,7 +70,12 @@ function pageMatchesSearch(page, searchTerm) {
 }
 
 export default function KnowledgeIndexPage() {
-  useKnowledgeIndexMeta();
+  usePageMeta({
+    title: "Textile Knowledge | Knitspeed",
+    description:
+      "Practical knitted fabric sourcing guidance from Knitspeed and GSC Import Export Co., Ltd.",
+    canonicalUrl: `${KNITSPEED_SITE_URL}/knowledge`,
+  });
 
   const pages = useMemo(() => getAllKnowledgePages(), []);
   const clusters = useMemo(() => getKnowledgeTopicClusters(), []);
