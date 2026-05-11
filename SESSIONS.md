@@ -1384,3 +1384,31 @@ Rules preserved:
 Next:
 - Phase 3.6A-5 Mobile Progressive Disclosure Layer
 - then Phase 3.6B Manufacturing Intelligence Layer
+
+## 2026-05-11 — Phase 3.6A-5 / 3.6A-6 Complete
+
+Completed:
+- Mobile progressive disclosure layer for knowledge articles
+- Collapsible mobile-only intelligence pacing blocks
+- Production Notes disclosure
+- Sourcing Context disclosure
+- FAQ disclosure
+- Related Guides disclosure
+- Self-expiring freshness metadata system
+- "New" freshness badges on knowledge cards
+- Dynamic "New Guides" filter
+- Editorial freshness signaling without blog-style timestamps
+
+Architectural Outcome:
+- Knowledge growth pacing now scalable on mobile
+- Intelligence density reduced psychologically without reducing depth
+- Knowledge hub now supports freshness awareness
+- Freshness system self-expires automatically after 30 days
+- No CMS complexity introduced
+- Preserved calm sourcing/editorial tone
+
+Next Strategic Slice Candidates:
+- 3.6A-7 Knowledge cluster onboarding paths
+- 3.6B Manufacturing causality graph expansion
+- 3.6B Buyer intent progression memory
+- 3.6B Operational sourcing recommendation intelligence
