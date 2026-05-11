@@ -6,15 +6,58 @@ export function getOperationalContextSignals() {
 
 export function getOperationalContextForPage(page = {}) {
   const searchText = JSON.stringify(page).toLowerCase();
+  const tags = page.tags || [];
+  const cluster = page.topicCluster || "";
 
   return OPERATIONAL_CONTEXT_SIGNALS.filter((signal) => {
-    const affectedMatch = signal.affectedAreas.some((area) =>
-      searchText.includes(area.toLowerCase())
-    );
+    if (
+      signal.id === "dark-reactive-shade-pressure" &&
+      (
+        tags.includes("dyeing") ||
+        tags.includes("reactive dyeing") ||
+        searchText.includes("dark shade") ||
+        cluster.toLowerCase().includes("dye")
+      )
+    ) {
+      return true;
+    }
 
-    const labelMatch = searchText.includes(signal.label.toLowerCase());
+    if (
+      signal.id === "finishing-stability-sensitivity" &&
+      (
+        tags.includes("shrinkage") ||
+        tags.includes("compacting") ||
+        tags.includes("finishing") ||
+        searchText.includes("gsm") ||
+        searchText.includes("width")
+      )
+    ) {
+      return true;
+    }
 
-    return affectedMatch || labelMatch;
+    if (
+      signal.id === "seasonal-production-pressure" &&
+      (
+        tags.includes("cotton") ||
+        tags.includes("production") ||
+        searchText.includes("lead time")
+      )
+    ) {
+      return true;
+    }
+
+    if (
+      signal.id === "cotton-price-volatility" &&
+      (
+        tags.includes("cotton") ||
+        searchText.includes("quotation") ||
+        searchText.includes("pricing")
+      )
+    ) {
+      return true;
+    }
+
+    return false;
   });
 }
 

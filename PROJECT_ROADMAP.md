@@ -763,3 +763,35 @@ Future possibility:
 - production volatility notes
 - textile operational updates
 
+
+---
+
+## Operational Context Intelligence Layer
+
+Status:
+- active
+- early operational intelligence now surfaced
+
+Implemented:
+- operational context signal system
+- dynamic relevance filtering
+- manufacturing sensitivity scoring
+- sourcing-context article enrichment
+- textile operational reasoning framework
+
+Current operational awareness:
+- cotton pricing volatility
+- dark reactive dyeing pressure
+- seasonal production pressure
+- finishing stability sensitivity
+- dimensional stability sensitivity
+- shade approval sensitivity
+- knit structure behavior sensitivity
+
+Strategic role:
+- sourcing education
+- buyer trust
+- operational transparency
+- future quote intelligence foundation
+- future procurement intelligence foundation
+

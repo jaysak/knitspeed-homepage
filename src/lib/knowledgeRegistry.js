@@ -1,3 +1,4 @@
+import { getManufacturingSensitivity } from "./operations/manufacturingSensitivity";
 import { getOperationalContextForPage, summarizeOperationalContext } from "./operations/operationalContext";
 import { getTemporalManufacturingSignals } from "./intelligence/temporalManufacturingSignals"
 import { TEXTILE_KNOWLEDGE_PAGES } from "../data/textileKnowledgePages";
@@ -138,6 +139,17 @@ export function getKnowledgePageOperationalContext(slug) {
     signals,
     summary: summarizeOperationalContext(signals)
   };
+}
+
+
+export function getKnowledgePageManufacturingSensitivity(slug) {
+  const page = getKnowledgePageBySlug(slug);
+
+  if (!page) {
+    return null;
+  }
+
+  return getManufacturingSensitivity(page);
 }
 
 function scoreKnowledgeRelationship(sourcePage, candidatePage) {

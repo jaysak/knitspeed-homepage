@@ -1279,3 +1279,37 @@ Strategic effect:
 - stronger sourcing-trust positioning
 - better manufacturing-aware semantic clustering
 
+
+---
+
+## Operational Context + Manufacturing Sensitivity Sprint
+
+Status:
+- implemented and visually verified
+
+Added:
+- operational context signal layer
+- dynamic operational context filtering
+- manufacturing sensitivity engine
+- manufacturing sensitivity article enrichment
+- contextual sourcing intelligence blocks
+
+Behavior:
+- operational context now adapts per textile topic
+- dyeing topics surface dyeing-related operational signals
+- finishing topics surface dimensional stability and finishing sensitivity
+- manufacturing sensitivity scoring now identifies operationally fragile production areas
+
+Strategic effect:
+- Knitspeed now communicates sourcing realism directly within knowledge articles
+- strengthens buyer education and operational trust
+- creates foundation for future quote intelligence and sourcing prioritization
+- expands textile operational reasoning capability
+
+UX result:
+- calm and professional
+- no dashboard clutter
+- no fake AI language
+- no realtime-news chaos
+- sourcing-aware and manufacturing-aware positioning preserved
+
