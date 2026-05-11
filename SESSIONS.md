@@ -1453,3 +1453,53 @@ Rules preserved:
 - no Prime scoring changes
 - no schema changes
 - no AI wording, scores, prediction language, or aggressive recommendations
+
+---
+
+## 2026-05-11 — Phase 3.6C Operational Inference Expansion
+
+Status:
+- implemented and verified
+
+Summary:
+- added hidden operational inference layers:
+  - quote urgency inference
+  - sourcing stability inference
+  - buyer intent progression memory
+- enriched operational context runtime with:
+  - urgency
+  - sourcing stability
+  - buyer intent progression
+- preserved calm editorial UX with no visible AI scoring or recommendation UI
+
+Implemented files:
+- `src/lib/intelligence/quoteUrgencyInference.js`
+- `src/lib/intelligence/sourcingStabilityInference.js`
+- `src/lib/intelligence/buyerIntentProgression.js`
+- `src/lib/knowledgeRegistry.js`
+
+Verification:
+- `npm run build` passes
+- `npm run lint` passes
+- browser smoke remained stable
+
+Strategic effect:
+- Knitspeed now reasons across:
+  - textile semantics
+  - manufacturing behavior
+  - sourcing sensitivity
+  - operational stability
+  - buyer maturity progression
+
+Rules preserved:
+- no Supabase changes
+- no admin dashboard changes
+- no quote flow changes
+- no visible AI scoring
+- deterministic and inspectable logic only
+
+Next likely slice:
+- Phase 3.6D Operational Recommendation Intelligence
+- hidden recommendation seeding only
+- no UI expansion yet
+

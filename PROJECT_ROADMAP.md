@@ -847,3 +847,40 @@ Strategic role:
 Next:
 - 3.6A-5 Mobile Progressive Disclosure Layer
 - 3.6B Manufacturing Intelligence Layer
+
+---
+
+## Phase 3.6C — Operational Inference Layer
+
+Status:
+- active
+- operational inference foundation established
+
+Implemented:
+- quote urgency inference
+- sourcing stability inference
+- buyer intent progression memory
+
+Current hidden intelligence stack:
+- semantic textile graph
+- production memory
+- relationship weighting
+- manufacturing causality
+- operational context
+- temporal manufacturing signals
+- quote urgency inference
+- sourcing stability inference
+- buyer intent progression memory
+
+Strategic direction:
+- deterministic sourcing-aware reasoning
+- manufacturing-aware intelligence
+- calm editorial UX
+- no visible AI clutter
+- no noisy prediction dashboards
+
+Next:
+- Phase 3.6D Operational Recommendation Intelligence
+- hidden recommendation and sourcing-guidance seeding
+- future procurement intelligence foundation
+

@@ -1155,3 +1155,57 @@ Notes:
 
 Magic words for next boot:
 > Jarvis, continue Knitspeed from Phase 3.6B-3 Production Relationships UI. Production relationships are implemented locally and visually smoked on `/knowledge/single-jersey-vs-interlock`, build/lint pass, and Jay may still need to commit. First inspect HANDOFF.md, PROJECT_ROADMAP.md, DECISIONS.md, SESSIONS.md, and git status before patching.
+
+---
+
+# CURRENT CHECKPOINT — Phase 3.6C Operational Inference Expansion
+
+Status:
+- stable local checkpoint
+- build and lint passing
+- browser smoke stable
+
+Implemented:
+- quote urgency inference
+- sourcing stability inference
+- buyer intent progression memory
+- operational context enrichment runtime
+
+Implemented files:
+- `src/lib/intelligence/quoteUrgencyInference.js`
+- `src/lib/intelligence/sourcingStabilityInference.js`
+- `src/lib/intelligence/buyerIntentProgression.js`
+- `src/lib/knowledgeRegistry.js`
+
+Current hidden intelligence stack:
+- semantic textile graph
+- production memory
+- relationship weighting
+- manufacturing causality
+- operational context
+- temporal manufacturing signals
+- quote urgency inference
+- sourcing stability inference
+- buyer intent progression memory
+
+Verified:
+- `npm run build` passes
+- `npm run lint` passes
+- article routes remain stable
+- no visible UX regressions
+
+Rules preserved:
+- no Supabase changes
+- no admin dashboard changes
+- no quote flow changes
+- no AI scoring UI
+- deterministic inspectable logic only
+
+Next likely safe slice:
+- Phase 3.6D Operational Recommendation Intelligence
+- hidden recommendation seeds only
+- no UI expansion yet
+
+Magic words for next boot:
+> Jarvis, continue Knitspeed from Phase 3.6C Operational Inference Expansion. Quote urgency inference, sourcing stability inference, and buyer intent progression memory are active. Build/lint pass and browser smoke remained stable. First inspect HANDOFF.md, PROJECT_ROADMAP.md, DECISIONS.md, SESSIONS.md, and git status before patching.
+

@@ -5,6 +5,9 @@ import { TEXTILE_KNOWLEDGE_PAGES } from "../data/textileKnowledgePages";
 import { getProductionMemory } from "./production/productionMemory";
 import { getRelationshipWeight } from "./intelligence/relationshipWeights";
 import { getManufacturingCausalitySummary } from "./intelligence/manufacturingCausality";
+import { getQuoteUrgencyInference } from "./intelligence/quoteUrgencyInference";
+import { getSourcingStabilityInference } from "./intelligence/sourcingStabilityInference";
+import { getBuyerIntentProgression } from "./intelligence/buyerIntentProgression";
 
 const implementedKnowledgeSlugs = new Set(
   TEXTILE_KNOWLEDGE_PAGES.map((page) => page.slug)
@@ -178,7 +181,10 @@ export function getKnowledgePageOperationalContext(slug) {
 
   return {
     signals,
-    summary: summarizeOperationalContext(signals)
+    summary: summarizeOperationalContext(signals),
+    urgency: getQuoteUrgencyInference(page),
+    sourcingStability: getSourcingStabilityInference(page),
+    buyerIntentProgression: getBuyerIntentProgression(page)
   };
 }
 
