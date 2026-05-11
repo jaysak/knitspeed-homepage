@@ -1493,8 +1493,8 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
 {
   slug: "why-cotton-knits-shrink-after-dyeing",
   title: "Why Cotton Knits Shrink After Dyeing",
-  category: "Production Behavior",
-  topicCluster: "Production Behavior",
+  category: "Textile Production",
+  topicCluster: "Textile Production",
   buyerIntent: "Understand shrinkage after dyeing and finishing",
   discoveryPriority: 45,
   tags: ["shrinkage", "cotton", "knitted fabric", "dyeing", "compacting"],
