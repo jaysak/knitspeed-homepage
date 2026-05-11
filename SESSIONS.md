@@ -1579,3 +1579,41 @@ Architectural significance:
 - platform evolved from textile-only intelligence into textile + garment manufacturing intelligence
 - existing operational inference layers successfully generalized into garment-production semantics
 
+
+
+## Phase 3.7 Expansion — Garment + Decoration Intelligence
+
+Completed:
+- size-ratio consumption intelligence
+- oversized garment consumption logic
+- garment wash behavior guidance
+- garment feel variance logic
+- print placement reasoning
+- large print garment-feel guidance
+- print cracking behavior guidance
+- print hand-feel guidance
+
+Major architectural event:
+- semantic taxonomy normalization became necessary
+- canonical semantic keys were standardized:
+  - textile-production
+  - garment-production
+  - decoration-printing
+
+Operational lesson:
+- long-chain semantic evolution can drift between:
+  - display labels
+  - canonical keys
+  - historical cluster naming
+
+New mandatory workflow:
+1. grep existing semantic keys before insertion
+2. verify taxonomy counts before commit
+3. never invent semantic keys inline
+4. separate canonical keys from display labels
+
+Current semantic direction:
+- sourcing-aware garment manufacturing intelligence
+- decoration durability reasoning
+- garment wash behavior intelligence
+- apparel production realism

@@ -1304,3 +1304,71 @@ Next likely direction:
 Magic words for next boot:
 > Jarvis, continue Knitspeed from Phase 3.7B Garment Production Intelligence. Garment-production semantic cluster and operational manufacturing articles are active, probe/build/lint pass, and behavioral verification infrastructure is operational. First inspect HANDOFF.md, PROJECT_ROADMAP.md, DECISIONS.md, SESSIONS.md, and git status before patching.
 
+
+
+---
+
+# CURRENT CHECKPOINT — Phase 3.7 Garment + Decoration Intelligence Expansion
+
+Status:
+- stable semantic checkpoint
+- taxonomy normalized
+- build/lint passing
+- garment-production and decoration-printing clusters stabilized
+
+Implemented:
+- garment size ratio intelligence
+- oversized garment consumption intelligence
+- garment wash behavior intelligence
+- garment feel variance intelligence
+- print placement intelligence
+- large print garment-feel intelligence
+- print cracking intelligence
+- print hand-feel intelligence
+
+Semantic taxonomy stabilized:
+- fabric-structures
+- yarn-quality
+- fabric-specification
+- fabric-behavior
+- fabric-finishing
+- fabric-dyeing
+- textile-production
+- garment-production
+- decoration-printing
+
+Operational lessons:
+- semantic taxonomy drift appeared between canonical keys and display labels
+- ontology normalization now required before semantic expansion
+- future semantic additions must verify canonical cluster keys before insertion
+
+New operating discipline:
+- grep semantic keys before insertion
+- run taxonomy verification before commit
+- separate canonical semantic keys from display labels
+- avoid inline semantic-string invention
+
+Verified:
+- npm run build passes
+- npm run lint passes
+- taxonomy verification stable
+- no sparse-array corruption remains
+- decoration-printing cluster isolated correctly
+- garment-production cluster stabilized correctly
+
+Current architecture direction:
+textile intelligence
+→ garment production intelligence
+→ decoration and print intelligence
+→ sourcing continuity reasoning
+→ future procurement intelligence
+
+Next likely safe slice:
+- Phase 3.7H — Advanced Decoration Intelligence
+- candidates:
+  - puff print behavior
+  - DTG vs screen print behavior
+  - heat-transfer durability
+  - print breathability
+- preserve calm sourcing-aware editorial UX
+- preserve deterministic inspectable logic

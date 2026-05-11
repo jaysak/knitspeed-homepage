@@ -247,3 +247,31 @@ Sequencing:
 3. manufacturing intelligence expansion
 4. buyer-intent inference
 5. operational textile OS
+
+
+## Decision — Canonical Semantic Taxonomy Enforcement
+
+Knitspeed semantic clusters must now use canonical internal keys.
+
+Approved canonical clusters:
+- fabric-structures
+- yarn-quality
+- fabric-specification
+- fabric-behavior
+- fabric-finishing
+- fabric-dyeing
+- textile-production
+- garment-production
+- decoration-printing
+
+Rules:
+- never invent semantic keys inline
+- canonical keys must remain lowercase slug format
+- display labels must remain separate from canonical keys
+- semantic insertions require grep verification before patching
+- taxonomy verification should run before semantic commits
+
+Reason:
+- prevent ontology drift
+- preserve semantic graph integrity
+- stabilize future recommendation and inference systems
