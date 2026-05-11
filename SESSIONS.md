@@ -1412,3 +1412,44 @@ Next Strategic Slice Candidates:
 - 3.6B Manufacturing causality graph expansion
 - 3.6B Buyer intent progression memory
 - 3.6B Operational sourcing recommendation intelligence
+
+---
+
+## 2026-05-11 — Phase 3.6B-3 Production Relationships UI
+
+Status:
+- implemented locally
+- visually smoke-tested
+- pending Jay's git checkpoint
+
+Summary:
+- Added `src/components/production/ProductionRelationshipsPanel.jsx`
+- Wired manufacturing causality summaries into `src/pages/KnowledgeArticlePage.jsx`
+- Reused existing `MobileDisclosure` behavior for the new production relationships block
+- Kept panel tone editorial and manufacturing-aware
+- Limited affected areas to the first 3 summary items
+
+Rendered behavior:
+- Shows no UI when no causality summary or affected areas exist
+- On `/knowledge/single-jersey-vs-interlock`, displays:
+  - drape
+  - edge curling
+  - washing behavior
+
+Verification:
+- `node --check src/components/production/ProductionRelationshipsPanel.jsx` failed because Node v25 rejects `.jsx` extension checks with `ERR_UNKNOWN_FILE_EXTENSION`
+- `node --check src/pages/KnowledgeArticlePage.jsx` failed for the same `.jsx` extension reason
+- `npm run build` passes
+- `npm run lint` passes
+- browser visual smoke confirms the panel appears in the production intelligence area
+- browser console errors: none
+
+Rules preserved:
+- no `textileKnowledgePages.js` changes
+- no routing changes
+- no Supabase changes
+- no admin dashboard changes
+- no quote flow changes
+- no Prime scoring changes
+- no schema changes
+- no AI wording, scores, prediction language, or aggressive recommendations

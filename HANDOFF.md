@@ -1117,3 +1117,41 @@ Do not do next:
 
 Magic words for next boot:
 > Jarvis, continue Knitspeed from Phase 3.6A checkpoint. Semantic textile knowledge graph is established, build/lint passed, and `/knowledge` visual check is complete. Next safe slice is 3.6A-5 Mobile Progressive Disclosure Layer before starting 3.6B Manufacturing Intelligence. First inspect HANDOFF.md, PROJECT_ROADMAP.md, DECISIONS.md, and SESSIONS.md, then inspect git status before patching.
+
+---
+
+# CURRENT CHECKPOINT — Phase 3.6B-3 Production Relationships UI
+
+Status:
+- implemented locally
+- build and lint passing
+- visual smoke completed
+- pending Jay's git checkpoint
+
+Implemented:
+- `src/components/production/ProductionRelationshipsPanel.jsx`
+- knowledge article wiring for `getKnowledgePageManufacturingCausality(slug)`
+- mobile progressive disclosure wrapper reused for Production relationships
+- calm sourcing-aware card showing up to 3 affected production areas
+
+Verified:
+- `npm run build` passes
+- `npm run lint` passes
+- `/knowledge/single-jersey-vs-interlock` renders the Production relationships panel
+- visual smoke confirms affected areas render calmly:
+  - drape
+  - edge curling
+  - washing behavior
+- browser console errors: none
+
+Notes:
+- requested `node --check` commands fail on `.jsx` in current Node v25 with `ERR_UNKNOWN_FILE_EXTENSION`; Vite build and ESLint passed as the JSX validation path
+- no changes to `textileKnowledgePages.js`
+- no routing changes
+- no Supabase, admin dashboard, quote flow, Prime scoring, or schema changes
+- existing untracked watermark files remain untouched:
+  - `public/branding/knitspeed-watermark1.png`
+  - `public/branding/knitspeed-watermark2.png`
+
+Magic words for next boot:
+> Jarvis, continue Knitspeed from Phase 3.6B-3 Production Relationships UI. Production relationships are implemented locally and visually smoked on `/knowledge/single-jersey-vs-interlock`, build/lint pass, and Jay may still need to commit. First inspect HANDOFF.md, PROJECT_ROADMAP.md, DECISIONS.md, SESSIONS.md, and git status before patching.
