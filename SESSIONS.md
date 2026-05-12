@@ -1737,3 +1737,61 @@ Next:
 - Phase 4.1C deterministic production observability
 - Knowledge integrity verification scripts
 - Canonical/SEO deployment sanity verification
+
+---
+
+## 2026-05-12 — Phase 4.1C–4.1E Production Hardening Checkpoint
+
+Status:
+- implemented
+- verified locally
+- pushed to origin/main
+
+Completed:
+- removed public GSC / GSC Import Export references so Knitspeed stands alone as the public brand
+- added deterministic knowledge integrity verification
+- added knowledge metadata normalization pipeline
+- normalized canonical paths, topic clusters, categories, subtitles, and discovery priorities across 40 knowledge pages
+- added missing `decoration-printing` semantic cluster label
+- added deterministic sitemap generation
+- generated `public/sitemap.xml` with 42 routes:
+  - homepage
+  - `/knowledge`
+  - 40 knowledge article routes
+- added deployment integrity verification
+- updated `robots.txt` to advertise sitemap
+- verified production robots now exposes:
+  - `Sitemap: https://knitspeed-homepage.vercel.app/sitemap.xml`
+
+Verification:
+- `npm run verify:knowledge` passes
+- `npm run verify:deployment` passes
+- `npm run generate:sitemap` generates 42 routes
+- sitemap XML parse passed
+- sitemap has 42 `<url>` and 42 `<loc>` entries
+- `npm run build` passes
+- `npm run lint` passes
+- production headers verified on:
+  - `/`
+  - `/knowledge`
+  - `/sitemap.xml`
+  - `/robots.txt`
+- production sitemap reachable
+- production robots reachable
+- Vercel deployment verified after push
+
+Strategic result:
+- Phase 4 hardening foundation is now established
+- Knitspeed has deterministic semantic integrity tooling
+- ontology drift is now detectable before deployment
+- sitemap and robots crawler handshake is active
+- public brand identity is now Knitspeed-first
+- semantic/article expansion remains frozen
+- future priority remains deployment stability, domain readiness, visual intelligence later, and real buyer behavior observation
+
+Latest checkpoints:
+- `5235550 Add deterministic knowledge integrity verification`
+- `52f30c4 Add deterministic sitemap generation`
+- `1c8caca Add deployment integrity verification`
+- `5bb327f Advertise sitemap in robots`
+

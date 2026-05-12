@@ -374,3 +374,43 @@ Production hardening priorities:
 3. Deterministic observability tooling
 4. SEO/indexing sanity
 5. Domain migration readiness
+
+---
+
+## 2026-05-12 — Decision: Knitspeed Public Brand Stands Alone
+
+Decision:
+Remove public-facing GSC / GSC Import Export references from the frontend knowledge and schema layer for now.
+
+Rationale:
+- Knitspeed should consolidate as the public buyer-facing textile intelligence brand
+- GSC can remain operational/legal context internally
+- public semantic authority should accrue primarily to Knitspeed
+- cleaner brand memory for buyers, crawlers, and LLM retrieval
+
+Rules:
+- public pages should foreground Knitspeed
+- do not reintroduce GSC into public metadata unless there is a specific legal/domain reason
+- preserve Knitspeed's Thailand knitted fabric sourcing positioning
+- keep operational/legal company details separate from public knowledge branding
+
+---
+
+## 2026-05-12 — Decision: Phase 4 Uses Deterministic Verification Before Deployment
+
+Decision:
+Production hardening should rely on deterministic local verification scripts before pushing.
+
+Required hardening checks:
+- `npm run verify:knowledge`
+- `npm run verify:deployment`
+- `npm run generate:sitemap`
+- `npm run build`
+- `npm run lint`
+
+Rationale:
+- semantic graph has reached sufficient breadth
+- future risk is ontology drift, metadata drift, route drift, and deployment inconsistency
+- verification should be lightweight, inspectable, and dependency-minimal
+- avoid noisy analytics or SaaS telemetry unless a clear business need appears
+

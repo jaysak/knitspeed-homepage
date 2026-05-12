@@ -1487,3 +1487,66 @@ Next likely safe direction:
 Magic words for next boot:
 > Jarvis, continue Knitspeed from Phase 3.8 procurement cognition checkpoint. Phase 3.8A–3.8E are implemented with sourcing continuity memory, buyer journey accumulation, weighted procurement cognition, temporal signal weighting, and probe observability. Build/lint/probe pass. Do not add more articles or UI. First inspect HANDOFF.md, PROJECT_ROADMAP.md, DECISIONS.md, SESSIONS.md, and git status before patching.
 
+
+---
+
+# CURRENT CHECKPOINT — Phase 4.1C–4.1E Production Hardening
+
+Status:
+- complete
+- pushed to origin/main
+- production verified
+
+Latest checkpoints:
+- `5235550 Add deterministic knowledge integrity verification`
+- `52f30c4 Add deterministic sitemap generation`
+- `1c8caca Add deployment integrity verification`
+- `5bb327f Advertise sitemap in robots`
+
+Implemented:
+- public GSC references removed from frontend/schema copy
+- Knitspeed now stands alone publicly as the brand
+- `scripts/verifyKnowledgeIntegrity.js`
+- `scripts/normalizeKnowledgeMetadata.js`
+- `scripts/generateSitemap.js`
+- `scripts/verifyDeploymentIntegrity.js`
+- `public/sitemap.xml`
+- `public/robots.txt` advertises sitemap
+
+New scripts:
+- `npm run normalize:knowledge`
+- `npm run verify:knowledge`
+- `npm run verify:deployment`
+- `npm run generate:sitemap`
+
+Verification state:
+- `npm run verify:knowledge` passes
+- `npm run verify:deployment` passes
+- `npm run generate:sitemap` generates 42 routes
+- sitemap XML validation passed
+- `npm run build` passes
+- `npm run lint` passes
+- production `/robots.txt` now shows:
+  - `Sitemap: https://knitspeed-homepage.vercel.app/sitemap.xml`
+- production `/sitemap.xml` reachable
+- homepage and `/knowledge` headers verified on Vercel
+
+Important:
+- semantic/article expansion remains frozen
+- intelligence breadth is sufficient for now
+- current priority is production hardening, deployment stability, domain readiness, and future visual intelligence later
+- do not add more articles unless Jay explicitly approves a final foundational exception
+- future custom domain migration will require updating canonical site URL and sitemap domain
+
+Next likely safe direction:
+- pause and observe deployment behavior
+- later prepare custom domain migration
+- later visual textile intelligence layer:
+  - fabric to garment use-case visuals
+  - sourcing examples
+  - fabric application guidance
+- optional future performance hardening if bundle size becomes a real issue
+
+Magic words for next boot:
+> Jarvis, continue Knitspeed from Phase 4.1C–4.1E production hardening checkpoint. Semantic expansion is frozen, Knitspeed public branding is standalone, deterministic verification scripts are active, sitemap and robots are deployed, and production was verified. First inspect HANDOFF.md, PROJECT_ROADMAP.md, DECISIONS.md, SESSIONS.md, then inspect git status before patching.
+

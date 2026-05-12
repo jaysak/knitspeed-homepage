@@ -932,3 +932,43 @@ Next possible expansions:
 - embroidery and wash-behavior knowledge
 - production sequencing intelligence
 
+
+---
+
+## Phase 4.1C–4.1E — Production Hardening Foundation
+
+Status:
+- complete
+
+Implemented:
+- deterministic knowledge integrity verification
+- metadata normalization pipeline
+- semantic taxonomy enforcement
+- deployment integrity verification
+- deterministic sitemap generation
+- robots sitemap advertisement
+- Knitspeed-only public brand cleanup
+
+Operational scripts:
+- `npm run normalize:knowledge`
+- `npm run verify:knowledge`
+- `npm run verify:deployment`
+- `npm run generate:sitemap`
+
+Current production hardening state:
+- 40 knowledge pages verified
+- 42 sitemap routes generated
+- sitemap deployed
+- robots advertises sitemap
+- Vercel production deployment verified
+
+Strategic rule:
+- semantic/article expansion remains frozen
+- Phase 4 priority remains production readiness, canonical/domain stability, crawlability, observability, and buyer trust infrastructure
+
+Next likely directions:
+- observe deployed behavior
+- prepare future custom domain migration
+- later visual textile intelligence layer
+- optional performance hardening/code splitting only when needed
+
