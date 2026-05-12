@@ -1550,3 +1550,75 @@ Next likely safe direction:
 Magic words for next boot:
 > Jarvis, continue Knitspeed from Phase 4.1C–4.1E production hardening checkpoint. Semantic expansion is frozen, Knitspeed public branding is standalone, deterministic verification scripts are active, sitemap and robots are deployed, and production was verified. First inspect HANDOFF.md, PROJECT_ROADMAP.md, DECISIONS.md, SESSIONS.md, then inspect git status before patching.
 
+
+
+---
+
+# CURRENT CHECKPOINT — Phase 4.2 Homepage Visual Intelligence UX
+
+Status:
+- stable local/product checkpoint
+- pushed to origin/main
+- visual inspection completed after progressive disclosure refactor
+
+Latest checkpoint:
+- 28a9a61 Refine homepage sourcing intelligence hierarchy
+
+Implemented:
+- deterministic product intelligence layer
+- buyer-facing article summaries
+- product insight badges
+- visual fabric guidance
+- decision confidence guidance
+- comparative fabric reasoning
+- garment outcome guidance
+- future visual placeholder architecture
+- collapsible secondary insight sections
+
+Current homepage structure:
+- visible surface layer:
+  - article name
+  - buyer summary
+  - future textile visual placeholder
+  - key insight badges
+  - Request Fabric Quote CTA
+- collapsible depth layer:
+  - Buyer Guidance
+  - Comparison Notes
+  - Garment Outcome
+
+Strategic result:
+- Homepage now behaves as a calm sourcing intelligence interface
+- Intelligence depth is preserved without overwhelming the buyer
+- Visual placeholder architecture prepares the platform for future textile imagery
+- Real images are intentionally deferred until UX hierarchy stabilizes
+
+Next safe tasks:
+1. Phase 4.2H-1 Visual QA
+   - desktop scan rhythm
+   - mobile stacking
+   - card height
+   - CTA visibility
+2. Phase 4.2H-2 Density Refinement
+   - reduce visible chip count if needed
+   - tighten placeholder height
+   - reduce repeated wording
+3. Phase 4.2H-3 Mobile Progressive Polish
+   - check collapsible usability
+   - reduce scroll fatigue
+4. Phase 4.3A Real Textile Visual System later
+   - fabric macro crops
+   - garment silhouette hints
+   - textile texture visuals
+   - only after hierarchy is stable
+
+Do not do next:
+- no more intelligence module expansion
+- no new knowledge articles
+- no real images yet
+- no custom domain migration yet
+- no CMS
+- no AI chatbot layer
+
+Magic words for next boot:
+> Jarvis, continue Knitspeed from Phase 4.2 Homepage Visual Intelligence UX checkpoint. Homepage sourcing intelligence cards, visual placeholders, and collapsible insight hierarchy are implemented and pushed. Next priority is visual QA, density refinement, and mobile hierarchy polish before adding real textile images or migrating domain. First inspect HANDOFF.md, PROJECT_ROADMAP.md, DECISIONS.md, SESSIONS.md, then inspect git status before patching.

@@ -1795,3 +1795,52 @@ Latest checkpoints:
 - `1c8caca Add deployment integrity verification`
 - `5bb327f Advertise sitemap in robots`
 
+
+
+---
+
+## 2026-05-12 — Phase 4.2A–4.2H Homepage Visual Intelligence UX
+
+Status:
+- implemented
+- verified locally
+- pushed to origin/main
+
+Completed:
+- Added deterministic homepage product intelligence guidance
+- Added buyer-facing sourcing summaries on Finished Article cards
+- Added insight badges for use cases, feel traits, and production notes
+- Added visual fabric guidance layer
+- Added decision confidence guidance
+- Added comparative fabric reasoning
+- Added garment outcome guidance
+- Added future visual placeholder architecture
+- Refined intelligence density with collapsible insight sections
+
+Key checkpoints:
+- c6f8ed5 Add homepage product intelligence guidance
+- 33b232b Add homepage visual fabric guidance
+- 9b19f53 Add homepage fabric decision guidance
+- 6594ecf Add homepage comparative fabric reasoning
+- 28a9a61 Refine homepage sourcing intelligence hierarchy
+
+Important UX outcome:
+- Homepage cards shifted from SKU quote cards into calm sourcing intelligence cards
+- Visual placeholder now anchors the card
+- Detailed buyer guidance, comparison notes, and garment outcome logic are available through progressive disclosure
+- Homepage no longer behaves like a mini knowledge page
+- Depth is preserved but revealed on demand
+
+Verification:
+- npm run verify:knowledge passes
+- npm run verify:deployment passes
+- npm run generate:sitemap generates 42 routes
+- npm run build passes
+- npm run lint passes
+- browser visual inspection confirmed much better card hierarchy after collapsible refactor
+
+Notes:
+- Current card UX is significantly improved but still needs refinement
+- Future work should focus on hierarchy, density, mobile rhythm, and visual polish
+- Do not add more intelligence modules until visual QA is complete
+- Real images should come later after placeholder architecture and hierarchy stabilize

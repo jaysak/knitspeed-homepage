@@ -972,3 +972,47 @@ Next likely directions:
 - later visual textile intelligence layer
 - optional performance hardening/code splitting only when needed
 
+
+
+---
+
+## Phase 4.2 — Homepage Visual Intelligence UX
+
+Status:
+- active refinement
+- core implementation complete
+
+Completed:
+- 4.2A Product intelligence guidance
+- 4.2B Buyer summary hierarchy
+- 4.2C Visual fabric guidance
+- 4.2D Decision confidence layer
+- 4.2E Comparative buyer reasoning
+- 4.2F Garment outcome guidance
+- 4.2G Visual placeholder architecture
+- 4.2H Initial progressive disclosure hierarchy
+
+Strategic purpose:
+- translate textile intelligence into buyer comprehension on the main landing page
+- help buyers understand fabric use, sourcing fit, garment outcome, and comparison context before requesting a quote
+- preserve calm sourcing-aware UX instead of creating noisy AI dashboards
+
+Current UX model:
+- homepage surface layer stays simple and visual
+- deeper sourcing intelligence is available through collapsible sections
+- future image zones are reserved but not yet populated
+
+Next:
+- visual QA
+- density refinement
+- mobile hierarchy polish
+- later real textile visual system
+- later performance hardening
+- later custom domain migration
+
+Rules:
+- no new article expansion
+- no real images until hierarchy stabilizes
+- no homepage feature sprawl
+- preserve deterministic mappings
+- keep public UX calm, premium, and sourcing-aware

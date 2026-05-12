@@ -414,3 +414,34 @@ Rationale:
 - verification should be lightweight, inspectable, and dependency-minimal
 - avoid noisy analytics or SaaS telemetry unless a clear business need appears
 
+
+
+---
+
+## 2026-05-12 — Decision: Homepage Intelligence Must Use Progressive Disclosure
+
+Decision:
+Homepage product cards should not expose every sourcing intelligence layer by default.
+
+Rationale:
+The homepage is for buyer comprehension and quote confidence, not full knowledge-page depth. Too many visible panels create scan fatigue and make product cards feel like compressed knowledge pages.
+
+Accepted homepage hierarchy:
+- visible:
+  - product/article name
+  - short buyer summary
+  - visual placeholder or future textile image zone
+  - key insight badges
+  - quote CTA
+- collapsible:
+  - Buyer Guidance
+  - Comparison Notes
+  - Garment Outcome
+
+Rules:
+- preserve intelligence depth through drill-down
+- keep homepage scan-friendly
+- prioritize visual anchor and CTA clarity
+- avoid adding more intelligence panels before density refinement
+- future real images must fit the established visual placeholder architecture
+- real textile images should come before final custom domain migration, but only after UX hierarchy is stable
