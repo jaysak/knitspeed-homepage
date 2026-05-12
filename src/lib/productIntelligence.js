@@ -1,8 +1,8 @@
 const normalize = (value = "") => value.toLowerCase()
 
 export function getProductIntelligence(article = {}) {
-  const name = normalize(article.article_name || article.name || "")
-  const slug = normalize(article.article_slug || article.slug || "")
+  const name = normalize(article.articleName || article.article_name || article.name || "")
+  const slug = normalize(article.seoSlug || article.article_slug || article.slug || "")
 
   const useCases = new Set()
   const feelTraits = new Set()
@@ -16,7 +16,7 @@ export function getProductIntelligence(article = {}) {
     feelTraits.add("Breathable knit")
     productionNotes.add("Good for screen printing")
     summary =
-      "Soft breathable knit commonly used for premium cotton T-shirts and retail basics."
+      "Soft breathable knit suited to cotton T-shirts and retail basics."
   }
 
   if (name.includes("interlock") || slug.includes("interlock")) {
@@ -24,7 +24,7 @@ export function getProductIntelligence(article = {}) {
     feelTraits.add("More stable structure")
     productionNotes.add("Often selected for premium programs")
     summary =
-      "Smoother and more stable knit structure often used for elevated apparel programs."
+      "Smoother, more stable knit structure for elevated apparel programs."
   }
 
   if (name.includes("compact")) {

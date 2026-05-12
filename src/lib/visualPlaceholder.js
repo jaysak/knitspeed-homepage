@@ -1,6 +1,6 @@
 export function getVisualPlaceholder(article = {}) {
-  const name = (article.article_name || article.name || "").toLowerCase()
-  const slug = (article.article_slug || article.slug || "").toLowerCase()
+  const name = (article.articleName || article.article_name || article.name || "").toLowerCase()
+  const slug = (article.seoSlug || article.article_slug || article.slug || "").toLowerCase()
 
   const placeholder = {
     label: "Fabric Visualization Zone",

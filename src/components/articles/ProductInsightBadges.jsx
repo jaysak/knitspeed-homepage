@@ -22,13 +22,15 @@ export default function ProductInsightBadges({
     return null
   }
 
+  const visibleSections = sections.slice(0, 3)
+
   return (
-    <div className="mt-3 flex flex-wrap gap-2">
-      {sections.map(({ label, tone }) => (
+    <div className="mt-3 flex flex-wrap gap-1.5">
+      {visibleSections.map(({ label, tone }) => (
         <span
           key={label}
           className={
-            "rounded-full border px-3 py-1 text-xs font-medium " + tone
+            "rounded-full border px-2.5 py-1 text-[11px] font-medium " + tone
           }
         >
           {label}

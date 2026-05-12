@@ -55,29 +55,32 @@ export default function FinishedArticleGrid({ articles, brand, onArticleSelect }
               </div>
 
               <div className="p-6">
-                <div className="flex flex-wrap gap-2 text-xs font-semibold text-slate-600">
-                  <span className="rounded-full bg-slate-100 px-3 py-1">{titleize(article.materialFamily)}</span>
-                  <span className="rounded-full bg-slate-100 px-3 py-1">{titleize(article.fabricStructure)}</span>
-                  {article.yarnCount ? (
-                    <span className="rounded-full bg-slate-100 px-3 py-1">{article.yarnCount}s</span>
-                  ) : null}
+                <div className="flex flex-wrap gap-1.5 text-xs font-semibold text-slate-600">
+                  <span className="rounded-full bg-slate-100 px-2.5 py-1">{titleize(article.materialFamily)}</span>
+                  <span className="rounded-full bg-slate-100 px-2.5 py-1">{titleize(article.fabricStructure)}</span>
                 </div>
-
-                <p className="mt-4 text-sm leading-6 text-slate-600">
-                  {article.availableWidths.length
-                    ? "Available widths: " + article.availableWidths.slice(0, 4).join(", ")
-                    : "Width options confirmed after inquiry."}
-                </p>
-
-                <p className="mt-4 text-sm leading-relaxed text-slate-600">
-                  {intelligence.summary}
-                </p>
 
                 <ProductVisualPlaceholder
                   label={visualPlaceholder.label}
                   mood={visualPlaceholder.mood}
                   texture={visualPlaceholder.texture}
                   gradient={visualPlaceholder.gradient}
+                />
+
+                <p className="mt-4 text-sm leading-relaxed text-slate-600">
+                  {intelligence.summary}
+                </p>
+
+                <p className="mt-2 text-xs leading-5 text-slate-500">
+                  {article.availableWidths.length
+                    ? "Widths: " + article.availableWidths.slice(0, 3).join(", ")
+                    : "Widths confirmed after inquiry."}
+                </p>
+
+                <ProductInsightBadges
+                  useCases={intelligence.useCases}
+                  feelTraits={intelligence.feelTraits}
+                  productionNotes={intelligence.productionNotes}
                 />
 
                 <CollapsibleInsightSection title="Buyer Guidance">
@@ -113,16 +116,10 @@ export default function FinishedArticleGrid({ articles, brand, onArticleSelect }
                   />
                 </CollapsibleInsightSection>
 
-                <ProductInsightBadges
-                  useCases={intelligence.useCases}
-                  feelTraits={intelligence.feelTraits}
-                  productionNotes={intelligence.productionNotes}
-                />
-
                 <button
                   type="button"
                   onClick={() => onArticleSelect(article)}
-                  className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-bold text-white shadow-sm transition hover:opacity-90"
+                  className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-bold text-white shadow-sm transition hover:opacity-90"
                   style={{ backgroundColor: brand.blue }}
                 >
                   Request Fabric Quote <ArrowRight size={16} />

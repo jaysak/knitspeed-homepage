@@ -1,6 +1,6 @@
 export function getComparativeReasoning(article = {}) {
-  const name = (article.article_name || article.name || "").toLowerCase()
-  const slug = (article.article_slug || article.slug || "").toLowerCase()
+  const name = (article.articleName || article.article_name || article.name || "").toLowerCase()
+  const slug = (article.seoSlug || article.article_slug || article.slug || "").toLowerCase()
 
   const reasoning = {
     compareAgainst: "Other versatile knitted fabrics",

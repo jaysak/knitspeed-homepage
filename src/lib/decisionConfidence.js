@@ -1,6 +1,6 @@
 export function getDecisionConfidence(article = {}) {
-  const name = (article.article_name || article.name || "").toLowerCase()
-  const slug = (article.article_slug || article.slug || "").toLowerCase()
+  const name = (article.articleName || article.article_name || article.name || "").toLowerCase()
+  const slug = (article.seoSlug || article.article_slug || article.slug || "").toLowerCase()
 
   const guidance = {
     bestFor: "General knitted apparel sourcing",

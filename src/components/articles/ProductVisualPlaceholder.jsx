@@ -7,27 +7,27 @@ export default function ProductVisualPlaceholder({
   return (
     <div
       className={
-        "mt-4 overflow-hidden rounded-2xl border border-slate-200 bg-gradient-to-br p-5 " +
+        "mt-4 overflow-hidden rounded-2xl border border-slate-200 bg-gradient-to-br p-4 " +
         gradient
       }
     >
-      <div className="flex min-h-[160px] flex-col justify-between">
+      <div className="flex min-h-[104px] flex-col justify-between">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
             Future Textile Visual Layer
           </p>
 
-          <h3 className="mt-2 text-lg font-semibold text-slate-900">
+          <h3 className="mt-1.5 text-base font-semibold text-slate-900">
             {label}
           </h3>
 
-          <p className="mt-2 max-w-sm text-sm leading-relaxed text-slate-600">
-            Reserved visual architecture for future textile imagery, garment outcome guidance, and fabric cognition systems.
+          <p className="mt-1.5 max-w-sm text-xs leading-5 text-slate-600">
+            Reserved for future fabric imagery and garment-use visuals.
           </p>
         </div>
 
-        <div className="mt-6 grid gap-3 sm:grid-cols-2">
-          <div className="rounded-xl border border-white/70 bg-white/70 p-3 backdrop-blur">
+        <div className="mt-3 grid gap-2 sm:grid-cols-2">
+          <div className="rounded-xl border border-white/70 bg-white/70 p-2.5 backdrop-blur">
             <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
               Garment Mood
             </p>
@@ -37,7 +37,7 @@ export default function ProductVisualPlaceholder({
             </p>
           </div>
 
-          <div className="rounded-xl border border-white/70 bg-white/70 p-3 backdrop-blur">
+          <div className="rounded-xl border border-white/70 bg-white/70 p-2.5 backdrop-blur">
             <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
               Surface Direction
             </p>
