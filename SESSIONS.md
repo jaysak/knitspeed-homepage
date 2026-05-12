@@ -1844,3 +1844,52 @@ Notes:
 - Future work should focus on hierarchy, density, mobile rhythm, and visual polish
 - Do not add more intelligence modules until visual QA is complete
 - Real images should come later after placeholder architecture and hierarchy stabilize
+
+---
+
+## 2026-05-12 — Phase 4.2M Mobile Sourcing UX + Garment Knowledge Continuity
+
+Status:
+- implemented
+- verified locally
+- ready for checkpoint commit
+
+Completed:
+- compressed mobile hero spacing
+- moved Finished Articles directly after hero
+- refined mobile product card ergonomics
+- reduced visible homepage product-card density
+- improved quote continuity with selected fabric visual preview
+- added "Choose another fabric" return shortcut from quote form
+- added contextual product-card knowledge hooks
+- temporarily hid premature "What are you making?" use-case section
+- added first garment sourcing guide:
+  - `/knowledge/t-shirt-fabric-sourcing`
+- added homepage entry point for garment sourcing guides
+- added sourcing continuation recommendation blocks inside the T-shirt guide
+
+Strategic result:
+- homepage now behaves product-first
+- mobile flow is faster and cleaner
+- quote flow preserves buyer context
+- knowledge layer now connects into garment-specific sourcing guidance
+- Knitspeed now has a closed loop:
+  homepage → product cards → knowledge guide → quote
+
+Verification:
+- npm run verify:knowledge passes
+- npm run verify:deployment passes
+- npm run generate:sitemap passes
+- npm run build passes
+- npm run lint passes
+- local desktop visual QA passed
+- local iPhone Wi-Fi QA passed
+
+Notes:
+- no CMS added
+- no dashboard changes
+- no Supabase changes
+- no AI chatbot layer
+- use-case section is hidden until garment guide paths become meaningful
+- future "What are you making?" section should link to real garment sourcing guides, not just scroll to products
+

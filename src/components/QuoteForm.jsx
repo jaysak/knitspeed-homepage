@@ -1,5 +1,7 @@
 import { Mail, MapPin, Phone } from "lucide-react";
 import { titleize, usageSegmentLabels } from "../lib/textileLabels";
+import ProductVisualPlaceholder from "./articles/ProductVisualPlaceholder";
+import { getVisualPlaceholder } from "../lib/visualPlaceholder";
 
 export default function QuoteForm({
   brand,
@@ -70,15 +72,45 @@ export default function QuoteForm({
       <input type="hidden" name="usage_segment" value={selectedArticle?.usageSegment || ""} />
 
       {selectedArticle ? (
-        <div className="mb-5 rounded-2xl border border-sky-100 bg-sky-50 px-4 py-3">
-          <div className="text-xs font-bold uppercase tracking-wide text-sky-700">
-            Selected article
-          </div>
-          <div className="mt-1 font-extrabold" style={{ color: brand.navy }}>
-            {selectedArticle.articleName}
-          </div>
-          <div className="mt-1 text-sm text-slate-600">
-            {usageSegmentLabels[selectedArticle.usageSegment] || titleize(selectedArticle.usageSegment)}
+        <div className="mb-5 overflow-hidden rounded-2xl border border-sky-100 bg-sky-50">
+          <div className="grid gap-4 p-4 sm:grid-cols-[0.85fr_1.15fr] sm:items-center">
+            <div className="overflow-hidden rounded-2xl bg-white">
+              <ProductVisualPlaceholder
+                label={getVisualPlaceholder(selectedArticle).label}
+                mood={getVisualPlaceholder(selectedArticle).mood}
+                texture={getVisualPlaceholder(selectedArticle).texture}
+                gradient={getVisualPlaceholder(selectedArticle).gradient}
+                image={getVisualPlaceholder(selectedArticle).image}
+              />
+            </div>
+
+            <div>
+              <div className="text-xs font-bold uppercase tracking-wide text-sky-700">
+                You are quoting this fabric
+              </div>
+              <div className="mt-1 font-extrabold" style={{ color: brand.navy }}>
+                {selectedArticle.articleName}
+              </div>
+              <div className="mt-1 text-sm text-slate-600">
+                {usageSegmentLabels[selectedArticle.usageSegment] || titleize(selectedArticle.usageSegment)}
+              </div>
+              <div className="mt-3 text-xs leading-5 text-slate-500">
+                Fabric type, material, yarn count, and width are prefilled from the selected product card.
+              </div>
+
+              <button
+                type="button"
+                onClick={() => {
+                  document.getElementById("products")?.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
+                }}
+                className="mt-4 text-sm font-semibold text-sky-700 transition hover:text-sky-900"
+              >
+                ← Choose another fabric
+              </button>
+            </div>
           </div>
         </div>
       ) : null}

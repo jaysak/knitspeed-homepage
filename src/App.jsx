@@ -16,6 +16,7 @@ import KnowledgeArticlePage from "./pages/KnowledgeArticlePage";
 import KnowledgeIndexPage from "./pages/KnowledgeIndexPage";
 import KnowledgeNotFoundPage from "./pages/KnowledgeNotFoundPage";
 import QuoteForm from "./components/QuoteForm";
+import TShirtFabricSourcingGuide from "./pages/knowledge/TShirtFabricSourcingGuide";
 import FinishedArticleGrid from "./components/articles/FinishedArticleGrid";
 import {
   getKnowledgePageFromPathname,
@@ -141,6 +142,10 @@ export default function App() {
         <Login />
       </AuthProvider>
     );
+  }
+
+  if (pathname === "/knowledge/t-shirt-fabric-sourcing") {
+    return <TShirtFabricSourcingGuide brand={brand} />;
   }
 
   if (pathname === "/admin/leads") {
@@ -304,9 +309,9 @@ export default function App() {
         <div className="absolute right-[-120px] top-[-120px] h-80 w-80 rounded-full bg-sky-200/50 blur-3xl" />
         <div className="absolute bottom-[-150px] left-[-120px] h-96 w-96 rounded-full bg-cyan-100/80 blur-3xl" />
 
-        <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 py-20 md:grid-cols-2 md:py-28">
+        <div className="mx-auto grid max-w-7xl items-center gap-7 px-5 py-8 md:grid-cols-2 md:py-16">
           <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <div className="mb-5 inline-flex rounded-full border border-sky-200 bg-white px-4 py-2 text-sm font-semibold text-sky-700 shadow-sm">
+            <div className="mb-2 inline-flex rounded-full border border-sky-200 bg-white px-4 py-2 text-sm font-semibold text-sky-700 shadow-sm">
               Trusted fabric partner since 2015
             </div>
 
@@ -314,12 +319,12 @@ export default function App() {
               Premium Knitted Fabric Supplier in Thailand
             </h1>
 
-            <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600">
+            <p className="mt-3 max-w-xl text-base leading-7 md:text-lg text-slate-600">
               Cotton / CVC / TC / Jersey / Rib / Interlock. Engineered from real production experience.
               Delivered on spec. Delivered on time.
             </p>
 
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-5 flex flex-col gap-3 sm:flex-row">
               <a
                 href="#quote"
                 className="inline-flex items-center justify-center gap-2 rounded-full px-7 py-4 font-bold text-white shadow-lg transition hover:translate-y-[-1px]"
@@ -364,7 +369,13 @@ export default function App() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-5 py-16">
+      <FinishedArticleGrid
+        articles={featuredArticles}
+        brand={brand}
+        onArticleSelect={handleArticleSelect}
+      />
+
+      <section className="hidden mx-auto max-w-7xl px-5 py-16">
         <div className="mb-8 text-center">
           <h2 className="text-3xl font-extrabold" style={{ color: brand.navy }}>What are you making?</h2>
           <p className="mt-3 text-slate-600">Tell us your use. We help recommend the right fabric.</p>
@@ -372,10 +383,27 @@ export default function App() {
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
           {buyerTypes.map((item) => (
-            <div key={item} className="rounded-3xl border border-sky-100 bg-white p-5 text-center shadow-sm transition hover:-translate-y-1 hover:shadow-lg hover:shadow-sky-100">
+            <button
+              key={item}
+              type="button"
+              onClick={() => {
+                document.getElementById("products")?.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+              }}
+              className="rounded-3xl border border-sky-100 bg-white p-5 text-center shadow-sm transition hover:-translate-y-1 hover:shadow-lg hover:shadow-sky-100"
+            >
               <Shirt className="mx-auto mb-3 text-sky-500" />
-              <div className="font-bold" style={{ color: brand.navy }}>{item}</div>
-            </div>
+
+              <div className="font-bold" style={{ color: brand.navy }}>
+                {item}
+              </div>
+
+              <div className="mt-2 text-xs font-semibold text-sky-700">
+                Explore suitable fabrics →
+              </div>
+            </button>
           ))}
         </div>
       </section>
@@ -410,11 +438,43 @@ export default function App() {
         </div>
       </section>
 
-      <FinishedArticleGrid
-        articles={featuredArticles}
-        brand={brand}
-        onArticleSelect={handleArticleSelect}
-      />
+
+
+
+      
+
+      <section className="mx-auto max-w-7xl px-5 pb-10">
+        <div className="rounded-[2rem] border border-sky-100 bg-white p-6 shadow-sm md:p-8">
+          <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
+            <div>
+              <div className="text-sm font-bold uppercase tracking-wide text-sky-700">
+                Garment sourcing guides
+              </div>
+
+              <h2
+                className="mt-2 text-2xl font-extrabold"
+                style={{ color: brand.navy }}
+              >
+                Practical fabric guidance for apparel production
+              </h2>
+
+              <p className="mt-3 max-w-2xl text-sm leading-7 text-slate-600 md:text-base">
+                Learn how fabric structure, GSM, yarn quality, and finishing affect
+                garment feel, printability, durability, and sourcing decisions.
+              </p>
+            </div>
+
+            <a
+              href="/knowledge/t-shirt-fabric-sourcing"
+              className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 font-bold text-white shadow-sm transition hover:translate-y-[-1px]"
+              style={{ backgroundColor: brand.blue }}
+            >
+              Explore T-Shirt Guide →
+            </a>
+          </div>
+        </div>
+      </section>
+
 
       <section className="mx-auto max-w-7xl px-5 pb-16">
         <div className="rounded-[2rem] border border-sky-100 bg-white p-8 shadow-sm md:p-10">

@@ -1016,3 +1016,55 @@ Rules:
 - no homepage feature sprawl
 - preserve deterministic mappings
 - keep public UX calm, premium, and sourcing-aware
+
+---
+
+## Phase 4.2M — Mobile Sourcing UX + Garment Knowledge Continuity
+
+Status:
+- active refinement
+- first implementation complete
+
+Completed:
+- mobile hero compression
+- product-first homepage ordering
+- mobile card ergonomics
+- visible density reduction on product cards
+- selected fabric quote continuity card
+- quote-to-products return shortcut
+- contextual knowledge hooks from product-card guidance
+- first garment sourcing guide route:
+  - `/knowledge/t-shirt-fabric-sourcing`
+- homepage garment sourcing guide entry point
+- knowledge-to-quote continuation blocks
+
+Strategic purpose:
+- improve buyer journey continuity across discovery, understanding, and inquiry
+- turn Knitspeed from a static textile knowledge base into a garment-aware sourcing guidance system
+- preserve calm sourcing UX while making knowledge actionable
+
+Current model:
+- homepage = product-first sourcing catalog
+- product cards = visual textile intelligence
+- quote form = contextual inquiry continuation
+- garment guides = deeper sourcing reasoning
+- knowledge pages = operational textile explanation layer
+
+Next likely direction:
+- stabilize and observe
+- add only one garment guide at a time
+- future candidates:
+  - Polo Shirt Fabric Sourcing Guide
+  - Uniform Fabric Sourcing Guide
+  - Screen Printing Fabric Selection Guide
+  - Small Batch / Sampling Fabric Guide
+- only revive "What are you making?" when multiple guide routes exist
+
+Rules:
+- no generic content expansion
+- no CMS yet
+- no AI chatbot UI
+- no dashboard bloat
+- preserve product-first homepage flow
+- keep garment guides practical, sourcing-aware, and production-grounded
+

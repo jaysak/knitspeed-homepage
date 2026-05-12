@@ -445,3 +445,27 @@ Rules:
 - avoid adding more intelligence panels before density refinement
 - future real images must fit the established visual placeholder architecture
 - real textile images should come before final custom domain migration, but only after UX hierarchy is stable
+
+---
+
+## 2026-05-12 — Decision: Garment Sourcing Guides Must Be Meaningful Entry Points
+
+Decision:
+The "What are you making?" section should remain hidden until each visible use-case card links to a real garment sourcing guide or meaningful guided sourcing path.
+
+Rationale:
+Cards like T-shirts, Polo, Uniforms, Screen Printing, and Sampling imply deeper help. If they only scroll to products, the interaction feels underpowered and may reduce trust.
+
+Accepted direction:
+- build garment sourcing guides one at a time
+- start with T-shirt Fabric Sourcing Guide
+- future use-case cards should link to real guide routes
+- garment guides should connect knowledge to quote inquiry
+
+Rules:
+- do not revive use-case cards as decorative UI
+- do not create fake guide pages just to fill navigation
+- keep garment guides sourcing-aware and production-grounded
+- preserve homepage product-first flow
+- knowledge integration should support buyer decisions, not overwhelm product discovery
+

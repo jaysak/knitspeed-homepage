@@ -1622,3 +1622,60 @@ Do not do next:
 
 Magic words for next boot:
 > Jarvis, continue Knitspeed from Phase 4.2 Homepage Visual Intelligence UX checkpoint. Homepage sourcing intelligence cards, visual placeholders, and collapsible insight hierarchy are implemented and pushed. Next priority is visual QA, density refinement, and mobile hierarchy polish before adding real textile images or migrating domain. First inspect HANDOFF.md, PROJECT_ROADMAP.md, DECISIONS.md, SESSIONS.md, then inspect git status before patching.
+
+---
+
+# CURRENT CHECKPOINT — Phase 4.2M Mobile Sourcing UX + Garment Knowledge Continuity
+
+Status:
+- implemented locally
+- verification passing
+- ready for git checkpoint
+
+Implemented:
+- mobile hero compression
+- product cards moved immediately after hero
+- homepage product card density refinement
+- mobile card ergonomics refinement
+- quote continuity card with selected fabric visual preview
+- "Choose another fabric" shortcut from quote form back to products
+- contextual knowledge hooks in product decision guidance
+- hidden premature "What are you making?" section
+- first garment sourcing guide:
+  - `/knowledge/t-shirt-fabric-sourcing`
+- homepage garment sourcing guide entry point
+- sourcing continuation blocks inside T-shirt guide
+
+Current UX flow:
+- Hero
+- Finished Articles
+- Garment sourcing guide entry
+- Knowledge support
+- Quote
+- Additional trust/support sections
+
+Strategic result:
+- Knitspeed homepage now feels product-first
+- mobile buyer journey is cleaner
+- quote flow retains context
+- garment sourcing knowledge layer has started
+- knowledge now supports inquiry instead of remaining passive content
+
+Verification:
+- npm run verify:knowledge passes
+- npm run verify:deployment passes
+- npm run generate:sitemap passes
+- npm run build passes
+- npm run lint passes
+- desktop visual QA passed
+- iPhone local Wi-Fi QA passed
+
+Important notes:
+- hidden use-case section should not be revived until it links to real garment sourcing guides
+- future garment guides should be added one at a time
+- preserve product-first homepage rhythm
+- do not reintroduce cognitive overload above products
+
+Magic words for next boot:
+> Jarvis, continue Knitspeed from Phase 4.2M checkpoint. Mobile sourcing UX, product-first homepage ordering, quote continuity, contextual knowledge hooks, and the first garment sourcing guide `/knowledge/t-shirt-fabric-sourcing` are implemented. The "What are you making?" section is hidden until it can link to real garment sourcing guides. First inspect HANDOFF.md, PROJECT_ROADMAP.md, DECISIONS.md, SESSIONS.md, then inspect git status before patching.
+
