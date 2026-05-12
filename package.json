@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "probe:intelligence": "tsx scripts/intelligence/probeKnowledgeIntelligence.js",
     "verify:knowledge": "tsx scripts/verifyKnowledgeIntegrity.js",
-    "normalize:knowledge": "tsx scripts/normalizeKnowledgeMetadata.js"
+    "normalize:knowledge": "tsx scripts/normalizeKnowledgeMetadata.js",
+    "generate:sitemap": "tsx scripts/generateSitemap.js"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.105.3",
