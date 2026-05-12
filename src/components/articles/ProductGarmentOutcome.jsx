@@ -1,0 +1,56 @@
+export default function ProductGarmentOutcome({
+  garmentShape,
+  wearingExperience,
+  visualResult,
+  productionEffect,
+}) {
+  return (
+    <div className="mt-4 overflow-hidden rounded-2xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white">
+      <div className="border-b border-slate-200 px-4 py-3">
+        <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+          Garment Outcome Visualization
+        </p>
+
+        <p className="mt-1 text-sm text-slate-700">
+          How fabric selection may influence garment feel and presentation.
+        </p>
+      </div>
+
+      <div className="grid gap-3 p-4 md:grid-cols-3">
+        <div className="rounded-xl bg-white p-3 border border-slate-200">
+          <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+            Garment Shape
+          </p>
+
+          <p className="mt-2 text-sm text-slate-700">
+            {garmentShape}
+          </p>
+        </div>
+
+        <div className="rounded-xl bg-white p-3 border border-slate-200">
+          <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+            Wearing Experience
+          </p>
+
+          <p className="mt-2 text-sm text-slate-700">
+            {wearingExperience}
+          </p>
+        </div>
+
+        <div className="rounded-xl bg-white p-3 border border-slate-200">
+          <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+            Visual Result
+          </p>
+
+          <p className="mt-2 text-sm text-slate-700">
+            {visualResult}
+          </p>
+        </div>
+      </div>
+
+      <div className="border-t border-slate-200 bg-white px-4 py-3 text-sm leading-relaxed text-slate-600">
+        {productionEffect}
+      </div>
+    </div>
+  )
+}
