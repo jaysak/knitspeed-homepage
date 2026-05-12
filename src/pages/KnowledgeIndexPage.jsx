@@ -2,6 +2,7 @@ import { useMemo, useState } from "react";
 
 import SEOJsonLd from "../components/SEOJsonLd";
 import { usePageMeta } from "../lib/usePageMeta";
+import KnowledgeContinuityNav from "../components/knowledge/KnowledgeContinuityNav";
 import {
   buildBreadcrumbSchema,
   buildKnowledgeCollectionSchema,
@@ -109,7 +110,9 @@ export default function KnowledgeIndexPage() {
 
   return (
     <div className="bg-slate-50">
-      <SEOJsonLd schema={schema} />
+  <SEOJsonLd schema={schema} />
+
+  <KnowledgeContinuityNav backHref="/" backLabel="Back to Home" />
 
       <section className="border-b border-slate-200 bg-sky-50">
         <div className="mx-auto max-w-5xl px-5 py-16">

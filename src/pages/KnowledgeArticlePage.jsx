@@ -8,12 +8,16 @@ import ReadingProgressBar from "../components/knowledge/ReadingProgressBar";
 import OperationalContextBlock from "../components/knowledge/OperationalContextBlock";
 import ManufacturingSensitivityNote from "../components/knowledge/ManufacturingSensitivityNote";
 import KnowledgeWatermark from "../components/branding/KnowledgeWatermark";
+import KnowledgeContinuityNav from "../components/knowledge/KnowledgeContinuityNav";
 import SpecSummaryGrid from "../components/knowledge/SpecSummaryGrid";
 import ProductionMemoryPanel from "../components/production/ProductionMemoryPanel";
 import ProductionRelationshipsPanel from "../components/production/ProductionRelationshipsPanel";
 import MobileDisclosure from "../components/ui/MobileDisclosure";
 import { writeBuyerIntentEvent } from "../lib/buyerIntent";
 import { usePageMeta } from "../lib/usePageMeta";
+import KnowledgeContinueExploring from "../components/knowledge/KnowledgeContinueExploring";
+import RelatedKnowledgeContinuity from "../components/knowledge/RelatedKnowledgeContinuity";
+import { getKnowledgeContinuity } from "../lib/knowledgeContinuityMap";
 import { getKnowledgePageProductionMemory,
   getKnowledgePageOperationalContext,
   getKnowledgePageManufacturingSensitivity,
@@ -89,16 +93,23 @@ export default function KnowledgeArticlePage({ page }) {
 
   if (!page) {
     return (
+      <>
+        <KnowledgeContinuityNav />
+
       <KnowledgePageLayout
-        eyebrow="Textile knowledge"
-        title="Knowledge page not found"
-        subtitle="The requested textile knowledge page is not available."
-      />
+          eyebrow="Textile knowledge"
+          title="Knowledge page not found"
+          subtitle="The requested textile knowledge page is not available."
+        />
+      </>
     );
   }
 
   const pageUrl = getCanonicalKnowledgeUrl(page);
-  const schema = [
+  
+  const continuity = getKnowledgeContinuity(page.slug);
+
+const schema = [
     buildOrganizationSchema(),
     buildArticleSchema(page),
     buildFAQPageSchema(page),
@@ -113,6 +124,9 @@ export default function KnowledgeArticlePage({ page }) {
       <ReadingProgressBar />
       <KnowledgeWatermark />
       <SEOJsonLd schema={schema} />
+
+      <KnowledgeContinuityNav />
+
       <KnowledgePageLayout
         eyebrow={page.eyebrow}
         title={page.title}
@@ -208,7 +222,17 @@ export default function KnowledgeArticlePage({ page }) {
         )}
 
 
-      </KnowledgePageLayout>
+      
+        
+        <RelatedKnowledgeContinuity
+          relatedKnowledge={continuity.relatedKnowledge}
+          relatedGarments={continuity.relatedGarments}
+        />
+
+        <KnowledgeContinueExploring />
+
+
+</KnowledgePageLayout>
     </>
   );
 }

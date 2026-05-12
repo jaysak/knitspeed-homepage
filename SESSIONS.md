@@ -1893,3 +1893,37 @@ Notes:
 - use-case section is hidden until garment guide paths become meaningful
 - future "What are you making?" section should link to real garment sourcing guides, not just scroll to products
 
+
+
+---
+
+## 2026-05-12 — Phase 4.2M Navigation + Continuity Stabilization
+
+Status:
+- implemented and verified
+
+Summary:
+- fixed continuity routing loop caused by shared hardcoded Knowledge navigation component
+- refactored `KnowledgeContinuityNav` into reusable prop-driven component
+- `/knowledge` index now routes back to homepage
+- `/knowledge/:slug` routes back to `/knowledge`
+- normalized Explore Fabrics continuity target to:
+  - `/#finished-articles`
+- preserved lightweight pathname-based architecture
+
+Verification:
+- `npm run build` passes
+- `npm run lint` passes
+- manual browser continuity flow verified
+
+Strategic result:
+- knowledge continuity UX now matches intended buyer flow
+- reduced future nav regression risk
+- improved separation between knowledge hub navigation and article recovery navigation
+
+Notes:
+- no routing overhaul
+- no React Router
+- no CMS
+- no semantic expansion
+- no dashboard changes

@@ -1679,3 +1679,53 @@ Important notes:
 Magic words for next boot:
 > Jarvis, continue Knitspeed from Phase 4.2M checkpoint. Mobile sourcing UX, product-first homepage ordering, quote continuity, contextual knowledge hooks, and the first garment sourcing guide `/knowledge/t-shirt-fabric-sourcing` are implemented. The "What are you making?" section is hidden until it can link to real garment sourcing guides. First inspect HANDOFF.md, PROJECT_ROADMAP.md, DECISIONS.md, SESSIONS.md, then inspect git status before patching.
 
+
+
+---
+
+# CURRENT CHECKPOINT — Phase 4.2M Navigation + Continuity Stabilization
+
+Status:
+- stable local checkpoint
+- build/lint passing
+- continuity navigation architecture corrected
+
+Implemented:
+- split Knowledge continuity navigation behavior by page context
+- `/knowledge` index now routes back to homepage
+- `/knowledge/:slug` article pages now route back to `/knowledge`
+- normalized Explore Fabrics continuity path to:
+  - `/#finished-articles`
+- removed continuity routing loop caused by shared hardcoded nav behavior
+- preserved lightweight non-router architecture
+
+Verification:
+- `npm run build` passes
+- `npm run lint` passes
+- browser UX continuity verified manually
+
+Current continuity flow:
+- Homepage
+  → Knowledge index
+    → Back to Home
+  → Knowledge article
+    → Back to Knowledge
+    → Explore Fabrics
+
+Next likely safe tasks:
+1. Phase 4.2M visual QA refinement
+2. mobile spacing rhythm polish
+3. homepage density refinement
+4. continuity component cleanup
+5. Phase 4.2N knowledge navigation stabilization planning
+6. textile visual system planning
+
+Rules preserved:
+- no CMS
+- no React Router
+- no semantic expansion
+- no dashboard sprawl
+- no AI chatbot UX
+
+Magic words for next boot:
+> Jarvis, continue Knitspeed from the Phase 4.2M Navigation + Continuity Stabilization checkpoint. Knowledge continuity routing is now corrected: `/knowledge` routes back to Home while article pages route back to `/knowledge`. Explore Fabrics uses `/#finished-articles`. Build/lint pass. Next focus is visual QA, density refinement, continuity cleanup, and future navigation stabilization planning. First inspect HANDOFF.md, PROJECT_ROADMAP.md, DECISIONS.md, SESSIONS.md, then inspect git status before patching.
