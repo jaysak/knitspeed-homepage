@@ -36,6 +36,7 @@ import {
   BookOpen,
 } from "lucide-react";
 import { motion } from "framer-motion";
+import GarmentGuideCard from "./components/garments/GarmentGuideCard";
 
 const brand = {
   blue: "#3FA9D5",
@@ -443,37 +444,7 @@ export default function App() {
 
       
 
-      <section className="mx-auto max-w-7xl px-5 pb-10">
-        <div className="rounded-[2rem] border border-sky-100 bg-white p-6 shadow-sm md:p-8">
-          <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
-            <div>
-              <div className="text-sm font-bold uppercase tracking-wide text-sky-700">
-                Garment sourcing guides
-              </div>
-
-              <h2
-                className="mt-2 text-2xl font-extrabold"
-                style={{ color: brand.navy }}
-              >
-                Practical fabric guidance for apparel production
-              </h2>
-
-              <p className="mt-3 max-w-2xl text-sm leading-7 text-slate-600 md:text-base">
-                Learn how fabric structure, GSM, yarn quality, and finishing affect
-                garment feel, printability, durability, and sourcing decisions.
-              </p>
-            </div>
-
-            <a
-              href="/knowledge/t-shirt-fabric-sourcing"
-              className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 font-bold text-white shadow-sm transition hover:translate-y-[-1px]"
-              style={{ backgroundColor: brand.blue }}
-            >
-              Explore T-Shirt Guide →
-            </a>
-          </div>
-        </div>
-      </section>
+      <GarmentGuideCard />
 
 
       <section className="mx-auto max-w-7xl px-5 pb-16">

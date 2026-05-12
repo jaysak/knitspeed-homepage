@@ -13,6 +13,8 @@ import { getDecisionConfidence } from "../../lib/decisionConfidence";
 import { getComparativeReasoning } from "../../lib/comparativeReasoning";
 import { getGarmentOutcome } from "../../lib/garmentOutcome";
 import { getVisualPlaceholder } from "../../lib/visualPlaceholder";
+import { getFabricTexture } from "../../lib/fabricTextureMap";
+import GarmentOutcomeHints from "../garments/GarmentOutcomeHints";
 
 export default function FinishedArticleGrid({ articles, brand, onArticleSelect }) {
   return (
@@ -54,6 +56,16 @@ export default function FinishedArticleGrid({ articles, brand, onArticleSelect }
                 </h3>
               </div>
 
+              <div className="relative h-14 overflow-hidden border-b border-slate-100">
+                <img
+                  src={getFabricTexture(article)}
+                  alt=""
+                  className="h-full w-full object-cover opacity-60"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-white/30 via-transparent to-white/20" />
+              </div>
+
               <div className="p-5 md:p-6">
                 <div className="flex flex-wrap gap-1 text-[11px] font-semibold text-slate-500">
                   <span className="rounded-full bg-slate-100 px-2.5 py-1">{titleize(article.materialFamily)}</span>
@@ -83,6 +95,8 @@ export default function FinishedArticleGrid({ articles, brand, onArticleSelect }
                   feelTraits={intelligence.feelTraits}
                   productionNotes={intelligence.productionNotes}
                 />
+
+                <GarmentOutcomeHints article={article} />
 
                 <button
                   type="button"
