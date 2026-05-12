@@ -11,7 +11,8 @@
     "probe:intelligence": "tsx scripts/intelligence/probeKnowledgeIntelligence.js",
     "verify:knowledge": "tsx scripts/verifyKnowledgeIntegrity.js",
     "normalize:knowledge": "tsx scripts/normalizeKnowledgeMetadata.js",
-    "generate:sitemap": "tsx scripts/generateSitemap.js"
+    "generate:sitemap": "tsx scripts/generateSitemap.js",
+    "verify:deployment": "tsx scripts/verifyDeploymentIntegrity.js"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.105.3",
