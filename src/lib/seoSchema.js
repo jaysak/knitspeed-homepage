@@ -19,7 +19,6 @@ export function buildOrganizationSchema() {
     "@type": "Organization",
     "@id": ORGANIZATION_ID,
     name: "Knitspeed",
-    legalName: "GSC Import Export Co., Ltd.",
     url: KNITSPEED_SITE_URL,
     description:
       "Knitspeed supports knitted fabric sourcing discussions for buyers working with Thailand textile suppliers.",
@@ -87,7 +86,7 @@ export function buildKnowledgeCollectionSchema(pages) {
     "@id": `${url}#collection`,
     name: "Knitspeed Textile Knowledge",
     description:
-      "Practical knitted fabric sourcing guidance from Knitspeed and GSC Import Export Co., Ltd.",
+      "Practical knitted fabric sourcing guidance from Knitspeed.",
     url,
     publisher: {
       "@id": ORGANIZATION_ID,

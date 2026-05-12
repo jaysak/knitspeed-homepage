@@ -73,7 +73,7 @@ export default function KnowledgeIndexPage() {
   usePageMeta({
     title: "Textile Knowledge | Knitspeed",
     description:
-      "Practical knitted fabric sourcing guidance from Knitspeed and GSC Import Export Co., Ltd.",
+      "Practical knitted fabric sourcing guidance from Knitspeed.",
     canonicalUrl: `${KNITSPEED_SITE_URL}/knowledge`,
   });
 
@@ -123,7 +123,7 @@ export default function KnowledgeIndexPage() {
 
           <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-600">
             Practical textile sourcing guidance from Knitspeed and
-            GSC Import Export Co., Ltd. focused on knitted fabric structures,
+            Knitspeed focused on knitted fabric structures,
             sourcing considerations, garment applications, and production-aware
             buyer support.
           </p>

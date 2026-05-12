@@ -8,7 +8,9 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "probe:intelligence": "tsx scripts/intelligence/probeKnowledgeIntelligence.js"
+    "probe:intelligence": "tsx scripts/intelligence/probeKnowledgeIntelligence.js",
+    "verify:knowledge": "tsx scripts/verifyKnowledgeIntegrity.js",
+    "normalize:knowledge": "tsx scripts/normalizeKnowledgeMetadata.js"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.105.3",

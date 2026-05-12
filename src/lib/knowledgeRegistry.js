@@ -134,7 +134,8 @@ const CLUSTER_LABELS = {
   "textile-production": "Textile Production",
   "yarn-quality": "Yarn Quality",
   "fabric-dyeing": "Fabric Dyeing",
-  "garment-production": "Garment Production"
+  "garment-production": "Garment Production",
+  "decoration-printing": "Decoration Printing"
 };
 
 function formatClusterLabel(clusterKey) {

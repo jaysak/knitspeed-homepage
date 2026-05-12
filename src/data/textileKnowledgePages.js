@@ -14,8 +14,7 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
     tags: ["single jersey", "interlock", "knitted fabric", "fabric structure", "apparel sourcing"],
     eyebrow: "Textile knowledge",
     title: "Single Jersey vs Interlock",
-    subtitle:
-      "A practical buyer guide to two common knitted fabric structures and how to choose between them for apparel production.",
+    subtitle: "A practical buyer guide to two common knitted fabric structures and how to choose between them for apparel production.",
     metaDescription:
       "Compare Single Jersey and Interlock knitted fabrics with practical buyer guidance for apparel sourcing, structure, hand feel, and production checks.",
     shortAnswer:
@@ -95,8 +94,7 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
     tags: ["compact cotton", "combed cotton", "cotton fabric", "yarn quality", "apparel sourcing"],
     eyebrow: "Textile knowledge",
     title: "What Is Compact Cotton?",
-    subtitle:
-      "A practical buyer guide to compact cotton yarn and why it matters for knitted fabric appearance, hand feel, and production quality.",
+    subtitle: "A practical buyer guide to compact cotton yarn and why it matters for knitted fabric appearance, hand feel, and production quality.",
     metaDescription:
       "Learn what compact cotton means for knitted fabrics, including yarn quality, fabric surface, buyer checks, and apparel sourcing considerations.",
     shortAnswer:
@@ -172,8 +170,7 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
     tags: ["t-shirt fabric", "gsm", "single jersey", "fabric weight", "apparel sourcing"],
     eyebrow: "Textile knowledge",
     title: "What GSM Should T-Shirts Use?",
-    subtitle:
-      "A practical buyer guide to choosing T-shirt fabric weight based on garment use, market position, hand feel, and production needs.",
+    subtitle: "A practical buyer guide to choosing T-shirt fabric weight based on garment use, market position, hand feel, and production needs.",
     metaDescription:
       "Learn how to choose T-shirt fabric GSM with practical sourcing guidance for single jersey, premium basics, streetwear, and production checks.",
     shortAnswer:
@@ -257,8 +254,7 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
   ],
   eyebrow: "Textile knowledge",
   title: "Combed Cotton vs Carded Cotton",
-  subtitle:
-    "A practical buyer guide to understanding combed and carded cotton for knitted fabric sourcing, garment feel, and production expectations.",
+  subtitle: "A practical buyer guide to understanding combed and carded cotton for knitted fabric sourcing, garment feel, and production expectations.",
   metaDescription:
     "Compare combed cotton and carded cotton with practical sourcing guidance for knitted fabrics, garment feel, yarn quality, and apparel production.",
   shortAnswer:
@@ -357,8 +353,7 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
   ],
   eyebrow: "Textile knowledge",
   title: "Understanding Spirality Considerations in Knitted Fabrics",
-  subtitle:
-    "A practical buyer guide to understanding spirality behavior in knitted fabrics and how production, finishing, and garment construction can influence final results.",
+  subtitle: "A practical buyer guide to understanding spirality behavior in knitted fabrics and how production, finishing, and garment construction can influence final results.",
   metaDescription:
     "Learn what spirality means in knitted fabrics, why it can happen in garments, and how sourcing, knitting, finishing, and washing considerations affect production outcomes.",
   shortAnswer:
@@ -453,8 +448,7 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
   ],
   eyebrow: "Textile knowledge",
   title: "How Fabric Finishing Affects Garment Feel",
-  subtitle:
-    "A practical buyer guide to understanding how finishing processes can influence softness, drape, stability, and final garment perception.",
+  subtitle: "A practical buyer guide to understanding how finishing processes can influence softness, drape, stability, and final garment perception.",
   metaDescription:
     "Learn how textile finishing can affect garment feel, softness, drape, shrinkage, and production consistency in knitted fabric sourcing.",
   shortAnswer:
@@ -549,8 +543,7 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
   ],
   eyebrow: "Textile knowledge",
   title: "Why Fabrics With the Same GSM Can Feel Different",
-  subtitle:
-    "A practical buyer guide to understanding why similar fabric weights can still produce different hand feel, drape, softness, and garment behavior.",
+  subtitle: "A practical buyer guide to understanding why similar fabric weights can still produce different hand feel, drape, softness, and garment behavior.",
   metaDescription:
     "Learn why fabrics with similar GSM can still feel different depending on yarn quality, finishing, knitting structure, compaction, and garment use.",
   shortAnswer:
@@ -637,8 +630,7 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
   ],
   eyebrow: "Textile knowledge",
   title: "What Causes Pilling in Knitted Fabrics?",
-  subtitle:
-    "A practical buyer guide to understanding why pilling can appear in garments and how yarn, finishing, washing, and fabric construction influence wear behavior.",
+  subtitle: "A practical buyer guide to understanding why pilling can appear in garments and how yarn, finishing, washing, and fabric construction influence wear behavior.",
   metaDescription:
     "Learn what causes pilling in knitted fabrics and how yarn quality, finishing, garment use, washing, and fabric construction affect long-term appearance.",
   shortAnswer:
@@ -733,8 +725,7 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
   ],
   eyebrow: "Textile knowledge",
   title: "How Shrinkage Is Evaluated in Apparel Fabrics",
-  subtitle:
-    "A practical buyer guide to understanding how shrinkage is reviewed during fabric and garment development before bulk production.",
+  subtitle: "A practical buyer guide to understanding how shrinkage is reviewed during fabric and garment development before bulk production.",
   metaDescription:
     "Learn how shrinkage is evaluated in apparel fabrics and how washing, finishing, knitting structure, and garment construction influence production expectations.",
   shortAnswer:
@@ -822,8 +813,7 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
   tags: ["combed cotton", "compact cotton", "cotton yarn", "yarn quality", "apparel sourcing"],
   eyebrow: "Textile knowledge",
   title: "Combed Cotton vs Compact Cotton",
-  subtitle:
-    "A practical buyer guide to understanding how combed cotton and compact cotton differ in yarn preparation, fabric appearance, and garment expectations.",
+  subtitle: "A practical buyer guide to understanding how combed cotton and compact cotton differ in yarn preparation, fabric appearance, and garment expectations.",
   metaDescription:
     "Compare combed cotton and compact cotton with practical sourcing guidance for knitted fabrics, yarn quality, surface appearance, and garment feel.",
   shortAnswer:
@@ -903,8 +893,7 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
   tags: ["fabric width", "marker planning", "garment production", "knitted fabric", "apparel sourcing"],
   eyebrow: "Textile knowledge",
   title: "How Fabric Width Affects Garment Production",
-  subtitle:
-    "A practical buyer guide to understanding why fabric width matters for cutting efficiency, marker planning, garment sizing, and production cost.",
+  subtitle: "A practical buyer guide to understanding why fabric width matters for cutting efficiency, marker planning, garment sizing, and production cost.",
   metaDescription:
     "Learn how fabric width affects garment production, cutting efficiency, fabric usage, marker planning, and sourcing decisions for knitted fabrics.",
   shortAnswer:
@@ -984,8 +973,7 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
   tags: ["wash testing", "shrinkage", "pilling", "spirality", "garment production", "apparel sourcing"],
   eyebrow: "Textile knowledge",
   title: "Why Wash Testing Matters for Apparel Fabrics",
-  subtitle:
-    "A practical buyer guide to understanding how wash testing helps review shrinkage, hand feel, pilling, color behavior, and garment stability before production.",
+  subtitle: "A practical buyer guide to understanding how wash testing helps review shrinkage, hand feel, pilling, color behavior, and garment stability before production.",
   metaDescription:
     "Learn why wash testing matters for apparel fabrics and how it helps evaluate shrinkage, pilling, spirality, hand feel, and garment stability.",
   shortAnswer:
@@ -1052,11 +1040,14 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
 
 {
   slug: "cotton-knit-dyeing",
+    canonicalPath: "/knowledge/cotton-knit-dyeing",
   publishedAt: "2026-05-11",
   updatedAt: "2026-05-11",
   title: "Cotton Knit Dyeing Process",
+    subtitle: "Cotton knit dyeing is not only a color process.",
   category: "Dyeing & Finishing",
-  topicCluster: "Fabric Dyeing",
+    discoveryPriority: 130,
+  topicCluster: "fabric-dyeing",
   buyerIntent: "Understand cotton knit dyeing process before quotation",
   tags: ["cotton", "knitted fabric", "dyeing", "finishing", "production"],
   metaDescription:
@@ -1113,9 +1104,12 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
 
 {
   slug: "dyeing-painpoints-cotton-knits",
+    canonicalPath: "/knowledge/dyeing-painpoints-cotton-knits",
   title: "Dyeing Painpoints in Cotton Knitted Fabric",
+    subtitle: "Most cotton knit dyeing painpoints come from production variables that affect shade, stability, hand feel, and final garment behavior.",
   category: "Dyeing & Finishing",
-  topicCluster: "Fabric Dyeing",
+    discoveryPriority: 140,
+  topicCluster: "fabric-dyeing",
   buyerIntent: "Understand common dyeing risks in cotton knits",
   tags: ["dyeing", "cotton", "shade", "shrinkage", "quality control"],
   metaDescription:
@@ -1172,9 +1166,12 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
 
 {
   slug: "reactive-dyeing-cotton",
+    canonicalPath: "/knowledge/reactive-dyeing-cotton",
   title: "Reactive Dyeing for Cotton Knits",
+    subtitle: "Reactive dyeing is commonly used for cotton because reactive dyes bond with cellulose fiber, but process control and washing are critical for reliable shade and fastness.",
   category: "Dyeing Chemistry",
-  topicCluster: "Fabric Dyeing",
+    discoveryPriority: 150,
+  topicCluster: "fabric-dyeing",
   buyerIntent: "Understand reactive dyeing for cotton knitted fabric",
   tags: ["reactive dyeing", "cotton", "colorfastness", "dark shade", "washing"],
   metaDescription:
@@ -1231,9 +1228,12 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
 
 {
   slug: "finishing-effects-cotton-knits",
+    canonicalPath: "/knowledge/finishing-effects-cotton-knits",
   title: "Finishing Effects on Cotton Knitted Fabric",
+    subtitle: "Finishing gives cotton knit fabric its final commercial character.",
   category: "Fabric Finishing",
-  topicCluster: "Fabric Finishing",
+    discoveryPriority: 160,
+  topicCluster: "fabric-finishing",
   buyerIntent: "Understand how finishing changes cotton knit fabric behavior",
   tags: ["finishing", "cotton", "hand feel", "compacting", "shrinkage"],
   metaDescription:
@@ -1291,11 +1291,13 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
 
 {
   slug: "why-lab-dip-and-bulk-shade-can-differ",
+    canonicalPath: "/knowledge/why-lab-dip-and-bulk-shade-can-differ",
   publishedAt: "2026-05-11",
   updatedAt: "2026-05-11",
   title: "Why Lab Dip and Bulk Shade Can Differ",
+    subtitle: "Lab dip is a useful approval reference, but bulk dyeing happens at a different scale with different production variables, so shade can still shift.",
   category: "Dyeing & Finishing",
-  topicCluster: "Fabric Dyeing",
+  topicCluster: "fabric-dyeing",
   buyerIntent: "Understand shade approval and bulk dyeing risk",
   discoveryPriority: 42,
   tags: ["lab dip", "bulk shade", "dyeing", "shade matching", "cotton"],
@@ -1358,11 +1360,13 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
 
 {
   slug: "why-dark-shades-need-more-dyeing-control",
+    canonicalPath: "/knowledge/why-dark-shades-need-more-dyeing-control",
   publishedAt: "2026-05-11",
   updatedAt: "2026-05-11",
   title: "Why Dark Shades Need More Dyeing Control",
+    subtitle: "Dark shades usually need more dye, stronger washing control, and more attention to colorfastness than light shades.",
   category: "Dyeing & Finishing",
-  topicCluster: "Fabric Dyeing",
+  topicCluster: "fabric-dyeing",
   buyerIntent: "Understand dark shade dyeing and colorfastness risk",
   discoveryPriority: 43,
   tags: ["dark shade", "reactive dyeing", "colorfastness", "dyeing", "cotton"],
@@ -1425,11 +1429,13 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
 
 {
   slug: "what-affects-colorfastness-in-cotton-knits",
+    canonicalPath: "/knowledge/what-affects-colorfastness-in-cotton-knits",
   publishedAt: "2026-05-11",
   updatedAt: "2026-05-11",
   title: "What Affects Colorfastness in Cotton Knits?",
+    subtitle: "Colorfastness depends on dyeing, washing, shade depth, finishing, testing method, and garment use condition.",
   category: "Dyeing & Finishing",
-  topicCluster: "Fabric Dyeing",
+  topicCluster: "fabric-dyeing",
   buyerIntent: "Understand colorfastness expectations before production",
   discoveryPriority: 44,
   tags: ["colorfastness", "cotton", "washing", "rubbing", "dyeing"],
@@ -1492,7 +1498,9 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
 
 {
   slug: "why-cotton-knits-shrink-after-dyeing",
+    canonicalPath: "/knowledge/why-cotton-knits-shrink-after-dyeing",
   title: "Why Cotton Knits Shrink After Dyeing",
+    subtitle: "Cotton knits shrink after dyeing because wet processing relaxes loop tension and changes the fabric from greige state to finished state.",
   category: "Textile Production",
   topicCluster: "textile-production",
   buyerIntent: "Understand shrinkage after dyeing and finishing",
@@ -1557,9 +1565,11 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
 
 {
   slug: "compacting-vs-stentering-for-cotton-knits",
+    canonicalPath: "/knowledge/compacting-vs-stentering-for-cotton-knits",
   title: "Compacting vs Stentering for Cotton Knits",
+    subtitle: "Compacting mainly helps dimensional stability and shrinkage control, while stentering helps width, appearance, and fabric setting.",
   category: "Fabric Finishing",
-  topicCluster: "Fabric Finishing",
+  topicCluster: "fabric-finishing",
   buyerIntent: "Understand finishing routes and dimensional stability",
   discoveryPriority: 46,
   tags: ["compacting", "stentering", "finishing", "shrinkage", "cotton"],
@@ -1639,8 +1649,7 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
     publishedAt: "2026-05-11",
     metaDescription:
       "Learn how fabric width, tubular width, body size, and marker efficiency affect garment yield, fabric consumption, and apparel costing.",
-    subtitle:
-      "Fabric width can strongly influence how efficiently fabric is cut into garments. The same GSM and fabric type can produce different garment costs depending on width, size range, and marker planning.",
+    subtitle: "Fabric width can strongly influence how efficiently fabric is cut into garments. The same GSM and fabric type can produce different garment costs depending on width, size range, and marker planning.",
     shortAnswer:
       "Fabric width affects how many garment pieces can be placed across the fabric during cutting. Better width alignment can reduce wastage, improve marker efficiency, and make fabric consumption more predictable. Poor width matching can increase leftover fabric, especially for larger sizes or wide garment panels.",
     comparison: [
@@ -1717,8 +1726,7 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
     publishedAt: "2026-05-11",
     metaDescription:
       "Understand why GSM alone does not predict fabric consumption. Fabric width, cutting yield, shrinkage, and garment pattern layout all affect usage and cost.",
-    subtitle:
-      "GSM tells fabric weight per square meter, but garment usage also depends on width, yield, shrinkage, and pattern efficiency.",
+    subtitle: "GSM tells fabric weight per square meter, but garment usage also depends on width, yield, shrinkage, and pattern efficiency.",
     shortAnswer:
       "GSM helps estimate fabric weight, but it does not fully determine how much fabric a garment uses. Width, marker efficiency, shrinkage allowance, garment size, and pattern shape all affect consumption. This is why two fabrics with similar GSM can still lead to different costing results.",
     comparison: [
@@ -1795,8 +1803,7 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
     publishedAt: "2026-05-11",
     metaDescription:
       "Understand the difference between tubular and open-width fabric, and how each affects garment cutting, side seams, marker efficiency, print placement, and production planning.",
-    subtitle:
-      "Tubular and open-width fabric can both be useful, but they affect cutting, garment layout, seams, and production planning in different ways.",
+    subtitle: "Tubular and open-width fabric can both be useful, but they affect cutting, garment layout, seams, and production planning in different ways.",
     shortAnswer:
       "Tubular fabric is knitted as a tube, while open-width fabric is slit and processed flat. Tubular fabric may reduce side seams for some T-shirt styles, but open-width fabric can offer more flexible marker planning, print placement, and cutting control. The better choice depends on garment design, size range, shrinkage expectations, and production workflow.",
     comparison: [
@@ -1858,7 +1865,11 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
 
   {
     slug: "why-size-ratio-affects-fabric-consumption",
+    canonicalPath: "/knowledge/why-size-ratio-affects-fabric-consumption",
+    category: "Garment production",
+    discoveryPriority: 250,
     title: "Why Size Ratio Affects Fabric Consumption",
+    subtitle: "Size ratio changes fabric consumption because garment panels scale differently across sizes, and marker efficiency depends on how those panels fit together during cutting.",
     shortTitle: "Size Ratio & Fabric Use",
     metaDescription:
       "Learn why garment size ratios affect fabric consumption, marker efficiency, cutting waste, and apparel quotation planning.",
@@ -1934,7 +1945,11 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
   },
   {
     slug: "why-oversized-garments-use-more-fabric",
+    canonicalPath: "/knowledge/why-oversized-garments-use-more-fabric",
+    category: "Garment production",
+    discoveryPriority: 260,
     title: "Why Oversized Garments Use More Fabric",
+    subtitle: "Oversized garments use more fabric because larger panels and relaxed silhouettes reduce marker efficiency and increase average garment consumption.",
     shortTitle: "Oversized Garment Fabric Use",
     metaDescription:
       "Understand why oversized T-shirts and streetwear garments often require more fabric because of fit, panel geometry, width, cutting efficiency, and garment construction.",
@@ -2011,7 +2026,11 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
 
   {
     slug: "why-screen-printing-behaves-differently-on-fabrics",
+    canonicalPath: "/knowledge/why-screen-printing-behaves-differently-on-fabrics",
+    category: "Decoration printing",
+    discoveryPriority: 270,
     title: "Why Screen Printing Behaves Differently on Fabrics",
+    subtitle: "Screen printing depends on more than artwork.",
     shortTitle: "Screen Print & Fabric Behavior",
     metaDescription:
       "Learn why screen printing can behave differently across knitted fabrics depending on GSM, surface texture, finishing, shrinkage, washing, and garment construction.",
@@ -2087,7 +2106,11 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
   },
   {
     slug: "why-embroidery-affects-fabric-behavior",
+    canonicalPath: "/knowledge/why-embroidery-affects-fabric-behavior",
+    category: "Decoration printing",
+    discoveryPriority: 280,
     title: "Why Embroidery Affects Fabric Behavior",
+    subtitle: "Embroidery changes local fabric behavior by adding stitch tension and structure.",
     shortTitle: "Embroidery & Fabric Stability",
     metaDescription:
       "Understand how embroidery can affect knitted fabric behavior through needle tension, fabric stability, GSM, stretch, distortion, and wash performance.",
@@ -2164,7 +2187,11 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
 
   {
     slug: "why-garments-change-after-washing",
+    canonicalPath: "/knowledge/why-garments-change-after-washing",
+    category: "Garment production",
+    discoveryPriority: 290,
     title: "Why Garments Change After Washing",
+    subtitle: "Washing can change garment size, feel, drape, twist, and surface appearance because knitted fabrics continue relaxing after production and finishing.",
     shortTitle: "Garment Change After Washing",
     metaDescription:
       "Understand why garments can change after washing because of shrinkage, relaxation, finishing behavior, fabric recovery, garment construction, and production processes.",
@@ -2240,7 +2267,11 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
   },
   {
     slug: "why-two-garments-made-from-the-same-fabric-can-feel-different",
+    canonicalPath: "/knowledge/why-two-garments-made-from-the-same-fabric-can-feel-different",
+    category: "Garment production",
+    discoveryPriority: 300,
     title: "Why Two Garments Made From the Same Fabric Can Feel Different",
+    subtitle: "Fabric is only one part of garment feel.",
     shortTitle: "Same Fabric Different Feel",
     metaDescription:
       "Learn why garments made from the same fabric can still feel different because of finishing, sewing, washing, print treatment, garment construction, and production handling.",
@@ -2317,7 +2348,11 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
 
   {
     slug: "why-large-prints-affect-garment-feel",
+    canonicalPath: "/knowledge/why-large-prints-affect-garment-feel",
+    category: "Decoration printing",
+    discoveryPriority: 310,
     title: "Why Large Prints Affect Garment Feel",
+    subtitle: "Large prints affect garment feel because they cover more fabric surface, which can reduce softness, stretch, drape, and breathability compared with smaller prints.",
     shortTitle: "Large Prints & Garment Feel",
     metaDescription:
       "Understand why large screen prints can affect garment feel, stretch, drape, breathability, washing behavior, and comfort on knitted apparel.",
@@ -2393,7 +2428,11 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
   },
   {
     slug: "why-print-placement-matters-on-stretch-fabrics",
+    canonicalPath: "/knowledge/why-print-placement-matters-on-stretch-fabrics",
+    category: "Decoration printing",
+    discoveryPriority: 320,
     title: "Why Print Placement Matters on Stretch Fabrics",
+    subtitle: "Print placement affects durability and appearance because high-stretch areas, seams, ribs, and curved panels place more stress on the printed layer.",
     shortTitle: "Print Placement on Stretch Fabrics",
     metaDescription:
       "Learn why print placement matters on stretch knitted fabrics because movement zones, seams, rib areas, garment fit, and washing behavior affect print durability and appearance.",
@@ -2470,7 +2509,11 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
 
   {
     slug: "why-prints-crack-after-washing",
+    canonicalPath: "/knowledge/why-prints-crack-after-washing",
+    category: "Decoration printing",
+    discoveryPriority: 330,
     title: "Why Prints Crack After Washing",
+    subtitle: "Print cracking usually comes from interaction between the printed layer and the fabric.",
     shortTitle: "Print Cracking After Washing",
     metaDescription:
       "Learn why garment prints can crack after washing because of print chemistry, curing, fabric stretch, shrinkage, placement, and laundering behavior.",
@@ -2546,7 +2589,11 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
   },
   {
     slug: "why-some-prints-feel-heavier-than-others",
+    canonicalPath: "/knowledge/why-some-prints-feel-heavier-than-others",
+    category: "Decoration printing",
+    discoveryPriority: 340,
     title: "Why Some Prints Feel Heavier Than Others",
+    subtitle: "Prints feel heavier when the printed layer adds noticeable thickness, stiffness, or surface coverage compared with the softness and stretch of the base fabric.",
     shortTitle: "Why Prints Feel Heavy",
     metaDescription:
       "Understand why some garment prints feel heavier or stiffer because of print coverage, ink deposit, print method, fabric softness, GSM, and washing behavior.",
@@ -2622,7 +2669,11 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
   },
   {
     slug: "why-puff-prints-behave-differently-on-knitted-fabrics",
+    canonicalPath: "/knowledge/why-puff-prints-behave-differently-on-knitted-fabrics",
+    category: "Decoration printing",
+    discoveryPriority: 350,
     title: "Why Puff Prints Behave Differently on Knitted Fabrics",
+    subtitle: "Puff prints create raised surface texture, so fabric stretch, washing, curing, and garment movement affect durability and appearance more visibly.",
     shortTitle: "Puff Print Behavior",
     metaDescription:
       "Understand why puff prints behave differently depending on fabric stretch, GSM, washing, curing, and knitted fabric structure.",
@@ -2680,7 +2731,11 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
   },
   {
     slug: "dtg-vs-screen-printing-on-knitted-garments",
+    canonicalPath: "/knowledge/dtg-vs-screen-printing-on-knitted-garments",
+    category: "Decoration printing",
+    discoveryPriority: 360,
     title: "DTG vs Screen Printing on Knitted Garments",
+    subtitle: "DTG usually creates softer detailed prints, while screen printing can provide stronger opacity and durability depending on ink system and production control.",
     shortTitle: "DTG vs Screen Printing",
     metaDescription:
       "Compare DTG and screen printing behavior on knitted garments, including surface feel, durability, color appearance, and washing behavior.",
@@ -2738,7 +2793,11 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
   },
   {
     slug: "how-heat-transfer-prints-affect-durability",
+    canonicalPath: "/knowledge/how-heat-transfer-prints-affect-durability",
+    category: "Decoration printing",
+    discoveryPriority: 370,
     title: "How Heat Transfer Prints Affect Durability",
+    subtitle: "Heat transfer prints can perform well, but durability depends on application quality, washing behavior, fabric stretch, and garment movement.",
     shortTitle: "Heat Transfer Durability",
     metaDescription:
       "Understand how heat transfer prints can affect durability, washing behavior, stretch, and garment feel on knitted apparel.",
@@ -2797,7 +2856,11 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
 ,
   {
     slug: "how-printing-affects-garment-breathability",
+    canonicalPath: "/knowledge/how-printing-affects-garment-breathability",
+    category: "Decoration printing",
+    discoveryPriority: 380,
     title: "How Printing Affects Garment Breathability",
+    subtitle: "Large or dense print coverage can reduce airflow and change how breathable a garment feels during wear.",
     shortTitle: "Print Breathability",
     metaDescription:
       "Understand how print coverage, ink deposit, garment construction, and fabric structure can affect breathability and comfort in printed garments.",
@@ -2855,7 +2918,11 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
   },
   {
     slug: "how-discharge-printing-behaves-on-knitted-fabrics",
+    canonicalPath: "/knowledge/how-discharge-printing-behaves-on-knitted-fabrics",
+    category: "Decoration printing",
+    discoveryPriority: 390,
     title: "How Discharge Printing Behaves on Knitted Fabrics",
+    subtitle: "Discharge printing removes or replaces dye in selected areas, so fabric composition, dyeing method, and washing behavior strongly affect the final result.",
     shortTitle: "Discharge Printing Behavior",
     metaDescription:
       "Learn how discharge printing behaves differently depending on dyeing, fabric composition, washing, and knitted fabric structure.",
@@ -2913,7 +2980,11 @@ export const TEXTILE_KNOWLEDGE_PAGES = [
   },
   {
     slug: "how-printed-garments-change-after-repeated-washing",
+    canonicalPath: "/knowledge/how-printed-garments-change-after-repeated-washing",
+    category: "Decoration printing",
+    discoveryPriority: 400,
     title: "How Printed Garments Change After Repeated Washing",
+    subtitle: "Printed garments may change over time because washing, abrasion, stretch, and garment use affect both the fabric and printed surface.",
     shortTitle: "Print Aging After Washing",
     metaDescription:
       "Understand how repeated washing can affect print appearance, softness, cracking, fading, stretch, and garment feel over time.",
