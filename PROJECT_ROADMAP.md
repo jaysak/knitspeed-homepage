@@ -1068,3 +1068,25 @@ Rules:
 - preserve product-first homepage flow
 - keep garment guides practical, sourcing-aware, and production-grounded
 
+
+---
+
+## Phase 4.3 — Production Identity + Marketing Readiness
+
+Status:
+- active stabilization
+
+Current focus:
+- custom domain migration
+- branded email readiness
+- canonical domain hardening
+- sitemap and metadata migration
+- marketing onboarding preparation
+- real textile visual asset integration
+
+Current domain state:
+- www.knitspeed.com operational
+- root knitspeed.com pending stabilization
+
+Priority:
+- stabilize public identity before further production-facing UX expansion

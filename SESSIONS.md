@@ -1967,3 +1967,47 @@ Operational lesson:
 - always check Vercel deployment status after pushes before continuing UX iteration
 - untracked files can make local work while production fails
 
+
+---
+
+## 2026-05-13 — Production Domain Migration + Marketing Readiness
+
+Status:
+- active stabilization checkpoint
+- production domain migration started
+- SPA routing fixed and deployed
+- www.knitspeed.com operational
+- root knitspeed.com still partially resolving old legacy hosting
+
+Implemented:
+- connected custom production domain to Vercel
+- DNS migration from legacy hosting initiated through GoDaddy
+- added Vercel SPA rewrite configuration
+- deployed production route fix for direct knowledge URLs
+- started Thursday marketing-readiness stabilization phase
+- started legacy textile asset extraction before full DNS cutover
+
+Verified:
+- https://www.knitspeed.com loads production homepage
+- /knowledge routes render correctly on production
+- SSL operational on working production domain
+- Vercel production deployment healthy
+
+Current priorities:
+1. finish root-domain propagation stabilization
+2. canonical domain hardening
+3. sitemap + metadata domain migration
+4. analytics/Search Console prep
+5. textile visual system refinement
+6. subtle legacy logo integration
+
+Important:
+- avoid major production refactors before Accella marketing onboarding
+- preserve calm sourcing-aware UX
+- continue visual/image experiments locally before pushing
+- do not commit unfinished legacy asset extraction yet
+
+Next likely safe slice:
+- canonical domain stabilization
+- real textile image integration for homepage product cards
+- subtle heritage logo integration

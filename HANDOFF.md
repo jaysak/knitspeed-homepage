@@ -1777,3 +1777,45 @@ Do not do next:
 Magic words for next boot:
 > Jarvis, continue Knitspeed from the Phase 4.2M Production Parity + Visual Stabilization checkpoint. Vercel deployment is healthy again, missing continuity files were committed, texture paths are normalized, Finished Article cards no longer duplicate imagery, and the Garment Sourcing Guide card was simplified by removing the decorative T-shirt icon. First inspect HANDOFF.md, PROJECT_ROADMAP.md, DECISIONS.md, SESSIONS.md, then inspect git status before patching.
 
+
+---
+
+# CURRENT CHECKPOINT — Production Domain Migration + Marketing Readiness
+
+Status:
+- active stabilization
+- www.knitspeed.com operational
+- root knitspeed.com still needs stabilization
+- SPA production routing fixed
+
+Completed:
+- GoDaddy DNS migration toward Vercel production started
+- www.knitspeed.com serves the live Vercel production app
+- Vercel SPA rewrite config added so direct routes like /knowledge work
+- production knowledge routing verified after deployment
+- marketing-readiness mode started for Accella onboarding
+- legacy image/logo extraction started locally but should not be committed yet
+
+Known issue:
+- knitspeed.com root domain may still resolve to old legacy hosting during propagation or due to root A record/canonical setup
+- next session should inspect GoDaddy root A record and Vercel domain assignment
+- likely desired short-term setup: www.knitspeed.com as working production domain, root knitspeed.com redirecting to www until canonical hardening is finalized
+
+Next steps:
+1. verify GoDaddy A record for @ points only to Vercel target
+2. confirm Vercel domain assignment for root and www
+3. choose canonical domain strategy
+4. update siteConfig canonical URL
+5. regenerate sitemap
+6. verify robots and sitemap on production
+7. prep Search Console / analytics
+8. integrate real textile images into homepage cards
+9. add subtle legacy logo use on homepage and knowledge pages
+
+Do not do next:
+- no major homepage redesign
+- no new article expansion
+- no CMS
+- no React Router migration
+- no dashboard sprawl
+- no unfinished asset commit

@@ -508,3 +508,26 @@ Avoid:
 Rationale:
 The product card should feel calm, premium, and sourcing-aware, not like a crowded catalog or image demo.
 
+
+---
+
+## 2026-05-13 — Decision: Domain Stabilization Before Further Production UX
+
+Decision:
+Before additional public UX polish, stabilize the production domain identity.
+
+Current production reality:
+- www.knitspeed.com is operational on Vercel
+- root knitspeed.com still needs propagation/canonical stabilization
+- SPA routing requires Vercel rewrite config for direct routes
+
+Rules:
+- do not continue major production UI changes until domain behavior is verified
+- do not touch email DNS records while fixing website routing
+- keep GoDaddy as domain/email/DNS authority for now
+- keep Vercel as frontend deployment platform
+- prefer one canonical public domain before sitemap/Search Console submission
+- avoid committing unfinished legacy image extraction until assets are selected and organized
+
+Rationale:
+Marketing onboarding requires credible public identity, stable routing, branded email, and clean website behavior more than new features.
