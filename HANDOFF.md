@@ -1819,3 +1819,28 @@ Do not do next:
 - no React Router migration
 - no dashboard sprawl
 - no unfinished asset commit
+
+# CURRENT STATE
+
+Knitspeed production identity stabilized.
+
+Canonical:
+- knitspeed.com → www.knitspeed.com confirmed via 308 redirect
+
+Brand system:
+- normalized branding assets under /public/branding
+- homepage + knowledge logo consistency complete
+- sticky nav active
+- mobile nav simplified to:
+  [Logo] [Knowledge] [Quote]
+
+Commercial readiness:
+- mobile UX significantly improved
+- knowledge layer now positioned as buyer education + sourcing intelligence
+- suitable for Accella onboarding/demo discussion
+
+Immediate next work:
+- email + LINE contact refinement
+- product image duplication reduction
+- footer/contact polish
+

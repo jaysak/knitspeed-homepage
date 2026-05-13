@@ -531,3 +531,16 @@ Rules:
 
 Rationale:
 Marketing onboarding requires credible public identity, stable routing, branded email, and clean website behavior more than new features.
+
+## 2026-05-13 — Brand Positioning Direction
+
+Decision:
+Use "Built on Textile Intelligence" as brand identity layer instead of generic supplier tagline.
+
+Reason:
+- differentiates from generic textile suppliers
+- reinforces knowledge-driven sourcing
+- aligns with procurement intelligence direction
+- avoids overusing AI terminology
+- improves commercial positioning for marketing/buyer onboarding
+
