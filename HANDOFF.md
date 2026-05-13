@@ -1729,3 +1729,51 @@ Rules preserved:
 
 Magic words for next boot:
 > Jarvis, continue Knitspeed from the Phase 4.2M Navigation + Continuity Stabilization checkpoint. Knowledge continuity routing is now corrected: `/knowledge` routes back to Home while article pages route back to `/knowledge`. Explore Fabrics uses `/#finished-articles`. Build/lint pass. Next focus is visual QA, density refinement, continuity cleanup, and future navigation stabilization planning. First inspect HANDOFF.md, PROJECT_ROADMAP.md, DECISIONS.md, SESSIONS.md, then inspect git status before patching.
+
+---
+
+# CURRENT CHECKPOINT — Phase 4.2M Production Parity + Visual Stabilization
+
+Status:
+- stable
+- production deployment healthy
+- local and Vercel parity restored
+- homepage visual hierarchy cleaned
+
+Latest confirmed work:
+- fixed Vercel deployment failures caused by untracked continuity files
+- committed missing files:
+  - `src/components/knowledge/RelatedKnowledgeContinuity.jsx`
+  - `src/lib/knowledgeContinuityMap.js`
+- removed custom Vercel rewrite config
+- normalized texture asset paths to `/textures/...`
+- confirmed texture assets are tracked in `public/textures`
+- removed duplicate real texture strip from Finished Article cards
+- simplified Garment Sourcing Guide card by removing the decorative T-shirt icon/visual block
+- preserved T-Shirt Fabric Sourcing guide section, tags, copy, and CTA
+
+Current homepage state:
+- product-first homepage flow remains active
+- Finished Article cards use one main tactile visual only
+- garment sourcing guide entry is clean and editorial
+- production now reflects local changes
+
+Next likely safe tasks:
+1. Phase 4.2M visual QA refinement
+2. mobile spacing rhythm polish
+3. homepage density refinement
+4. continuity cleanup
+5. Phase 4.2N knowledge navigation stabilization planning
+6. textile visual system planning
+
+Do not do next:
+- no new article expansion
+- no CMS
+- no React Router
+- no AI chatbot UX
+- no dashboard sprawl
+- no decorative placeholder expansion unless it improves sourcing clarity
+
+Magic words for next boot:
+> Jarvis, continue Knitspeed from the Phase 4.2M Production Parity + Visual Stabilization checkpoint. Vercel deployment is healthy again, missing continuity files were committed, texture paths are normalized, Finished Article cards no longer duplicate imagery, and the Garment Sourcing Guide card was simplified by removing the decorative T-shirt icon. First inspect HANDOFF.md, PROJECT_ROADMAP.md, DECISIONS.md, SESSIONS.md, then inspect git status before patching.
+

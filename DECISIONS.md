@@ -469,3 +469,42 @@ Rules:
 - preserve homepage product-first flow
 - knowledge integration should support buyer decisions, not overwhelm product discovery
 
+
+---
+
+## 2026-05-13 — Decision: Production Parity Before UX Iteration
+
+Decision:
+Before continuing homepage or knowledge UX refinement, confirm Vercel production deployment is green and reflects the latest commit.
+
+Rules:
+- do not assume local equals production
+- check Vercel deployment status after meaningful pushes
+- if production does not update, inspect build logs before making more UI patches
+- avoid continuing design iteration on top of a broken deployment baseline
+
+Rationale:
+A failed production build masked homepage visual changes and made image/debugging issues look like asset problems when the real blocker was untracked imported files.
+
+---
+
+## 2026-05-13 — Decision: Avoid Duplicate Textile Imagery
+
+Decision:
+Homepage product cards should not show both a real texture strip and a real tactile image in the same card.
+
+Accepted hierarchy:
+- subtle abstract textile rhythm or whitespace
+- one main tactile visual
+- buyer summary
+- quote CTA
+- progressive disclosure
+
+Avoid:
+- repeated real fabric images
+- decorative texture strips that compete with the main product visual
+- placeholder visuals that do not improve sourcing comprehension
+
+Rationale:
+The product card should feel calm, premium, and sourcing-aware, not like a crowded catalog or image demo.
+

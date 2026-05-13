@@ -1927,3 +1927,43 @@ Notes:
 - no CMS
 - no semantic expansion
 - no dashboard changes
+
+---
+
+## 2026-05-13 — Phase 4.2M Production Parity + Visual Stabilization
+
+Status:
+- production deployment restored
+- homepage visual hierarchy stabilized
+- local and Vercel parity confirmed
+
+Summary:
+- Diagnosed production issue that first appeared as missing images but was actually caused by failed Vercel deployments
+- Root cause: untracked local files were imported by `KnowledgeArticlePage.jsx` but not committed:
+  - `src/components/knowledge/RelatedKnowledgeContinuity.jsx`
+  - `src/lib/knowledgeContinuityMap.js`
+- Fixed Vercel deployment by committing missing continuity files
+- Removed custom `vercel.json` rewrite after confirming Vite deployment worked correctly without it
+- Normalized texture asset paths from `/visuals/textures/...` to `/textures/...`
+- Confirmed texture assets are tracked under `public/textures`
+- Removed duplicate real texture strip from Finished Article cards
+- Restored calmer product-card hierarchy:
+  - soft textile rhythm
+  - one main tactile visual
+  - no duplicated imagery
+- Simplified Garment Sourcing Guide card by removing the decorative T-shirt icon/visual block
+- Preserved the actual T-Shirt Fabric Sourcing section, tags, copy, and CTA
+
+Verification:
+- `npm run build` passes
+- `npm run lint` passes
+- Vercel deployment is green again
+- production homepage now reflects local changes
+- Finished Article cards no longer show double imagery
+- Garment guide section now reads cleaner and more editorial
+
+Operational lesson:
+- local success was misleading because Vercel had been failing and production stayed on the last green deployment
+- always check Vercel deployment status after pushes before continuing UX iteration
+- untracked files can make local work while production fails
+
