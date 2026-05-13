@@ -347,7 +347,9 @@ export default function App() {
               </a>
 
               <a
-                href="#contact"
+                href="https://line.me/R/ti/p/@fyg8511"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-sky-200 bg-white px-7 py-4 font-bold text-sky-700 shadow-sm transition hover:bg-sky-50"
               >
                 <MessageCircle size={18} /> Chat on LINE
