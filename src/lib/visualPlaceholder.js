@@ -7,6 +7,7 @@ export function getVisualPlaceholder(article = {}) {
     mood: "Balanced textile structure",
     texture: "Commercial knit surface",
     gradient: "from-slate-100 via-slate-50 to-white",
+    image: "/textures/knit-generic.jpg",
   }
 
   if (name.includes("single jersey") || slug.includes("single-jersey")) {
@@ -14,6 +15,7 @@ export function getVisualPlaceholder(article = {}) {
     placeholder.mood = "Relaxed breathable movement"
     placeholder.texture = "Lightweight casual knit surface"
     placeholder.gradient = "from-blue-50 via-slate-50 to-white"
+    placeholder.image = "/textures/single-jersey.jpg"
   }
 
   if (name.includes("interlock") || slug.includes("interlock")) {
@@ -21,15 +23,18 @@ export function getVisualPlaceholder(article = {}) {
     placeholder.mood = "Cleaner and more stable body"
     placeholder.texture = "Smoother premium knit surface"
     placeholder.gradient = "from-emerald-50 via-slate-50 to-white"
+    placeholder.image = "/textures/interlock.jpg"
   }
 
   if (name.includes("rib")) {
     placeholder.label = "Stretch Recovery Visualization"
     placeholder.texture = "Flexible rib structure"
+    placeholder.image = "/textures/rib.jpg"
   }
 
   if (name.includes("compact")) {
     placeholder.texture = "Cleaner premium cotton appearance"
+    placeholder.image = "/textures/compact-cotton.jpg"
   }
 
   return placeholder

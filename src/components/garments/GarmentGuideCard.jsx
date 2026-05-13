@@ -5,7 +5,7 @@ export default function GarmentGuideCard() {
     <section className="rounded-[2rem] border border-sky-100 bg-white/90 shadow-sm overflow-hidden">
       <div className="grid gap-0 lg:grid-cols-[0.95fr_1.05fr]">
         <div className="relative min-h-[220px] bg-gradient-to-br from-sky-50 via-white to-cyan-50 p-6 flex items-center justify-center">
-          <div className="absolute inset-x-6 bottom-6 h-16 rounded-2xl bg-[url('/visuals/textures/single-jersey-texture.jpg')] bg-cover bg-center opacity-40 border border-white/70" />
+          <div className="absolute inset-x-6 bottom-6 h-16 rounded-2xl bg-[url('/textures/single-jersey.jpg')] bg-cover bg-center opacity-40 border border-white/70" />
           <div className="relative z-10 h-36 w-36 rounded-[2rem] bg-white/80 border border-sky-100 shadow-sm flex items-center justify-center">
             <img
               src="/visuals/garments/tshirt-silhouette.png"

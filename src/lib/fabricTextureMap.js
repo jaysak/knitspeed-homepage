@@ -1,14 +1,14 @@
 export const fabricTextureMap = {
-  "single jersey": "/visuals/textures/single-jersey-texture.jpg",
-  "single-jersey": "/visuals/textures/single-jersey-texture.jpg",
-  "sj": "/visuals/textures/single-jersey-texture.jpg",
+  "single jersey": "/textures/single-jersey.jpg",
+  "single-jersey": "/textures/single-jersey.jpg",
+  "sj": "/textures/single-jersey.jpg",
 
-  rib: "/visuals/textures/rib-texture.jpg",
+  rib: "/textures/rib.jpg",
 
-  interlock: "/visuals/textures/interlock-texture.jpg",
+  interlock: "/textures/interlock.jpg",
 
-  compact: "/visuals/textures/compact-cotton-texture.jpg",
-  "compact cotton": "/visuals/textures/compact-cotton-texture.jpg",
+  compact: "/textures/compact-cotton.jpg",
+  "compact cotton": "/textures/compact-cotton.jpg",
 };
 
 export function getFabricTexture(article = {}) {
@@ -28,5 +28,5 @@ export function getFabricTexture(article = {}) {
     }
   }
 
-  return "/visuals/textures/single-jersey-texture.jpg";
+  return "/textures/single-jersey.jpg";
 }
