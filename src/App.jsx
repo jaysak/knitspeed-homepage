@@ -268,20 +268,16 @@ export default function App() {
     <main className="min-h-screen bg-white text-slate-800">
       <header className="sticky top-0 z-30 border-b border-sky-100 bg-white/90 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4">
-          <div className="flex items-center gap-3">
-            <div
-              className="flex h-11 w-11 items-center justify-center rounded-2xl text-white shadow-sm"
-              style={{ backgroundColor: brand.blue }}
-            >
-              KS
+          <a href="/" className="flex items-center gap-3" aria-label="Knitspeed home">
+            <img
+              src="/branding/knitspeed-logo.png"
+              alt="Knitspeed"
+              className="h-10 w-auto"
+            />
+            <div className="hidden text-xs text-slate-500 sm:block">
+              Built on Textile Intelligence
             </div>
-            <div>
-              <div className="text-xl font-bold tracking-tight" style={{ color: brand.navy }}>
-                Knitspeed
-              </div>
-              <div className="text-xs text-slate-500">Premium Knitted Fabric Supplier</div>
-            </div>
-          </div>
+          </a>
 
           <nav className="hidden items-center gap-7 text-sm font-medium text-slate-600 md:flex">
             <a href="#products" className="hover:text-sky-600">Products</a>
@@ -519,8 +515,14 @@ export default function App() {
       <footer id="contact" className="bg-slate-900 px-5 py-10 text-white">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-6 md:flex-row md:items-center">
           <div>
-            <div className="text-2xl font-extrabold">Knitspeed</div>
-            <p className="mt-2 text-slate-300">Premium knitted fabric supplier in Thailand.</p>
+            <img
+              src="/branding/knitspeed-logo.png"
+              alt="Knitspeed"
+              className="h-10 w-auto brightness-0 invert"
+            />
+            <p className="mt-3 text-slate-300">
+              Premium knitted fabric supplier in Thailand.
+            </p>
           </div>
           <div className="text-sm text-slate-300">
             www.knitspeed.com • Facebook: Knitspeed • 090-912-4154
