@@ -355,6 +355,15 @@ export default function App() {
                 <MessageCircle size={18} /> Chat on LINE
               </a>
             </div>
+
+            <div className="mt-4 text-center sm:text-left">
+              <a
+                href="mailto:sales@knitspeed.com"
+                className="text-sm text-slate-500 transition hover:text-sky-700"
+              >
+                Prefer email? sales@knitspeed.com
+              </a>
+            </div>
           </motion.div>
 
           <motion.div initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6, delay: 0.15 }}>
