@@ -274,7 +274,7 @@ export default function App() {
               alt="Knitspeed"
               className="h-10 w-auto"
             />
-            <div className="hidden text-xs text-slate-500 sm:block">
+            <div className="hidden text-xs text-slate-500 lg:block">
               Built on Textile Intelligence
             </div>
           </a>

@@ -11,7 +11,7 @@ export default function KnowledgeContinuityNav({
             alt="Knitspeed"
             className="h-8 w-auto shrink-0"
           />
-          <span className="hidden truncate text-xs font-medium text-slate-500 sm:block">
+          <span className="hidden truncate text-xs font-medium text-slate-500 lg:block">
             Built on Textile Intelligence
           </span>
         </a>
