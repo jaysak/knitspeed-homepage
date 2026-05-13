@@ -287,9 +287,25 @@ export default function App() {
             <a href="#contact" className="hover:text-sky-600">Contact</a>
           </nav>
 
+          <div className="flex items-center gap-2 md:hidden">
+            <a
+              href="/knowledge"
+              className="rounded-full border border-sky-200 bg-white px-3 py-2 text-xs font-semibold text-sky-700 shadow-sm transition hover:bg-sky-50"
+            >
+              Knowledge
+            </a>
+            <a
+              href="#quote"
+              className="rounded-full px-4 py-2 text-xs font-semibold text-white shadow-sm transition hover:opacity-90"
+              style={{ backgroundColor: brand.blue }}
+            >
+              Quote
+            </a>
+          </div>
+
           <a
             href="#quote"
-            className="rounded-full px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:opacity-90"
+            className="hidden rounded-full px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:opacity-90 md:inline-flex"
             style={{ backgroundColor: brand.blue }}
           >
             Get Quote
