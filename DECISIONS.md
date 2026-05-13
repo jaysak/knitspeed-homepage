@@ -544,3 +544,24 @@ Reason:
 - avoids overusing AI terminology
 - improves commercial positioning for marketing/buyer onboarding
 
+
+
+## 2026-05-13 — Decision: Contact Trust Layer Before Visual Expansion
+
+Decision:
+Establish direct buyer communication trust before continuing textile visual expansion.
+
+Implemented:
+- official LINE OA CTA
+- branded email trust layer
+- mobile-first communication flow
+
+Rules:
+- preserve calm sourcing-aware UX
+- avoid aggressive floating contact spam
+- prioritize one-tap mobile communication
+- keep quote CTA primary
+- keep email as quiet trust reinforcement
+
+Strategic direction:
+Next phase shifts toward tactile textile imagery and sourcing presentation quality for marketing onboarding and buyer confidence.

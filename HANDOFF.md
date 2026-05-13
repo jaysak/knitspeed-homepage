@@ -1844,3 +1844,52 @@ Immediate next work:
 - product image duplication reduction
 - footer/contact polish
 
+
+
+---
+
+# CURRENT CHECKPOINT — Phase 4.3A Contact Trust Layer
+
+Status:
+- stable
+- production-ready
+- build/lint/verification passing
+- mobile LINE flow verified
+
+Implemented:
+- official LINE OA deep link
+- branded email trust layer
+- mobile-first contact CTA refinement
+- hero CTA continuity stabilization
+- repo cleanup and temporary texture note cleanup
+
+Production contact layer:
+- LINE OA: https://lin.ee/6bLsSlt
+- sales email: sales@knitspeed.com
+
+Verified:
+- LINE CTA opens correctly on mobile
+- email trust layer renders correctly
+- npm run verify:knowledge passes
+- npm run verify:deployment passes
+- npm run generate:sitemap passes
+- npm run build passes
+- npm run lint passes
+- working tree clean
+
+Current strategic direction:
+- pause infra/intelligence expansion
+- next phase is textile visual system
+- focus on real tactile fabric imagery
+- support upcoming marketing onboarding with accella.co.th
+
+Next likely safe slice:
+- Phase 4.3B Textile Visual System
+- macro texture imagery
+- tactile fabric presentation
+- sourcing-oriented product visuals
+- preserve calm premium hierarchy
+- one image per card initially
+
+Magic words for next boot:
+> Jarvis, continue Knitspeed from Phase 4.3A Contact Trust Layer checkpoint. Official LINE OA and branded email trust layer are live, mobile CTA flow is verified, and next phase is the textile visual system for upcoming marketing onboarding. Focus on real tactile fabric imagery and calm sourcing-aware presentation. First inspect HANDOFF.md, PROJECT_ROADMAP.md, DECISIONS.md, SESSIONS.md, then inspect git status before patching.
