@@ -1,67 +1,77 @@
 article_id,article_name,seo_slug,usage_segment,material_family,fabric_structure,yarn_count,available_widths,linked_products,lead_priority
-A0008,208s Combed Cotton Rib,208s-combed-cotton-rib,collar_cuff,cotton,rib,208.0,28.0,1,prime
-A0022,20s CVC Rib,20s-cvc-rib,collar_cuff,cvc,rib,20.0,32.0,1,prime
-A0003,20s Combed Cotton Rib,20s-combed-cotton-rib,collar_cuff,cotton,rib,20.0,"19.0, 20.0, 28.0, 30.0, 32.0",13,prime
-A0027,20s Mixed Blend Rib,20s-mixed-blend-rib,collar_cuff,mixed_blend,rib,20.0,"101.0, 30.0",2,prime
-A0036,20s Polyester Rib,20s-polyester-rib,collar_cuff,polyester,rib,20.0,32.0,1,prime
-A0062,20s Specialty Fabric Rib,20s-specialty-fabric-rib,collar_cuff,unknown,rib,20.0,32.0,1,prime
-A0051,20s TC Blend Rib,20s-tc-blend-rib,collar_cuff,tc,rib,20.0,"28.0, 32.0",4,prime
-A0004,24s Combed Cotton Rib,24s-combed-cotton-rib,collar_cuff,cotton,rib,24.0,"28.0, 32.0",2,prime
-A0005,28s Combed Cotton Rib,28s-combed-cotton-rib,collar_cuff,cotton,rib,28.0,"22.0, 24.0, 30.0, 34.0",5,prime
-A0009,308s Combed Cotton Rib,308s-combed-cotton-rib,collar_cuff,cotton,rib,308.0,32.0,1,prime
-A0023,30s CVC Rib,30s-cvc-rib,collar_cuff,cvc,rib,30.0,32.0,2,prime
-A0006,30s Combed Cotton Rib,30s-combed-cotton-rib,collar_cuff,cotton,rib,30.0,"2.0, 24.0, 32.0, 33.0, 34.0",10,prime
-A0028,30s Mixed Blend Rib,30s-mixed-blend-rib,collar_cuff,mixed_blend,rib,30.0,"104.0, 21.0, 24.0, 30.0, 32.0",8,prime
-A0037,30s Polyester Rib,30s-polyester-rib,collar_cuff,polyester,rib,30.0,32.0,1,prime
-A0052,30s TC Blend Rib,30s-tc-blend-rib,collar_cuff,tc,rib,30.0,"30.0, 32.0",4,prime
-A0007,32s Combed Cotton Rib,32s-combed-cotton-rib,collar_cuff,cotton,rib,32.0,"21.0, 32.0, 35.0",4,prime
-A0038,34s Polyester Rib,34s-polyester-rib,collar_cuff,polyester,rib,34.0,"27.0, 28.0, 29.0, 30.0, 31.0, 34.5, 36.0, 40.0, 41.0",11,prime
-A0053,34s TC Blend Rib,34s-tc-blend-rib,collar_cuff,tc,rib,34.0,32.0,2,prime
-A0039,45s Polyester Rib,45s-polyester-rib,collar_cuff,polyester,rib,45.0,27.5,1,prime
-A0010,Combed Cotton Rib,combed-cotton-rib,collar_cuff,cotton,rib,,32.5,1,prime
-A0040,Polyester Rib,polyester-rib,collar_cuff,polyester,rib,,"2.0, 26.0, 30.0",6,prime
-A0063,Specialty Fabric Rib,specialty-fabric-rib,collar_cuff,unknown,rib,,"30.0, 32.0, 36.0",5,prime
-A0019,20s Combed Cotton Special Structure,20s-combed-cotton-special-structure,general,cotton,unknown,20.0,,1,prime
-A0031,20s Mixed Blend Special Structure,20s-mixed-blend-special-structure,general,mixed_blend,unknown,20.0,48.0,1,prime
-A0044,20s Polyester Special Structure,20s-polyester-special-structure,general,polyester,unknown,20.0,"47.5, 48.0, 49.0",8,prime
-A0020,308s Combed Cotton Special Structure,308s-combed-cotton-special-structure,general,cotton,unknown,308.0,,1,prime
-A0026,30s CVC Special Structure,30s-cvc-special-structure,general,cvc,unknown,30.0,48.0,1,prime
-A0045,30s Polyester Special Structure,30s-polyester-special-structure,general,polyester,unknown,30.0,72.0,1,prime
-A0058,30s TC Blend Special Structure,30s-tc-blend-special-structure,general,tc,unknown,30.0,"36.0, 72.0",2,prime
-A0046,34s Polyester Special Structure,34s-polyester-special-structure,general,polyester,unknown,34.0,72.0,1,prime
-A0059,45s TC Blend Special Structure,45s-tc-blend-special-structure,general,tc,unknown,45.0,,1,prime
-A0021,Combed Cotton Special Structure,combed-cotton-special-structure,general,cotton,unknown,,"36.0, 38.0",2,prime
-A0047,Polyester Special Structure,polyester-special-structure,general,polyester,unknown,,"47.5, 72.0",2,prime
-A0066,Specialty Fabric Special Structure,specialty-fabric-special-structure,general,unknown,unknown,,"32.0, 38.0, 60.0, 72.0",8,prime
-A0032,30s Polyester Interlock,30s-polyester-interlock,premium_fashion,polyester,interlock,30.0,36.0,1,prime
-A0048,30s TC Blend Interlock,30s-tc-blend-interlock,premium_fashion,tc,interlock,30.0,"36.0, 36.5, 40.0, 72.0, 76.0",6,prime
-A0001,32s Combed Cotton Interlock,32s-combed-cotton-interlock,premium_fashion,cotton,interlock,32.0,43.0,1,prime
-A0033,34s Polyester Interlock,34s-polyester-interlock,premium_fashion,polyester,interlock,34.0,38.0,1,prime
-A0049,34s TC Blend Interlock,34s-tc-blend-interlock,premium_fashion,tc,interlock,34.0,"36.0, 36.5, 38.0, 42.5",5,prime
-A0002,40s Combed Cotton Interlock,40s-combed-cotton-interlock,premium_fashion,cotton,interlock,40.0,37.0,2,prime
-A0060,40s Specialty Fabric Interlock,40s-specialty-fabric-interlock,premium_fashion,unknown,interlock,40.0,37.0,1,prime
-A0034,45s Polyester Interlock,45s-polyester-interlock,premium_fashion,polyester,interlock,45.0,"36.0, 39.0, 44.5, 46.0, 86.0",5,prime
-A0050,45s TC Blend Interlock,45s-tc-blend-interlock,premium_fashion,tc,interlock,45.0,"36.0, 36.5, 37.5, 38.0, 39.0, 40.0, 41.0, 43.0, 44.0, 46.0, 84.0, 87.0",12,prime
-A0035,Polyester Interlock,polyester-interlock,premium_fashion,polyester,interlock,,"36.0, 38.0, 40.0, 42.0, 44.0, 71.0, 72.0, 80.0",9,prime
-A0061,Specialty Fabric Interlock,specialty-fabric-interlock,premium_fashion,unknown,interlock,,"36.0, 37.0, 66.0, 72.0",4,prime
-A0016,208s Combed Cotton Single Jersey,208s-combed-cotton-single-jersey,tshirt,cotton,single_jersey,208.0,36.0,1,prime
-A0024,20s CVC Single Jersey,20s-cvc-single-jersey,tshirt,cvc,single_jersey,20.0,36.5,1,prime
-A0011,20s Combed Cotton Single Jersey,20s-combed-cotton-single-jersey,tshirt,cotton,single_jersey,20.0,"16.0, 18.0, 20.0, 21.0, 22.0, 24.0, 26.0, 34.0, 35.0, 36.0, 36.5, 74.0",26,prime
-A0029,20s Mixed Blend Single Jersey,20s-mixed-blend-single-jersey,tshirt,mixed_blend,single_jersey,20.0,"20.0, 22.0, 36.5, 72.0",6,prime
-A0041,20s Polyester Single Jersey,20s-polyester-single-jersey,tshirt,polyester,single_jersey,20.0,"36.0, 36.5",2,prime
-A0054,20s TC Blend Single Jersey,20s-tc-blend-single-jersey,tshirt,tc,single_jersey,20.0,"20.0, 43.0, 44.5",6,prime
-A0012,24s Combed Cotton Single Jersey,24s-combed-cotton-single-jersey,tshirt,cotton,single_jersey,24.0,"19.0, 20.0, 22.0, 24.0, 26.0, 33.0, 33.5, 36.5",10,prime
-A0013,28s Combed Cotton Single Jersey,28s-combed-cotton-single-jersey,tshirt,cotton,single_jersey,28.0,"20.0, 21.0, 22.0, 34.5, 36.5, 41.0",7,prime
-A0017,308s Combed Cotton Single Jersey,308s-combed-cotton-single-jersey,tshirt,cotton,single_jersey,308.0,"18.0, 20.0, 22.0, 23.5, 34.5, 36.5, 38.0, 40.0",10,prime
-A0025,30s CVC Single Jersey,30s-cvc-single-jersey,tshirt,cvc,single_jersey,30.0,"36.0, 37.5, 38.0",3,prime
-A0014,30s Combed Cotton Single Jersey,30s-combed-cotton-single-jersey,tshirt,cotton,single_jersey,30.0,"17.0, 17.5, 18.0, 18.5, 19.0, 20.0, 20.5, 21.0, 21.5, 22.0, 22.5, 23.0, 23.5, 24.0, 24.5, 25.0, 25.5, 34.0, 34.5, 36.0, 36.5, 37.0, 37.5, 38.0, 41.0, 73.0",58,prime
-A0030,30s Mixed Blend Single Jersey,30s-mixed-blend-single-jersey,tshirt,mixed_blend,single_jersey,30.0,"36.0, 36.5, 37.5, 41.0, 73.0",8,prime
-A0042,30s Polyester Single Jersey,30s-polyester-single-jersey,tshirt,polyester,single_jersey,30.0,"36.0, 55.0",2,prime
-A0064,30s Specialty Fabric Single Jersey,30s-specialty-fabric-single-jersey,tshirt,unknown,single_jersey,30.0,22.0,1,prime
-A0055,30s TC Blend Single Jersey,30s-tc-blend-single-jersey,tshirt,tc,single_jersey,30.0,"36.5, 37.5",3,prime
-A0015,32s Combed Cotton Single Jersey,32s-combed-cotton-single-jersey,tshirt,cotton,single_jersey,32.0,"19.0, 20.0, 21.5, 22.0, 22.5, 23.0, 24.5, 34.5, 35.0, 36.5, 38.0, 38.5, 39.0, 40.5",16,prime
-A0043,34s Polyester Single Jersey,34s-polyester-single-jersey,tshirt,polyester,single_jersey,34.0,36.0,1,prime
-A0056,34s TC Blend Single Jersey,34s-tc-blend-single-jersey,tshirt,tc,single_jersey,34.0,"24.0, 35.5, 36.0, 37.5",5,prime
-A0018,Combed Cotton Single Jersey,combed-cotton-single-jersey,tshirt,cotton,single_jersey,,72.0,2,prime
-A0065,Specialty Fabric Single Jersey,specialty-fabric-single-jersey,tshirt,unknown,single_jersey,,"32.0, 48.0, 72.0, 74.0",15,prime
-A0057,TC Blend Single Jersey,tc-blend-single-jersey,tshirt,tc,single_jersey,,36.0,1,prime
+A0007,208s Combed Cotton Rib,208s-combed-cotton-rib,collar_cuff,combed_cotton,rib,208.0,28.0,1,prime
+A0024,20s CVC Rib,20s-cvc-rib,collar_cuff,cvc,rib,20.0,32.0,1,prime
+A0002,20s Combed Cotton Rib,20s-combed-cotton-rib,collar_cuff,combed_cotton,rib,20.0,"19.0, 20.0, 28.0, 30.0, 32.0",8,prime
+A0021,20s Cotton Rib,20s-cotton-rib,collar_cuff,cotton,rib,20.0,"30.0, 32.0",4,prime
+A0029,20s Mixed Blend Rib,20s-mixed-blend-rib,collar_cuff,mixed_blend,rib,20.0,"101.0, 30.0",2,prime
+A0038,20s Polyester Rib,20s-polyester-rib,collar_cuff,polyester,rib,20.0,32.0,1,prime
+A0052,20s Semi Combed Cotton Rib,20s-semi-combed-cotton-rib,collar_cuff,semi_combed_cotton,rib,20.0,32.0,1,prime
+A0072,20s Specialty Fabric Rib,20s-specialty-fabric-rib,collar_cuff,unknown,rib,20.0,32.0,1,prime
+A0061,20s TC Blend Rib,20s-tc-blend-rib,collar_cuff,tc,rib,20.0,"28.0, 32.0",4,prime
+A0003,24s Combed Cotton Rib,24s-combed-cotton-rib,collar_cuff,combed_cotton,rib,24.0,"28.0, 32.0",2,prime
+A0004,28s Combed Cotton Rib,28s-combed-cotton-rib,collar_cuff,combed_cotton,rib,28.0,"22.0, 24.0, 30.0, 34.0",5,prime
+A0008,308s Combed Cotton Rib,308s-combed-cotton-rib,collar_cuff,combed_cotton,rib,308.0,32.0,1,prime
+A0025,30s CVC Rib,30s-cvc-rib,collar_cuff,cvc,rib,30.0,32.0,2,prime
+A0005,30s Combed Cotton Rib,30s-combed-cotton-rib,collar_cuff,combed_cotton,rib,30.0,"24.0, 32.0, 34.0",5,prime
+A0030,30s Mixed Blend Rib,30s-mixed-blend-rib,collar_cuff,mixed_blend,rib,30.0,"104.0, 21.0, 24.0, 30.0, 32.0",8,prime
+A0039,30s Polyester Rib,30s-polyester-rib,collar_cuff,polyester,rib,30.0,32.0,1,prime
+A0053,30s Semi Combed Cotton Rib,30s-semi-combed-cotton-rib,collar_cuff,semi_combed_cotton,rib,30.0,"2.0, 32.0, 33.0",5,prime
+A0062,30s TC Blend Rib,30s-tc-blend-rib,collar_cuff,tc,rib,30.0,"30.0, 32.0",4,prime
+A0006,32s Combed Cotton Rib,32s-combed-cotton-rib,collar_cuff,combed_cotton,rib,32.0,32.0,1,prime
+A0054,32s Semi Combed Cotton Rib,32s-semi-combed-cotton-rib,collar_cuff,semi_combed_cotton,rib,32.0,"21.0, 32.0, 35.0",3,prime
+A0040,34s Polyester Rib,34s-polyester-rib,collar_cuff,polyester,rib,34.0,"27.0, 28.0, 29.0, 30.0, 31.0, 34.5, 36.0, 40.0, 41.0",11,prime
+A0063,34s TC Blend Rib,34s-tc-blend-rib,collar_cuff,tc,rib,34.0,32.0,2,prime
+A0041,45s Polyester Rib,45s-polyester-rib,collar_cuff,polyester,rib,45.0,27.5,1,prime
+A0009,Combed Cotton Rib,combed-cotton-rib,collar_cuff,combed_cotton,rib,,32.5,1,prime
+A0042,Polyester Rib,polyester-rib,collar_cuff,polyester,rib,,"2.0, 26.0, 30.0",6,prime
+A0073,Specialty Fabric Rib,specialty-fabric-rib,collar_cuff,unknown,rib,,"30.0, 32.0, 36.0",5,prime
+A0018,20s Combed Cotton Special Structure,20s-combed-cotton-special-structure,general,combed_cotton,unknown,20.0,,1,prime
+A0033,20s Mixed Blend Special Structure,20s-mixed-blend-special-structure,general,mixed_blend,unknown,20.0,48.0,1,prime
+A0046,20s Polyester Special Structure,20s-polyester-special-structure,general,polyester,unknown,20.0,"47.5, 48.0, 49.0",8,prime
+A0019,308s Combed Cotton Special Structure,308s-combed-cotton-special-structure,general,combed_cotton,unknown,308.0,,1,prime
+A0028,30s CVC Special Structure,30s-cvc-special-structure,general,cvc,unknown,30.0,48.0,1,prime
+A0047,30s Polyester Special Structure,30s-polyester-special-structure,general,polyester,unknown,30.0,72.0,1,prime
+A0068,30s TC Blend Special Structure,30s-tc-blend-special-structure,general,tc,unknown,30.0,"36.0, 72.0",2,prime
+A0048,34s Polyester Special Structure,34s-polyester-special-structure,general,polyester,unknown,34.0,72.0,1,prime
+A0069,45s TC Blend Special Structure,45s-tc-blend-special-structure,general,tc,unknown,45.0,,1,prime
+A0020,Combed Cotton Special Structure,combed-cotton-special-structure,general,combed_cotton,unknown,,"36.0, 38.0",2,prime
+A0049,Polyester Special Structure,polyester-special-structure,general,polyester,unknown,,"47.5, 72.0",2,prime
+A0076,Specialty Fabric Special Structure,specialty-fabric-special-structure,general,unknown,unknown,,"32.0, 38.0, 60.0, 72.0",8,prime
+A0034,30s Polyester Interlock,30s-polyester-interlock,premium_fashion,polyester,interlock,30.0,36.0,1,prime
+A0058,30s TC Blend Interlock,30s-tc-blend-interlock,premium_fashion,tc,interlock,30.0,"36.0, 36.5, 40.0, 72.0, 76.0",6,prime
+A0050,32s Semi Combed Cotton Interlock,32s-semi-combed-cotton-interlock,premium_fashion,semi_combed_cotton,interlock,32.0,43.0,1,prime
+A0035,34s Polyester Interlock,34s-polyester-interlock,premium_fashion,polyester,interlock,34.0,38.0,1,prime
+A0059,34s TC Blend Interlock,34s-tc-blend-interlock,premium_fashion,tc,interlock,34.0,"36.0, 36.5, 38.0, 42.5",5,prime
+A0001,40s Combed Cotton Interlock,40s-combed-cotton-interlock,premium_fashion,combed_cotton,interlock,40.0,37.0,1,prime
+A0051,40s Semi Combed Cotton Interlock,40s-semi-combed-cotton-interlock,premium_fashion,semi_combed_cotton,interlock,40.0,37.0,1,prime
+A0070,40s Specialty Fabric Interlock,40s-specialty-fabric-interlock,premium_fashion,unknown,interlock,40.0,37.0,1,prime
+A0036,45s Polyester Interlock,45s-polyester-interlock,premium_fashion,polyester,interlock,45.0,"36.0, 39.0, 44.5, 46.0, 86.0",5,prime
+A0060,45s TC Blend Interlock,45s-tc-blend-interlock,premium_fashion,tc,interlock,45.0,"36.0, 36.5, 37.5, 38.0, 39.0, 40.0, 41.0, 43.0, 44.0, 46.0, 84.0, 87.0",12,prime
+A0037,Polyester Interlock,polyester-interlock,premium_fashion,polyester,interlock,,"36.0, 38.0, 40.0, 42.0, 44.0, 71.0, 72.0, 80.0",9,prime
+A0071,Specialty Fabric Interlock,specialty-fabric-interlock,premium_fashion,unknown,interlock,,"36.0, 37.0, 66.0, 72.0",4,prime
+A0015,208s Combed Cotton Single Jersey,208s-combed-cotton-single-jersey,tshirt,combed_cotton,single_jersey,208.0,36.0,1,prime
+A0026,20s CVC Single Jersey,20s-cvc-single-jersey,tshirt,cvc,single_jersey,20.0,36.5,1,prime
+A0010,20s Combed Cotton Single Jersey,20s-combed-cotton-single-jersey,tshirt,combed_cotton,single_jersey,20.0,"16.0, 22.0, 26.0, 34.0, 35.0, 36.0, 36.5, 74.0",11,prime
+A0022,20s Cotton Single Jersey,20s-cotton-single-jersey,tshirt,cotton,single_jersey,20.0,"16.0, 18.0, 20.0, 21.0, 22.0, 24.0, 36.0",14,prime
+A0031,20s Mixed Blend Single Jersey,20s-mixed-blend-single-jersey,tshirt,mixed_blend,single_jersey,20.0,"20.0, 22.0, 36.5, 72.0",6,prime
+A0043,20s Polyester Single Jersey,20s-polyester-single-jersey,tshirt,polyester,single_jersey,20.0,"36.0, 36.5",2,prime
+A0055,20s Semi Combed Cotton Single Jersey,20s-semi-combed-cotton-single-jersey,tshirt,semi_combed_cotton,single_jersey,20.0,36.5,1,prime
+A0064,20s TC Blend Single Jersey,20s-tc-blend-single-jersey,tshirt,tc,single_jersey,20.0,"20.0, 43.0, 44.5",6,prime
+A0011,24s Combed Cotton Single Jersey,24s-combed-cotton-single-jersey,tshirt,combed_cotton,single_jersey,24.0,"19.0, 20.0, 22.0, 24.0, 26.0, 33.0, 33.5, 36.5",10,prime
+A0012,28s Combed Cotton Single Jersey,28s-combed-cotton-single-jersey,tshirt,combed_cotton,single_jersey,28.0,"20.0, 21.0, 22.0, 34.5, 36.5, 41.0",7,prime
+A0016,308s Combed Cotton Single Jersey,308s-combed-cotton-single-jersey,tshirt,combed_cotton,single_jersey,308.0,"18.0, 20.0, 22.0, 23.5, 34.5, 36.5, 38.0, 40.0",10,prime
+A0027,30s CVC Single Jersey,30s-cvc-single-jersey,tshirt,cvc,single_jersey,30.0,"36.0, 37.5, 38.0",3,prime
+A0013,30s Combed Cotton Single Jersey,30s-combed-cotton-single-jersey,tshirt,combed_cotton,single_jersey,30.0,"17.5, 18.0, 18.5, 19.0, 20.0, 20.5, 21.0, 21.5, 22.0, 22.5, 23.0, 23.5, 24.0, 24.5, 25.0, 25.5, 34.0, 34.5, 36.0, 36.5, 37.0, 37.5, 38.0, 41.0",38,prime
+A0032,30s Mixed Blend Single Jersey,30s-mixed-blend-single-jersey,tshirt,mixed_blend,single_jersey,30.0,"36.0, 36.5, 37.5, 41.0, 73.0",8,prime
+A0044,30s Polyester Single Jersey,30s-polyester-single-jersey,tshirt,polyester,single_jersey,30.0,"36.0, 55.0",2,prime
+A0056,30s Semi Combed Cotton Single Jersey,30s-semi-combed-cotton-single-jersey,tshirt,semi_combed_cotton,single_jersey,30.0,"17.0, 18.0, 19.0, 20.0, 21.0, 22.0, 23.0, 24.0, 34.5, 36.0, 36.5, 38.0, 73.0",20,prime
+A0074,30s Specialty Fabric Single Jersey,30s-specialty-fabric-single-jersey,tshirt,unknown,single_jersey,30.0,22.0,1,prime
+A0065,30s TC Blend Single Jersey,30s-tc-blend-single-jersey,tshirt,tc,single_jersey,30.0,"36.5, 37.5",3,prime
+A0014,32s Combed Cotton Single Jersey,32s-combed-cotton-single-jersey,tshirt,combed_cotton,single_jersey,32.0,"20.0, 21.5, 22.5, 23.0, 24.5, 36.5, 38.0",8,prime
+A0057,32s Semi Combed Cotton Single Jersey,32s-semi-combed-cotton-single-jersey,tshirt,semi_combed_cotton,single_jersey,32.0,"19.0, 22.0, 34.5, 35.0, 36.5, 38.5, 39.0, 40.5",8,prime
+A0045,34s Polyester Single Jersey,34s-polyester-single-jersey,tshirt,polyester,single_jersey,34.0,36.0,1,prime
+A0066,34s TC Blend Single Jersey,34s-tc-blend-single-jersey,tshirt,tc,single_jersey,34.0,"24.0, 35.5, 36.0, 37.5",5,prime
+A0017,Combed Cotton Single Jersey,combed-cotton-single-jersey,tshirt,combed_cotton,single_jersey,,72.0,1,prime
+A0023,Cotton Single Jersey,cotton-single-jersey,tshirt,cotton,single_jersey,,,1,prime
+A0075,Specialty Fabric Single Jersey,specialty-fabric-single-jersey,tshirt,unknown,single_jersey,,"32.0, 48.0, 72.0, 74.0",15,prime
+A0067,TC Blend Single Jersey,tc-blend-single-jersey,tshirt,tc,single_jersey,,36.0,1,prime

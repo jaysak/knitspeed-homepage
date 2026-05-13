@@ -18,7 +18,9 @@ grouped = df.groupby([
 for idx, ((material, structure, yarn, usage), group) in enumerate(grouped):
 
     material_map = {
-        "cotton": "Combed Cotton",
+        "combed_cotton": "Combed Cotton",
+        "semi_combed_cotton": "Semi Combed Cotton",
+        "cotton": "Cotton",
         "cvc": "CVC",
         "tc": "TC Blend",
         "polyester": "Polyester",

@@ -44,7 +44,7 @@ def detect_material(name):
 
     # Semi combed
     if "SM" in n:
-        return "cotton"
+        return "semi_combed_cotton"
 
     # OE weaving / OE knitting
     if "OEW" in n or "OE" in n:
@@ -54,8 +54,12 @@ def detect_material(name):
     if "POLY" in n:
         return "polyester"
 
-    # Cotton / combed
-    if "CM" in n or "COMBED" in n or "COTTON" in n:
+    # Combed cotton
+    if "CM" in n:
+        return "combed_cotton"
+
+    # Generic cotton fallback
+    if "COMBED" in n or "COTTON" in n:
         return "cotton"
 
     return "unknown"
@@ -76,7 +80,9 @@ def build_display_name(row):
     width = row.get("width_inches")
 
     material_map = {
-        "cotton": "Combed Cotton",
+        "combed_cotton": "Combed Cotton",
+        "semi_combed_cotton": "Semi Combed Cotton",
+        "cotton": "Cotton",
         "cvc": "CVC",
         "tc": "TC Blend",
         "polyester": "Polyester",

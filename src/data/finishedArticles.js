@@ -3,11 +3,11 @@
 
 export const FINISHED_ARTICLES = [
   {
-    "articleId": "A0008",
+    "articleId": "A0007",
     "articleName": "208s Combed Cotton Rib",
     "seoSlug": "208s-combed-cotton-rib",
     "usageSegment": "collar_cuff",
-    "materialFamily": "cotton",
+    "materialFamily": "combed_cotton",
     "fabricStructure": "rib",
     "yarnCount": "208",
     "availableWidths": [
@@ -17,7 +17,7 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0022",
+    "articleId": "A0024",
     "articleName": "20s CVC Rib",
     "seoSlug": "20s-cvc-rib",
     "usageSegment": "collar_cuff",
@@ -31,11 +31,11 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0003",
+    "articleId": "A0002",
     "articleName": "20s Combed Cotton Rib",
     "seoSlug": "20s-combed-cotton-rib",
     "usageSegment": "collar_cuff",
-    "materialFamily": "cotton",
+    "materialFamily": "combed_cotton",
     "fabricStructure": "rib",
     "yarnCount": "20",
     "availableWidths": [
@@ -45,11 +45,26 @@ export const FINISHED_ARTICLES = [
       "30",
       "32"
     ],
-    "linkedProducts": 13,
+    "linkedProducts": 8,
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0027",
+    "articleId": "A0021",
+    "articleName": "20s Cotton Rib",
+    "seoSlug": "20s-cotton-rib",
+    "usageSegment": "collar_cuff",
+    "materialFamily": "cotton",
+    "fabricStructure": "rib",
+    "yarnCount": "20",
+    "availableWidths": [
+      "30",
+      "32"
+    ],
+    "linkedProducts": 4,
+    "leadPriority": "prime"
+  },
+  {
+    "articleId": "A0029",
     "articleName": "20s Mixed Blend Rib",
     "seoSlug": "20s-mixed-blend-rib",
     "usageSegment": "collar_cuff",
@@ -64,7 +79,7 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0036",
+    "articleId": "A0038",
     "articleName": "20s Polyester Rib",
     "seoSlug": "20s-polyester-rib",
     "usageSegment": "collar_cuff",
@@ -78,7 +93,21 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0062",
+    "articleId": "A0052",
+    "articleName": "20s Semi Combed Cotton Rib",
+    "seoSlug": "20s-semi-combed-cotton-rib",
+    "usageSegment": "collar_cuff",
+    "materialFamily": "semi_combed_cotton",
+    "fabricStructure": "rib",
+    "yarnCount": "20",
+    "availableWidths": [
+      "32"
+    ],
+    "linkedProducts": 1,
+    "leadPriority": "prime"
+  },
+  {
+    "articleId": "A0072",
     "articleName": "20s Specialty Fabric Rib",
     "seoSlug": "20s-specialty-fabric-rib",
     "usageSegment": "collar_cuff",
@@ -92,7 +121,7 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0051",
+    "articleId": "A0061",
     "articleName": "20s TC Blend Rib",
     "seoSlug": "20s-tc-blend-rib",
     "usageSegment": "collar_cuff",
@@ -107,11 +136,11 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0004",
+    "articleId": "A0003",
     "articleName": "24s Combed Cotton Rib",
     "seoSlug": "24s-combed-cotton-rib",
     "usageSegment": "collar_cuff",
-    "materialFamily": "cotton",
+    "materialFamily": "combed_cotton",
     "fabricStructure": "rib",
     "yarnCount": "24",
     "availableWidths": [
@@ -122,11 +151,11 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0005",
+    "articleId": "A0004",
     "articleName": "28s Combed Cotton Rib",
     "seoSlug": "28s-combed-cotton-rib",
     "usageSegment": "collar_cuff",
-    "materialFamily": "cotton",
+    "materialFamily": "combed_cotton",
     "fabricStructure": "rib",
     "yarnCount": "28",
     "availableWidths": [
@@ -139,11 +168,11 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0009",
+    "articleId": "A0008",
     "articleName": "308s Combed Cotton Rib",
     "seoSlug": "308s-combed-cotton-rib",
     "usageSegment": "collar_cuff",
-    "materialFamily": "cotton",
+    "materialFamily": "combed_cotton",
     "fabricStructure": "rib",
     "yarnCount": "308",
     "availableWidths": [
@@ -153,7 +182,7 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0023",
+    "articleId": "A0025",
     "articleName": "30s CVC Rib",
     "seoSlug": "30s-cvc-rib",
     "usageSegment": "collar_cuff",
@@ -167,25 +196,23 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0006",
+    "articleId": "A0005",
     "articleName": "30s Combed Cotton Rib",
     "seoSlug": "30s-combed-cotton-rib",
     "usageSegment": "collar_cuff",
-    "materialFamily": "cotton",
+    "materialFamily": "combed_cotton",
     "fabricStructure": "rib",
     "yarnCount": "30",
     "availableWidths": [
-      "2",
       "24",
       "32",
-      "33",
       "34"
     ],
-    "linkedProducts": 10,
+    "linkedProducts": 5,
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0028",
+    "articleId": "A0030",
     "articleName": "30s Mixed Blend Rib",
     "seoSlug": "30s-mixed-blend-rib",
     "usageSegment": "collar_cuff",
@@ -203,7 +230,7 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0037",
+    "articleId": "A0039",
     "articleName": "30s Polyester Rib",
     "seoSlug": "30s-polyester-rib",
     "usageSegment": "collar_cuff",
@@ -217,7 +244,23 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0052",
+    "articleId": "A0053",
+    "articleName": "30s Semi Combed Cotton Rib",
+    "seoSlug": "30s-semi-combed-cotton-rib",
+    "usageSegment": "collar_cuff",
+    "materialFamily": "semi_combed_cotton",
+    "fabricStructure": "rib",
+    "yarnCount": "30",
+    "availableWidths": [
+      "2",
+      "32",
+      "33"
+    ],
+    "linkedProducts": 5,
+    "leadPriority": "prime"
+  },
+  {
+    "articleId": "A0062",
     "articleName": "30s TC Blend Rib",
     "seoSlug": "30s-tc-blend-rib",
     "usageSegment": "collar_cuff",
@@ -232,11 +275,25 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0007",
+    "articleId": "A0006",
     "articleName": "32s Combed Cotton Rib",
     "seoSlug": "32s-combed-cotton-rib",
     "usageSegment": "collar_cuff",
-    "materialFamily": "cotton",
+    "materialFamily": "combed_cotton",
+    "fabricStructure": "rib",
+    "yarnCount": "32",
+    "availableWidths": [
+      "32"
+    ],
+    "linkedProducts": 1,
+    "leadPriority": "prime"
+  },
+  {
+    "articleId": "A0054",
+    "articleName": "32s Semi Combed Cotton Rib",
+    "seoSlug": "32s-semi-combed-cotton-rib",
+    "usageSegment": "collar_cuff",
+    "materialFamily": "semi_combed_cotton",
     "fabricStructure": "rib",
     "yarnCount": "32",
     "availableWidths": [
@@ -244,11 +301,11 @@ export const FINISHED_ARTICLES = [
       "32",
       "35"
     ],
-    "linkedProducts": 4,
+    "linkedProducts": 3,
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0038",
+    "articleId": "A0040",
     "articleName": "34s Polyester Rib",
     "seoSlug": "34s-polyester-rib",
     "usageSegment": "collar_cuff",
@@ -270,7 +327,7 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0053",
+    "articleId": "A0063",
     "articleName": "34s TC Blend Rib",
     "seoSlug": "34s-tc-blend-rib",
     "usageSegment": "collar_cuff",
@@ -284,7 +341,7 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0039",
+    "articleId": "A0041",
     "articleName": "45s Polyester Rib",
     "seoSlug": "45s-polyester-rib",
     "usageSegment": "collar_cuff",
@@ -298,11 +355,11 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0010",
+    "articleId": "A0009",
     "articleName": "Combed Cotton Rib",
     "seoSlug": "combed-cotton-rib",
     "usageSegment": "collar_cuff",
-    "materialFamily": "cotton",
+    "materialFamily": "combed_cotton",
     "fabricStructure": "rib",
     "yarnCount": "",
     "availableWidths": [
@@ -312,7 +369,7 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0040",
+    "articleId": "A0042",
     "articleName": "Polyester Rib",
     "seoSlug": "polyester-rib",
     "usageSegment": "collar_cuff",
@@ -328,7 +385,7 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0063",
+    "articleId": "A0073",
     "articleName": "Specialty Fabric Rib",
     "seoSlug": "specialty-fabric-rib",
     "usageSegment": "collar_cuff",
@@ -344,11 +401,11 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0019",
+    "articleId": "A0018",
     "articleName": "20s Combed Cotton Special Structure",
     "seoSlug": "20s-combed-cotton-special-structure",
     "usageSegment": "general",
-    "materialFamily": "cotton",
+    "materialFamily": "combed_cotton",
     "fabricStructure": "unknown",
     "yarnCount": "20",
     "availableWidths": [],
@@ -356,7 +413,7 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0031",
+    "articleId": "A0033",
     "articleName": "20s Mixed Blend Special Structure",
     "seoSlug": "20s-mixed-blend-special-structure",
     "usageSegment": "general",
@@ -370,7 +427,7 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0044",
+    "articleId": "A0046",
     "articleName": "20s Polyester Special Structure",
     "seoSlug": "20s-polyester-special-structure",
     "usageSegment": "general",
@@ -386,11 +443,11 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0020",
+    "articleId": "A0019",
     "articleName": "308s Combed Cotton Special Structure",
     "seoSlug": "308s-combed-cotton-special-structure",
     "usageSegment": "general",
-    "materialFamily": "cotton",
+    "materialFamily": "combed_cotton",
     "fabricStructure": "unknown",
     "yarnCount": "308",
     "availableWidths": [],
@@ -398,7 +455,7 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0026",
+    "articleId": "A0028",
     "articleName": "30s CVC Special Structure",
     "seoSlug": "30s-cvc-special-structure",
     "usageSegment": "general",
@@ -412,7 +469,7 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0045",
+    "articleId": "A0047",
     "articleName": "30s Polyester Special Structure",
     "seoSlug": "30s-polyester-special-structure",
     "usageSegment": "general",
@@ -426,7 +483,7 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0058",
+    "articleId": "A0068",
     "articleName": "30s TC Blend Special Structure",
     "seoSlug": "30s-tc-blend-special-structure",
     "usageSegment": "general",
@@ -441,7 +498,7 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0046",
+    "articleId": "A0048",
     "articleName": "34s Polyester Special Structure",
     "seoSlug": "34s-polyester-special-structure",
     "usageSegment": "general",
@@ -455,7 +512,7 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0059",
+    "articleId": "A0069",
     "articleName": "45s TC Blend Special Structure",
     "seoSlug": "45s-tc-blend-special-structure",
     "usageSegment": "general",
@@ -467,11 +524,11 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0021",
+    "articleId": "A0020",
     "articleName": "Combed Cotton Special Structure",
     "seoSlug": "combed-cotton-special-structure",
     "usageSegment": "general",
-    "materialFamily": "cotton",
+    "materialFamily": "combed_cotton",
     "fabricStructure": "unknown",
     "yarnCount": "",
     "availableWidths": [
@@ -482,7 +539,7 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0047",
+    "articleId": "A0049",
     "articleName": "Polyester Special Structure",
     "seoSlug": "polyester-special-structure",
     "usageSegment": "general",
@@ -497,7 +554,7 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0066",
+    "articleId": "A0076",
     "articleName": "Specialty Fabric Special Structure",
     "seoSlug": "specialty-fabric-special-structure",
     "usageSegment": "general",
@@ -514,7 +571,7 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0032",
+    "articleId": "A0034",
     "articleName": "30s Polyester Interlock",
     "seoSlug": "30s-polyester-interlock",
     "usageSegment": "premium_fashion",
@@ -528,7 +585,7 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0048",
+    "articleId": "A0058",
     "articleName": "30s TC Blend Interlock",
     "seoSlug": "30s-tc-blend-interlock",
     "usageSegment": "premium_fashion",
@@ -546,11 +603,11 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0001",
-    "articleName": "32s Combed Cotton Interlock",
-    "seoSlug": "32s-combed-cotton-interlock",
+    "articleId": "A0050",
+    "articleName": "32s Semi Combed Cotton Interlock",
+    "seoSlug": "32s-semi-combed-cotton-interlock",
     "usageSegment": "premium_fashion",
-    "materialFamily": "cotton",
+    "materialFamily": "semi_combed_cotton",
     "fabricStructure": "interlock",
     "yarnCount": "32",
     "availableWidths": [
@@ -560,7 +617,7 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0033",
+    "articleId": "A0035",
     "articleName": "34s Polyester Interlock",
     "seoSlug": "34s-polyester-interlock",
     "usageSegment": "premium_fashion",
@@ -574,7 +631,7 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0049",
+    "articleId": "A0059",
     "articleName": "34s TC Blend Interlock",
     "seoSlug": "34s-tc-blend-interlock",
     "usageSegment": "premium_fashion",
@@ -591,21 +648,35 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0002",
+    "articleId": "A0001",
     "articleName": "40s Combed Cotton Interlock",
     "seoSlug": "40s-combed-cotton-interlock",
     "usageSegment": "premium_fashion",
-    "materialFamily": "cotton",
+    "materialFamily": "combed_cotton",
     "fabricStructure": "interlock",
     "yarnCount": "40",
     "availableWidths": [
       "37"
     ],
-    "linkedProducts": 2,
+    "linkedProducts": 1,
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0060",
+    "articleId": "A0051",
+    "articleName": "40s Semi Combed Cotton Interlock",
+    "seoSlug": "40s-semi-combed-cotton-interlock",
+    "usageSegment": "premium_fashion",
+    "materialFamily": "semi_combed_cotton",
+    "fabricStructure": "interlock",
+    "yarnCount": "40",
+    "availableWidths": [
+      "37"
+    ],
+    "linkedProducts": 1,
+    "leadPriority": "prime"
+  },
+  {
+    "articleId": "A0070",
     "articleName": "40s Specialty Fabric Interlock",
     "seoSlug": "40s-specialty-fabric-interlock",
     "usageSegment": "premium_fashion",
@@ -619,7 +690,7 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0034",
+    "articleId": "A0036",
     "articleName": "45s Polyester Interlock",
     "seoSlug": "45s-polyester-interlock",
     "usageSegment": "premium_fashion",
@@ -637,7 +708,7 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0050",
+    "articleId": "A0060",
     "articleName": "45s TC Blend Interlock",
     "seoSlug": "45s-tc-blend-interlock",
     "usageSegment": "premium_fashion",
@@ -662,7 +733,7 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0035",
+    "articleId": "A0037",
     "articleName": "Polyester Interlock",
     "seoSlug": "polyester-interlock",
     "usageSegment": "premium_fashion",
@@ -683,7 +754,7 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0061",
+    "articleId": "A0071",
     "articleName": "Specialty Fabric Interlock",
     "seoSlug": "specialty-fabric-interlock",
     "usageSegment": "premium_fashion",
@@ -700,11 +771,11 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0016",
+    "articleId": "A0015",
     "articleName": "208s Combed Cotton Single Jersey",
     "seoSlug": "208s-combed-cotton-single-jersey",
     "usageSegment": "tshirt",
-    "materialFamily": "cotton",
+    "materialFamily": "combed_cotton",
     "fabricStructure": "single_jersey",
     "yarnCount": "208",
     "availableWidths": [
@@ -714,7 +785,7 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0024",
+    "articleId": "A0026",
     "articleName": "20s CVC Single Jersey",
     "seoSlug": "20s-cvc-single-jersey",
     "usageSegment": "tshirt",
@@ -728,9 +799,30 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0011",
+    "articleId": "A0010",
     "articleName": "20s Combed Cotton Single Jersey",
     "seoSlug": "20s-combed-cotton-single-jersey",
+    "usageSegment": "tshirt",
+    "materialFamily": "combed_cotton",
+    "fabricStructure": "single_jersey",
+    "yarnCount": "20",
+    "availableWidths": [
+      "16",
+      "22",
+      "26",
+      "34",
+      "35",
+      "36",
+      "36.5",
+      "74"
+    ],
+    "linkedProducts": 11,
+    "leadPriority": "prime"
+  },
+  {
+    "articleId": "A0022",
+    "articleName": "20s Cotton Single Jersey",
+    "seoSlug": "20s-cotton-single-jersey",
     "usageSegment": "tshirt",
     "materialFamily": "cotton",
     "fabricStructure": "single_jersey",
@@ -742,18 +834,13 @@ export const FINISHED_ARTICLES = [
       "21",
       "22",
       "24",
-      "26",
-      "34",
-      "35",
-      "36",
-      "36.5",
-      "74"
+      "36"
     ],
-    "linkedProducts": 26,
+    "linkedProducts": 14,
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0029",
+    "articleId": "A0031",
     "articleName": "20s Mixed Blend Single Jersey",
     "seoSlug": "20s-mixed-blend-single-jersey",
     "usageSegment": "tshirt",
@@ -770,7 +857,7 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0041",
+    "articleId": "A0043",
     "articleName": "20s Polyester Single Jersey",
     "seoSlug": "20s-polyester-single-jersey",
     "usageSegment": "tshirt",
@@ -785,7 +872,21 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0054",
+    "articleId": "A0055",
+    "articleName": "20s Semi Combed Cotton Single Jersey",
+    "seoSlug": "20s-semi-combed-cotton-single-jersey",
+    "usageSegment": "tshirt",
+    "materialFamily": "semi_combed_cotton",
+    "fabricStructure": "single_jersey",
+    "yarnCount": "20",
+    "availableWidths": [
+      "36.5"
+    ],
+    "linkedProducts": 1,
+    "leadPriority": "prime"
+  },
+  {
+    "articleId": "A0064",
     "articleName": "20s TC Blend Single Jersey",
     "seoSlug": "20s-tc-blend-single-jersey",
     "usageSegment": "tshirt",
@@ -801,11 +902,11 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0012",
+    "articleId": "A0011",
     "articleName": "24s Combed Cotton Single Jersey",
     "seoSlug": "24s-combed-cotton-single-jersey",
     "usageSegment": "tshirt",
-    "materialFamily": "cotton",
+    "materialFamily": "combed_cotton",
     "fabricStructure": "single_jersey",
     "yarnCount": "24",
     "availableWidths": [
@@ -822,11 +923,11 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0013",
+    "articleId": "A0012",
     "articleName": "28s Combed Cotton Single Jersey",
     "seoSlug": "28s-combed-cotton-single-jersey",
     "usageSegment": "tshirt",
-    "materialFamily": "cotton",
+    "materialFamily": "combed_cotton",
     "fabricStructure": "single_jersey",
     "yarnCount": "28",
     "availableWidths": [
@@ -841,11 +942,11 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0017",
+    "articleId": "A0016",
     "articleName": "308s Combed Cotton Single Jersey",
     "seoSlug": "308s-combed-cotton-single-jersey",
     "usageSegment": "tshirt",
-    "materialFamily": "cotton",
+    "materialFamily": "combed_cotton",
     "fabricStructure": "single_jersey",
     "yarnCount": "308",
     "availableWidths": [
@@ -862,7 +963,7 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0025",
+    "articleId": "A0027",
     "articleName": "30s CVC Single Jersey",
     "seoSlug": "30s-cvc-single-jersey",
     "usageSegment": "tshirt",
@@ -878,15 +979,14 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0014",
+    "articleId": "A0013",
     "articleName": "30s Combed Cotton Single Jersey",
     "seoSlug": "30s-combed-cotton-single-jersey",
     "usageSegment": "tshirt",
-    "materialFamily": "cotton",
+    "materialFamily": "combed_cotton",
     "fabricStructure": "single_jersey",
     "yarnCount": "30",
     "availableWidths": [
-      "17",
       "17.5",
       "18",
       "18.5",
@@ -910,14 +1010,13 @@ export const FINISHED_ARTICLES = [
       "37",
       "37.5",
       "38",
-      "41",
-      "73"
+      "41"
     ],
-    "linkedProducts": 58,
+    "linkedProducts": 38,
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0030",
+    "articleId": "A0032",
     "articleName": "30s Mixed Blend Single Jersey",
     "seoSlug": "30s-mixed-blend-single-jersey",
     "usageSegment": "tshirt",
@@ -935,7 +1034,7 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0042",
+    "articleId": "A0044",
     "articleName": "30s Polyester Single Jersey",
     "seoSlug": "30s-polyester-single-jersey",
     "usageSegment": "tshirt",
@@ -950,7 +1049,33 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0064",
+    "articleId": "A0056",
+    "articleName": "30s Semi Combed Cotton Single Jersey",
+    "seoSlug": "30s-semi-combed-cotton-single-jersey",
+    "usageSegment": "tshirt",
+    "materialFamily": "semi_combed_cotton",
+    "fabricStructure": "single_jersey",
+    "yarnCount": "30",
+    "availableWidths": [
+      "17",
+      "18",
+      "19",
+      "20",
+      "21",
+      "22",
+      "23",
+      "24",
+      "34.5",
+      "36",
+      "36.5",
+      "38",
+      "73"
+    ],
+    "linkedProducts": 20,
+    "leadPriority": "prime"
+  },
+  {
+    "articleId": "A0074",
     "articleName": "30s Specialty Fabric Single Jersey",
     "seoSlug": "30s-specialty-fabric-single-jersey",
     "usageSegment": "tshirt",
@@ -964,7 +1089,7 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0055",
+    "articleId": "A0065",
     "articleName": "30s TC Blend Single Jersey",
     "seoSlug": "30s-tc-blend-single-jersey",
     "usageSegment": "tshirt",
@@ -979,34 +1104,48 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0015",
+    "articleId": "A0014",
     "articleName": "32s Combed Cotton Single Jersey",
     "seoSlug": "32s-combed-cotton-single-jersey",
     "usageSegment": "tshirt",
-    "materialFamily": "cotton",
+    "materialFamily": "combed_cotton",
+    "fabricStructure": "single_jersey",
+    "yarnCount": "32",
+    "availableWidths": [
+      "20",
+      "21.5",
+      "22.5",
+      "23",
+      "24.5",
+      "36.5",
+      "38"
+    ],
+    "linkedProducts": 8,
+    "leadPriority": "prime"
+  },
+  {
+    "articleId": "A0057",
+    "articleName": "32s Semi Combed Cotton Single Jersey",
+    "seoSlug": "32s-semi-combed-cotton-single-jersey",
+    "usageSegment": "tshirt",
+    "materialFamily": "semi_combed_cotton",
     "fabricStructure": "single_jersey",
     "yarnCount": "32",
     "availableWidths": [
       "19",
-      "20",
-      "21.5",
       "22",
-      "22.5",
-      "23",
-      "24.5",
       "34.5",
       "35",
       "36.5",
-      "38",
       "38.5",
       "39",
       "40.5"
     ],
-    "linkedProducts": 16,
+    "linkedProducts": 8,
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0043",
+    "articleId": "A0045",
     "articleName": "34s Polyester Single Jersey",
     "seoSlug": "34s-polyester-single-jersey",
     "usageSegment": "tshirt",
@@ -1020,7 +1159,7 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0056",
+    "articleId": "A0066",
     "articleName": "34s TC Blend Single Jersey",
     "seoSlug": "34s-tc-blend-single-jersey",
     "usageSegment": "tshirt",
@@ -1037,21 +1176,33 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0018",
+    "articleId": "A0017",
     "articleName": "Combed Cotton Single Jersey",
     "seoSlug": "combed-cotton-single-jersey",
     "usageSegment": "tshirt",
-    "materialFamily": "cotton",
+    "materialFamily": "combed_cotton",
     "fabricStructure": "single_jersey",
     "yarnCount": "",
     "availableWidths": [
       "72"
     ],
-    "linkedProducts": 2,
+    "linkedProducts": 1,
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0065",
+    "articleId": "A0023",
+    "articleName": "Cotton Single Jersey",
+    "seoSlug": "cotton-single-jersey",
+    "usageSegment": "tshirt",
+    "materialFamily": "cotton",
+    "fabricStructure": "single_jersey",
+    "yarnCount": "",
+    "availableWidths": [],
+    "linkedProducts": 1,
+    "leadPriority": "prime"
+  },
+  {
+    "articleId": "A0075",
     "articleName": "Specialty Fabric Single Jersey",
     "seoSlug": "specialty-fabric-single-jersey",
     "usageSegment": "tshirt",
@@ -1068,7 +1219,7 @@ export const FINISHED_ARTICLES = [
     "leadPriority": "prime"
   },
   {
-    "articleId": "A0057",
+    "articleId": "A0067",
     "articleName": "TC Blend Single Jersey",
     "seoSlug": "tc-blend-single-jersey",
     "usageSegment": "tshirt",
