@@ -8,18 +8,18 @@ export default function ProductGarmentOutcome({
     <div className="mt-4 overflow-hidden rounded-2xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white">
       <div className="border-b border-slate-200 px-4 py-3">
         <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
-          Garment Outcome Visualization
+          ผลลัพธ์หลังขึ้นงาน
         </p>
 
         <p className="mt-1 text-sm text-slate-700">
-          How fabric selection may influence garment feel and presentation.
+          การเลือกผ้ามีผลต่อสัมผัส ทรง และภาพลักษณ์ของเสื้อหลังผลิตจริง
         </p>
       </div>
 
       <div className="grid gap-3 p-4 md:grid-cols-3">
         <div className="rounded-xl bg-white p-3 border border-slate-200">
           <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
-            Garment Shape
+            ทรงเสื้อ
           </p>
 
           <p className="mt-2 text-sm text-slate-700">
@@ -29,7 +29,7 @@ export default function ProductGarmentOutcome({
 
         <div className="rounded-xl bg-white p-3 border border-slate-200">
           <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
-            Wearing Experience
+            ความรู้สึกเวลาใส่
           </p>
 
           <p className="mt-2 text-sm text-slate-700">
@@ -39,7 +39,7 @@ export default function ProductGarmentOutcome({
 
         <div className="rounded-xl bg-white p-3 border border-slate-200">
           <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
-            Visual Result
+            ภาพลักษณ์งานจริง
           </p>
 
           <p className="mt-2 text-sm text-slate-700">

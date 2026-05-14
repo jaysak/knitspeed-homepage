@@ -6,5 +6,4 @@ export const FEATURED_ARTICLE_SLUGS = [
   "30s-combed-cotton-single-jersey",
   "20s-combed-cotton-single-jersey",
   "40s-combed-cotton-interlock",
-  "30s-tc-blend-single-jersey",
 ];

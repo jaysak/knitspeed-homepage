@@ -1090,3 +1090,32 @@ Current domain state:
 
 Priority:
 - stabilize public identity before further production-facing UX expansion
+
+---
+
+## Phase 4.2N–4.2O — Homepage Thai UX + Product Intelligence Refinement
+
+Status:
+- implemented
+- verification passing
+
+Completed:
+- Thai-first homepage identity and CTA refinement
+- product card language localization
+- product-card density refinement
+- yarn-count intelligence overlays
+- yarn-quality product intelligence overlays
+- garment outcome differentiation
+- comparative reasoning differentiation
+- TC card hidden pending deeper blend-ratio data enrichment
+- T-shirt sourcing guide link repaired
+
+Current strategic result:
+- homepage now better communicates Knitspeed as a Thai-first textile sourcing intelligence platform
+- product cards now express more product-specific textile reasoning instead of generic repeated guidance
+
+Next:
+- production push
+- real iPhone warehouse/fabric photo capture
+- image hierarchy cleanup
+- later TC/CVC historical data enrichment

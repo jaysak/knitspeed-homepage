@@ -18,12 +18,12 @@ export default function ProductDecisionConfidence({
 
         <div className="grid gap-2 text-sm text-slate-600">
           <div className="rounded-xl bg-slate-50 px-3 py-2">
-            <span className="font-medium text-slate-800">Sourcing fit:</span>{" "}
+            <span className="font-medium text-slate-800">เหมาะกับการใช้งาน:</span>{" "}
             {sourcingFit}
           </div>
 
           <div className="rounded-xl bg-slate-50 px-3 py-2">
-            <span className="font-medium text-slate-800">Buyer perspective:</span>{" "}
+            <span className="font-medium text-slate-800">มุมมองผู้ซื้อ:</span>{" "}
             {buyerPerspective}
           </div>
 

@@ -180,7 +180,7 @@ export default function TShirtFabricSourcingGuide({ brand }) {
             className="mt-10 inline-flex items-center justify-center gap-2 rounded-full px-7 py-4 font-bold text-white shadow-sm transition hover:translate-y-[-1px]"
             style={{ backgroundColor: brand.blue }}
           >
-            Request Fabric Quote <ArrowRight size={18} />
+            ขอราคาผ้า <ArrowRight size={18} />
           </a>
         </div>
       </section>

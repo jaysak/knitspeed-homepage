@@ -17,6 +17,7 @@ import KnowledgeIndexPage from "./pages/KnowledgeIndexPage";
 import KnowledgeNotFoundPage from "./pages/KnowledgeNotFoundPage";
 import QuoteForm from "./components/QuoteForm";
 import TShirtFabricSourcingGuide from "./pages/knowledge/TShirtFabricSourcingGuide";
+import BrandIdentitySection from "./components/home/BrandIdentitySection";
 import FinishedArticleGrid from "./components/articles/FinishedArticleGrid";
 import {
   getKnowledgePageFromPathname,
@@ -392,6 +393,8 @@ export default function App() {
           </motion.div>
         </div>
       </section>
+
+      <BrandIdentitySection />
 
       <FinishedArticleGrid
         articles={featuredArticles}

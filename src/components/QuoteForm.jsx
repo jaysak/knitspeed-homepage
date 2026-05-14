@@ -31,7 +31,7 @@ export default function QuoteForm({
         className="text-3xl font-extrabold md:text-4xl"
         style={{ color: brand.navy }}
       >
-        Request a Fabric Quote
+        ขอราคาผ้า
       </h2>
 
       <p className="mt-4 text-lg leading-8 text-slate-600">
@@ -352,7 +352,7 @@ export default function QuoteForm({
       >
         {submitStatus === "sending"
           ? "Sending..."
-          : "Submit Quote Request"}
+          : "ส่งคำขอราคา"}
       </button>
 
       <p className="mt-3 text-center text-xs text-slate-400">
@@ -361,7 +361,7 @@ export default function QuoteForm({
 
       {submitStatus === "success" && (
         <div className="mt-5 rounded-2xl border border-green-200 bg-green-50 px-4 py-3 text-center text-sm font-semibold text-green-700">
-          Quote request sent successfully.
+          ส่งคำขอเรียบร้อยแล้ว
           Our team will contact you shortly.
         </div>
       )}

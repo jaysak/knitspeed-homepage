@@ -1893,3 +1893,41 @@ Next likely safe slice:
 
 Magic words for next boot:
 > Jarvis, continue Knitspeed from Phase 4.3A Contact Trust Layer checkpoint. Official LINE OA and branded email trust layer are live, mobile CTA flow is verified, and next phase is the textile visual system for upcoming marketing onboarding. Focus on real tactile fabric imagery and calm sourcing-aware presentation. First inspect HANDOFF.md, PROJECT_ROADMAP.md, DECISIONS.md, SESSIONS.md, then inspect git status before patching.
+
+---
+
+# CURRENT CHECKPOINT — Phase 4.2N–4.2O Homepage Thai UX + Product Intelligence Refinement
+
+Status:
+- stable local checkpoint
+- build/lint passing
+- ready for production push
+
+Implemented:
+- homepage brand identity section added after hero
+- Thai-first buyer copy introduced while keeping English textile terminology where natural
+- homepage CTAs and card section labels translated into Thai
+- product card density refined for better scan rhythm
+- product intelligence now includes yarn-count overlays:
+  - 20s = heavier, more opaque, oversized/uniform-friendly
+  - 30s = balanced daily retail use
+  - 40s = lighter, finer, premium feel
+- yarn-quality overlays added:
+  - combed
+  - semi-combed
+  - compact
+  - CVC
+- garment outcome and comparative reasoning logic now differentiates products more clearly
+- TC featured card hidden from homepage until blend-ratio data is enriched
+- broken T-shirt sourcing guide link fixed to `/knowledge/t-shirt-fabric-sourcing`
+
+Important:
+- do not over-infer TC behavior until historical blend data is added
+- future TC/CVC work should use proper fields such as blend family, cotton ratio, poly ratio, handfeel expectation, commercial positioning, and production notes
+- T-shirt sourcing guide route works but needs navigation/header polish later
+
+Next likely safe tasks:
+1. push current checkpoint to production
+2. photograph real warehouse/fabric visuals with iPhone
+3. replace placeholder/redundant imagery with real textile image hierarchy
+4. later plan TC/CVC historical data enrichment and DB-safe schema additions

@@ -9,24 +9,24 @@ export function getVisualGuidance(article = {}) {
   }
 
   if (name.includes("single jersey") || slug.includes("single-jersey")) {
-    guidance.silhouette = "T-Shirts and Casualwear"
-    guidance.fabricMood = "Soft breathable drape"
-    guidance.visualTone = "Relaxed everyday cotton feel"
+    guidance.silhouette = "เสื้อยืดและงานลำลอง"
+    guidance.fabricMood = "สัมผัสนุ่ม ระบายอากาศดี"
+    guidance.visualTone = "ลุคคอตตอนสบายสำหรับใส่ประจำวัน"
   }
 
   if (name.includes("interlock") || slug.includes("interlock")) {
-    guidance.silhouette = "Structured Knit Apparel"
-    guidance.fabricMood = "Cleaner and more stable body"
-    guidance.visualTone = "Premium retail structure"
+    guidance.silhouette = "งานผ้าถักที่ต้องการทรงชัด"
+    guidance.fabricMood = "ทรงผ้าดูนิ่งและเรียบร้อยขึ้น"
+    guidance.visualTone = "ลุคพรีเมียมสำหรับงานรีเทล"
   }
 
   if (name.includes("rib")) {
-    guidance.silhouette = "Collars, Cuffs, Stretch Areas"
-    guidance.fabricMood = "Flexible stretch recovery"
+    guidance.silhouette = "ปก แขน และส่วนที่ต้องการความยืดหยุ่น"
+    guidance.fabricMood = "ยืดหยุ่นและคืนตัวได้ดี"
   }
 
   if (name.includes("compact")) {
-    guidance.visualTone = "Cleaner premium surface appearance"
+    guidance.visualTone = "ผิวผ้าเรียบและดูพรีเมียม"
   }
 
   return guidance

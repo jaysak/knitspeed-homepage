@@ -32,10 +32,10 @@ export default function GarmentGuideCard() {
         </div>
 
         <a
-          href="/knowledge/tshirt-fabric-sourcing-guide"
+          href="/knowledge/t-shirt-fabric-sourcing"
           className="mt-8 inline-flex items-center rounded-full bg-sky-500 px-6 py-3 text-sm font-bold text-white transition hover:bg-sky-600"
         >
-          Explore T-Shirt Guide →
+          ดูคู่มือผ้าเสื้อยืด →
         </a>
       </div>
     </section>

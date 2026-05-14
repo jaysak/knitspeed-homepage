@@ -1,6 +1,6 @@
 const DEFAULT_LINKS = [
   {
-    label: "Explore Finished Fabrics",
+    label: "ดูผ้ายืดเพิ่มเติม",
     href: "/#finished-articles",
     description: "Browse sourcing-ready knitted fabric articles.",
   },
@@ -10,7 +10,7 @@ const DEFAULT_LINKS = [
     description: "Continue exploring practical textile guidance.",
   },
   {
-    label: "Request Related Fabric Quote",
+    label: "ขอราคาผ้าที่เกี่ยวข้อง",
     href: "/#quote",
     description: "Discuss GSM, structure, printing, or sourcing needs.",
   },
@@ -31,7 +31,7 @@ export default function KnowledgeContinueExploring({
         </h2>
 
         <p className="mt-3 max-w-2xl text-sm leading-relaxed text-slate-600">
-          Explore related fabric knowledge, compare sourcing directions,
+          สำรวจความรู้เกี่ยวกับผ้า เปรียบเทียบแนวทางการผลิต
           or continue toward production inquiry.
         </p>
       </div>

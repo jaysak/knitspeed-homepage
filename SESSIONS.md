@@ -2039,3 +2039,37 @@ Next priorities:
 4. procurement intelligence deepening
 5. quote continuity evolution
 
+
+---
+
+## 2026-05-14 — Phase 4.2N–4.2O Homepage Thai UX + Product Intelligence Refinement
+
+Status:
+- implemented locally
+- build and lint passing
+- ready for production push
+
+Completed:
+- added homepage brand identity section between hero and Finished Articles
+- shifted homepage language toward Thai-first buyer UX while preserving English textile terminology
+- translated key CTA and homepage card labels into Thai
+- refined product card density and visual rhythm
+- added yarn-count intelligence overlays for 20s, 30s, and 40s fabrics
+- added yarn-quality overlays for combed, semi-combed, compact, and CVC
+- improved garment outcome and comparative reasoning logic
+- removed TC card from homepage featured articles until TC/CVC blend ratio data can be enriched properly
+- fixed broken T-shirt sourcing guide link to `/knowledge/t-shirt-fabric-sourcing`
+
+Strategic outcome:
+- homepage now better reflects Knitspeed's identity as a Thai-first textile sourcing intelligence platform
+- product cards now differentiate fabric behavior more clearly instead of repeating generic guidance
+- TC/CVC deeper intelligence is intentionally deferred until historical blend-ratio data and DB enrichment are handled in a separate session
+
+Verification:
+- npm run build passes
+- npm run lint passes
+- local browser visual QA completed
+
+Notes:
+- T-shirt sourcing guide route now loads, but navigation/header polish on that page remains future work
+- next major visual task is real iPhone warehouse/fabric photography and image hierarchy cleanup

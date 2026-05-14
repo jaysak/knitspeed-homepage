@@ -55,10 +55,10 @@ export default function FinishedArticleGrid({ articles, brand, onArticleSelect }
                 </h3>
               </div>
 
-              <div className="p-5 md:p-6">
-                <div className="flex flex-wrap gap-1 text-[11px] font-semibold text-slate-500">
-                  <span className="rounded-full bg-slate-100 px-2.5 py-1">{titleize(article.materialFamily)}</span>
-                  <span className="rounded-full bg-slate-100 px-2.5 py-1">{titleize(article.fabricStructure)}</span>
+              <div className="p-4 md:p-5">
+                <div className="flex flex-wrap gap-1 text-[10px] font-semibold text-slate-500">
+                  <span className="rounded-full bg-slate-100 px-2 py-0.5">{titleize(article.materialFamily)}</span>
+                  <span className="rounded-full bg-slate-100 px-2 py-0.5">{titleize(article.fabricStructure)}</span>
                 </div>
 
                 <ProductVisualPlaceholder
@@ -69,7 +69,7 @@ export default function FinishedArticleGrid({ articles, brand, onArticleSelect }
                   image={visualPlaceholder.image}
                 />
 
-                <p className="mt-3 line-clamp-2 text-sm leading-relaxed text-slate-600 md:mt-4">
+                <p className="mt-2 line-clamp-2 text-[13px] leading-6 text-slate-600 md:mt-3">
                   {intelligence.summary}
                 </p>
 
@@ -90,13 +90,13 @@ export default function FinishedArticleGrid({ articles, brand, onArticleSelect }
                 <button
                   type="button"
                   onClick={() => onArticleSelect(article)}
-                  className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full px-5 py-3.5 text-sm font-bold text-white shadow-sm transition hover:opacity-90 md:py-3"
+                  className="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-bold text-white shadow-sm transition hover:opacity-90"
                   style={{ backgroundColor: brand.blue }}
                 >
-                  Request Fabric Quote <ArrowRight size={16} />
+                  ขอราคาผ้า <ArrowRight size={16} />
                 </button>
 
-                <CollapsibleInsightSection title="Buyer Guidance">
+                <CollapsibleInsightSection title="คำแนะนำสำหรับงานผลิต">
                   <ProductVisualGuidance
                     silhouette={visualGuidance.silhouette}
                     fabricMood={visualGuidance.fabricMood}
@@ -111,7 +111,7 @@ export default function FinishedArticleGrid({ articles, brand, onArticleSelect }
                   />
                 </CollapsibleInsightSection>
 
-                <CollapsibleInsightSection title="Comparison Notes">
+                <CollapsibleInsightSection title="จุดสังเกตของเนื้อผ้า">
                   <ProductComparativeReasoning
                     compareAgainst={comparativeReasoning.compareAgainst}
                     softerSide={comparativeReasoning.softerSide}
@@ -120,7 +120,7 @@ export default function FinishedArticleGrid({ articles, brand, onArticleSelect }
                   />
                 </CollapsibleInsightSection>
 
-                <CollapsibleInsightSection title="Garment Outcome">
+                <CollapsibleInsightSection title="ผลลัพธ์หลังขึ้นงาน">
                   <ProductGarmentOutcome
                     garmentShape={garmentOutcome.garmentShape}
                     wearingExperience={garmentOutcome.wearingExperience}

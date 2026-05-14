@@ -28,7 +28,7 @@ export default function KnowledgeContinuityNav({
             href="/#finished-articles"
             className="text-emerald-700 transition hover:text-emerald-900"
           >
-            Explore Fabrics
+            ดูเนื้อผ้าเพิ่มเติม
           </a>
         </div>
       </div>

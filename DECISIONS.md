@@ -565,3 +565,34 @@ Rules:
 
 Strategic direction:
 Next phase shifts toward tactile textile imagery and sourcing presentation quality for marketing onboarding and buyer confidence.
+
+---
+
+## 2026-05-14 — Decision: Thai-First Homepage, English Textile Terminology
+
+Decision:
+Knitspeed homepage should become Thai-first for buyer clarity while preserving natural English textile terminology.
+
+Rules:
+- Thai for buyer guidance, CTA text, sourcing explanations, and trust copy
+- keep industry-native terms such as GSM, Single Jersey, Interlock, Rib, Compact Cotton, DTG, Screen Print where natural
+- do not create separate TH/EN routing yet
+- do not machine-translate knowledge pages wholesale
+
+Rationale:
+Most active buyers are Thai, but textile communication in Thailand naturally mixes Thai explanation with English technical terms.
+
+---
+
+## 2026-05-14 — Decision: Hide TC From Featured Homepage Until Blend Data Is Enriched
+
+Decision:
+Remove TC blend card from homepage featured articles for now.
+
+Rationale:
+TC behavior depends heavily on blend ratio such as 20/80 or 35/65. Current featured data does not expose ratio clearly enough for confident public intelligence guidance.
+
+Rules:
+- do not delete TC data
+- do not over-infer TC behavior publicly
+- revisit TC/CVC in a separate data-enrichment session using historical records and DB-safe fields
