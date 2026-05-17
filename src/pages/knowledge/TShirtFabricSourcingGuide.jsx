@@ -11,20 +11,19 @@ export default function TShirtFabricSourcingGuide({ brand }) {
       >
         <div className="mx-auto max-w-5xl px-5 py-14 md:py-20">
           <div className="inline-flex rounded-full border border-sky-200 bg-white px-4 py-2 text-sm font-semibold text-sky-700 shadow-sm">
-            Garment Sourcing Guide
+            คู่มือเลือกผ้าตามประเภทงานผลิต
           </div>
 
           <h1
             className="mt-5 text-4xl font-extrabold leading-tight tracking-tight md:text-6xl"
             style={{ color: brand.navy }}
           >
-            T-Shirt Fabric Sourcing Guide
+            คู่มือเลือกผ้าสำหรับเสื้อยืด
           </h1>
 
           <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-600">
-            Learn how fabric structure, yarn quality, GSM, and finishing affect
-            softness, breathability, durability, printability, and garment outcome
-            for T-shirt production.
+            เข้าใจความแตกต่างของโครงสร้างผ้า คุณภาพเส้นด้าย GSM และการ finishing
+            เพื่อเลือกผ้าที่เหมาะกับเสื้อยืดมากขึ้น
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
@@ -32,7 +31,7 @@ export default function TShirtFabricSourcingGuide({ brand }) {
               "Single Jersey",
               "Compact Cotton",
               "Printing Performance",
-              "GSM Selection",
+              "การเลือก GSM ให้เหมาะกับงาน",
               "Breathability",
             ].map((item) => (
               <div
@@ -51,33 +50,33 @@ export default function TShirtFabricSourcingGuide({ brand }) {
           <div className="rounded-3xl border border-sky-100 bg-white p-6 shadow-sm">
             <Shirt className="mb-4 text-sky-500" size={30} />
             <h2 className="text-xl font-extrabold" style={{ color: brand.navy }}>
-              Everyday T-Shirts
+              เสื้อยืดใส่ประจำวัน
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-600">
-              30s Single Jersey remains one of the most balanced structures for
-              softness, breathability, production efficiency, and commercial pricing.
+              30s Single Jersey ให้สัมผัสสมดุลทั้งความนุ่ม
+              การระบายอากาศ และต้นทุนการผลิต เหมาะกับเสื้อยืดใช้งานทั่วไป
             </p>
           </div>
 
           <div className="rounded-3xl border border-sky-100 bg-white p-6 shadow-sm">
             <Waves className="mb-4 text-sky-500" size={30} />
             <h2 className="text-xl font-extrabold" style={{ color: brand.navy }}>
-              Premium Hand Feel
+              สัมผัสผ้า Premium มากขึ้น
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-600">
-              Compact cotton and combed yarns improve surface smoothness,
-              reduce hairiness, and create cleaner garment appearance.
+              Compact Cotton และ Combed Yarn ช่วยให้ผิวผ้าเรียบขึ้น
+              ลดขนผิว และทำให้เสื้อดู clean มากขึ้น
             </p>
           </div>
 
           <div className="rounded-3xl border border-sky-100 bg-white p-6 shadow-sm">
             <Weight className="mb-4 text-sky-500" size={30} />
             <h2 className="text-xl font-extrabold" style={{ color: brand.navy }}>
-              GSM Selection
+              การเลือก GSM ให้เหมาะกับงาน
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-600">
-              Lightweight fabrics improve breathability while mid-weight GSM
-              supports better structure, opacity, and durability.
+              GSM ที่เบากว่าจะช่วยเรื่องการระบายอากาศ
+              ส่วน GSM ระดับกลางถึงสูง จะให้ทรงและความทึบของผ้าที่มากขึ้น
             </p>
           </div>
         </div>
@@ -89,22 +88,22 @@ export default function TShirtFabricSourcingGuide({ brand }) {
             className="text-3xl font-extrabold"
             style={{ color: brand.navy }}
           >
-            Recommended Fabric Structures
+            โครงสร้างผ้าที่แนะนำ
           </h2>
 
           <div className="mt-8 space-y-5">
             {[
               {
                 title: "30s Combed Cotton Single Jersey",
-                text: "Balanced softness, breathability, and printability for everyday T-shirt production.",
+                text: "สมดุลระหว่างความนุ่ม การระบายอากาศ และความเหมาะกับงานสกรีนสำหรับเสื้อยืดทั่วไป",
               },
               {
                 title: "30s Compact Cotton Single Jersey",
-                text: "Cleaner surface and premium hand feel for elevated apparel programs.",
+                text: "ผิวผ้าเรียบขึ้นและสัมผัสดูพรีเมียม เหมาะกับงานเสื้อผ้าระดับสูงขึ้น",
               },
               {
                 title: "TC Single Jersey",
-                text: "Better durability and shape retention for uniforms and repeated washing.",
+                text: "คงรูปและทนต่อการซัก เหมาะกับยูนิฟอร์มและงานใช้งานต่อเนื่อง",
               },
             ].map((item) => (
               <div
@@ -128,49 +127,6 @@ export default function TShirtFabricSourcingGuide({ brand }) {
                     </p>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
-            {[
-              {
-                title: "30s Combed Cotton Single Jersey",
-                description:
-                  "Balanced softness, breathability, and printability for everyday T-shirt production.",
-              },
-              {
-                title: "30s Compact Cotton Single Jersey",
-                description:
-                  "Cleaner surface and smoother hand feel for elevated apparel collections.",
-              },
-              {
-                title: "TC Single Jersey",
-                description:
-                  "Durable structure for uniforms, repeated washing, and stable production runs.",
-              },
-            ].map((item) => (
-              <div
-                key={item.title}
-                className="rounded-3xl border border-sky-100 bg-white p-5 shadow-sm"
-              >
-                <div
-                  className="text-lg font-extrabold"
-                  style={{ color: brand.navy }}
-                >
-                  {item.title}
-                </div>
-
-                <p className="mt-3 text-sm leading-7 text-slate-600">
-                  {item.description}
-                </p>
-
-                <a
-                  href="/#quote"
-                  className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-sky-700 transition hover:text-sky-900"
-                >
-                  Request sourcing quote →
-                </a>
               </div>
             ))}
           </div>

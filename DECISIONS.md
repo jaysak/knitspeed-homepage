@@ -596,3 +596,35 @@ Rules:
 - do not delete TC data
 - do not over-infer TC behavior publicly
 - revisit TC/CVC in a separate data-enrichment session using historical records and DB-safe fields
+
+---
+
+## 2026-05-17 — Decision: Thai-First UX With English Textile Semantic Anchors
+
+Decision:
+Knitspeed public UX should use Thai-first reading flow while preserving English textile terminology as semantic anchors.
+
+Accepted pattern:
+- Thai for buyer-facing explanations, headings, and sourcing guidance
+- English preserved for textile/product/production terms where industry-native:
+  - Single Jersey
+  - Compact Cotton
+  - Combed Yarn
+  - GSM
+  - Printing Performance
+  - Breathability
+  - DTG
+  - Screen Print
+- Avoid duplicated Thai/English paragraphs
+- Avoid English-first blocks on Thai buyer pages
+- Avoid over-translating technical textile terms into unnatural Thai
+
+Rationale:
+- most buyers are Thai
+- Thai textile communication naturally mixes English technical terms
+- Thai-first UX improves trust and readability
+- English textile anchors preserve SEO, LLM retrieval, and machine-readable semantics
+
+Rule:
+This is localization of textile intelligence, not plain translation.
+

@@ -2073,3 +2073,43 @@ Verification:
 Notes:
 - T-shirt sourcing guide route now loads, but navigation/header polish on that page remains future work
 - next major visual task is real iPhone warehouse/fabric photography and image hierarchy cleanup
+
+---
+
+## 2026-05-17 — English/Thai UX Language Harmony Pass v1
+
+Status:
+- implemented locally
+- visually verified on `/knowledge/t-shirt-fabric-sourcing`
+
+Summary:
+- Began Thai-first UX alignment for Knitspeed knowledge/sourcing guide pages
+- Updated T-shirt Fabric Sourcing Guide copy to reduce awkward English/Thai flow
+- Preserved English textile semantic anchors for LLM/search understanding:
+  - Single Jersey
+  - Compact Cotton
+  - Combed Yarn
+  - GSM
+  - Printing Performance
+  - Breathability
+- Converted key public reading flow into Thai-first sourcing language
+- Kept technical textile terms in English where natural for Thai textile industry usage
+
+Strategic result:
+- page now feels more like a Thai textile sourcing intelligence platform
+- less like an English-first translated template
+- LLM semantic layer remains intact through terminology, route structure, and knowledge architecture
+
+Verification:
+- local browser visual QA completed
+- `/knowledge/t-shirt-fabric-sourcing` now reads cleaner in Thai
+- semantic English textile anchors remain visible
+
+Rules preserved:
+- no routing changes
+- no CMS
+- no schema change
+- no dashboard changes
+- no quote flow changes
+- no loss of textile semantic structure
+

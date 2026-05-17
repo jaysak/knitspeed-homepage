@@ -1931,3 +1931,44 @@ Next likely safe tasks:
 2. photograph real warehouse/fabric visuals with iPhone
 3. replace placeholder/redundant imagery with real textile image hierarchy
 4. later plan TC/CVC historical data enrichment and DB-safe schema additions
+
+---
+
+# CURRENT CHECKPOINT — Thai/English UX Language Harmony v1
+
+Status:
+- implemented locally
+- visual QA completed on `/knowledge/t-shirt-fabric-sourcing`
+
+Implemented:
+- T-shirt Fabric Sourcing Guide converted toward Thai-first UX rhythm
+- English textile semantic anchors preserved
+- card titles and body copy now read more naturally for Thai buyers
+- page still keeps machine-readable textile context through terminology and route structure
+
+Current language pattern:
+- Thai controls the reading flow
+- English preserves textile entities and LLM/search semantics
+- no duplicated bilingual paragraphs
+- no over-translation of industry-native terms
+
+Verified visually:
+- intro copy improved
+- Daily Wear card body improved
+- Premium/Compact Cotton card body improved
+- GSM card body improved
+- overall page feels calmer and more Thai-native
+
+Next likely safe task:
+- continue language harmony pass across adjacent homepage/knowledge sections
+- update one page/section at a time
+- preserve English semantic anchors
+- run build/lint after each meaningful copy pass
+
+Do not do next:
+- no full bilingual duplication
+- no TH/EN routing yet
+- no CMS
+- no bulk translation
+- no loss of textile terminology
+
